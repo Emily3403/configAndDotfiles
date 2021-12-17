@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# First argument specifies the cpu usage of the compression
+# E.g. `vdcompress 42` means:use at most 42% of the cpu (including all cores).
+case $# in
+  1 )
+    cpulimit -l $(( $(nproc) * $1 )) -i _vdcompress ;;
+  * )
+    echo "Usage: vdcompress <cpu usage in percent>; e.g. vdcompress 42" ;;
+esac

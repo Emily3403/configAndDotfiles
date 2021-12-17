@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Cleanup trash
+rm -rf $XDG_DATA_HOME/Trash/*
+
+# Remove orphaned packages
+unused_pack=$(pacman -Qtdq) 
+if [ ! -z "${unused_pack}" ]; then
+    sudo pacman -Rns $(unused_pack) --noconfirm
+fi
+
+
+# Remove caches
+sudo pacman -Sc --noconfirm
+rm -rf $HOME/.cache
+
+
+# Remove Systemd journal
+sudo journalctl --vacuum-size=1M
