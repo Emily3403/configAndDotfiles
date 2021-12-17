@@ -1,0 +1,1 @@
+/home/emily/.config/fish/config.fish

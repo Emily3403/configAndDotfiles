@@ -1,0 +1,14 @@
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "package_translation/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yaml"
+    - "package_translation/{{ ansible_distribution }}.yaml"
+    - "package_translation/{{ ansible_os_family }}.yaml"
+  when: apache_package_name is not defined or apache_service_name is not defined
+
+
+- name: Gui packages
+  ansible.builtin.package:
+    name:
+      - "{{ chromium_package_name }}"
+      - flameshot
+      - pavucontrol

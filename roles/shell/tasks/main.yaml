@@ -1,0 +1,142 @@
+
+# Missing packages
+#   Adobe source code pro
+#   alacritty
+#   chromium
+#   discord
+#   exa
+#   starship → on pacman etc.
+
+
+
+# Maybe:
+#   ansible
+#   standard bluetooth
+#   ffmpeg
+#   gimp
+#   gscan2pdf
+#   jetbrains toolbox + products
+#   jupyter
+#   nmap
+#   qbittorrent
+#   shellcheck
+#   spotify
+#   steam
+#   telegram-desktop
+#   texlive
+#   thunderbird
+#   vlc
+
+
+# Idk
+#   Timeshift
+
+# Uni specific
+#   mumble
+#   zotero
+
+# Arch specific
+#   find-the-command
+#   yay
+
+
+# Garuda dependencies
+
+
+
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "package_translation/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yaml"
+    - "package_translation/{{ ansible_distribution }}.yaml"
+    - "package_translation/{{ ansible_os_family }}.yaml"
+  when: apache_package_name is not defined or apache_service_name is not defined
+
+
+- name: Install really core packages
+  ansible.builtin.package:
+    name:
+      - curl
+      - wget
+      - fish
+  become: true
+
+
+- name: Change default shell
+  become: true
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/bin/fish
+
+
+- name: Add deadsnakes repository
+  become: true
+  apt_repository: repo="ppa:deadsnakes/ppa"
+  when: ansible_os_family == 'Debian'
+
+
+
+#- name: Update cache apt
+#  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600 upgrade=dist force_apt_get=yes
+#  when: ansible_os_family == 'Debian'
+#  become: true
+
+
+
+
+- name: Install starship
+  shell: wget -P /tmp https://starship.rs/install.sh; sh -c "$(cat /tmp/install.sh)" -- -y; mv /usr/local/bin/starship /usr/bin/starship
+  become: true
+  args:
+    creates: /usr/bin/starship
+
+
+- name: Core packages
+  ansible.builtin.package:
+    name:
+      - bat
+      - gcc
+      - cmake
+      - "{{ exa_package_name | default('') }}"
+      - make
+      - cowsay
+      - direnv
+      - git
+      - htop
+      - neofetch
+      - neovim
+      - "{{ openssh_package_name }}"
+      - "{{ pip_package_name }}"
+      - "{{ python_package_name }}"
+      - rsync
+      - vim
+      - jq
+
+    state: latest
+  become: true
+
+
+- name: Pip packages
+  pip:
+    name:
+      - thefuck
+      - tldr
+      - ipython
+
+
+
+
+
+- name: Install dotfiles
+  copy: src={{ item.src }} dest={{ item.dest }}
+
+  with_items:
+    - { src: 'dotfiles/bin/', dest: '~/bin' }
+    - { src: 'dotfiles/fish/', dest: '~/.config/fish' }
+    - { src: 'dotfiles/neofetch/', dest: '~/.config/neofetch' }
+    - { src: 'dotfiles/starship/starship.toml', dest: '~/.config/starship.toml' }
+
+    # - { src: 'dotfiles/vim/…', dest: '~/…' }  TODO
+
+
+
+

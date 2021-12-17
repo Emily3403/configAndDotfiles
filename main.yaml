@@ -1,0 +1,6 @@
+---
+- hosts: ubuntu-vm
+  roles:
+    - shell
+
+
