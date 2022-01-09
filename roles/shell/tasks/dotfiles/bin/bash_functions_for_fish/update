@@ -34,49 +34,44 @@ function psuccess {
   printf "${GREEN}[ SUCCESS ]:${NORMAL} ${1}\n"
 }
 
-# Redifine the $HOME since this script is being run as root
-HOME="/home/$SUDO_USER"
-
 # This file is partially based on Garuda linux implementation.
-#
-# Elevate once and restart the script
-if [[ $EUID -ne 0 ]]; then
-    exec sudo "$0" "$@"
-    exit 1
-fi
-
+sudo sh -c ""
 
 # Refresh mirrorlists
 if [ -x /usr/bin/rate-mirrors ]; then
     pnotify "Refreshing mirrorlists using rate-mirrors ..."
 
-    MIRRORLIST_TEMP="$(mktemp)" && rate-mirrors --allow-root --save=/etc/pacman.d/mirrorlist arch --max-delay=21600 &> /dev/null \
-    && chmod 644 /etc/pacman.d/mirrorlist && pacman -Syy || { perror "Failed to update mirrorlist"; }
+    MIRRORLIST_TEMP="$(mktemp)" && sudo rate-mirrors --allow-root --save=/etc/pacman.d/mirrorlist arch --max-delay=21600 &> /dev/null \
+    && sudo chmod 644 /etc/pacman.d/mirrorlist && sudo pacman -Syy || { perror "Failed to update mirrorlist"; }
 
 elif [ -x /usr/bin/reflector ]; then
     pnotify "Refreshing mirrorlists using reflector ..."
-    reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist \
+    sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist \
     && cat /etc/pacman.d/mirrorlist && echo "" \
-    && pacman -Syy || { perror -e "Failed to update mirrorlist"; }
+    && sudo pacman -Syy || { perror -e "Failed to update mirrorlist"; }
 fi
 
 
-pnotify "Starting to upgrade pacman ..."
-pacman -Syu --noconfirm
+pnotify "Starting to upgrade packages ..."
+sudo pacman -Syu --noconfirm
 
-pnotify "Starting to upgrade user repository packages ..."
-yay -Syu --noconfirm
+# notfiy i3blocks
+if [[ $XDG_CURRENT_DESKTOP == "i3" ]]; then
+    pkill -SIGRTMIN+11 i3blocks
+fi
 
 
+pnotify "Starting to update pip packages ..."
+pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user
 
-pnotify "Start to upgrade vim plugins ..."
+pnotify "Starting to upgrade vim plugins ..."
 $HOME/.vim/pack/vendor/start/update.sh
 
 
 
 if [ -x /usr/bin/locate ]; then
     pnotify "Updating mlocate index ..."
-    updatedb
+    sudo updatedb
 fi
 
 
@@ -86,5 +81,5 @@ if [ -x /usr/bin/fish ] && [ ! -z "$SUDO_UID" ]; then
 fi
 
 
-printf "\nSystem updated! 🐧\n"
 
+printf "\nSystem updated! 🐧\n"

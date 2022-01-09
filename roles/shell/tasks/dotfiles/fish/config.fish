@@ -73,6 +73,8 @@ function conf
 	        vim "$HOME/.vimrc"
         case ssh 
             vim "$HOME/.ssh/config"
+        case starship 
+            vim "$HOME/.config/starship.toml"
     end
 end
 
@@ -82,22 +84,22 @@ function u
 		case bs 
 			cd "$HOME/Documents/Uni/5/BSPrak/Exercises"
         case bs!
-            cd "$HOME/Documents/Uni/5/BSPrak/Material/Material"
+            cd "$HOME/Documents/Uni/5/BSPrak/Material"
             
 		case dip
 			cd "$HOME/Documents/Uni/5/DIP/Exercises"
         case dip!
-            cd "$HOME/Documents/Uni/5/DIP/Material/Material"
+            cd "$HOME/Documents/Uni/5/DIP/Material"
 
 		case grs
 			cd "$HOME/Documents/Uni/5/GRS/Exercises"
         case grs!
-            cd "$HOME/Documents/Uni/5/GRS/Material/Material"
+            cd "$HOME/Documents/Uni/5/GRS/Material"
 
 		case ig
             cd "$HOME/Documents/Uni/5/IG/Exercises"
         case ig!
-            cd "$HOME/Documents/Uni/5/IG/Material/Material"
+            cd "$HOME/Documents/Uni/5/IG/Material"
 
 		case latex
 			cd "$HOME/Documents/Uni/LaTeX/"
@@ -105,7 +107,7 @@ function u
         case backup
             cd "$HOME/Documents/Programs/Bash/BackupScript"
 
-        case isisdl
+        case isisdl is
             cd "$HOME/Documents/Programs/Python/isisdl" && ac
 
 	end
@@ -141,7 +143,7 @@ function ac
 end
 
 # Fast remove
-function frm
+function rmf
 	mkdir -p .empty/
 	rsync -r --delete .empty/ $argv
 	rmdir .empty/
@@ -191,6 +193,7 @@ end
 # Replace some more things with better alternatives
 alias cat='bat --style header --style rules --style snip --style changes --style header'
 alias yay='paru'
+alias sudo='doas'
 
 # Common use
 alias tar!='tar -acf'
@@ -226,15 +229,17 @@ alias cpd="pwd | c"                               # Current directory to clipboa
 
 # Python shortcuts
 alias i="ipython --no-confirm-exit"
-alias jn= "jupyter notebook"
-alias jn="jupyter notebook stop"
+alias jn="jupyter notebook"
+alias jn!="jupyter notebook stop"
 
-# Chrome
+# Browser Stuff
 alias cr="chromium"
-set -g browser chromium
-alias pdf="chromium ./out/main.pdf"
+alias fi="firefox"
+set -g browser firefox
+alias pdf="$BROWSER ./out/main.pdf"
 
 # General stuff
+alias dc="cd"
 alias ds="du -shx * | sort -h"
 alias ds!="du -shx * .* | sort -h"
 alias sl!="pkill -9 sl"
@@ -243,8 +248,20 @@ alias nt="clear && neofetch"
 alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 11 12 13 14"
 alias thunar="/usr/bin/thunar & disown"
 alias quote="fortune | cowsay | lolcat"
-
+alias b="bluetoothctl"
 alias please="sudo"
+alias fuck!="fuck --hard"
+
+# Shortcut for too long names
+alias blue=bluetoothctl
+alias mi=mediainfo
+alias rmv="rm venv -rf"
+alias rmg="rm .git -rf"
+alias pipi="pip install -e ."
+alias pipr="pip install -r requirements.txt"
+alias piprd="pip install -r requirements_dev.txt"
+alias pipu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
+# _alias (for vim jump)
 
 
 ########### Matteo's stuff ############

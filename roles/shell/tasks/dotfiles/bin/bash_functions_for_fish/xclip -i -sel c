@@ -1,0 +1,91 @@
+#/bin/bash
+
+# Colors
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+
+function pnotify {
+  printf "${BLUE}[ NOTIFICATION ]:${NORMAL} ${1}\n"
+}
+
+function pwarn {
+  printf "${YELLOW}[ WARNING ]:${NORMAL} ${1}\n"
+}
+
+function perror {
+  printf "${RED}[ ERROR ]:${NORMAL} ${1}\n"
+}
+
+function psuccess {
+  printf "${GREEN}[ SUCCESS ]:${NORMAL} ${1}\n"
+}
+
+# Redifine the $HOME since this script is being run as root
+HOME="/home/$SUDO_USER"
+
+# This file is partially based on Garuda linux implementation.
+#
+# Elevate once and restart the script
+if [[ $EUID -ne 0 ]]; then
+    exec sudo "$0" "$@"
+    exit 1
+fi
+
+
+# Refresh mirrorlists
+if [ -x /usr/bin/rate-mirrors ]; then
+    pnotify "Refreshing mirrorlists using rate-mirrors ..."
+
+    MIRRORLIST_TEMP="$(mktemp)" && rate-mirrors --allow-root --save=/etc/pacman.d/mirrorlist arch --max-delay=21600 &> /dev/null \
+    && chmod 644 /etc/pacman.d/mirrorlist && pacman -Syy || { perror "Failed to update mirrorlist"; }
+
+elif [ -x /usr/bin/reflector ]; then
+    pnotify "Refreshing mirrorlists using reflector ..."
+    reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist \
+    && cat /etc/pacman.d/mirrorlist && echo "" \
+    && pacman -Syy || { perror -e "Failed to update mirrorlist"; }
+fi
+
+
+pnotify "Starting to upgrade packages ..."
+yay -Syu --noconfirm
+
+
+
+pnotify "Start to upgrade vim plugins ..."
+$HOME/.vim/pack/vendor/start/update.sh
+
+
+
+if [ -x /usr/bin/locate ]; then
+    pnotify "Updating mlocate index ..."
+    updatedb
+fi
+
+
+if [ -x /usr/bin/fish ] && [ ! -z "$SUDO_UID" ]; then
+    pnotify "Updating fish completions ..."
+    sudo -u "#$SUDO_UID" fish -c fish_update_completions
+fi
+
+
+printf "\nSystem updated! 🐧\n"
+
+# notfiy i3blocks
+if [[ $XDG_CURRENT_DESKTOP == "i3" ]]; then
+    pkill -SIGRTMIN+11 i3blocks
+fi
