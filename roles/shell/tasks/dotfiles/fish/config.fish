@@ -34,7 +34,7 @@ function remove_from_path
 end
 
 remove_from_path ~/bin
-add_to_path ~/.local/bin ~/arm/bin ~/bin/i3programs ~/bin ~/bin/bash_functions_for_fish
+add_to_path ~/.local/bin ~/arm/bin ~/bin/i3programs ~/bin ~/bin/bash_functions_for_fish ~/.local/share/gem/ruby/3.0.0/bin
 
 
 # Backup
@@ -261,6 +261,7 @@ alias pipi="pip install -e ."
 alias pipr="pip install -r requirements.txt"
 alias piprd="pip install -r requirements_dev.txt"
 alias pipu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
+alias mypy="dmypy run"
 # _alias (for vim jump)
 
 
