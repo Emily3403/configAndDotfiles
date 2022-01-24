@@ -19,41 +19,99 @@
                "y": 0
             },
             "marks": [],
-            "name": "Hiding Information Inside of PNG - YouTube — Mozilla Firefox",
+            "name": "Mozilla Firefox",
             "percent": 0.5,
             "swallows": [
                {
                 "class": "^firefox$"
                // "instance": "^Navigator$",
                // "machine": "^UwU$",
-               // "title": "^Hiding\\ Information\\ Inside\\ of\\ PNG\\ \\-\\ YouTube\\ \\—\\ Mozilla\\ Firefox$",
+               // "title": "^Mozilla\\ Firefox$",
                // "window_role": "^browser$"
                }
             ],
             "type": "con"
         },
         {
+            // tabbed split container with 3 children
             "border": "normal",
-            "current_border_width": 2,
             "floating": "auto_off",
-            "geometry": {
-               "height": 600,
-               "width": 800,
-               "x": 0,
-               "y": 0
-            },
+            "layout": "tabbed",
             "marks": [],
-            "name": "fish /home/emily/Documents/Programs/Python/isisdl",
             "percent": 0.5,
-            "swallows": [
-               {
-                "class": "^Alacritty$"
-               // "instance": "^Alacritty$",
-               // "machine": "^UwU$",
-               // "title": "^fish\\ \\/home\\/emily\\/Documents\\/Programs\\/Python\\/isisdl$"
-               }
-            ],
-            "type": "con"
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 600,
+                       "width": 800,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "fish /home/emily",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^Alacritty$"
+                       // "instance": "^Alacritty$",
+                       // "machine": "^UwU$",
+                       // "title": "^fish\\ \\/home\\/emily$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1388,
+                       "width": 2556,
+                       "x": 2,
+                       "y": 24
+                    },
+                    "marks": [],
+                    "name": "Bluetooth Devices",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^Blueman\\-manager$"
+                       // "instance": "^blueman\\-manager$",
+                       // "machine": "^UwU$",
+                       // "title": "^Bluetooth\\ Devices$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1041,
+                       "width": 1916,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Inbox - Uni Email - Mozilla Thunderbird",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                        "class": "^Thunderbird$"
+                       // "instance": "^Mail$",
+                       // "machine": "^UwU$",
+                       // "title": "^Inbox\\ \\-\\ Uni\\ Email\\ \\-\\ Mozilla\\ Thunderbird$",
+                       // "window_role": "^3pane$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
         }
     ]
 }
