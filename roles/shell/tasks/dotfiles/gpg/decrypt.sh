@@ -1,8 +1,5 @@
 #/bin/bash
 
-set -e
-set -o pipefail
-
 if [ ! -f "secret.png" ]; then
     echo "The file \"secret.png\" was not found."
     exit 1
