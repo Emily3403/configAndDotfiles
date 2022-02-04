@@ -4,15 +4,11 @@
 rm -rf $XDG_DATA_HOME/Trash/*
 
 # Remove orphaned packages
-unused_pack=$(pacman -Qtdq) 
-if [ ! -z "${unused_pack}" ]; then
-    sudo pacman -Rns $(unused_pack) --noconfirm
-fi
+sudo pacman -Rns $(pacman -Qtdq) --noconfirm
 
 
 # Remove caches
 sudo pacman -Sc --noconfirm
-rm -rf $HOME/.cache
 
 
 # Remove Systemd journal
