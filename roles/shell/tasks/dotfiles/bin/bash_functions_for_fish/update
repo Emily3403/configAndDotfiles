@@ -1,5 +1,10 @@
 #/bin/bash
 
+#if [[ $EUID -ne 0 ]]; then
+#	exec sudo /home/emily/bin/bash_functions_for_fish/update "$@"
+#	exit 1
+#fi
+
 # Colors
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)
