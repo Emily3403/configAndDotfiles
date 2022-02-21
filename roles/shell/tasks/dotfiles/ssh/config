@@ -8,7 +8,7 @@ Host laptop 192.168.1.13
     User emily
 
 Host pc 192.168.1.42
-	HostName 192.168.0.42
+	HostName 192.168.1.42
 	User emily
 
 Host router 192.168.1.1
