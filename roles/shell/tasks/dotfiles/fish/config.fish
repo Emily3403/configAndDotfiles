@@ -46,6 +46,13 @@ function lsr
 	ls | sort -R | tail -"$cnt"
 end
 
+# Automatically get the newest update of the config
+function upfish
+    set id (tr -dc A-Za-z0-9 </dev/urandom | head -c 8 ; echo '')
+    wget https://raw.githubusercontent.com/Emily3403/configAndDotfiles/main/roles/shell/tasks/dotfiles/fish/config.fish --directory-prefix /tmp/$id
+    mv /tmp/$id/config.fish "$HOME/.config/fish/config.fish"
+end
+
 # Profile a python script
 function profile
     echo "Running Program…"
@@ -185,7 +192,6 @@ end
 # Replace some more things with better alternatives
 alias cat='bat --style header --style rules --style snip --style changes --style header'
 alias yay='paru'
-alias sudo='doas'
 
 # Common use
 alias tar!='tar -acf'
