@@ -115,6 +115,13 @@ end
 
 function cd
     builtin cd $argv
+    git rev-parse 2>/dev/null
+    if test $status -eq 0
+        if test "$_LAST_REPO" != (basename (git rev-parse --show-toplevel))
+            onefetch
+			set -g _LAST_REPO (basename (git rev-parse --show-toplevel))
+        end
+    end
     ls
 end
 
@@ -195,7 +202,8 @@ alias yay='paru'
 
 # Common use
 alias tar!='tar -acf'
-alias untar='tar -zxvf'
+alias untar.='tar -zxvf'
+alias untar="tar xfv"
 alias wget='wget -c '
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -266,6 +274,7 @@ alias gco="git checkout"
 alias gp="git push"
 alias gl="git pull"
 alias grm="git stash; git stash drop"  # Danger!
+alias gcl="git clone --depth 1"
 
 # Shortcut for too long names
 alias rmv="rm venv -rf"
