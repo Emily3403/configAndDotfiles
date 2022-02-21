@@ -89,7 +89,7 @@ scrolling:
 # Font configuration
 font:
   # Normal (roman) font face
-  size: 8.5
+  size: 10
   normal:
     # Font family
     #
@@ -97,7 +97,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: MesloLGS NF
+    family: DejaVu Sans Mono
+    style: Regular
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -108,7 +109,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:  MesloLGS NF
+    family: DejaVu Sans Mono
+    style: Bold
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
@@ -119,7 +121,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:  MesloLGS NF
+    family:  DejaVu Sans Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
@@ -130,7 +132,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family:  MesloLGS NF
+    family:  DejaVu Sans Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
@@ -276,7 +278,8 @@ draw_bold_text_with_bright_colors: true
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+window:
+  opacity: 0.8
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

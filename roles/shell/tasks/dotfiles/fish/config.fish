@@ -1,8 +1,6 @@
 ﻿# The first part of this config file is mostly inspired by Garuda linux.
 #
 #
-# TODO:
-#   git aliases
 
 
 # Hide welcome message
@@ -35,12 +33,6 @@ end
 
 remove_from_path ~/bin
 add_to_path ~/.local/bin ~/arm/bin ~/bin/i3programs ~/bin ~/bin/bash_functions_for_fish ~/.local/share/gem/ruby/3.0.0/bin
-
-
-# Backup
-function bu --argument filename
-    cp $filename $filename.bak
-end
 
 
 # List a random subset of files
@@ -104,7 +96,7 @@ function u
 		case latex
 			cd "$HOME/Documents/Uni/LaTeX/"
 
-        case backup
+        case backup bu
             cd "$HOME/Documents/Programs/Bash/BackupScript"
 
         case isisdl is
@@ -230,7 +222,11 @@ alias cpd="pwd | c"                               # Current directory to clipboa
 # Python shortcuts
 alias i="ipython --no-confirm-exit"
 alias jn="jupyter notebook"
-alias jn!="jupyter notebook stop"
+alias jn.="jupyter notebook stop"
+alias pi="pip install"
+alias pir="pip install -r requirements.txt"
+alias pird="pip install -r requirements_dev.txt"
+alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
 
 # Browser Stuff
 alias cr="chromium"
@@ -241,9 +237,8 @@ alias pdf="$BROWSER ./out/main.pdf"
 # General stuff
 alias dc="cd"
 alias ds="du -shx * | sort -h"
-alias ds!="du -shx * .* | sort -h"
-alias sl!="pkill -9 sl"
-alias rm!="rm -rf"
+alias ds.="du -shx * .* | sort -h"
+alias sl.="pkill -9 sl"
 alias nt="clear && neofetch"
 alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 11 12 13 14"
 alias thunar="/usr/bin/thunar & disown"
@@ -251,11 +246,24 @@ alias quote="fortune | cowsay | lolcat"
 alias b="bluetoothctl"
 alias please="sudo"
 alias fuck!="fuck --hard"
+alias bu="cp $1 $1.bak"
+
+# Git aliases
+alias ga="git add"
+alias gaa="git add --all"
+alias gau="git add -u"
+alias gu="git add -u; git commit-status; git push "
+alias gs="git status"
+alias gb="git branch"
+alias gc="git commit -m"
+alias gco="git checkout"
+alias gp="git push"
+alias gl="git pull"
+alias grm="git stash; git stash drop"  # Danger!
 
 # Shortcut for too long names
-alias blue=bluetoothctl
-alias mi=mediainfo
 alias rmv="rm venv -rf"
+alias mi="mediainfo"
 alias rmg="rm .git -rf"
 alias pipi="pip install -e ."
 alias pipr="pip install -r requirements.txt"
@@ -332,13 +340,17 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 
 # Hooks for various packages
-direnv hook fish | source
-thefuck --alias | source
+if test -x direnv
+    direnv hook fish | source
+end
+
+if test -x thefuck 
+    thefuck --alias | source
+end
 
 ### Exports
 # To enable importing gpg keys via qr codes
 # See: https://wiki.archlinux.org/title/Paperkey
 export EDITOR=vim
 
-# Make gpg work, check `man gpg-agent`
 
