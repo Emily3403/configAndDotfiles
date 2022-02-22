@@ -264,6 +264,7 @@ alias fuck!="fuck --hard"
 alias bu="cp $1 $1.bak"
 
 # Git aliases
+alias git.="/usr/bin/git"
 alias ga="git add"
 alias gaa="git add --all"
 alias gau="git add -u"
@@ -276,6 +277,7 @@ alias gp="git push"
 alias gl="git pull"
 alias grm="git stash; git stash drop"  # Danger!
 alias gcl="git clone --depth 1"
+
 
 # Shortcut for too long names
 alias rmv="rm venv -rf"
