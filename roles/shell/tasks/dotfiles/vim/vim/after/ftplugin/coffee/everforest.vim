@@ -1,0 +1,26 @@
+if !exists('g:colors_name') || g:colors_name !=# 'everforest'
+    finish
+endif
+if index(g:everforest_loaded_file_types, 'coffee') ==# -1
+    call add(g:everforest_loaded_file_types, 'coffee')
+else
+    finish
+endif
+" ft_begin: coffee {{{
+" vim-coffee-script: https://github.com/kchmck/vim-coffee-script {{{
+highlight! link coffeeExtendedOp Orange
+highlight! link coffeeSpecialOp Fg
+highlight! link coffeeDotAccess Grey
+highlight! link coffeeCurly Fg
+highlight! link coffeeParen Fg
+highlight! link coffeeBracket Fg
+highlight! link coffeeParens Blue
+highlight! link coffeeBrackets Blue
+highlight! link coffeeCurlies Blue
+highlight! link coffeeOperator RedItalic
+highlight! link coffeeStatement Orange
+highlight! link coffeeSpecialIdent Purple
+highlight! link coffeeObject Purple
+highlight! link coffeeObjAssign Aqua
+" }}}
+" ft_end
