@@ -239,6 +239,7 @@ alias jn="jupyter notebook"
 alias jn.="jupyter notebook stop"
 alias pi="pip install"
 alias pir="pip install -r requirements.txt"
+alias pie="pip install -e ."
 alias pird="pip install -r requirements_dev.txt"
 alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
 
@@ -280,11 +281,9 @@ alias gcl="git clone --depth 1"
 alias rmv="rm venv -rf"
 alias mi="mediainfo"
 alias rmg="rm .git -rf"
-alias pipi="pip install -e ."
-alias pipr="pip install -r requirements.txt"
-alias piprd="pip install -r requirements_dev.txt"
-alias pipu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
 alias mypy="dmypy run"
+alias ss="source sauce"
+
 # _alias (for vim jump)
 
 

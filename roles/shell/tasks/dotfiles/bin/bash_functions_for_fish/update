@@ -42,23 +42,9 @@ function psuccess {
 # This file is partially based on Garuda linux implementation.
 sudo sh -c ""
 
-# Refresh mirrorlists
-if [ -x /usr/bin/rate-mirrors ]; then
-    pnotify "Refreshing mirrorlists using rate-mirrors ..."
-
-    MIRRORLIST_TEMP="$(mktemp)" && sudo rate-mirrors --allow-root --save=/etc/pacman.d/mirrorlist arch --max-delay=21600 &> /dev/null \
-    && sudo chmod 644 /etc/pacman.d/mirrorlist && sudo pacman -Syy || { perror "Failed to update mirrorlist"; }
-
-elif [ -x /usr/bin/reflector ]; then
-    pnotify "Refreshing mirrorlists using reflector ..."
-    sudo reflector --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist \
-    && cat /etc/pacman.d/mirrorlist && echo "" \
-    && sudo pacman -Syy || { perror -e "Failed to update mirrorlist"; }
-fi
-
 
 pnotify "Starting to upgrade packages ..."
-sudo pacman -Syu --noconfirm
+yay -Syu --noconfirm
 
 # notfiy i3blocks
 if [[ $XDG_CURRENT_DESKTOP == "i3" ]]; then
