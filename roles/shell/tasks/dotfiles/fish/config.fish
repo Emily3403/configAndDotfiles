@@ -1,20 +1,38 @@
-﻿# The first part of this config file is mostly inspired by Garuda linux.
-#
-#
-
-
-# Hide welcome message
+﻿# Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 
 
-# Starship prompt
-if status --is-interactive
-    source (starship init fish --print-full-init | psub)
+# Logging
+function pnotify 
+    set_color blue
+    printf "[ NOTE    ]: "
+    set_color normal
+    printf "$argv\n"
+end
+
+function pwarn 
+    set_color yellow
+    printf "[ WARNING ]: "
+    set_color normal
+    printf "$argv\n"
+end
+
+function perror 
+    set_color red
+    printf "[ ERROR   ]: "
+    set_color normal
+    printf "$argv\n"
+end
+
+function psuccess 
+    set_color green
+    printf "[ SUCCESS ]: "
+    set_color normal
+    printf "$argv\n"
 end
 
 
-# Add stuff to PATH
 function add_to_path
     for arg in $argv
         if test -d $arg; and not contains -- $arg $PATH
@@ -31,20 +49,13 @@ function remove_from_path
     end
 end
 
+# Add the "usual" stuff to the path. This may vary for you!
+add_to_path ~/.local/bin ~/arm/bin ~/bin/i3programs ~/bin/bash_functions_for_fish ~/.local/share/gem/ruby/3.0.0/bin 
+
+# Re-add ~/bin at the end so it is considered first
 remove_from_path ~/bin
-add_to_path ~/.local/bin ~/arm/bin ~/bin/i3programs ~/bin ~/bin/bash_functions_for_fish ~/.local/share/gem/ruby/3.0.0/bin
+add_to_path ~/bin
 
-
-# List a random subset of files
-function lsr
-	if count $argv > /dev/null
-		set cnt $argv
-	else
-		set cnt 10
-	end
-
-	ls | sort -R | tail -"$cnt"
-end
 
 # Automatically get the newest update of the config
 function upfish
@@ -53,13 +64,6 @@ function upfish
     mv /tmp/$id/config.fish "$HOME/.config/fish/config.fish"
 end
 
-# Profile a python script
-function profile
-    echo "Running Program…"
-    time python -m cProfile -o profiled.dat $argv
-    echo "Done!"
-    snakeviz profiled.dat
-end
 
 # General configuration manager
 function conf
@@ -153,44 +157,55 @@ function rmf
 	rmdir $argv
 end
 
-# Logging
-function pnotify 
-    set_color blue
-    printf "[ NOTE    ]: "
-    set_color normal
-    printf "$argv\n"
-end
 
-function pwarn 
-    set_color yellow
-    printf "[ WARNING ]: "
-    set_color normal
-    printf "$argv\n"
-end
+# ===== Python Stuff =====
 
-function perror 
-    set_color red
-    printf "[ ERROR   ]: "
-    set_color normal
-    printf "$argv\n"
-end
 
-function psuccess 
-    set_color green
-    printf "[ SUCCESS ]: "
-    set_color normal
-    printf "$argv\n"
+# Profile a python script
+function profile
+    echo "Running Program…"
+    time python -m cProfile -o profiled.dat $argv
+    echo "Done!"
+    snakeviz profiled.dat
 end
 
 
+# Anaconda packages
+alias i="ipython --no-confirm-exit"
+alias jn="jupyter notebook"
+alias jn.="jupyter notebook stop"
+
+
+# Pip aliases
+alias pi="pip install"
+alias pir="pip install -r requirements.txt"
+alias pie="pip install -e ."
+alias pird="pip install -r requirements_dev.txt"
+alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
+alias piuf="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 -P(nproc) pip install"
+
+
+# ====/ Python Stuff =====
+
+
+# ===== Useful aliases =====
 
 
 ## Useful aliases
-# Replace ls with exa
 if type -q exa
 	alias ls='exa -lb --color=always --group-directories-first --icons --time-style=long-iso'   # preferred listing
 	alias lt='exa -aT --color=always --group-directories-first --icons --sort=size --level=3'  # tree listing
 end
+
+
+
+
+
+
+
+# ====/ Useful aliases =====
+
+
 
 
 # Replace some more things with better alternatives
@@ -229,16 +244,6 @@ alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
 alias c="sed -z '\$ s/\n\$//' | xclip -sel clip"  # stripping newline
 alias C="xclip -sel clip"                         # don't strip newline
 alias cpd="pwd | c"                               # Current directory to clipboard
-
-# Python shortcuts
-alias i="ipython --no-confirm-exit"
-alias jn="jupyter notebook"
-alias jn.="jupyter notebook stop"
-alias pi="pip install"
-alias pir="pip install -r requirements.txt"
-alias pie="pip install -e ."
-alias pird="pip install -r requirements_dev.txt"
-alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
 
 # Browser Stuff
 alias cr="chromium"
@@ -296,44 +301,45 @@ alias open="nohup xdg-open $argv 1>/dev/null 2>/dev/null"
 alias findbn="sudo find / -not -path '/run/*' -name '$1' "
 
 
-###############  VPN  ############################
+# ===== VPN Stuff =====
 
 # Connect to the VPN of Technische Universität Berlin
-# alias vpnt='openconnect https://vpn.tu-berlin.de/ -b'
-function vpnt 
-  pnotify "Connecting to the VPN of Technische Universität Berlin ..."
-  vpnnd >/dev/null
-  sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u mattis3403
-  psuccess "Connection established."
+function tuvpn-connect 
+    pnotify "Connecting to the VPN of Technische Universität Berlin ..."
+    vtuvpn-disconnect &> /dev/null
+    sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u mattis3403
+    psuccess "Connection established."
 end
+
 
 # Disconnect from the VPN of Technische Universität Berlin
-function vpntd 
-  sudo pkill openconnect
-  psuccess "Disconnected from the VPN of Technische Universität Berlin."
+function tuvpn-disconnect 
+    sudo pkill openconnect
+    psuccess "Disconnected from the VPN of Technische Universität Berlin."
 end
 
-# Connect to the VPN of NordVPN
-function vpnn 
-  pnotify "Connecting to NordVPN ..."
-  if pidof openconnect >/dev/null
-    vpntd >/dev/null
-  end
 
-  if not string match -q -- "*active (running)*" (systemctl status nordvpnd)
-    sudo systemctl enable nordvpnd
-  end 
+# Connect to the VPN of NordVPN (currently not in use since `nordvpn` works)
+function _nordvpn-connect 
+    pnotify "Connecting to NordVPN ..."
+    if pidof openconnect >/dev/null
+      vpntd >/dev/null
+    end
 
-  if not string match -q -- "*not logged in*" (nordvpn connect)
-    nordvpn login
-  end
-  nordvpn connect $argv
-end 
+    if not string match -q -- "*active (running)*" (systemctl status nordvpnd)
+      sudo systemctl enable nordvpnd
+    end 
+
+    if not string match -q -- "*not logged in*" (nordvpn connect)
+      nordvpn login
+    end
+    nordvpn connect $argv
+end  
 
 # Disconnect from NordVPN
-function vpnnd 
-  nordvpn disconnect
-  psuccess "Disconnected from NordVPN."
+function _nordvpn-disconnect 
+    nordvpn disconnect
+    psuccess "Disconnected from NordVPN."
 end
 
 
@@ -341,12 +347,12 @@ end
 
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
-   set -x QT_QPA_PLATFORMTHEME "qt5ct"
+    set -x QT_QPA_PLATFORMTHEME "qt5ct"
 end
 
 ## Run paleofetch if session is interactive
 if status --is-interactive
-   neofetch
+    neofetch
 end
 
 # Colorful man pages
@@ -368,3 +374,7 @@ end
 export EDITOR=vim
 
 
+# Starship prompt
+if status --is-interactive
+    source (starship init fish --print-full-init | psub)
+end
