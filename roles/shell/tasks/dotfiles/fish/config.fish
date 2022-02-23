@@ -81,34 +81,31 @@ end
 function u
 	switch (string lower $argv)
 		case bs 
-			cd "$HOME/Documents/Uni/5/BSPrak/Exercises"
+            cd "$HOME/Documents/Uni/5/BSPrak/Exercises"
+           
+		case bs6 
+			cd "$HOME/Documents/Uni/5/BSPrak/Exercises/Aufgabe_6"
         case bs!
-            cd "$HOME/Documents/Uni/5/BSPrak/Material"
-            
-		case dip
-			cd "$HOME/Documents/Uni/5/DIP/Exercises"
-        case dip!
-            cd "$HOME/Documents/Uni/5/DIP/Material"
+            cd "$HOME/isisdl/[WS 2122] Betriebssystempraktikum"
 
 		case grs
 			cd "$HOME/Documents/Uni/5/GRS/Exercises"
         case grs!
-            cd "$HOME/Documents/Uni/5/GRS/Material"
+            cd "$HOME/isisdl/[WS2122] Grundlagen der Rechnersicherheit"
 
 		case ig
             cd "$HOME/Documents/Uni/5/IG/Exercises"
         case ig!
-            cd "$HOME/Documents/Uni/5/IG/Material"
+            cd "$HOME/isisdl/[WS21] Information Governance"
 
 		case latex
-			cd "$HOME/Documents/Uni/LaTeX/"
+			cd "$HOME/Documents/Programs/LaTeX"
 
-        case backup bu
+        case bu
             cd "$HOME/Documents/Programs/Bash/BackupScript"
 
         case isisdl is
             cd "$HOME/Documents/Programs/Python/isisdl" && ac
-
 	end
 end
 
@@ -285,6 +282,7 @@ alias mi="mediainfo"
 alias rmg="rm .git -rf"
 alias mypy="dmypy run"
 alias ss="source sauce"
+alias htop.="htop -d 0.1"
 
 # _alias (for vim jump)
 
