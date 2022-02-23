@@ -53,7 +53,9 @@ fi
 
 
 pnotify "Starting to update pip packages ..."
-pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user
+if [[ "$VIRTUAL_ENV" == "" ]]; then
+    pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user
+fi
 
 pnotify "Starting to upgrade vim plugins ..."
 $HOME/.vim/pack/vendor/start/update.sh

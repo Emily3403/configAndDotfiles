@@ -49,8 +49,9 @@ function remove_from_path
     end
 end
 
+
 # Add the "usual" stuff to the path. This may vary for you!
-add_to_path ~/.local/bin ~/arm/bin ~/bin/i3programs ~/bin/bash_functions_for_fish ~/.local/share/gem/ruby/3.0.0/bin 
+add_to_path ~~/bin/bash_functions_for_fish /.local/bin ~/arm/bin 
 
 # Re-add ~/bin at the end so it is considered first
 remove_from_path ~/bin
@@ -65,58 +66,12 @@ function upfish
 end
 
 
-# General configuration manager
-function conf
-	switch $argv
-		case fish
-			vim "$HOME/.config/fish/config.fish"
-		case i3
-			vim "$HOME/.config/i3/config"
-		case vim 
-	        vim "$HOME/.vimrc"
-        case ssh 
-            vim "$HOME/.ssh/config"
-        case starship 
-            vim "$HOME/.config/starship.toml"
-    end
-end
-
-# Function to get to by common places
-function u
-	switch (string lower $argv)
-		case bs 
-            cd "$HOME/Documents/Uni/5/BSPrak/Exercises"
-           
-		case bs6 
-			cd "$HOME/Documents/Uni/5/BSPrak/Exercises/Aufgabe_6"
-        case bs!
-            cd "$HOME/isisdl/[WS 2122] Betriebssystempraktikum"
-
-		case grs
-			cd "$HOME/Documents/Uni/5/GRS/Exercises"
-        case grs!
-            cd "$HOME/isisdl/[WS2122] Grundlagen der Rechnersicherheit"
-
-		case ig
-            cd "$HOME/Documents/Uni/5/IG/Exercises"
-        case ig!
-            cd "$HOME/isisdl/[WS21] Information Governance"
-
-		case latex
-			cd "$HOME/Documents/Programs/LaTeX"
-
-        case bu
-            cd "$HOME/Documents/Programs/Bash/BackupScript"
-
-        case isisdl is
-            cd "$HOME/Documents/Programs/Python/isisdl" && ac
-	end
-end
-
-
+# Have cd show usefull stuff about repos
 function cd
     builtin cd $argv
-    git rev-parse 2>/dev/null
+
+    # If `onefetch` is install show a 
+    git rev-parse &>/dev/null
     if test $status -eq 0
         if test "$_LAST_REPO" != (basename (git rev-parse --show-toplevel))
             onefetch
@@ -127,29 +82,7 @@ function cd
 end
 
 
-
-
-# Activate a python virtual environment
-function ac
-    if count $argv > /dev/null
-        set vers $argv
-    else
-        # find highest python version
-        for i in (seq 10 -1 7)
-            if type -q python3.$i
-                set vers $i
-                break
-            end
-        end
-    end 
-
-    if not test -e ./venv
-        eval "python3.$vers -m venv venv/"
-    end
-    source venv/bin/activate.fish
-end
-
-# Fast remove
+# Fast / better remove
 function rmf
 	mkdir -p .empty/
 	rsync -r --delete .empty/ $argv
@@ -158,7 +91,38 @@ function rmf
 end
 
 
+
+# Aliases for config files
+alias fishe="vim $HOME/.config/fish/config.fish"
+alias i3e="vim $HOME/.config/i3/config"
+alias vime="vim $HOME/.config/i3/config"
+alias vime="vim $HOME/.ssh/config"
+alias sse="vim $HOME/.config/starship.toml"
+
+
+
 # ===== Python Stuff =====
+
+
+# Activate a python virtual environment
+# Usage:
+#   `ac`    → activate a python3   environment
+#   `ac 8`  → activate a python3.8 environment
+#   `ac 10` → activate a python3.8 environment
+ 
+function ac
+    if not test -e venv
+        if count $argv &> /dev/null
+            set python_ver "python3.$argv"
+        else
+            set python_ver "python3"
+        end 
+
+        eval $python_ver -m venv venv
+    end
+
+    source venv/bin/activate.fish
+end
 
 
 # Profile a python script
@@ -191,79 +155,41 @@ alias piuf="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1
 # ===== Useful aliases =====
 
 
-## Useful aliases
-if type -q exa
-	alias ls='exa -lb --color=always --group-directories-first --icons --time-style=long-iso'   # preferred listing
-	alias lt='exa -aT --color=always --group-directories-first --icons --sort=size --level=3'  # tree listing
-end
+# Aliases for posix-commands
 
-
-
-
-
-
-
-# ====/ Useful aliases =====
-
-
-
-
-# Replace some more things with better alternatives
-alias cat='bat --style header --style rules --style snip --style changes --style header'
-alias yay='paru'
-
-# Common use
-alias tar!='tar -acf'
-alias untar.='tar -zxvf'
-alias untar="tar xfv"
-alias wget='wget -c '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias hw='hwinfo --short'                                   # Hardware Info
-alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
-alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
-
-# Get fastest mirrors 
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" 
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist" 
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist" 
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist" 
-
 
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
+alias dir='dir --color=auto'  # But why would anyone use this? :D
 
-# Copy to clipboard
-alias c="sed -z '\$ s/\n\$//' | xclip -sel clip"  # stripping newline
-alias C="xclip -sel clip"                         # don't strip newline
-alias cpd="pwd | c"                               # Current directory to clipboard
+alias tar.='tar caf'
+alias untar="tar xvf"
+alias grep='grep --color=auto'
 
-# Browser Stuff
-alias cr="chromium"
-alias fi="firefox"
-set -g browser firefox
-alias pdf="$BROWSER ./out/main.pdf"
-
-# General stuff
 alias dc="cd"
 alias ds="du -shx * | sort -h"
 alias ds.="du -shx * .* | sort -h"
 alias sl.="pkill -9 sl"
-alias nt="clear && neofetch"
 alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 11 12 13 14"
-alias thunar="/usr/bin/thunar & disown"
+alias nt="clear && neofetch"
 alias quote="fortune | cowsay | lolcat"
 alias b="bluetoothctl"
 alias please="sudo"
-alias fuck!="fuck --hard"
-alias bu="cp $1 $1.bak"
+alias fuck.="fuck --hard"
+alias bu="cp -r $1 $1.bak"
+
+
+# Shortcut for too long names
+alias rmv="rm venv -rf"
+alias mi="mediainfo"
+alias rmg="rm .git -rf"
+alias mypy="dmypy run"
+alias ss="source sauce"
+alias htop.="htop -d 0.1"
 
 # Git aliases
 alias git.="/usr/bin/git"
@@ -281,24 +207,32 @@ alias grm="git stash; git stash drop"  # Danger!
 alias gcl="git clone --depth 1"
 
 
-# Shortcut for too long names
-alias rmv="rm venv -rf"
-alias mi="mediainfo"
-alias rmg="rm .git -rf"
-alias mypy="dmypy run"
-alias ss="source sauce"
-alias htop.="htop -d 0.1"
 
-# _alias (for vim jump)
+# Copy to clipboard
+alias c="sed -z '\$ s/\n\$//' | xclip -sel clip"  # stripping newline
+alias C="xclip -sel clip"                         # don't strip newline
+alias cpd="pwd | c"                               # Current directory to clipboard
+
+# Browser Stuff
+alias cr="chromium"
+alias fi="firefox"
+set -g browser chromium
+export BROWSER=chromium
+alias pdf="$BROWSER ./out/main.pdf"
+
+# Replace commands with better commands (if they exist)
+
+if type -q exa
+	alias ls='exa -lb --color=always --group-directories-first --icons --time-style=long-iso'
+	alias lt='exa -aT --color=always --group-directories-first --icons --sort=size --level=3'
+end
 
 
-########### Matteo's stuff ############
+if type -q bat
+    alias cat='bat --style header --style rules --style snip --style changes --style header'
+end
 
-# Open files easily
-alias open="nohup xdg-open $argv 1>/dev/null 2>/dev/null"
-
-# find things
-alias findbn="sudo find / -not -path '/run/*' -name '$1' "
+# ====/ Useful aliases =====
 
 
 # ===== VPN Stuff =====
@@ -318,38 +252,80 @@ function tuvpn-disconnect
     psuccess "Disconnected from the VPN of Technische Universität Berlin."
 end
 
-### Random stuff ###
 
-## Export variable need for qt-theme
-if type "qtile" >> /dev/null 2>&1
-    set -x QT_QPA_PLATFORMTHEME "qt5ct"
+# ====/ VPN Stuff =====
+
+
+# ===== Personal config =====
+
+add_to_path ~/arm/bin ~/bin/i3programs ~/.local/share/gem/ruby/3.0.0/bin
+
+
+# Function to get to by common places
+# _ue
+function u
+	switch (string lower $argv)
+		case bs 
+			cd "$HOME/Documents/Uni/5/BSPrak/Exercises/Aufgabe_6"
+        case bs!
+            cd "$HOME/isisdl/[WS 2122] Betriebssystempraktikum"
+
+		case grs
+			cd "$HOME/Documents/Uni/5/GRS/Exercises"
+        case grs!
+            cd "$HOME/isisdl/[WS2122] Grundlagen der Rechnersicherheit"
+
+		case ig
+            cd "$HOME/Documents/Uni/5/IG/Exercises"
+        case ig!
+            cd "$HOME/isisdl/[WS21] Information Governance"
+
+		case latex
+			cd "$HOME/Documents/Programs/LaTeX"
+
+        case bu
+            cd "$HOME/Documents/Programs/Bash/BackupScript"
+
+        case isisdl is
+            cd "$HOME/Documents/Programs/Python/isisdl" && ac
+	end
 end
 
-## Run paleofetch if session is interactive
-if status --is-interactive
-    neofetch
+
+# ====/ Personal Config =====
+
+
+
+# Finally, export and set variables accordingly.
+
+## Enable qt-theme 
+if type "qtile" >> /dev/null 2>&1
+    export QT_QPA_PLATFORMTHEME="qt5ct"
 end
 
 # Colorful man pages
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+if type -q bat 
+    export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+end
+
+if type -q vim
+    export EDITOR=vim
+end
 
 
-# Hooks for various packages
-if test -x direnv
+# Hooks for packages
+if type -q direnv
     direnv hook fish | source
 end
 
-if test -x thefuck 
+if type -q thefuck 
     thefuck --alias | source
 end
 
-### Exports
-# To enable importing gpg keys via qr codes
-# See: https://wiki.archlinux.org/title/Paperkey
-export EDITOR=vim
 
-
-# Starship prompt
+# Display the final prompt
 if status --is-interactive
     source (starship init fish --print-full-init | psub)
+    neofetch
 end
+
