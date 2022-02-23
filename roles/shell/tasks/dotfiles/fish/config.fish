@@ -318,31 +318,6 @@ function tuvpn-disconnect
     psuccess "Disconnected from the VPN of Technische Universität Berlin."
 end
 
-
-# Connect to the VPN of NordVPN (currently not in use since `nordvpn` works)
-function _nordvpn-connect 
-    pnotify "Connecting to NordVPN ..."
-    if pidof openconnect >/dev/null
-      vpntd >/dev/null
-    end
-
-    if not string match -q -- "*active (running)*" (systemctl status nordvpnd)
-      sudo systemctl enable nordvpnd
-    end 
-
-    if not string match -q -- "*not logged in*" (nordvpn connect)
-      nordvpn login
-    end
-    nordvpn connect $argv
-end  
-
-# Disconnect from NordVPN
-function _nordvpn-disconnect 
-    nordvpn disconnect
-    psuccess "Disconnected from NordVPN."
-end
-
-
 ### Random stuff ###
 
 ## Export variable need for qt-theme
