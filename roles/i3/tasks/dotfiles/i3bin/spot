@@ -1,3 +1,0 @@
-#!/bin/bash
-echo uwu
-/usr/bin/spotify --force-device-scale-factor=1.3

@@ -1,8 +1,0 @@
-#!/bin/bash
-i3-msg append_layout $HOME/i3bin/i3layouts/layout_clion.json
-i3-msg "[title=ClionUnique] move scratchpad"
-i3-msg append_layout $HOME/i3bin/i3layouts/layout_clion.json
-
-i3-msg "[title=ClionUnique] border none"
-
-$HOME/bin/programs/clion2
