@@ -232,6 +232,10 @@ if type -q bat
     alias cat='bat --style header --style rules --style snip --style changes --style header'
 end
 
+if type -q pass
+    alias pc="pass -c"
+end
+
 # ====/ Useful aliases =====
 
 
