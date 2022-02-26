@@ -161,5 +161,7 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/vim/.vimrc', dest: '~/.vimrc' }
 
 
-
-
+- name: Bootstrapping vim
+  command: ~/.vim/pack/vendor/start/bootstrap.sh
+  args:
+    chdir: ~/.vim/pack/vendor/start/
