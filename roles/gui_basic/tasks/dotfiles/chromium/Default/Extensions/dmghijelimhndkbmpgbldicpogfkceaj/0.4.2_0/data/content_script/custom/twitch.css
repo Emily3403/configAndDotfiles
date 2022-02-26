@@ -1,0 +1,28 @@
+.hero,
+.footer,
+.side-nav,
+.subscribe-cta,
+.nav__container,
+.consent-banner,
+.subscribe-footer,
+.side-nav-page-info,
+.side-nav-card__avatar,
+.anon-front__featured-section {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+div[data-test-selector="tw-card-title"],
+div[data-test-selector="test_selector_prime_tracking_button_wrapper"] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.tw-input,
+.side-bar-contents,
+.prime-offers.tw-relative,
+.tw-core-button--secondary,
+.pl-age-restriction-overlay,
+.tw-core-button--secondary.tw-core-button--disabled {
+  background: #c7c7c7 !important;
+}

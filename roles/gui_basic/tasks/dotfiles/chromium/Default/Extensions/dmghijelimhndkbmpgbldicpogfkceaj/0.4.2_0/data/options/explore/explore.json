@@ -1,0 +1,22 @@
+[
+  {"id": "zip-maker", "title": "ZIP Writer"},
+  {"id": "zip-reader", "title": "ZIP Reader"},
+  {"id": "speed-dial", "title": "Speed Dial"},
+  {"id": "dark-theme", "title": "Dark Theme"},
+  {"id": "epub-reader", "title": "ePUB Reader"},
+  {"id": "mobi-reader", "title": "MOBI Reader"},
+  {"id": "easy-emoji", "title": "Emoji Finder"},
+  {"id": "flag-plus", "title": "Country Flag +"},
+  {"id": "audio-to-mp3", "title": "Audio to MP3"},
+  {"id": "color-picker", "title": "Color Picker"},
+  {"id": "blank-new-tab", "title": "Dark New Tab"},
+  {"id": "symbol-finder", "title": "Symbol Finder"},
+  {"id": "audio-equalizer", "title": "Audio Equalizer"},
+  {"id": "custom-page-zoom", "title": "Custom Page Zoom"},
+  {"id": "useragent-switcher", "title": "User-Agent Switcher"},
+  {"id": "custom-style-script", "title": "Custom Style Script"},
+  {"id": "magnifying-glass", "title": "Magnifying Glass (Hover Zoom)"},
+  {"id": "video-audio-downloader", "title": "Video & Audio Downloader"},
+  {"id": "color-changer-facebook", "title": "Color Changer for Facebook™"},
+  {"id": "screen-color-temperature", "title": "Color Temperature (Change Lux)"}
+]

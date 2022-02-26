@@ -1,0 +1,40 @@
+.gb_b,
+.gb_W ,
+.Fq82mf,
+a[href*="./"],
+a[href*="?tab="],
+a[href*="&tab="],
+a[aria-label*="@gmail.com"] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+img.gb_ua {
+  filter: invert(0) !important;
+  -webkit-filter: invert(0) !important;
+}
+
+a[href*="?tab="] span,
+a[href*="&tab="] span {
+  color: rgba(177, 177, 177, 0.87) !important;
+}
+
+#docs-branding-logo,
+div[class*="-button-action"] {
+  background-color: #999999 !important;
+}
+
+div[class*="-button-action"] {
+  border-color: #666666 !important;
+  background-image: none !important;
+}
+
+.a-D-gc-wKOTTc .a-ec-Gd button.RTMQvb {
+  color: #ababab !important;
+  background: #000 !important;
+}
+
+.h-uj {background: #d6d6d6 !important}
+.gb_xd {background-color: #d9d9d9 !important}
+.a-nEbBXb .a-qc-La {background-color: #e3e3e3 !important}
+.a-nEbBXb .a-D-B.a-D-B-gc-WErN3d {background-color: #c0c0c0 !important}

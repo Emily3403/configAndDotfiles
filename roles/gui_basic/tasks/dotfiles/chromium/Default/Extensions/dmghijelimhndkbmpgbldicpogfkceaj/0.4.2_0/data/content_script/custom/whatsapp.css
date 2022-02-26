@@ -1,0 +1,13 @@
+a[target="_blank"],
+div[data-asset-intro-image],
+div[data-asset-intro-image-light] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+._31gEB,
+._1evad,
+.app-wrapper-web::after {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}

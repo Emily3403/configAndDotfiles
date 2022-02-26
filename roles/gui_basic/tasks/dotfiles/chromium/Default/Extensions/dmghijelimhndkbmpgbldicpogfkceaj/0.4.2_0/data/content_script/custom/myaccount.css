@@ -1,0 +1,25 @@
+a[href*="./"],
+a[href*="?tab="],
+a[href*="&tab="],
+a[aria-label*="@gmail.com"] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.B1tEqd,
+.gb_l .gb_Ma,
+.gb_sa.gb_6e .gb_md,
+.EhlvJf.KKjvXb .iKN8Oe .DPvwYc, .EhlvJf.KKjvXb .GiKO7c {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+a[href*="?tab="] span,
+a[href*="&tab="] span {
+  color: rgba(177, 177, 177, 0.87) !important;
+}
+
+article a div,
+a[href*="privacy.google."] {
+  color: #9e8340 !important;
+}

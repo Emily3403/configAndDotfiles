@@ -1,0 +1,38 @@
+.I3EnF,
+.zHQkBf,
+.T8qVIf,
+.zZhnYe:not(.RDPZE),
+.nDKKZc.zZhnYe:not(.RDPZE) {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#docs-branding-logo,
+div[class*="-button-action"] {
+  background-color: #999999 !important;
+}
+
+div[class*="-button-action"] {
+  border-color: #666666 !important;
+  background-image: none !important;
+}
+
+div#viewport {
+  background: #eaeaea !important;
+}
+
+a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu {
+  color: #ad773f !important;
+}
+
+.a, cite, cite a:link, cite a:visited, .cite, .cite:link, #nygTcd>i, .bc a:link {
+  color: #610066 !important;
+}
+
+.mblink:visited, a:visited {
+  color: #679650 !important;
+}
+
+.RAYh1e.qmmlRd .xkfVF {
+  background-color: #e0e0e0 !important;
+}

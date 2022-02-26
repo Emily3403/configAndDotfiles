@@ -1,0 +1,58 @@
+.nav,
+a[href*="./"],
+playback-header,
+a[href*="?tab="],
+a[href*="&tab="],
+li[data-item-id],
+playback-controls,
+a[href*="accounts.google."],
+a[aria-label*="@gmail.com"] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.gb_3c.gb_Og.gb_i {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+playback-header, 
+playback-controls {
+  background-color: transparent !important;
+}
+
+a[href*="?tab="] span,
+a[href*="&tab="] span {
+  color: rgba(177, 177, 177, 0.87) !important;
+}
+
+.gb_ye.gb_vc.gb_we,
+#docs-branding-logo,
+div[class*="-button-action"] {
+  background-color: #999999 !important;
+}
+
+div[class*="-button-action"] {
+  border-color: #666666 !important;
+  background-image: none !important;
+}
+
+div#viewport {background: #eaeaea !important}
+.SDkEP {background-color: #e6e6e6 !important}
+.mblink:visited, a:visited {color: #679650 !important}
+#irc_bgl, #irc_cc, .irc_c {background-color: #e0e0e0 !important}
+.RNNXgb {box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.1) !important}
+.a, cite, cite a:link, cite a:visited, .cite, .cite:link, #nygTcd>i, .bc a:link {color: #610066 !important}
+a:link, .w, #prs a:visited, #prs a:active, .q:active, .q:visited, .kl:active, .tbotu {color: #ad773f !important}
+.U8Ww7d, .U8Ww7d:visited, .drrice .IfEcue, .drrice .IfEcue:visited, .U8Ww7d.xjAeve, .U8Ww7d.xjAeve:visited {background-color: #689f38 !important}
+
+.bYEzqc.LAhoGb {
+  background-color: rgb(255 255 255 / 75%) !important;
+}
+
+.mat-icon-button,
+.mat-icon-button[_ngcontent-lvx-c22],
+.mat-icon-button[_ngcontent-lvx-c22]:hover, 
+.mat-icon-button.cdk-focused[_ngcontent-lvx-c22] {
+  color: rgb(0 0 0 / 80%) !important;
+}

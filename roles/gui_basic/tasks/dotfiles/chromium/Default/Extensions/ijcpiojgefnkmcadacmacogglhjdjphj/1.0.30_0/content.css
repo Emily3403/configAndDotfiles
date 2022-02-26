@@ -1,0 +1,42 @@
+body {
+   --ShinigamiEyesTFriendly: #77B91E;
+   --ShinigamiEyesTransphobic: #991515;
+}
+
+.shinigami-eyes-theme-green-red-max {
+   --ShinigamiEyesTFriendly: #00FF00;
+   --ShinigamiEyesTransphobic: #FF0000;
+}
+
+.shinigami-eyes-theme-purple-yellow {
+   --ShinigamiEyesTFriendly: rgb(153, 0, 255);
+   --ShinigamiEyesTransphobic: rgb(179, 152, 0);
+}
+
+.shinigami-eyes-theme-cyan-orange {
+   --ShinigamiEyesTFriendly: rgb(98, 161, 197);
+   --ShinigamiEyesTransphobic: #FB6A4A;
+}
+
+.assigned-label-transphobic, a.assigned-label-transphobic { color: var(--ShinigamiEyesTransphobic) !important; }
+.assigned-label-t-friendly, a.assigned-label-t-friendly { color: var(--ShinigamiEyesTFriendly) !important; }
+
+.has-assigned-label * { color: inherit !important; }
+.shinigami-eyes-debug-snippet-highlight {
+     outline: 2px dashed darkorchid !important;
+     background-color: darkorchid !important;
+     color: white !important;
+ }
+ .shinigami-eyes-debug-snippet-highlight:after {
+    content: " ";
+    pointer-events: none;
+    z-index: 1000000;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: darkorchid !important;
+    opacity: 0.5;
+ }

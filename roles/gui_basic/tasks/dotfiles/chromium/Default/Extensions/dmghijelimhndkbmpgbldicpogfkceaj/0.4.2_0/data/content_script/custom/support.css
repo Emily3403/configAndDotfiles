@@ -1,0 +1,21 @@
+a[href*="./"],
+a[href*="?tab="],
+a[href*="&tab="] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.gb_Md,
+.gb_je:not(.gb_3),
+.navigation-menu a,
+.info-bar-container,
+.hcfe .promoted-search__container,
+.promoted-search-greeting__logo-container {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.portal .list-of-hcs li h3,
+.portal .product-selector li h3 {
+  color: #7d7d7d !important;
+}

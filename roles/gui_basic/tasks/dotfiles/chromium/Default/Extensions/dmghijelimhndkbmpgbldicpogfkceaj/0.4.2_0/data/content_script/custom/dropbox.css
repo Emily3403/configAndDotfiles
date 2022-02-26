@@ -1,0 +1,20 @@
+.RebrandHero,
+.RebrandMedia,
+.RebrandPlane,
+.arbor-aspect-box,
+.arbor-button--dbx-blue,
+.arbor-css-grid-element,
+.button.button--primary,
+.RebrandNavigation-container,
+.arbor-background-color--panda-black,
+.business-2015 .button-primary, .dws.business-2015 .button-primary,
+.business-comparison-matrix .business-comparison-matrix__td--button,
+.business-2015 .button-secondary, .dws.business-2015 .button-secondary {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#top-notification-bar-container {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}

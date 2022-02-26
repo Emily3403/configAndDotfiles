@@ -1,0 +1,14 @@
+a[href*="./"],
+a[href*="?tab="],
+a[href*="&tab="],
+div[class*="-button-flat"],
+a[aria-label*="@gmail.com"],
+.docs-homescreen-grid-metadata-row {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+a[href*="?tab="] span,
+a[href*="&tab="] span {
+  color: rgba(177, 177, 177, 0.87) !important;
+}

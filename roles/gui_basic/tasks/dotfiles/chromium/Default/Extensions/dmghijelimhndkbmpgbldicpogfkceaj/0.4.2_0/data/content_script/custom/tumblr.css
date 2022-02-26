@@ -1,0 +1,56 @@
+header, 
+footer {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.OPol8,
+._149RG,
+._1PcJ1,
+._3LljV,
+._3r0gp,
+._3LdQR,
+._221MH,
+._3kSOF._2sWUK,
+.discover-tags,
+.discover-tumblelogs,
+.l-header-container--refresh {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.identity .controls_section.user_list .avatar,
+.discover .post_brick.reblog_header .post_header .tumblelog_avatar {
+  filter: invert(0) !important;
+  -webkit-filter: invert(0) !important;
+}
+
+article {
+  background-color: #dadada !important;
+}
+
+.l-container {
+  background: #e4e4e4 !important;
+}
+
+._2hdQN {
+  background-color: #c8bfb3 !important;
+}
+
+.POCCe {
+  background-color: #343434 !important;
+}
+
+._3EaPT svg {
+  fill: black !important;
+}
+
+.ui_search .search_form_field:before,
+.tab_bar .tab_messaging .tab_anchor:before,
+.tab_bar .tab_nav_account .tab_anchor i:before {
+  color: black !important;
+}
+
+#tumblr_lightbox {
+  background-color: rgb(240,240,240,0.9) !important;
+}

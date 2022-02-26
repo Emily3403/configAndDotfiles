@@ -1,0 +1,88 @@
+#scene,
+html, body {
+  background: #222 !important;
+}
+
+.vTtwMg9xIJV__container,
+.vTtwMg9xIJV__interactive {
+  background: #ececec !important;
+}
+
+.gallery-cell,
+#pane .widget-pane,
+#app-container #scene {
+  transform: translate3d(0,0,0);
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+div[aria-label='Street View'],
+#pane .widget-pane .section-hero-header-hero,
+#pane .widget-pane .section-image-pack-button,
+#pane .widget-pane .section-directions-omnibox,
+#pane .widget-pane .section-image-pack-image-container,
+#pane .widget-pane .section-hero-header-image-hero-container {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+
+.widget-homescreen,
+.section-common-icon,
+.section-area-weather-icon,
+.widget-settings-icon-close,
+.widget-settings-button-icon,
+.maps-sprite-settings-chevron-left,
+.section-categorical-shortcut-more,
+.section-categorical-shortcut-button-icon {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+.HzV7m-tJHJj,
+.qqvbed-tJHJj,
+.qqvbed-tJHJj-fmcmS,
+.HzV7m-tJHJj>.i4ewOd-r4nke,
+.section-homescreen-expand-entrypoint,
+.section-homescreen-expand-single-card {
+  color: #616161 !important;
+  background-color: #c5c5c5 !important;
+}
+
+.section-compact-filters,
+.section-omnibox-spacer-blue,
+.section-compact-filters-compact-footer {
+  opacity: 0.7;
+}
+
+.section-filter-label,
+.section-filter-user-rating-select {
+  color: #000 !important;
+}
+
+.widget-homescreen .section-layout.section-cardbox {
+  background-color: rgb(193 193 193) !important;
+}
+
+.widget-settings-pane {
+  background-color: #313131 !important;
+}
+
+.widget-settings-button,
+.widget-settings-button-label, 
+.widget-settings-sub-button-label {
+  color: gainsboro !important;
+}
+
+.section-result {
+  background: #d6d6d6 !important;
+}
+
+.widget-pane-toggle-button {
+  box-shadow: none !important;
+}
+
+.section-directions-trip {
+  background: #e4e4e4 !important;
+}

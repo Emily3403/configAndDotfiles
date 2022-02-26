@@ -1,0 +1,70 @@
+footer {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.id_button,
+li[id*="scpt"],
+.crs_wide.itile,
+.search_controls,
+.b_searchboxForm,
+.b_scopebar .b_active,
+.insights.rr.pin .insml,
+.sw_st, .sw_sth, .sw_ste,
+.sfisd .sfisi, .sfisd .sfisi:hover {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#close,
+#b_footer,
+#langChange,
+#hp_container,
+#hp_id_hdr #id_h,
+#detailPage #headerButtons .action,
+div#hp_container #hp_sw_hdr ul#sc_hdu,
+div#hp_container #hp_ctrls div#sh_rdiv {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#carousel #crs_pane .itile .crs_item #crs_content img, 
+#carousel #crs_pane .itile .crs_item .crs_content img, 
+#carousel #crs_pane .itile .crs_item .see_more_left img {
+  filter: invert(0) !important;
+  -webkit-filter: invert(0) !important;
+}
+
+cite,
+#bk_wr_container cite a,
+#b_results cite.sb_crmb a,
+#b_results .b_adurl cite a,
+#b_results cite a.sb_metalink {
+  color: #006d69 !important;
+}
+
+#b_results>li a {color: #a00092 !important}
+#b_results>.b_ad a {color: #a06100 !important}
+.b_ad cite, .b_ad cite a {color: #5d006d !important}
+
+#b_header,
+#detailPage,
+.insights.rr,
+#detailCanvas,
+#detailheader {
+  background-color: #e1e1e1 !important;
+}
+
+#b_footer {
+  background-color: #0a0a0a !important; 
+}
+
+#detailMeta a.ptitle {
+  color: rgb(19 19 19 / 80%) !important; 
+}
+
+.vidDat .wi,
+#detailPage a,
+#detailPage .cpyrtc {
+  color: #000 !important; 
+}

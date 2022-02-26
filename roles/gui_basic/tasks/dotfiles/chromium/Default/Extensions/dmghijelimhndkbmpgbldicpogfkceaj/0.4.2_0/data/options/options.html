@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dark Mode</title>
+    <link type="text/css" rel="stylesheet" href="options.css">
+    <link type="text/css" rel="stylesheet" href="explore/explore.css">
+    <link type="text/css" rel="stylesheet" href="resources/styles/toolbar.css">
+    <link type="text/css" rel="stylesheet" href="resources/styles/overlay.css">
+    <link type="text/css" rel="stylesheet" href="resources/styles/scrollbar.css">
+  </head>
+  <body>
+    <div id="explore"></div>
+    <div class="overlay">
+      <div class="container">
+        <div class="close" id="close-overlay" title="Close">
+          <svg width="10" height="10" viewBox="0 0 512 512">
+            <g transform="matrix(1.0842783,0,0,1.0842783,-18.118477,-24.53228)">
+              <rect width="499.08917" height="65.118034" x="112.26851" y="-28.276203" ry="0" transform="rotate(45)"/>
+              <rect width="499.08716" height="65.118034" x="-245.26077" y="329.25357" ry="0" transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"/>
+            </g>
+          </svg>        
+        </div>
+        <div class="items">
+          <table>
+            <tr>
+              <td class="header" colspan='3'>
+                <span class="title">Dark browsing pack</span>
+              </td>
+            </tr>
+            <tr>
+              <td id="dark-mode-item" title="Dark Mode - a global dark theme for the web">
+                <span class="status" title="Added to browser">
+                  <svg width="18" height="18" viewBox="0 0 32 32">
+                    <path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"/>
+                  </svg>
+                </span>
+                <span class="title">Dark Mode</span>
+              </td>
+              <td id="dark-new-tab-item" title="Dark New Tab - darkens the new tab page">
+                <span class="status"></span>
+                <span class="title">Dark New Tab</span>
+              </td>
+              <td id="dark-theme-item" title="Dark Theme - a simple and elegant dark theme">
+                <span class="status"></span>
+                <span class="title">Dark Theme</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="footer" colspan='3'>
+                <span class="title"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar">
+      <table>
+        <tr>
+          <td id="dark-browsing-pack" title="Dark browsing pack">
+            <svg width="12" height="12" viewBox="0 0 24 24">
+              <path d="M12.9,2.6l2.3,5c0.1,0.3,0.4,0.5,0.7,0.6l5.2,0.8C22,9,22.3,10,21.7,10.6l-3.8,3.9c-0.2,0.2-0.3,0.6-0.3,0.9 l0.9,5.4c0.1,0.8-0.7,1.5-1.4,1.1l-4.7-2.6c-0.3-0.2-0.6-0.2-0.9,0l-4.7,2.6c-0.7,0.4-1.6-0.2-1.4-1.1l0.9-5.4 c0.1-0.3-0.1-0.7-0.3-0.9l-3.8-3.9C1.7,10,2,9,2.8,8.9l5.2-0.8c0.3,0,0.6-0.3,0.7-0.6l2.3-5C11.5,1.8,12.5,1.8,12.9,2.6z"/>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td id="test-dark-mode" title="Test dark styles or your custom dark theme">
+            <svg width="12" height="12" viewBox="0 0 32 32">
+              <path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"/>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td id="youtube-tutorial" title="See tutorial on YouTube">
+            <svg width="12" height="12" viewBox="0 0 24 24">
+              <path d="M 4.0898438,2.2384375 C 2.2603414,2.2384375 0.21480069,3.812498 0.21484375,5.642 L 0.21496088,10.618 C 0.21500394,12.447501 2.2604585,14.021562 4.0899609,14.021562 H 11.920039 C 13.749542,14.021562 15.795082,12.447501 15.795039,10.618 L 15.794922,5.642 C 15.794879,3.812498 13.749425,2.2384375 11.919922,2.2384375 Z M 6.1955233,5.3359375 10.332242,7.8066406 C 10.764925,8.0521486 10.673494,8.4409148 10.377164,8.5859375 L 6.1154452,11.123047 C 5.7619228,11.278428 5.640275,11.007097 5.6408358,10.806641 V 5.6542969 C 5.6340504,5.2082973 6.0075973,5.2139695 6.1955233,5.3359375 Z" transform="scale(1.5)"/>
+            </svg>
+          </td>
+        </tr>
+        <tr>
+          <td id="open-support-page" title="Open support page">
+            <svg width="12" height="12" viewBox="0 0 1792 1792">
+              <path d="M1088 1256v240q0 16-12 28t-28 12h-240q-16 0-28-12t-12-28v-240q0-16 12-28t28-12h240q16 0 28 12t12 28zm316-600q0 54-15.5 101t-35 76.5-55 59.5-57.5 43.5-61 35.5q-41 23-68.5 65t-27.5 67q0 17-12 32.5t-28 15.5h-240q-15 0-25.5-18.5t-10.5-37.5v-45q0-83 65-156.5t143-108.5q59-27 84-56t25-76q0-42-46.5-74t-107.5-32q-65 0-108 29-35 25-107 115-13 16-31 16-12 0-25-8l-164-125q-13-10-15.5-25t5.5-28q160-266 464-266 80 0 161 31t146 83 106 127.5 41 158.5z"/>
+            </svg>            
+          </td>
+        </tr>
+        <tr>
+          <td id="make-a-donation" title="Make a donation">
+            <svg width="12" height="12" viewBox="-0.709 -11.555 141.732 141.732">
+              <path d="M140.314,37.654C140.314,16.858,123.402,0,102.537,0c-13.744,0-25.77,7.317-32.379,18.255C63.549,7.317,51.521,0,37.777,0 C16.912,0,0,16.858,0,37.654c0,10.821,4.588,20.57,11.922,27.438h-0.01l54.084,51.584c0.992,1.188,2.48,1.945,4.148,1.945 c1.545,0,2.936-0.653,3.92-1.696l54.346-51.833h-0.016C135.729,58.225,140.314,48.476,140.314,37.654"/>
+            </svg>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <details class="section-1">
+      <summary>I. Classic Themes</summary>
+      <div class="themes">
+        <table class="section">
+          <tr>
+            <td>
+              <table class="options">
+                <tr><td><label class="comment">A. General dark styles (class a)</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_1">Dark mode - simple dark - I</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_39">Dark mode - simple dark - II</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_40">Dark mode - simple dark - III</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_2">Dark mode - midnight dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_3">Dark mode - sharp dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_4">Dark mode - pitch dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_5">Dark mode - texture dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_6">Dark mode - amoled dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_7">Dark mode - ice dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_8">Dark mode - blue dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_9">Dark mode - coffee dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_10">Dark mode - twilight dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_11">Dark mode - blue dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_12">Dark mode - blue dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_13">Dark mode - blue dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_14">Dark mode - owl dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_17">Dark mode - yellow dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_18">Dark mode - orange dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_20">Dark mode - classy dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_22">Dark mode - grey dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_23">Dark mode - pink dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_24">Dark mode - nicer dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_30">Dark mode - transparent dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_32">Dark mode - pitch dark</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_33">Dark mode - purple dark</label></td></tr>
+                <tr class="hidden"><td><label><input type="checkbox"></label></td></tr>
+              </table>
+            </td>
+            <td>
+              <table class="options">
+                <tr><td><label class="comment">B. General dark styles (class b)</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_15">Dark invert #1</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_16">Dark invert #2</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_19">Dark invert #3</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_21">Dark invert #4</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_25">Dark invert #5</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_26">Dark invert #6</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_27">Dark invert #7</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_28">Dark invert #8</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_29">Dark invert #9</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_31">Dark invert #10</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_34">Dark invert #11</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_35">Dark invert #12</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_36">Dark invert #13</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dark_37">Dark invert #14</label></td></tr>
+                <tr class="hidden"><td><label><input type="checkbox"></label></td></tr>
+              </table>
+            </td>
+            <td>
+              <table class="options">
+                <tr><td><label class="comment">C. Custom dark styles</label></td></tr>
+                <tr><td><label><input type="checkbox" id="bing">Dark theme for Bing</label></td></tr>
+                <tr><td><label><input type="checkbox" id="ebay">Dark theme for Ebay</label></td></tr>
+                <tr><td><label><input type="checkbox" id="gmail">Dark theme for Gmail</label></td></tr>
+                <tr><td><label><input type="checkbox" id="twitter">Dark theme for Twitter</label></td></tr>
+                <tr><td><label><input type="checkbox" id="reddit">Dark theme for Reddit</label></td></tr>
+                <tr><td><label><input type="checkbox" id="yahoo">Dark theme for Yahoo</label></td></tr>
+                <tr><td><label><input type="checkbox" id="twitch">Dark theme for Twitch</label></td></tr>
+                <tr><td><label><input type="checkbox" id="github">Dark theme for GitHub</label></td></tr>
+                <tr><td><label><input type="checkbox" id="tumblr">Dark theme for Tumblr</label></td></tr>
+                <tr><td><label><input type="checkbox" id="yandex">Dark theme for Yandex</label></td></tr>
+                <tr><td><label><input type="checkbox" id="amazon">Dark theme for Amazon</label></td></tr>
+                <tr><td><label><input type="checkbox" id="dropbox">Dark theme for Dropbox</label></td></tr>
+                <tr><td><label><input type="checkbox" id="youtube">Dark theme for YouTube</label></td></tr>
+                <tr><td><label><input type="checkbox" id="telegram">Dark theme for Telegram</label></td></tr>
+                <tr><td><label><input type="checkbox" id="facebook">Dark theme for Facebook</label></td></tr>
+                <tr><td><label><input type="checkbox" id="wikipedia">Dark theme for Wikipedia</label></td></tr>
+                <tr><td><label><input type="checkbox" id="instagram">Dark theme for Instagram</label></td></tr>
+                <tr><td><label><input type="checkbox" id="whatsapp">Dark theme for WhatsApp</label></td></tr>
+                <tr><td><label><input type="checkbox" id="w3schools">Dark theme for W3Schools</label></td></tr>
+                <tr><td><label><input type="checkbox" id="play">Dark theme for Google Play</label></td></tr>
+                <tr><td><label><input type="checkbox" id="docs">Dark theme for Google Docs</label></td></tr>
+                <tr><td><label><input type="checkbox" id="drive">Dark theme for Google Drive</label></td></tr>
+                <tr><td><label><input type="checkbox" id="sites">Dark theme for Google Sites</label></td></tr>
+                <tr><td><label><input type="checkbox" id="maps">Dark theme for Google Maps</label></td></tr>
+                <tr><td><label><input type="checkbox" id="duckduckgo">Dark theme for DuckDuckGo</label></td></tr>
+                <tr><td><label><input type="checkbox" id="google">Dark theme for Google Search</label></td></tr>
+                <tr><td><label><input type="checkbox" id="stackoverflow">Dark theme for Stack Overflow</label></td></tr>
+                <tr><td><label><input type="checkbox" id="support">Dark theme for Google Support</label></td></tr>
+                <tr><td><label><input type="checkbox" id="translate">Dark theme for Google Translate</label></td></tr>
+                <tr><td><label><input type="checkbox" id="accounts">Dark theme for Google Accounts</label></td></tr>
+                <tr><td><label><input type="checkbox" id="myaccount">Dark theme for Google MyAccount</label></td></tr>
+                <tr class="hidden"><td><label><input type="checkbox"></label></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </details>
+    <details class="section-2">
+      <summary>II. Options</summary>
+      <div class="content">
+        <table class="section">
+          <tr>
+            <td>
+              <label class="comment">Support page</label>
+              <label class="comment">
+                <input type="checkbox" id="supportpage">
+                Open support page for upgrades
+              </label>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </details>
+    <details class="section-3">
+      <summary>III. Custom Dark</summary>
+      <div class="content">
+        <table class="section">
+          <tr>
+            <td>
+              <label class="comment">
+                <input type="checkbox" id="dark_38">
+                Dark mode - custom dark
+              </label>
+              <label class="comment">Write a custom dark theme</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea type="text" id="custom" spellcheck="false" placeholder="i.e. html, html * {color: #eeeeee !important; background-color: #222222 !important}"></textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </details>
+    <details class="section-4">
+      <summary>IV. Native Dark</summary>
+      <div class="content">
+        <table class="section">
+          <tr>
+            <td>
+              <label class="comment">
+                <input type="checkbox" id="dark_41">
+                Dark mode - native dark
+              </label>
+              <label class="comment">
+                <input type="checkbox" id="nativeforceborder">
+                When the native dark theme is active, change all border colors on the page.
+              </label>
+              <label class="comment">
+                <input type="checkbox" id="nativeignore">
+                When the native dark theme is active, ignore all - Custom dark styles - in section I.C above.
+              </label>
+              <label class="comment">Extra CSS rules for native dark theme</label>
+              <p class="note">
+                Note: Native dark uses document.styleSheets, MutationObserver, and the following additional CSS rules to darkens the page as new styles are adding. Edit the below rules to customize desired element's styles in dark mode. This dark theme is still in beta and may not work properly. Moreover, it may slow down content-heavy websites.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea type="text" id="native" spellcheck="false" placeholder="i.e. html, html * {color: #eeeeee !important; background-color: #222222 !important}"></textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </details>
+    <details class="section-5">
+      <summary>V. Exclude list</summary>
+      <div class="content">
+        <table class="section">
+          <tr>
+            <td>
+              <label class="comment">Comma-separated list of cookies, localStorage or sessionStorage values to exclude from dark mode (when a page contains one of these values in the cookie, localStorage, or sessionStorage)</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea type="text" id="cookie" spellcheck="false" placeholder="i.e. theme=dark, ..."></textarea>
+            </td>
+          </tr>
+          <!-- -->
+          <tr>
+            <td>
+              <label class="comment">Comma-separated list of domains to exclude from dark mode</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea type="text" id="whitelist" spellcheck="false" placeholder="i.e. google.com, yahoo.com, bing.com, ..."></textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </details>
+    <!-- -->
+    <script type="text/javascript" src="explore/explore.js" async></script>
+    <script type="text/javascript" src="../rules/rules.js"></script>
+    <script type="text/javascript" src="vendor/behave.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+  </body>
+</html>

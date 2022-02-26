@@ -1,0 +1,27 @@
+.w3-code,
+.w3-theme,
+.w3-dark-grey,
+.w3-dark-gray,
+.w3-hover-dark-grey:hover,
+.w3-hover-dark-gray:hover {
+  opacity: 0.8;
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.sidenav,
+div[class*="w3-black"],
+div[class*="w3-black"]:hover {
+  background-color: #FFF !important;
+}
+
+.w3-dark-grey,
+.w3-dark-gray,
+.w3-hover-dark-grey:hover,
+.w3-hover-dark-gray:hover {
+  background-color: #1d1d1d !important
+}
+
+* {
+  border-color: #292929 !important;
+}

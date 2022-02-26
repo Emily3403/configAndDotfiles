@@ -1,0 +1,41 @@
+.sbb,
+.grad,
+.wizard-header,
+div[role="contentinfo"] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#hd,
+#eyebrow,
+#mega-uh,
+#mega-topbar,
+#mega-banner,
+#yucs-top-bar,
+#mega-bottombar,
+#binBtn_btn_submit,
+#sb_rel_my-adsLDRB-iframe {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#results a,
+#results #web a,
+#results #left #web p a,
+#results .compTitle h3 a {
+  color: #995600 !important;
+}
+
+#results #web a.cite,
+#results .compTitle a,
+#results #web .compTitle span,
+#results #web .compDlink span,
+#results .LocalPc-LRRu .fc-10th,
+#results #web .compArticleList span,
+#results #right .compImageList span {
+  color: #750070 !important;
+}
+
+#atomic a {
+  color: #53ae00 !important;
+}

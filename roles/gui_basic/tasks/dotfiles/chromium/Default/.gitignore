@@ -1,0 +1,16 @@
+Sessions
+Session\ Storage
+Service\ Worker/*
+IndexedDB
+Local\ Storage
+Cookies*
+DownloadMetadata
+History*
+Login\ Data*
+QuotaManager*
+Safe\ Browsing\ Cookies
+TransportSecurity
+Trusted\ Vault
+Web\ Data*
+GPUCache
+Network\ Action\ Predictor

@@ -1,0 +1,41 @@
+html, body {
+  color: #eeeeee !important;
+  background-image: none !important;
+  background-color: #292929 !important;
+}
+
+html::before, body::before {
+  background-image: none !important;
+}
+
+html * {
+  color: #eeeeee !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-radius: unset !important;
+  border-color: #555555 !important;
+  outline-color: #555555 !important;
+  background-color: rgb(41, 41, 41, 0.95) !important;
+}
+
+img {
+  z-index: 1;
+  filter: brightness(0.85) !important;
+  background-color: transparent !important;
+}
+
+video {
+  z-index: 1;
+  background-color: transparent !important;
+}
+
+svg {opacity: 0.85 !important}
+cite, cite * {color: #029833 !important}
+input {background-color: #333333 !important}
+a {background-color: rgba(255, 255, 255, 0.01) !important}
+li, input, select, button {background-image: none !important}
+textarea, input[type='text'] {background-color: #555555 !important}
+
+:before {color: #eeeeee !important}
+:link, :link * {color: #8db2e5 !important}
+:visited, :visited * {color: rgb(211, 138, 138) !important}

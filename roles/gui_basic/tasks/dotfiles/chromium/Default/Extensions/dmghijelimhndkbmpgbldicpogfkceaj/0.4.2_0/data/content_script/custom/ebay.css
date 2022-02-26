@@ -1,0 +1,33 @@
+.gh-td,
+.vi-filmstp,
+.vi-feedback,
+.vi-VR-btnWdth-XL,
+.s-item .NEGATIVE,
+.vi-swc-embg-dollar,
+.social-widget .sw a,
+.vi-ds3cont-box-marpad,
+.vi-swc-top-rated-plus,
+.mfe-lex .mfe-hotness-badge,
+.gh-sch-prom#gh .btn.btn-ter,
+.srp-controls--selected-value,
+.srp-controls__control--legacy,
+.vi-bb-flex #CenterPanelDF .watch-redesign.new-brdr-btns .btn-ter {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+a[id],
+a[data-track],
+a[aria-describedby] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#gh-la,
+#gh-cat-box,
+#binBtn_btn,
+#linkMainImg,
+#binBtn_btn_submit {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}

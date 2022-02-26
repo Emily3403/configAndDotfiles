@@ -1,0 +1,12 @@
+html[temporarily-dark-style] {
+  filter: none !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+  background: #292929 !important;
+  -webkit-filter: none !important;
+}
+
+html[temporarily-dark-style] * {
+  display: none !important;
+}

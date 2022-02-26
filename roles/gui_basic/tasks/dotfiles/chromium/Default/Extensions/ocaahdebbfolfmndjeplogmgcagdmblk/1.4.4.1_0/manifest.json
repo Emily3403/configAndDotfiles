@@ -1,0 +1,45 @@
+{
+   "author": "NeverDecaf",
+   "background": {
+      "persistent": false,
+      "scripts": [ "scripts/util.js", "scripts/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "assets/icon/icon_16.png",
+         "24": "assets/icon/icon_24.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_extension_Name__"
+   },
+   "content_scripts": [ {
+      "js": [ "scripts/inject.js" ],
+      "matches": [ "https://chrome.google.com/webstore*", "https://addons.opera.com/*extensions/details/*", "https://microsoftedge.microsoft.com/addons/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extension_Description__",
+   "homepage_url": "https://github.com/NeverDecaf/chromium-web-store",
+   "icons": {
+      "128": "assets/icon/icon_128.png",
+      "16": "assets/icon/icon_16.png",
+      "24": "assets/icon/icon_24.png",
+      "32": "assets/icon/icon_32.png",
+      "48": "assets/icon/icon_48.png",
+      "64": "assets/icon/icon_64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqF/d41Q7agjkUzYq8ZGbQr8XW8mmEIMXOnR1uCTnYLL+Dm9Z+LO50xZukOISNy6zFxpI8ts/OGLsm+I2x9+UprUU4/EVdmxuwegFE6NBoEhHoRNYY0gbXZkaU8YY/XwzjVY/k18DDhl5NYPEnF6uq4Oyidg+xtd3W4+iGYczuOLER1Tp5y614zOTphcvFYhvUkCijQ6HT1TtRq/34SlFoRQqo4SFiLriK451xWIcfwiMLIekWrdoQa1v8dqIlMA3r6CKc0QykJpSYbiyormWiZ0hl2HLpkZ85mD9V0eDQ5RCtb6vkybK7INcq4yKQV4YkXhr9NpX9U4re4dlFQjEJQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extension_Name__",
+   "optional_permissions": [ "https://*/", "http://*/" ],
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options.html"
+   },
+   "permissions": [ "management", "https://clients2.google.com/service/*", "storage", "alarms", "contextMenus", "downloads" ],
+   "storage": {
+      "managed_schema": "managed_storage.json"
+   },
+   "update_url": "https://raw.githubusercontent.com/NeverDecaf/chromium-web-store/master/updates.xml",
+   "version": "1.4.4.1"
+}
