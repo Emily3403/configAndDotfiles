@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Except the executables
+!bootstrap.sh
+!clean.sh
+!update.sh
+!.gitignore
