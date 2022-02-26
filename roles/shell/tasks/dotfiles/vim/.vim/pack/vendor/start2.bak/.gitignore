@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# But not these files...
+
+!.gitignore
+!bootstrap.sh
+!update.sh
