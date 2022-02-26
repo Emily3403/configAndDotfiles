@@ -157,7 +157,8 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/neofetch/current_image.txt', dest: '~/.config/neofetch/current_image.txt' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/ssh/config', dest: '~/.ssh/config' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/starship/starship.toml', dest: '~/.config/starship.toml' }
-    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/vim', dest: '~/.vim' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/.vim', dest: '~/.vim' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/.vimrc', dest: '~/.vimrc' }
 
 
 
