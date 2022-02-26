@@ -6,3 +6,12 @@
 2022/02/26-23:51:24.657 551f7 Level-0 table #7: started
 2022/02/26-23:51:24.673 551f7 Level-0 table #7: 2024302 bytes OK
 2022/02/26-23:51:24.679 551f7 Delete type=0 #4
+2022/02/26-23:57:25.851 5f1ee Level-0 table #9: started
+2022/02/26-23:57:25.866 5f1ee Level-0 table #9: 1695634 bytes OK
+2022/02/26-23:57:25.872 5f1ee Delete type=0 #6
+2022/02/27-00:03:57.545 76252 Level-0 table #11: started
+2022/02/27-00:03:57.564 76252 Level-0 table #11: 1565301 bytes OK
+2022/02/27-00:03:57.570 76252 Delete type=0 #8
+2022/02/27-00:07:33.184 7bd6c Level-0 table #13: started
+2022/02/27-00:07:33.210 7bd6c Level-0 table #13: 2746818 bytes OK
+2022/02/27-00:07:33.215 7bd6c Delete type=0 #10
