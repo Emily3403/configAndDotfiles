@@ -1,5 +1,5 @@
 ---
-- hosts: ubuntu-vm
+- hosts: garuda-kde-vm
   roles:
     - shell
 
