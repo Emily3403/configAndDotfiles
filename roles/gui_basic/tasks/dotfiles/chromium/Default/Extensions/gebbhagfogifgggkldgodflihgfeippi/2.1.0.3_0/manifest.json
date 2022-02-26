@@ -12,7 +12,6 @@
       "matches": [ "*://youtube.com/*", "*://www.youtube.com/*", "*://m.youtube.com/*" ]
    } ],
    "description": "Returns ability to see dislikes",
-   "differential_fingerprint": "1.67adcc0d9078144a8957ac90750d7947d0cc429d4c1b904585bb816db0ee9c90",
    "externally_connectable": {
       "matches": [ "*://*.youtube.com/*" ]
    },

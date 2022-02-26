@@ -1,3 +1,8 @@
-2022/02/26-14:06:34.250 77d35 Reusing MANIFEST /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
-2022/02/26-14:06:34.250 77d35 Recovering log #954
-2022/02/26-14:06:34.253 77d35 Reusing old log /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000954.log 
+2022/02/26-23:47:33.046 4e905 Creating DB /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm since it was missing.
+2022/02/26-23:47:33.054 4e905 Reusing MANIFEST /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2022/02/26-23:47:33.861 4e907 Level-0 table #5: started
+2022/02/26-23:47:33.875 4e907 Level-0 table #5: 1511076 bytes OK
+2022/02/26-23:47:33.881 4e907 Delete type=0 #3
+2022/02/26-23:51:24.657 551f7 Level-0 table #7: started
+2022/02/26-23:51:24.673 551f7 Level-0 table #7: 2024302 bytes OK
+2022/02/26-23:51:24.679 551f7 Delete type=0 #4

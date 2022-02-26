@@ -1,11 +1,11 @@
 {
    "1pApplyChanges": {
       "description": "English: Apply changes",
-      "message": "Isumite ang mga pagbabago"
+      "message": "اعمال تغییرات"
    },
    "1pExport": {
       "description": "English: Export",
-      "message": "I-Export"
+      "message": "خروجي گرفتن"
    },
    "1pExportFilename": {
       "description": "English: my-ublock-static-filters_{{datetime}}.txt",
@@ -13,143 +13,143 @@
    },
    "1pFormatHint": {
       "description": "Short information about how to create custom filters",
-      "message": "One filter per line. A filter can be a plain hostname, or an EasyList-compatible filter. Lines prefixed with \u003Ccode>!\u003C/code> will be ignored."
+      "message": "یک فیلتر در هر خط. یک فیلتر می تواند آدرس هاست ساده یا فیلتر سازگار با Adblock plus باشد. خطوط با پیشوند &lsquo;!&rsquo; نادیده گرفته می شوند."
    },
    "1pImport": {
       "description": "English: Import and append",
-      "message": "I-Import at idugtong"
+      "message": "وارد کردن و الحاق"
    },
    "1pPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Mga filter ko"
+      "message": "فیلترهای من"
    },
    "3pApplyChanges": {
       "description": "English: Apply changes",
-      "message": "Isumite ang mga pagbabago"
+      "message": "اعمال تغییرات"
    },
    "3pAutoUpdatePrompt1": {
       "description": "A checkbox in the _3rd-party filters_ pane",
-      "message": "I-awtomatik-update ang listahan ng filter"
+      "message": "بروز رسانی خودکار لیست فیلتر."
    },
    "3pExternalListObsolete": {
       "description": "used as a tooltip for the out-of-date icon beside a list",
-      "message": "Out of date."
+      "message": "منقضی شده."
    },
    "3pExternalListsHint": {
       "description": "Short information about how to use the textarea to import external filter lists by URL",
-      "message": "One URL per line. Invalid URLs will be silently ignored."
+      "message": "هر آدرس در یک خط. خطوطی با پیشوند &lsquo;!&rsquo; در نظر گرفته نمیشوند. آدرس های نامعتبر نیز در سکوت نادیده گرفته میشوند."
    },
    "3pGroupAds": {
       "description": "English: Ads",
-      "message": "Ads"
+      "message": "تبلیغات"
    },
    "3pGroupAnnoyances": {
       "description": "The header identifying the filter lists in the category 'annoyances'",
-      "message": "Mga nakakayamot"
+      "message": "مزاحم‌ها"
    },
    "3pGroupCustom": {
       "description": "English: Custom",
-      "message": "Pasadya"
+      "message": "سفارشی"
    },
    "3pGroupDefault": {
       "description": "Header for the uBlock filters section in 'Filter lists pane'",
-      "message": "nagawa-sa"
+      "message": "داخلی"
    },
    "3pGroupMalware": {
       "description": "English: Malware domains",
-      "message": "Mga Malware domains"
+      "message": "دامنه های مخرب"
    },
    "3pGroupMultipurpose": {
       "description": "English: Multipurpose",
-      "message": "Multipurpose"
+      "message": "چند منظوره"
    },
    "3pGroupPrivacy": {
       "description": "English: Privacy",
-      "message": "Pribado"
+      "message": "حریم خصوصی"
    },
    "3pGroupRegions": {
       "description": "English: Regions, languages",
-      "message": "Rehiyon, mga Lenggwahe"
+      "message": "مناطق، زبانها"
    },
    "3pIgnoreGenericCosmeticFilters": {
       "description": "This will cause uBO to ignore all generic cosmetic filters.",
-      "message": "Huwag pansinin ang generic cosmetic filters"
+      "message": "نادیده گرفتن فیلترهای زیبا سازی عمومی"
    },
    "3pIgnoreGenericCosmeticFiltersInfo": {
       "description": "Describes the purpose of the 'Ignore generic cosmetic filters' feature.",
-      "message": "Generic cosmetic filters are those cosmetic filters which are meant to apply on all web sites. Enabling this option will eliminate the memory and CPU overhead added to web pages as a result of handling generic cosmetic filters.\n\nIt is recommended to enable this option on less powerful devices."
+      "message": "\u003Cp>فیلترهای زیبا سازی عمومی، آن دسته از فیلترهای زیبا سازی هستند که در همه وب سایت ها کاربرد دارند.\n\u003Cp>اگر چه بصورت موثر توسط uBlock₀ انجام شده، ولی فیلترهای عمومی زیبا سازی هنوز هم ممکن است سربار حافظه قابل اندازه گیری و سربار پردازنده در برخی از صفحات وب به جای بگذارد، به ویژه برای صفحات وب بزرگ و طولانی مدت.\u003Cp>فعال کردن این گزینه سربارهای حافظه و پردازنده را که به صفحات اضافه شده به عنوان نتیجۀ اجرای فیلترهای عمومی زیبا سازی برطرف می‌کند، و همچنین ردپای حافظۀ خود uBlock₀ را کمتر می‌کند\u003Cp>توصیه می شود این گزینه را در دستگاه های با قدرت کمتر فعال کنید."
    },
    "3pImport": {
       "description": "The label for the checkbox used to import external filter lists",
-      "message": "Mag-import..."
+      "message": "وارد شده"
    },
    "3pLastUpdate": {
       "description": "used as a tooltip for the clock icon beside a list",
-      "message": "Last update: {{ago}}.\nClick to force an update."
+      "message": "آخرین به روز رسانی: {{ago}}.\nبرای یک به روز رسانی اجباری کلیک کنید."
    },
    "3pListsOfBlockedHostsHeader": {
       "description": "English: Lists of blocked hosts",
-      "message": "Lists of blocked hosts"
+      "message": "فهرست میزبان های مسدود شده"
    },
    "3pListsOfBlockedHostsPerListStats": {
       "description": "Appears aside each filter list in the _3rd-party filters_ pane",
-      "message": "{{used}} na ang nagamit sa {{total}}"
+      "message": "تعداد {{used}} از {{total}} مورد استفاده شده"
    },
    "3pListsOfBlockedHostsPrompt": {
       "description": "Appears at the top of the _3rd-party filters_ pane",
-      "message": "{{netFilterCount}} network filters ＋ {{cosmeticFilterCount}} cosmetic filters from:"
+      "message": "{{netFilterCount}} فیلتر های شبکه ＋ {{cosmeticFilterCount}} فرم های فیلتر انتخابی:"
    },
    "3pNetworkError": {
       "description": "used as a tooltip for error icon beside a list",
-      "message": "A network error prevented the resource from being updated."
+      "message": "یک خطای شبکه از بروزشدن این منبع جلوگیری کرد."
    },
    "3pPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "3rd-party na mga filter"
+      "message": "لیست‌های فیلتر"
    },
    "3pParseAllABPHideFiltersInfo": {
       "description": "Describes the purpose of the 'Parse and enforce cosmetic filters' feature.",
-      "message": "Cosmetic filters serve to hide elements in a web page which are deemed to be a visual nuisance, and which can't be blocked by the network request-based filtering engines."
+      "message": "\u003Cp>این گزینه \u003Ca href=\"https://adblockplus.org/en/faq_internal#elemhide\">فیلترهای &ldquo;مخفی‌کردن اشیا&rdquo; سازگار با ادبلاک پلاس\u003C/a> را تجزیه و اجرا میکند. این فیلتر ها اساساً فنی هستند، آنها اشیاء موجود در صفحه وب را که مزاحم تلقی میشوند و با موتور فیلترینگ شبکه قابل بلاک کردن نیستند را حذف میکنند.\u003C/p>\u003Cp>فعال کردن این قابلیت مصرف حافظه ی uBlock را افزایش میدهد.\u003C/p>"
    },
    "3pParseAllABPHideFiltersPrompt1": {
       "description": "English: Parse and enforce Adblock+ element hiding filters.",
-      "message": "Parse and enforce cosmetic filters"
+      "message": "تجزیه و اجرای فیلترهای انتخابی."
    },
    "3pPurgeAll": {
       "description": "A button in the in the _3rd-party filters_ pane",
-      "message": "Purgahin ang lahat ng caches"
+      "message": "پاکسازی تمام انبارها"
    },
    "3pSuspendUntilListsAreLoaded": {
       "description": "A checkbox in the 'Filter lists' pane",
-      "message": "Suspend network activity until all filter lists are loaded"
+      "message": "تا وقتی همه‌ی فیلترها لود نشده‌اند ارتباط شبکه را قطع کن"
    },
    "3pUpdateNow": {
       "description": "A button in the in the _3rd-party filters_ pane",
-      "message": "I-update ngayon"
+      "message": "اکنون به روز رسانی شود"
    },
    "3pUpdating": {
       "description": "used as a tooltip for the spinner icon beside a list",
-      "message": "Ina-update..."
+      "message": "درحال بروزرسانی..."
    },
    "3pViewContent": {
       "description": "used as a tooltip for eye icon beside a list",
-      "message": "Tignan ang kaloob"
+      "message": "نمایش محتویات"
    },
    "GB": {
       "description": "short for 'gigabytes'",
-      "message": "GB"
+      "message": "گیگابایت"
    },
    "KB": {
       "description": "short for 'kilobytes'",
-      "message": "KB"
+      "message": "کیلوبایت"
    },
    "MB": {
       "description": "short for 'megabytes'",
-      "message": "MB"
+      "message": "مگابایت"
    },
    "aboutBackupDataButton": {
       "description": "Text for button to create a backup of all settings",
-      "message": "I-backup sa talaksan"
+      "message": "پشتیبان گیری در فایل"
    },
    "aboutBackupFilename": {
       "description": "English: my-ublock-backup_{{datetime}}.txt",
@@ -157,87 +157,87 @@
    },
    "aboutCDNs": {
       "description": "Shown in the About pane",
-      "message": "uBO's own filter lists are freely hosted on the following \u003Ca href=\"https://wikipedia.org/wiki/Content_delivery_network\">CDNs\u003C/a>:"
+      "message": "لیست‌های فیلتر اصلی uBlock Origin به صورت آزاد در \u003Ca href=\"https://wikipedia.org/wiki/Content_delivery_network\">این شبکه‌های تحویل محتوا\u003C/a> میزبانی می‌شوند."
    },
    "aboutCDNsInfo": {
       "description": "Shown in the About pane",
-      "message": "A randomly picked CDN is used when a filter list needs to be updated"
+      "message": "وقتی که لازم باشد تا یک لیست فیلتر  به روزرسانی شود، از یکی از  شبکه‌های تحویل محتوا به صورت تصادفی استفاده می‌شود"
    },
    "aboutChangelog": {
       "description": "",
-      "message": "Mga pagbabago"
+      "message": "تغییرات اخیر"
    },
    "aboutCode": {
       "description": "English: Source code (GPLv3)",
-      "message": "Source code (GPLv3)"
+      "message": "سورس کد  (GPLv3)"
    },
    "aboutContributors": {
       "description": "English: Contributors",
-      "message": "Contributors"
+      "message": "مشارکت کنندگان"
    },
    "aboutDependencies": {
       "description": "Shown in the About pane",
-      "message": "External dependencies (GPLv3-compatible):"
+      "message": "وابستگی‌های خارجی (سازگار با GPLv3):"
    },
    "aboutFilterLists": {
       "description": "Link text to uBO's own filter lists repo",
-      "message": "Filter lists"
+      "message": "لیست‌های فیلتر"
    },
    "aboutPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Tungkol dito"
+      "message": "در باره"
    },
    "aboutPrivacyPolicy": {
       "description": "Link to privacy policy on GitHub (English)",
-      "message": "Privacy policy"
+      "message": "قوانین حریم خصوصی"
    },
    "aboutResetDataButton": {
       "description": "English: Reset to default settings...",
-      "message": "Reset to default settings…"
+      "message": "تنظیم مجدد تنظیمات پیش فرض..."
    },
    "aboutResetDataConfirm": {
       "description": "Message asking user to confirm reset",
-      "message": "All your settings will be removed, and uBlock₀ will restart.\n\nReset uBlock₀ to factory settings?"
+      "message": "تمام تنظیمات شما حذف شده و uBlock₀ دوباره راه اندازی خواهد شد.\n\nتنظیم مجدد uBlock₀ به تنظیمات کارخانه؟"
    },
    "aboutRestoreDataButton": {
       "description": "English: Restore from file...",
-      "message": "Ibalik mula sa talaksan..."
+      "message": "بازیابی از فایل..."
    },
    "aboutRestoreDataConfirm": {
       "description": "Message asking user to confirm restore",
-      "message": "All your settings will be overwritten using data backed up on {{time}}, and uBlock₀ will restart.\n\nOverwrite all existing settings using backed up data?"
+      "message": "تمام تنظیمات با استفاده از پشتیبان گیری در {{time}}،  رونویسی شده و uBlock₀ مجدد راه اندازی میشود.\n\nتمام تنظیمات موجود با استفاده از داده های پشتیبانی رونویسی شود؟"
    },
    "aboutRestoreDataError": {
       "description": "Message to display when an error occurred during restore",
-      "message": "The data could not be read or is invalid"
+      "message": "داده ها نمی تواند خوانده شوند و یا نامعتبر اند"
    },
    "aboutSourceCode": {
       "description": "Link text to source code repo",
-      "message": "Pinagmulang kodigo"
+      "message": "کد منبع"
    },
    "aboutTranslations": {
       "description": "Link text to translations repo",
-      "message": "Mga Pagsasalin"
+      "message": "ترجمه‌ها"
    },
    "advancedSettingsPageName": {
       "description": "Title for the advanced settings page",
-      "message": "Mga pinalawig na ayos"
+      "message": "تنظیمات پیشرفته"
    },
    "advancedSettingsWarning": {
       "description": "A warning to users at the top of 'Advanced settings' page",
-      "message": "Babala! Baguhin mo ang mga masulong setting sa iyong sariling peligro."
+      "message": "هشدار! این تنظیمات پیشرفته را با مسئولیت خود تغییر دهید."
    },
    "assetViewerPageName": {
       "description": "Title for the asset viewer page",
-      "message": "uBlock₀ — Pang-tingin ng Asset\n"
+      "message": "uBlock₀ — نماینگر دارایی"
    },
    "clickToLoad": {
       "description": "Message used in frame placeholders",
-      "message": "Pindutin upang mag-load"
+      "message": "برای بازکردن کلیک نمایید"
    },
    "cloudDeviceNamePrompt": {
       "description": "used as a prompt for the user to provide a custom device name",
-      "message": "Itong pangalan ng device:"
+      "message": "نام این وسیله:"
    },
    "cloudNoData": {
       "description": "",
@@ -245,111 +245,111 @@
    },
    "cloudPull": {
       "description": "tooltip",
-      "message": "Import from cloud storage"
+      "message": "وارد کردن از فضای ذخیره سازی ابری"
    },
    "cloudPullAndMerge": {
       "description": "tooltip",
-      "message": "Import from cloud storage and merge with current settings"
+      "message": "وارد کردن از فضای ذخیره سازی ابری و ادغام با تنظیمات فعلی"
    },
    "cloudPush": {
       "description": "tooltip",
-      "message": "Export to cloud storage"
+      "message": "صدور به فضای ذخیره سازی ابری"
    },
    "contextMenuBlockElementInFrame": {
       "description": "An entry in the browser's contextual menu",
-      "message": "Block element in frame…"
+      "message": "بلاک‌کردن اِلمان در فریم..."
    },
    "contextMenuSubscribeToList": {
       "description": "An entry in the browser's contextual menu",
-      "message": "Sumubskribi sa listahan ng filter"
+      "message": "Subscribe to filter list..."
    },
    "contextMenuTemporarilyAllowLargeMediaElements": {
       "description": "A context menu entry, present when large media elements have been blocked on the current site",
-      "message": "Temporarily allow large media elements"
+      "message": "اجازه موقت عناصر رسانه‌ای حجیم"
    },
    "dashboardName": {
       "description": "English: uBlock₀ — Dashboard",
-      "message": "uBlock₀ — Dashboard"
+      "message": "uBlock₀ — داشبورد"
    },
    "dashboardUnsavedWarning": {
       "description": "A warning in the dashboard when navigating away from unsaved changes",
-      "message": "Ingat! Mayroong kang hindi na libang pinalitan"
+      "message": "هشدار! شما تنطیمات ذخیره نشده دارید"
    },
    "dashboardUnsavedWarningIgnore": {
       "description": "Label for button to ignore unsaved changes",
-      "message": "Huwag pansinin"
+      "message": "نادیده بگیر"
    },
    "dashboardUnsavedWarningStay": {
       "description": "Label for button to prevent navigating away from unsaved changes",
-      "message": "Manatili"
+      "message": "بمان"
    },
    "docblockedBack": {
       "description": "English: Go back",
-      "message": "Bumalik"
+      "message": "بازگشت به عقب"
    },
    "docblockedClose": {
       "description": "English: Close this window",
-      "message": "Sarado ang itong window"
+      "message": "بستن این پنجره"
    },
    "docblockedDisablePermanent": {
       "description": "English: Permanently",
-      "message": "Permanenteng"
+      "message": "دائمی"
    },
    "docblockedDisableTemporary": {
       "description": "English: Temporarily",
-      "message": "Pansamantalang"
+      "message": "موقتا"
    },
    "docblockedFoundIn": {
       "description": "English: List of filter list names follows",
-      "message": "Nahanap sa:"
+      "message": "یافته شده در:"
    },
    "docblockedNoParamsPrompt": {
       "description": "label to be used for the parameter-less URL: https://cloud.githubusercontent.com/assets/585534/9832014/bfb1b8f0-593b-11e5-8a27-fba472a5529a.png",
-      "message": "without parameters"
+      "message": "بدون پارامترها"
    },
    "docblockedProceed": {
       "description": "English: Disable strict blocking for {{hostname}} ...",
-      "message": "Disable strict blocking for {{hostname}}"
+      "message": "غیر فعال کردن بلاک برای  {{hostname}}"
    },
    "docblockedPrompt1": {
       "description": "Used in the strict-blocking page",
-      "message": "uBlock Origin has prevented the following page from loading:"
+      "message": "uBlock₀ از بارگذاری این صفحات جلوگیری کرده:"
    },
    "docblockedPrompt2": {
       "description": "Used in the strict-blocking page",
-      "message": "Because of the following filter:"
+      "message": "بخاطر فیلتر زیر"
    },
    "dummy": {
       "description": "so we dont need to deal with comma for last entry",
-      "message": "This entry must be the last one"
+      "message": "این باید آخرین مطلب باشد"
    },
    "elapsedManyDaysAgo": {
       "description": "English: {{value}} days ago",
-      "message": "{{value}} days ago"
+      "message": "{{value}} روز قبل"
    },
    "elapsedManyHoursAgo": {
       "description": "English: {{value}} hours ago",
-      "message": "{{value}} hours ago"
+      "message": "{{value}} ساعت قبل"
    },
    "elapsedManyMinutesAgo": {
       "description": "English: {{value}} minutes ago",
-      "message": "{{value}} mga minuto ang nakalipas"
+      "message": "{{value}} دقیقه پیش"
    },
    "elapsedOneDayAgo": {
       "description": "English: a day ago",
-      "message": "a day ago"
+      "message": "دیروز"
    },
    "elapsedOneHourAgo": {
       "description": "English: an hour ago",
-      "message": "isang oras ang nakalipas"
+      "message": "یک ساعت پیش"
    },
    "elapsedOneMinuteAgo": {
       "description": "English: a minute ago",
-      "message": "isang minuto ang nakalipas"
+      "message": "1 دقیقه پیش"
    },
    "errorCantConnectTo": {
       "description": "English: Network error: {{msg}}",
-      "message": "Hindi maka-connect sa {{url}}"
+      "message": "خطای شبکه: {{msg}}"
    },
    "extName": {
       "description": "extension name.",
@@ -357,95 +357,95 @@
    },
    "extShortDesc": {
       "description": "this will be in the Chrome web store: must be 132 characters or less",
-      "message": "Sa wakas! Isang magaling na blocker para sa Chromium-based browsers. Magaan sa CPU at memory."
+      "message": "بالاخره، یک بلاکر کارآمد. کم حجم بر روی پردازنده و حافظه."
    },
    "fennecMenuItemBlockingOff": {
       "description": "Firefox-specific: appears as 'uBlock₀ (off)'",
-      "message": "OFF"
+      "message": "خاموش"
    },
    "genericApplyChanges": {
       "description": "for generic 'Apply changes' buttons",
-      "message": "Apply changes"
+      "message": "اعمال تغییرات"
    },
    "genericBytes": {
       "description": "",
-      "message": "bytes"
+      "message": "بایت"
    },
    "genericCopyToClipboard": {
       "description": "Label for buttons used to copy something to the clipboard",
-      "message": "Kopyahin sa clipboard"
+      "message": "کپی به کلیپ‌بورد"
    },
    "genericMergeViewScrollLock": {
       "description": "Tooltip for the button used to lock scrolling between the views in the 'My rules' pane",
-      "message": "Toggle locked scrolling"
+      "message": "تغییر وضعیت پیمایش قفل شده"
    },
    "genericRevert": {
       "description": "for generic 'Revert' buttons",
-      "message": "Ibalik"
+      "message": "بازگرداندن"
    },
    "genericSelectAll": {
       "description": "Label for buttons used to select all text in editor",
-      "message": "Select all"
+      "message": "انتخاب همه"
    },
    "genericSubmit": {
       "description": "for generic 'Submit' buttons",
-      "message": "Ipasa"
+      "message": "ارسال"
    },
    "logAll": {
       "description": "Appears in the logger's tab selector",
-      "message": "Lahat"
+      "message": "همه"
    },
    "logBehindTheScene": {
       "description": "Pretty name for behind-the-scene network requests",
-      "message": "Walang tab"
+      "message": "پشت صحنه"
    },
    "logFilterPrompt": {
       "description": "Placeholder string for logger output filtering input field",
-      "message": "filter logger content"
+      "message": "فیلتر کردن محتوای لاگ"
    },
    "logRequestsHeaderDomain": {
       "description": "English: Domain",
-      "message": "Domain"
+      "message": "دامنه"
    },
    "logRequestsHeaderFilter": {
       "description": "English: Filter",
-      "message": "Salain"
+      "message": "فیلتر"
    },
    "logRequestsHeaderType": {
       "description": "English: Type",
-      "message": "Uri"
+      "message": "نوع"
    },
    "logRequestsHeaderURL": {
       "description": "English: URL",
-      "message": "URL"
+      "message": "آدرس"
    },
    "loggerClearTip": {
       "description": "Tooltip for the eraser in the logger page; used to blank the content of the logger",
-      "message": "Clear logger"
+      "message": "پاک‌کردن رویداد‌ها"
    },
    "loggerCurrentTab": {
       "description": "Appears in the logger's tab selector",
-      "message": "Pangkasalukuyang tab"
+      "message": "برگۀ فعلی"
    },
    "loggerDomInspectorTip": {
       "description": "Tooltip for the DOM inspector button in the logger page",
-      "message": "Toggle the DOM inspector"
+      "message": "تغییر وضعیت جستجوگر DOM"
    },
    "loggerEntryDetailsContext": {
       "description": "Label to identify a context field (typically a hostname)",
-      "message": "Konteksto"
+      "message": "محتوا"
    },
    "loggerEntryDetailsFilter": {
       "description": "Label to identify a filter field",
-      "message": "Salain"
+      "message": "فیلتر"
    },
    "loggerEntryDetailsFilterList": {
       "description": "Label to identify a filter list field",
-      "message": "Salain ang listahan"
+      "message": "لیست فیلتر"
    },
    "loggerEntryDetailsHeader": {
       "description": "Small header to identify the 'Details' pane for a specific logger entry",
-      "message": "Detalye"
+      "message": "جزئیات"
    },
    "loggerEntryDetailsPartyness": {
       "description": "Label to identify a field providing partyness information",
@@ -453,67 +453,67 @@
    },
    "loggerEntryDetailsRootContext": {
       "description": "Label to identify a root context field (typically a hostname)",
-      "message": "Ugat ng konteksto"
+      "message": "محتوای ریشه"
    },
    "loggerEntryDetailsRule": {
       "description": "Label to identify a rule field",
-      "message": "Batas"
+      "message": "قانون"
    },
    "loggerEntryDetailsType": {
       "description": "Label to identify the type of an entry",
-      "message": "Uri"
+      "message": "نوع"
    },
    "loggerEntryDetailsURL": {
       "description": "Label to identify the URL of an entry",
-      "message": "URL"
+      "message": "آدرس"
    },
    "loggerExportEncodeMarkdown": {
       "description": "Label for radio-button to pick export text format",
-      "message": "Markdown"
+      "message": "مارک‌داون"
    },
    "loggerExportEncodePlain": {
       "description": "Label for radio-button to pick export text format",
-      "message": "Plain"
+      "message": "ساده"
    },
    "loggerExportFormatList": {
       "description": "Label for radio-button to pick export format",
-      "message": "Listahan"
+      "message": "لیست"
    },
    "loggerExportFormatTable": {
       "description": "Label for radio-button to pick export format",
-      "message": "Mesa"
+      "message": "جدول"
    },
    "loggerInfoTip": {
       "description": "Tooltip for the top-right info label in the logger page",
-      "message": "uBlock Origin wiki: The logger"
+      "message": "ویکی uBlock Origin: ثبت‌کننده رویداد‌ها"
    },
    "loggerPauseTip": {
       "description": "Tooltip for the pause button in the logger page",
-      "message": "Pause logger (discard all incoming data)"
+      "message": "توقف ثبت رویداد‌ها (تمام داده‌های ورودی را نادیده بگیر)"
    },
    "loggerPopupPanelTip": {
       "description": "Tooltip for the popup panel button in the logger page",
-      "message": "Toggle the popup panel"
+      "message": "تغییر وضعیت پنل پاپ‌آپ"
    },
    "loggerReloadTip": {
       "description": "Tooltip for the reload button in the logger page",
-      "message": "I-reload ang kaloob ng tab"
+      "message": "بارگیری مجدد محتوای صفحه"
    },
    "loggerRowFiltererBuiltin1p": {
       "description": "A keyword in the built-in row filtering expression",
-      "message": "1st-partido"
+      "message": "1st-party"
    },
    "loggerRowFiltererBuiltin3p": {
       "description": "A keyword in the built-in row filtering expression",
-      "message": "ikatlong-partido"
+      "message": "طرف سوم"
    },
    "loggerRowFiltererBuiltinAllowed": {
       "description": "A keyword in the built-in row filtering expression",
-      "message": "Pinayagan"
+      "message": "مجاز"
    },
    "loggerRowFiltererBuiltinBlocked": {
       "description": "A keyword in the built-in row filtering expression",
-      "message": "Nabawal"
+      "message": "مسدود شده"
    },
    "loggerRowFiltererBuiltinEventful": {
       "description": "A keyword in the built-in row filtering expression: all items corresponding to uBO doing something (blocked, allowed, redirected, etc.)",
@@ -521,23 +521,23 @@
    },
    "loggerRowFiltererBuiltinModified": {
       "description": "A keyword in the built-in row filtering expression",
-      "message": "binago"
+      "message": "تغییر کرده"
    },
    "loggerRowFiltererBuiltinNot": {
       "description": "A keyword in the built-in row filtering expression",
-      "message": "Hindi"
+      "message": "نفی"
    },
    "loggerRowFiltererBuiltinTip": {
       "description": "Tooltip for the button to bring up logger output filtering options",
-      "message": "Logger filtering options"
+      "message": "گزینه‌های فیلتر ثبت رویداد‌ها"
    },
    "loggerRowFiltererButtonTip": {
       "description": "Tooltip for the row filterer button in the logger page",
-      "message": "Toggle logger filtering"
+      "message": "تغییر وضعیت فیلتر ثبت رویداد‌ها"
    },
    "loggerSettingDiscardPrompt": {
       "description": "Logger setting: A sentence to describe the purpose of the settings below",
-      "message": "Logger entries which do not fulfill all three conditions below will be automatically discarded:"
+      "message": "رویدادهای ورودی که مطابق سه شرط زیر نباشند، بصورت خودکار نادیده گرفته خواهند شد:"
    },
    "loggerSettingHideColumnContext": {
       "description": "A label for the context column",
@@ -545,7 +545,7 @@
    },
    "loggerSettingHideColumnFilter": {
       "description": "A label for the filter or rule column",
-      "message": "{{input}} Salain/batas"
+      "message": "{{input}} فیلتر/قانون"
    },
    "loggerSettingHideColumnPartyness": {
       "description": "A label for the partyness column",
@@ -553,11 +553,11 @@
    },
    "loggerSettingHideColumnTime": {
       "description": "A label for the time column",
-      "message": "{{input}} Oras"
+      "message": "{{input}} زمان"
    },
    "loggerSettingHideColumnsPrompt": {
       "description": "Logger settings: a sentence to describe the purpose of the checkboxes below",
-      "message": "Itago ang mga columns"
+      "message": "پنهان‌سازی ستون"
    },
    "loggerSettingPerEntryLineCount": {
       "description": "A logger setting",
@@ -565,11 +565,11 @@
    },
    "loggerSettingPerEntryMaxAge": {
       "description": "A logger setting",
-      "message": "Panatilihin and mga entry mula sa huling {{input}} mga minuto"
+      "message": "ورودی‌های {{input}} دقیقه اخیر را نگه دار"
    },
    "loggerSettingPerTabMaxEntries": {
       "description": "A logger setting",
-      "message": "Preserve at most {{input}} entries per tab"
+      "message": "لطفا در هر تب حداکثر {{input}} مدخل نگه‌دارید"
    },
    "loggerSettingPerTabMaxLoads": {
       "description": "A logger setting",
@@ -577,107 +577,107 @@
    },
    "loggerStaticFilteringFinderSentence1": {
       "description": "Below this sentence, the filter list(s) in which the filter was found",
-      "message": "Static filter \u003Ccode>{{filter}}\u003C/code> found in:"
+      "message": "انسداد ایستا \u003Ccode>{{filter}}\u003C/code> یافت شد در:"
    },
    "loggerStaticFilteringFinderSentence2": {
       "description": "Message to show when a filter cannot be found in any filter lists",
-      "message": "Static filter could not be found in any of the currently enabled filter lists"
+      "message": "فیلتر ایستا \u003Ccode>{{filter}}\u003C/code> در هیچ یک از لیست‌های فیلتر فعال پیدا نشد"
    },
    "loggerStaticFilteringHeader": {
       "description": "Small header to identify the static filtering section",
-      "message": "Static na pag-salain"
+      "message": "فیلترینگ ایستا"
    },
    "loggerStaticFilteringSentence": {
       "description": "Used in the static filtering wizard",
-      "message": "{{action}} network requests of {{type}} {{br}}which URL address matches {{url}} {{br}}and which originates {{origin}},{{br}}{{importance}} there is a matching exception filter."
+      "message": "{{action}} درخواست های شبکه از نوع {{type}}{{br}} که مطابقت دارد با آدرس اینترنی {{url}}{{br}} و سرچشمه می‌گیرد از {{origin}}،{{br}}{{importance}} اینها یک فیلتر استثناء از تطبیق هستند."
    },
    "loggerStaticFilteringSentencePartAllow": {
       "description": "Used in the static filtering wizard",
-      "message": "Ipayagan"
+      "message": "مجاز"
    },
    "loggerStaticFilteringSentencePartAnyOrigin": {
       "description": "Used in the static filtering wizard",
-      "message": "mula kahit saan"
+      "message": "از هر جایی"
    },
    "loggerStaticFilteringSentencePartAnyType": {
       "description": "Used in the static filtering wizard",
-      "message": "kahit anong uri"
+      "message": "هر نوعی"
    },
    "loggerStaticFilteringSentencePartBlock": {
       "description": "Used in the static filtering wizard",
-      "message": "Ibawal"
+      "message": "انسداد"
    },
    "loggerStaticFilteringSentencePartImportant": {
       "description": "Used in the static filtering wizard",
-      "message": "kahit"
+      "message": "حتی اگر"
    },
    "loggerStaticFilteringSentencePartNotImportant": {
       "description": "Used in the static filtering wizard",
-      "message": "maliban kung"
+      "message": "بجز وقتی"
    },
    "loggerStaticFilteringSentencePartOrigin": {
       "description": "Used in the static filtering wizard",
-      "message": "mula sa \"{{origin}}\""
+      "message": "از “{{origin}}”"
    },
    "loggerStaticFilteringSentencePartType": {
       "description": "Used in the static filtering wizard",
-      "message": "uri \"{{type}}\""
+      "message": "نوع “{{type}}”"
    },
    "loggerURLFilteringContextLabel": {
       "description": "Label for the context selector",
-      "message": "Konteksto:"
+      "message": "زمینه:"
    },
    "loggerURLFilteringHeader": {
       "description": "Small header to identify the dynamic URL filtering section",
-      "message": "URL na kautusan"
+      "message": "فیلترینگ پویای آدرس اینترنتی"
    },
    "loggerURLFilteringTypeLabel": {
       "description": "Label for the type selector",
-      "message": "Uri:"
+      "message": "نوع:"
    },
    "loggerUnpauseTip": {
       "description": "Tooltip for the play button in the logger page",
-      "message": "Unpause logger"
+      "message": "از سرگیری ثبت رویداد‌ها"
    },
    "pickerContextMenuEntry": {
       "description": "An entry in the browser's contextual menu",
-      "message": "Paghalang sa elemento"
+      "message": "بلاک کردن این بخش"
    },
    "pickerCosmeticFilters": {
       "description": "English: Cosmetic filters",
-      "message": "Cosmetic filters"
+      "message": "فیلترهای انتخابی"
    },
    "pickerCosmeticFiltersHint": {
       "description": "English: Click, Ctrl-click",
-      "message": "Pindutin, Ctrl-pindot"
+      "message": "کلیک، کنترل-کلیک"
    },
    "pickerCreate": {
       "description": "English: Create",
-      "message": "Idagdag ang rule"
+      "message": "ایجاد"
    },
    "pickerNetFilters": {
       "description": "English: header for a type of filter in the element picker dialog",
-      "message": "Network filters"
+      "message": "فیلترهای شبکه"
    },
    "pickerPick": {
       "description": "English: Pick",
-      "message": "Pumili ng bagong elemento"
+      "message": "انتخاب"
    },
    "pickerPreview": {
       "description": "Element picker preview mode: will cause the elements matching the current filter to be removed from the page",
-      "message": "Tingnan ang pagbabago"
+      "message": "پیش نمایش"
    },
    "pickerQuit": {
       "description": "English: Quit",
-      "message": "Bumalik sa pahina"
+      "message": "خروج"
    },
    "popup1pScriptRulePrompt": {
       "description": "",
-      "message": "1st-party na mga script"
+      "message": "اسکریپت های 1st-party"
    },
    "popup3pAnyRulePrompt": {
       "description": "",
-      "message": "Pang-tatlo na personalidad"
+      "message": "3rd-party"
    },
    "popup3pFrameFilterTip": {
       "description": "Tooltip shown when hovering small filtering widget in '3rd-party frames' cell",
@@ -685,11 +685,11 @@
    },
    "popup3pFrameRulePrompt": {
       "description": "",
-      "message": "3rd-party na mga frame"
+      "message": "فریم های 3rd-party"
    },
    "popup3pPassiveRulePrompt": {
       "description": "",
-      "message": "3rd-party CSS/images"
+      "message": "تصاویر/css سایت های ثالث"
    },
    "popup3pScriptFilterTip": {
       "description": "Tooltip shown when hovering small filtering widget in '3rd-party scripts' cell",
@@ -697,203 +697,203 @@
    },
    "popup3pScriptRulePrompt": {
       "description": "",
-      "message": "3rd-party na mga script"
+      "message": "اسکریپت های 3rd-party"
    },
    "popupAnyRulePrompt": {
       "description": "",
-      "message": "lahat"
+      "message": "همه"
    },
    "popupBlockedOnThisPagePrompt": {
       "description": "English: on this page",
-      "message": "sa pahina na to"
+      "message": "در این صفحه"
    },
    "popupBlockedOnThisPage_v2": {
       "description": "For the new mobile-friendly popup design",
-      "message": "Nabawal sa ditong pahina"
+      "message": "بلاک‌شده در این صفحه"
    },
    "popupBlockedRequestPrompt": {
       "description": "English: requests blocked",
-      "message": "mga na-block na request"
+      "message": "درخواست مسدود شده"
    },
    "popupBlockedSinceInstallPrompt": {
       "description": "English: since install",
-      "message": "simula noong ininstall"
+      "message": "از زمان نصب"
    },
    "popupBlockedSinceInstall_v2": {
       "description": "For the new mobile-friendly popup design",
-      "message": "Nabawal mula noong pag-install"
+      "message": "بلاک شده از زمان نصب"
    },
    "popupBlockedStats": {
       "description": "Example: 15 (13%)",
-      "message": "{{count}} o {{percent}}%"
+      "message": "{{count}} یا {{percent}}%"
    },
    "popupDomainsConnected_v2": {
       "description": "For the new mobile-friendly popup design",
-      "message": "Mga konektado na domain"
+      "message": "دامنه‌های متصل‌شده"
    },
    "popupHitDomainCount": {
       "description": "appears in popup",
-      "message": "{{count}} na domain sa {{total}} na domain"
+      "message": "تعداد {{count}} از {{total}} تا"
    },
    "popupHitDomainCountPrompt": {
       "description": "appears in popup",
-      "message": "mga nakonektang domain"
+      "message": "دامنه های دست خورده"
    },
    "popupImageRulePrompt": {
       "description": "",
-      "message": "mga imahe"
+      "message": "تصاویر"
    },
    "popupInlineScriptRulePrompt": {
       "description": "",
-      "message": "inline scripts"
+      "message": "اسکریپت های درون خطی"
    },
    "popupLessButton_v2": {
       "description": "Label to be used to hide popup panel sections",
-      "message": "kunti"
+      "message": "کمتر"
    },
    "popupMoreButton_v2": {
       "description": "Label to be used to show popup panel sections",
-      "message": "Mayroong pa"
+      "message": "بیشتر"
    },
    "popupNoCosmeticFiltering_v2": {
       "description": "Caption for the no-cosmetic-filtering per-site switch",
-      "message": "Pagsala ng kosmetiko"
+      "message": "Cosmetic filtering"
    },
    "popupNoLargeMedia_v2": {
       "description": "Caption for the no-large-media per-site switch",
-      "message": "Malaking media na elements"
+      "message": "اِلمان‌های دارای مدیای بزرگ"
    },
    "popupNoPopups_v2": {
       "description": "Caption for the no-popups per-site switch",
-      "message": "Pop-up windows"
+      "message": "پنجره‌ی پاپ‌آپ"
    },
    "popupNoRemoteFonts_v2": {
       "description": "Caption for the no-remote-fonts per-site switch",
-      "message": "fonts ng remote"
+      "message": "فونت‌های راه دور"
    },
    "popupNoScripting_v2": {
       "description": "Caption for the no-scripting per-site switch",
-      "message": "JavaScript"
+      "message": "جاوااسکریپت"
    },
    "popupOr": {
       "description": "English: or",
-      "message": "o"
+      "message": "یا"
    },
    "popupPowerSwitchInfo": {
       "description": "English: Click: disable/enable uBlock₀ for this site.\n\nCtrl+click: disable uBlock₀ only on this page.",
-      "message": "Click: paganahin (o 'wag paganahin) ang uBlock₀ para sa websayt na to.\n\nCtrl+click: 'wag paganahin ang uBlock₀ para lang sa pahina na to."
+      "message": "کلیک: غیر فعال/ فعال کردن uBlock₀ برای این سایت.\n\nکنترل+کلیک: غیر فعال کردن uBlock₀ فقط برای همین صفحه."
    },
    "popupPowerSwitchInfo1": {
       "description": "Message to be read by screen readers",
-      "message": "Click: paganahin ang uBlock₀ para sa websayt na ito.\n\nCtrl+click: 'wag paganahin ang uBlock₀ para lang sa pahina na to."
+      "message": "کلیک کنید تا uBlock₀ برای این سایت غیر فعال شود.\n\nهمزمان کلیدکنترل را نگهدارید و کلیک کنید تا uBlock₀ فقط برای این صفحه غیر فعال شود."
    },
    "popupPowerSwitchInfo2": {
       "description": "Message to be read by screen readers",
-      "message": "Click para paganahin ang uBlock₀ sa websayt na ito."
+      "message": "کلیک کنید تا uBlock₀ برای این سایت فعال شود."
    },
    "popupTipDashboard": {
       "description": "English: Click to open the dashboard",
-      "message": "Pindutin upang mabuksan ang dashboard"
+      "message": "باز کردن داشبورد"
    },
    "popupTipGlobalRules": {
       "description": "Tooltip when hovering the top-most cell of the global-rules column.",
-      "message": "Global rules: this column is for rules which apply to all sites."
+      "message": "قوانین همگانی: این ستون برای قوانینی است که برای همۀ سایت ها اعمال می شوند."
    },
    "popupTipLocalRules": {
       "description": "Tooltip when hovering the top-most cell of the local-rules column.",
-      "message": "Local rules: this column is for rules which apply to the current site only.\nLocal rules override global rules."
+      "message": "قوانین محلی: این ستون برای قوانینی است که تنها در این وب‌گاه اعمال می شود.\nقوانین محلی بر قوانین سراسری برتری دارد."
    },
    "popupTipLog": {
       "description": "Tooltip used for the logger icon in the panel",
-      "message": "Pumunta sa request log"
+      "message": "بازکردن واقعه‌نگار"
    },
    "popupTipNoCosmeticFiltering": {
       "description": "Tooltip for the no-cosmetic-filtering per-site switch",
-      "message": "Palit-ayos ng panala ng itsura para sa site na ito"
+      "message": "تغییر وضعیت فیلترزیباسازی برای این سایت"
    },
    "popupTipNoCosmeticFiltering1": {
       "description": "Tooltip for the no-cosmetic-filtering per-site switch",
-      "message": "Click para ihinto ang cosmetic filtering sa websayt na ito"
+      "message": "کلیک کنید تا فیلتر زیبا سازی بر روی این سایت غیر فعال شود"
    },
    "popupTipNoCosmeticFiltering2": {
       "description": "Tooltip for the no-cosmetic-filtering per-site switch",
-      "message": "Click para hindi ihinto ang cosmetic filtering sa websayt na ito"
+      "message": "کلیک کنید تا فیلتر زیبا سازی بر روی این سایت فعال شود"
    },
    "popupTipNoLargeMedia": {
       "description": "Tooltip for the no-large-media per-site switch",
-      "message": "Palit-ayos sa paghalang ng mga malaking media element sa site"
+      "message": "تغییر وضعیت مسدود کردن عناصر رسانه ای حجیم برای این سایت"
    },
    "popupTipNoLargeMedia1": {
       "description": "Tooltip for the no-large-media per-site switch",
-      "message": "Click para ihinto ang may malalaking media elements sa website na ito"
+      "message": "کلیک کنید تا عناصر رسانه ای حجیم بر روی این سایت مسدود شوند"
    },
    "popupTipNoLargeMedia2": {
       "description": "Tooltip for the no-large-media per-site switch",
-      "message": "Click para ihinto ang may malalaking media elements sa websayt na ito"
+      "message": "کلیک کنید تا از این به بعد عناصر رسانه ای حجیم روی این سایت مسدود نشوند"
    },
    "popupTipNoPopups": {
       "description": "Tooltip for the no-popups per-site switch",
-      "message": "Palit-ayos sa paghalang ng mga labasin sa site"
+      "message": "تغییر وضعیت انسداد همه‌ی پنجره های بالاپَر برای این سایت"
    },
    "popupTipNoPopups1": {
       "description": "Tooltip for the no-popups per-site switch",
-      "message": "Click para ihinto ang lahat ng popups sa websayt na ito"
+      "message": "کلیک کنید تا همۀ پنجره های بالاپَر در این سایت مسدود شوند"
    },
    "popupTipNoPopups2": {
       "description": "Tooltip for the no-popups per-site switch",
-      "message": "Click para hindi na ihinto ang lahat ng popups sa websayt na ito"
+      "message": "کلیک کنید تا دیگر هیچ کدام از پنجره های بالاپَر این سایت مسدود نشوند"
    },
    "popupTipNoRemoteFonts": {
       "description": "Tooltip for the no-remote-fonts per-site switch",
-      "message": "Palit-ayos sa paghalang ng malayuang itsura ng titik para sa site na ito"
+      "message": "تغییر وضعیت انسداد فونت های راه دور برای این سایت"
    },
    "popupTipNoRemoteFonts1": {
       "description": "Tooltip for the no-remote-fonts per-site switch",
-      "message": "Click para ihinto ang remote fonts sa websayt na ito"
+      "message": "کلیک کنید تا فونت های راه دور در این سایت مسدود شوند"
    },
    "popupTipNoRemoteFonts2": {
       "description": "Tooltip for the no-remote-fonts per-site switch",
-      "message": "Click para hindi na ihinto ang remote fonts sa websayt na ito"
+      "message": "کلیک کنید تا از این به بعد فونت های راه دور در این سایت مسدود نشوند"
    },
    "popupTipNoScripting1": {
       "description": "Tooltip for the no-scripting per-site switch",
-      "message": "Pindutin para hindi paganahin ang Javascript sa site na ito"
+      "message": "کلیک کنید تا جاوا اسکریپت در این سایت غیرفعال شود"
    },
    "popupTipNoScripting2": {
       "description": "Tooltip for the no-scripting per-site switch",
-      "message": "Pindutin upang paganahin na ang Javascript sa site na ito"
+      "message": "کلیک کنید تا جاوا اسکریپت دیگر در این سایت غیرفعال نشود"
    },
    "popupTipPicker": {
       "description": "English: Enter element picker mode",
-      "message": "Buksan ang element picker mode"
+      "message": "ورود به حالت انتخاب اشیاء"
    },
    "popupTipReport": {
       "description": "Tooltip used for the 'chat' icon in the panel",
-      "message": "Report an issue on this website"
+      "message": "گزارش یک اشکال در خصوص این وبسایت"
    },
    "popupTipRevertRules": {
       "description": "Tooltip when hovering over the eraser in the dynamic filtering pane.",
-      "message": "Pindutan upang ibalik ang iyong pag-bago."
+      "message": "برای دور انداختن تغییراتی که اعمال کرده اید کلیک کنید."
    },
    "popupTipSaveRules": {
       "description": "Tooltip when hovering over the padlock in the dynamic filtering pane.",
-      "message": "Pindutin upang maging permanente ang mga pagbabago."
+      "message": "برای دائمی سازی تغییرات کلیک کنید."
    },
    "popupTipZapper": {
       "description": "Tooltip for the element-zapper icon in the popup panel",
-      "message": "Buksan ang element zapper na paraan"
+      "message": "ورود به حالت له کردن اشیاء"
    },
    "popupVersion": {
       "description": "Example of use: Version 1.26.4",
-      "message": "Bersyon"
+      "message": "نگارش"
    },
    "relaxBlockingMode": {
       "description": "Label for keyboard shortcut used to relax blocking mode (meant to replace 'Toggle blocking profile')",
-      "message": "Relax blocking mode"
+      "message": "حالت بلاک‌کردن غیرسخت‌گیر"
    },
    "rulesCommit": {
       "description": "This will persist temporary rules",
-      "message": "Pagsubok"
+      "message": "ذخیره در منبع"
    },
    "rulesDefaultFileName": {
       "description": "default file name to use",
@@ -901,71 +901,71 @@
    },
    "rulesEdit": {
       "description": "Will enable manual-edit mode (textarea)",
-      "message": "Baguhin"
+      "message": "ویرایش"
    },
    "rulesEditDiscard": {
       "description": "Will discard manually-edited content and exit manual-edit mode",
-      "message": "Itapon"
+      "message": "لغو"
    },
    "rulesEditSave": {
       "description": "Will save manually-edited content and exit manual-edit mode",
-      "message": "I-save"
+      "message": "ذخيره"
    },
    "rulesExport": {
       "description": "",
-      "message": "I-export sa file"
+      "message": "خروجی گرفتن به فایل..."
    },
    "rulesFormatHint": {
       "description": "English: dynamic rule syntax and full documentation.",
-      "message": "Rule syntax: \u003Ccode>source destination type action\u003C/code> (\u003Ca href='https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-rule-syntax'>full documentation\u003C/a>)."
+      "message": "نحوه استفاده: \u003Ccode>source destination type action\u003C/code> (\u003Ca href='https://github.com/gorhill/uBlock/wiki/Dynamic-filtering:-rule-syntax'>مستندات کامل\u003C/a>)."
    },
    "rulesHint": {
       "description": "English: List of your dynamic filtering rules.",
-      "message": "List of your dynamic filtering rules."
+      "message": "لیست قوانین فیلترینگ پویای شما."
    },
    "rulesImport": {
       "description": "",
-      "message": "Mag-import mula sa file..."
+      "message": "وارد کردن از فایل..."
    },
    "rulesPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Mga patakaran"
+      "message": "قوانین من"
    },
    "rulesPermanentHeader": {
       "description": "header",
-      "message": "Permanenteng batas"
+      "message": "قوانین دائمی"
    },
    "rulesRevert": {
       "description": "This will remove all temporary rules",
-      "message": "Ibalik"
+      "message": "بازگرداندن"
    },
    "rulesSort": {
       "description": "English: label for sort option.",
-      "message": "Ayusin"
+      "message": "مرتب‌سازی:"
    },
    "rulesSortByDestination": {
       "description": "English: a sort option for list of rules.",
-      "message": "Destinasyon"
+      "message": "مقصد"
    },
    "rulesSortBySource": {
       "description": "English: a sort option for list of rules.",
-      "message": "Source"
+      "message": "منبع "
    },
    "rulesSortByType": {
       "description": "English: a sort option for list of rules.",
-      "message": "Batas na uri"
+      "message": "نوع قانون"
    },
    "rulesTemporaryHeader": {
       "description": "header",
-      "message": "Pansamantalang mga batas"
+      "message": "قوانین موقت"
    },
    "settingPerSiteSwitchGroup": {
       "description": "",
-      "message": "Orihinal na pag-uugali"
+      "message": "رفتار پیش فرض"
    },
    "settingPerSiteSwitchGroupSynopsis": {
       "description": "",
-      "message": "These default behaviors can be overridden on a per-site basis"
+      "message": "تنظیمات مخصوص هر سایت این تنظیمات پیش فرض را لغو می‌کند"
    },
    "settingsAdvanced": {
       "description": "Section for controlling advanced-user settings",
@@ -977,11 +977,11 @@
    },
    "settingsAdvancedUserPrompt": {
       "description": "Checkbox to let user access advanced, technical features",
-      "message": "I am an advanced user"
+      "message": "من کاربر حرفه ای هستم (\u003Ca href='https://github.com/gorhill/uBlock/wiki/Advanced-user-features'>لازم است بخوانید\u003C/a>)"
    },
    "settingsAdvancedUserSettings": {
       "description": "For the tooltip of a link which gives access to advanced settings",
-      "message": "advanced settings"
+      "message": "تنظیمات پیشرفته"
    },
    "settingsAppearance": {
       "description": "Section for controlling user interface appearance",
@@ -989,63 +989,63 @@
    },
    "settingsCloudStorageEnabledPrompt": {
       "description": "",
-      "message": "Enable cloud storage support"
+      "message": "فعال سازی پشتیبانی ذخیره سازی ابری"
    },
    "settingsCollapseBlockedPrompt": {
       "description": "English: Hide placeholders of blocked elements",
-      "message": "Hide placeholders of blocked elements"
+      "message": "مخفی کردن نگاهدارنده اشیاء بلاک شده"
    },
    "settingsColorBlindPrompt": {
       "description": "English: Color-blind friendly",
-      "message": "Color-blind friendly"
+      "message": "بهینه سازی کور رنگی"
    },
    "settingsContextMenuPrompt": {
       "description": "English: Make use of context menu where appropriate",
-      "message": "Make use of context menu where appropriate"
+      "message": "استفاده از منوی متنی در زمانهای لازم"
    },
    "settingsHyperlinkAuditingDisabledPrompt": {
       "description": "English: ",
-      "message": "Disable hyperlink auditing"
+      "message": "غیرفعال کردن حسابرسی پیوند"
    },
    "settingsIconBadgePrompt": {
       "description": "English: Show the number of blocked requests on the icon",
-      "message": "Ipakita ang bilang ng mga naharang sa ikon"
+      "message": "نمایش تعداد درخواست های بلاک شده بر روی آیکون"
    },
    "settingsLastBackupPrompt": {
       "description": "English: Last backup:",
-      "message": "Huling backup:"
+      "message": "آخرین پشتیبانی:"
    },
    "settingsLastRestorePrompt": {
       "description": "English: Last restore:",
-      "message": "Huling pag-restore:"
+      "message": "آخرین بازیابی:"
    },
    "settingsNoCSPReportsPrompt": {
       "description": "background information: https://github.com/gorhill/uBlock/issues/3150",
-      "message": "Pagbawalin ang balita ng CSP"
+      "message": "مسدود کردن براساس گزارشات سیاست امنیت محتوا"
    },
    "settingsNoCosmeticFilteringPrompt": {
       "description": "",
-      "message": "Di-pinagana ang cosmetic filtering"
+      "message": "غیر فعال‌سازی فیلتر زیبا سازی"
    },
    "settingsNoLargeMediaPrompt": {
       "description": "",
-      "message": "Bawalan ang mga media element na mas malaki sa {{input}} KB"
+      "message": "انسداد عناصر رسانه ای حجیم تر از {{input:number}} کیلوبایت"
    },
    "settingsNoRemoteFontsPrompt": {
       "description": "",
-      "message": "Bawalan ang remote fonts"
+      "message": "انسداد فونت های راه دور"
    },
    "settingsNoScriptingPrompt": {
       "description": "The default state for the per-site no-scripting switch",
-      "message": "Di-pinagana ang JavaScript"
+      "message": "غیرفعال کردن جاوا اسکریپت"
    },
    "settingsPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Mga Setting"
+      "message": "تنظیمات"
    },
    "settingsPrefetchingDisabledPrompt": {
       "description": "English: ",
-      "message": "Disable pre-fetching (to prevent any connection for blocked network requests)"
+      "message": "غیر فعال کردن واکشی اولیه (برای جلوگیری از هر گونه اتصال برای درخواست های مسدود شدۀ شبکه)"
    },
    "settingsThemeAccent0Label": {
       "description": "Label for checkbox to pick an accent color",
@@ -1057,59 +1057,59 @@
    },
    "settingsTooltipsPrompt": {
       "description": "A checkbox in the Settings pane",
-      "message": "Wag i-pagana ang tooltips"
+      "message": "غیر فعال سازی راهنماها"
    },
    "settingsUncloakCnamePrompt": {
       "description": "background information: https://github.com/uBlockOrigin/uBlock-issues/issues/1513",
-      "message": "Uncloak canonical names"
+      "message": "اسامی متعارف را از حالت قفل خارج کنید"
    },
    "settingsWebRTCIPAddressHiddenPrompt": {
       "description": "English: ",
-      "message": "Pigilan ang WebRTC sa paglalabas ng mga lokal na IP address "
+      "message": "جلوگیری کردن از WebRTC از افشاسازی آدرس های IP محلی"
    },
    "shortcutCapturePlaceholder": {
       "description": "Placeholder string for input field used to capture a keyboard shortcut",
-      "message": "Mag-sulat ng shortcut"
+      "message": "یک میانبر وارد کنید"
    },
    "shortcutsPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Mga daang tuwiran"
+      "message": "میانبرها"
    },
    "showDashboardButton": {
       "description": "Firefox/Fennec-specific: Show Dashboard",
-      "message": "Show Dashboard"
+      "message": "نمایش داشبورد"
    },
    "showNetworkLogButton": {
       "description": "Firefox/Fennec-specific: Show Logger",
-      "message": "Ipakita ang Logger"
+      "message": "نمایش واقعه‌نگار"
    },
    "statsPageName": {
       "description": "Title for the logger window",
-      "message": "uBlock - Talaan"
+      "message": "uBlock₀ — واقعه‌نگار"
    },
    "storageUsed": {
       "description": " In Setting pane, renders as (example): Storage used: 13.2 MB",
-      "message": "Storage used: {{value}} {{unit}}"
+      "message": "فضای مصرفی: {{value}} {{unit}}"
    },
    "subscribeButton": {
       "description": "For the button used to subscribe to a filter list",
-      "message": "Mag-subscribe"
+      "message": "آبونه شدن"
    },
    "subscriberConfirm": {
       "description": "No longer used",
-      "message": "Add the following URL to your custom filter lists?\n\nTitle: \"{{title}}\"\nURL: {{url}}"
+      "message": "uBlock₀: آدرس اینترنتی زیر به فهرست فیلتر های سفارشی شما اضافه شود؟\n\nعنوان: \"{{title}}\"\nآدرس: {{url}}"
    },
    "supportFindSpecificButton": {
       "description": "A clickable link in the filter issue reporter section",
-      "message": "Find similar reports"
+      "message": "یافتن گزارش‌های مشابه"
    },
    "supportOpenButton": {
       "description": "Text for button which open an external webpage in Support pane",
-      "message": "Open"
+      "message": "باز کردن"
    },
    "supportPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Support"
+      "message": "پشتیبانی"
    },
    "supportRedact": {
       "description": "Text for 'Redact' button",
@@ -1117,11 +1117,11 @@
    },
    "supportReportSpecificButton": {
       "description": "Text for button which open an external webpage in Support pane",
-      "message": "Create new report"
+      "message": "ایجاد گزارش جدید"
    },
    "supportS1H": {
       "description": "Header of 'Documentation' section in Support pane",
-      "message": "Documentation"
+      "message": "مستندات"
    },
    "supportS1P1": {
       "description": "First paragraph of 'Documentation' section in Support pane",
@@ -1129,7 +1129,7 @@
    },
    "supportS2H": {
       "description": "Header of 'Questions and support' section in Support pane",
-      "message": "Questions and support"
+      "message": "سوال‌ها و پشتیبانی"
    },
    "supportS2P1": {
       "description": "First paragraph of 'Questions and support' section in Support pane",
@@ -1145,7 +1145,7 @@
    },
    "supportS3P2": {
       "description": "Second paragraph of 'Filter issues' section in Support pane",
-      "message": "\u003Cb>Important:\u003C/b> Avoid using other similarly-purposed blockers along with uBlock Origin, as this may cause filter issues on specific websites."
+      "message": "\u003Cb>مهم:\u003C/b> از مسدودکننده‌های مشابه دیگر در کنار یوبلاک اوریجین استفاده نکنید. این کار ممکن است باعث ایجاد مشکل در فیلترها برای برخی سایت‌ها شود."
    },
    "supportS3P3": {
       "description": "Third paragraph of 'Filter issues' section in Support pane",
@@ -1153,7 +1153,7 @@
    },
    "supportS4H": {
       "description": "Header of 'Bug report' section in Support pane",
-      "message": "Bug report"
+      "message": "گزارش اشکال"
    },
    "supportS4P1": {
       "description": "First paragraph of 'Bug report' section in Support pane",
@@ -1165,7 +1165,7 @@
    },
    "supportS5P1": {
       "description": "First paragraph of 'Troubleshooting Information' section in Support pane",
-      "message": "Below is technical information that might be useful when volunteers are trying to help you solve a problem."
+      "message": "در زیر اطلاعات فنی آمده که ممکن است برای داوطلبانی که می‌خواهند در حل یک مشکل کمک کنند مفید باشد."
    },
    "supportS5P2": {
       "description": "Second paragraph of 'Troubleshooting Information' section in Support pane",
@@ -1177,23 +1177,23 @@
    },
    "supportS6H": {
       "description": "Header of 'Report a filter issue' section in Support pane",
-      "message": "Report a filter issue"
+      "message": "گزارش یک اشکال در فیلتر"
    },
    "supportS6P1S1": {
       "description": "A paragraph in the filter issue reporter section",
-      "message": "To avoid burdening volunteers with duplicate reports, please verify that the issue has not already been reported."
+      "message": "برای این که وقت داوطلبان با گزارش‌های تکراری گرفته نشوند، لطفا مطمئن شوید که این اشکال قبلا گزارش نشده باشد."
    },
    "supportS6Select1": {
       "description": "Label for widget to select type of issue",
-      "message": "The web page…"
+      "message": "این صفحه‌ی وب..."
    },
    "supportS6Select1Option0": {
       "description": "An entry in the widget used to select the type of issue",
-      "message": "-- Pick an entry --"
+      "message": "-- یک گزینه را انتخاب کنید --"
    },
    "supportS6Select1Option1": {
       "description": "An entry in the widget used to select the type of issue",
-      "message": "Shows ads or ad leftovers"
+      "message": "تبلیغات یا باقی‌مانده‌هایی از آن نشان می‌دهد"
    },
    "supportS6Select1Option2": {
       "description": "An entry in the widget used to select the type of issue",
@@ -1201,23 +1201,23 @@
    },
    "supportS6Select1Option3": {
       "description": "An entry in the widget used to select the type of issue",
-      "message": "Detects uBlock Origin"
+      "message": "یوبلاک اوریجین را تشخیص می‌دهد"
    },
    "supportS6Select1Option4": {
       "description": "An entry in the widget used to select the type of issue",
-      "message": "Has privacy-related issues"
+      "message": "دارای ایراد مربوط به حریم خصوصی است"
    },
    "supportS6Select1Option5": {
       "description": "An entry in the widget used to select the type of issue",
-      "message": "Malfunctions when uBlock Origin is enabled"
+      "message": "وقتی یوبلاک اوریجین فعال است عملکرد درستی ندارد"
    },
    "supportS6Select1Option6": {
       "description": "An entry in the widget used to select the type of issue",
-      "message": "Opens unwanted tabs or windows"
+      "message": "تب یا پنجره‌ی ناخواسته باز می‌کند"
    },
    "supportS6URL": {
       "description": "Label for the URL of the page",
-      "message": "Address of the web page:"
+      "message": "آدرس صفحه‌ی وب:"
    },
    "supportUnredact": {
       "description": "Text for 'Unredact' button",
@@ -1225,31 +1225,30 @@
    },
    "toggleBlockingProfile": {
       "description": "Label for keyboard shortcut used to toggle blocking profile",
-      "message": "Toggle blocking profile"
+      "message": "تغییروضعیت نمایه‌ی بلاک‌کردن"
    },
    "whitelistApply": {
       "description": "English: Apply changes",
-      "message": "Isumite ang mga pagbabago"
+      "message": "اعمال تغییرات"
    },
    "whitelistExport": {
       "description": "English: Export",
-      "message": "I-Export"
+      "message": "خروجي گرفتن"
    },
    "whitelistExportFilename": {
       "description": "The default filename to use for import/export purpose",
-      "message": "my-ublock-trusted-sites_{{datetime}}.txt"
+      "message": "my-ublock-whitelist_{{datetime}}.txt"
    },
    "whitelistImport": {
       "description": "English: Import and append",
-      "message": "Import and append"
+      "message": "وارد کردن و الحاق"
    },
    "whitelistPageName": {
       "description": "appears as tab name in dashboard",
-      "message": "Whitelist"
+      "message": "لیست سپید"
    },
    "whitelistPrompt": {
       "description": "A concise description of the 'Trusted sites' pane.",
-      "message": "The trusted site directives dictate on which web pages uBlock Origin should be disabled. One entry per line."
+      "message": "دستور العمل‌های لیست سفید حکم می‌کند که uBlock₀ باید بر روی کدام یک از صفحات وب غیر فعال باشد. در هر خط فقط یک مورد. دستور العمل‌های نامعتبر بدون اشاره ای نادیده گرفته شده و بیرون انداخته می‌شوند."
    }
 }
-  "whit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

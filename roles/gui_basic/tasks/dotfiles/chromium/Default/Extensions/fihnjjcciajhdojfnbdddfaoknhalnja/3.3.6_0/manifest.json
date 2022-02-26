@@ -11,7 +11,6 @@
       "default_popup": "data/menu/index.html"
    },
    "default_locale": "en",
-   "differential_fingerprint": "1.947686cbd771bb92fbacc655b620efdeaca618f07f790cde4b06a57d2356f7ea",
    "icons": {
       "128": "icons/128.png",
       "16": "icons/16.png",

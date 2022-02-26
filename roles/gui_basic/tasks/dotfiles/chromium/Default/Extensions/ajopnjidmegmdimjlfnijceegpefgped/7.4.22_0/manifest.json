@@ -12,7 +12,6 @@
       "matches": [ "*://*.twitch.tv/*" ]
    } ],
    "description": "BetterTTV enhances Twitch with new features, emotes, and more.",
-   "differential_fingerprint": "1.0cce78c22197b7aba9bcb89ab5d50fcd2b00610106241daf0e76aa0880fbfaa6",
    "externally_connectable": {
       "matches": [ "*://*.twitch.tv/*" ]
    },
