@@ -1,0 +1,25 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1384,
+       "width": 2550,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "ClionUnique",
+    "percent": 1,
+    "swallows": [
+       {
+          "class": "^jetbrains\\-clion$"
+       // "instance": "^jetbrains\\-clion$",
+       // "machine": "^UwU$",
+       // "title": "^Aufgabe_3\\ \\–\\ What\\'s\\ New\\ in\\ CLion$"
+       }
+    ],
+    "type": "con"
+}
+

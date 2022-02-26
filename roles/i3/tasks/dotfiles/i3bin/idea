@@ -1,0 +1,7 @@
+#!/bin/bash
+i3-msg append_layout $HOME/i3bin/i3layouts/layout_idea.json
+i3-msg "[title=IdeaUnique] move scratchpad"
+i3-msg append_layout $HOME/i3bin/i3layouts/layout_idea.json
+i3-msg "[title=IdeaUnique] border none"
+
+$HOME/bin/programs/idea

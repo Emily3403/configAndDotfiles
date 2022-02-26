@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Cleanup trash
+rm -rf $XDG_DATA_HOME/Trash/*
+
+# Remove orphaned packages
+sudo pacman -Rns $(pacman -Qtdq) --noconfirm
+
+
+# Remove caches
+sudo pacman -Sc --noconfirm
+
+
+# Remove Systemd journal
+sudo journalctl --vacuum-size=1M

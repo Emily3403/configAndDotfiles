@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [[ $XDG_CURRENT_DESKTOP == "i3" ]]; then
+    pkill -SIGRTMIN+11 i3blocks
+fi
