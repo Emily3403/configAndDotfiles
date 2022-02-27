@@ -1,3 +1,0 @@
-[submodule "roles/password/tasks/dotfiles/Passwords"]
-	path = roles/password/tasks/dotfiles/Passwords
-	url = git@github.com:Emily3403/Passwords.git
