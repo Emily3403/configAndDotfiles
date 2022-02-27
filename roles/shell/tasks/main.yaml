@@ -162,7 +162,7 @@
 
 
 
-- local_action: stat path=~/.vim/pack/vendor/start/YouCompleteMe
+- local_action: stat path=~/configAndDotfiles/roles/shell/dotfiles/vim/.vim/pack/vendor/start/YouCompleteMe
   register: vim_packages
 
 - name: Bootstrapping vim

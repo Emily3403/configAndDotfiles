@@ -1,6 +1,7 @@
 ---
-- hosts: garuda-gnome-vm
+- hosts: laptop
   roles:
+    - shell
     - gui_basic
 
 

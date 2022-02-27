@@ -13,16 +13,29 @@
       - "{{ chromium_package_name }}"
       - flameshot
       - pavucontrol
+      - spotify
+      - telegram-desktop
 
 
 
 # TODO: Auto-configure chrome plugins
 
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+
+- name: Set up chromium dir
+  file:
+    path: "~/.config/chromium"
+    state: directory
 
 - name: Delete unused files
   file:
     state: absent
     path: "~/.config/chromium/Default"
+
+
 
 - name: Install gui dotfiles
   file:
