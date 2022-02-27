@@ -161,7 +161,12 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/vim/.vimrc', dest: '~/.vimrc' }
 
 
+
+- local_action: stat path=~/.vim/pack/vendor/start/YouCompleteMe
+  register: vim_packages
+
 - name: Bootstrapping vim
   command: ~/.vim/pack/vendor/start/bootstrap.sh
   args:
     chdir: ~/.vim/pack/vendor/start/
+  when: not vim_packages.stat.exists
