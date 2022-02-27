@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 git clone https://github.com/sainnhe/everforest &
 git clone https://github.com/iamcco/markdown-preview.nvim &
