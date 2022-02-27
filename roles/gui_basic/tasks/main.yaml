@@ -1,0 +1,36 @@
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "package_translation/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yaml"
+    - "package_translation/{{ ansible_distribution }}.yaml"
+    - "package_translation/{{ ansible_os_family }}.yaml"
+  when: apache_package_name is not defined or apache_service_name is not defined
+
+
+- name: Gui packages
+  become: true
+  ansible.builtin.package:
+    name:
+      - "{{ chromium_package_name }}"
+      - flameshot
+      - pavucontrol
+
+
+
+# TODO: Auto-configure chrome plugins
+
+
+- name: Delete unused files
+  file:
+    state: absent
+    path: "~/.config/chromium/Default"
+
+- name: Install gui dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: "~/configAndDotfiles/roles/gui_basic/tasks/dotfiles/chromium/Default", dest: "~/.config/chromium/Default" }
+    - { src: "~/configAndDotfiles/roles/gui_basic/tasks/dotfiles/chromium/Background", dest: "~/Pictures/Background" }
