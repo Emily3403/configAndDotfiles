@@ -1,0 +1,10 @@
+- name: Install packages
+  package:
+    name:
+      - paperkey
+      - gnupg
+      - pass
+
+- name: Install the private gpg key
+  shell: 
+
