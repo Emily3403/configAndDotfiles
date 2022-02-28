@@ -1,3 +1,4 @@
+
 - name: Install packages
   package:
     name:
@@ -5,6 +6,31 @@
       - gnupg
       - pass
 
-- name: Install the private gpg key
-  shell: 
 
+- name: Delete old password store
+  file:
+    state: absent
+    path: ~/.password-store
+
+- name: Clone the passwords repo
+  git: 
+    repo: https://github.com/Emily3403/Passwords
+    dest: ~/.password-store 
+    force: yes
+
+
+- pause: 
+    prompt: "Please enter your GPG password!"
+
+  register: gpg_password
+  no_log: yes
+
+- name: What is password?
+  debug:
+    var: gpg_password
+
+- name: Install the private gpg key
+  shell:
+    cmd:  ~/.password-store/bootstrap/decrypt.sh
+    chdir: ~/.password-store/bootstrap
+    stdin: "{{ gpg_password.user_input }}" 
