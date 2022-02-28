@@ -24,6 +24,7 @@
   git:
     repo: https://github.com/Emily3403/configAndDotfiles
     dest: ~/configAndDotfiles
+    force: yes
 
 - name: Set up chromium dir
   file:
