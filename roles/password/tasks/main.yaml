@@ -1,5 +1,6 @@
 
 - name: Install packages
+  become: yes
   package:
     name:
       - paperkey
@@ -34,3 +35,8 @@
     cmd:  ~/.password-store/bootstrap/decrypt.sh
     chdir: ~/.password-store/bootstrap
     stdin: "{{ gpg_password.user_input }}" 
+
+- name: Install ssh key
+  shell:
+    cmd: ~/configAndDotfiles/roles/password/tasks/dotfiles/ssh/bootstrap.sh 
+    stdin: "{{ gpg_password.user_input }}"

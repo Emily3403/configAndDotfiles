@@ -137,6 +137,7 @@
   git:
     repo: https://github.com/Emily3403/configAndDotfiles
     dest: ~/configAndDotfiles
+    force: true
 
 
 - name: Install dotfiles
@@ -162,11 +163,8 @@
 
 
 
-- local_action: stat path=~/configAndDotfiles/roles/shell/dotfiles/vim/.vim/pack/vendor/start/YouCompleteMe
-  register: vim_packages
-
 - name: Bootstrapping vim
-  command: ~/.vim/pack/vendor/start/bootstrap.sh
+  command: ~/configAndDotfiles/roles/shell/tasks/dotfiles/vim/.vim/pack/vendor/start/bootstrap.sh
   args:
-    chdir: ~/.vim/pack/vendor/start/
-  when: not vim_packages.stat.exists
+    chdir: ~/configAndDotfiles/roles/shell/tasks/dotfiles/vim/.vim/pack/vendor/start/
+    creates: ~/configAndDotfiles/roles/shell/tasks/dotfiles/vim/.vim/pack/vendor/start/YouCompleteMe
