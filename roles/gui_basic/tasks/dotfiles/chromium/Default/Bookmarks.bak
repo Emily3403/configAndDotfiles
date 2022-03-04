@@ -1,5 +1,5 @@
 {
-   "checksum": "5a9a624b83aa61e1d8ea5d2136920db8",
+   "checksum": "9dab9758cda7727eabff06cf11e384e7",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -51,6 +51,13 @@
             "name": "isisdl",
             "type": "url",
             "url": "https://github.com/Emily3403/isisdl"
+         }, {
+            "date_added": "13290713634210503",
+            "guid": "dbae944f-f741-4810-973e-b7bbaeb5b2ef",
+            "id": "78",
+            "name": "Gartenverein",
+            "type": "url",
+            "url": "https://meet.ffmuc.net/MartinsKleinerGartenverein"
          }, {
             "children": [ {
                "date_added": "13278779200685392",
@@ -196,9 +203,16 @@
                "name": "danistefanovic/build-your-own-x: 🤓 Build your own (insert technology here)",
                "type": "url",
                "url": "https://github.com/danistefanovic/build-your-own-x"
+            }, {
+               "date_added": "13290387384327828",
+               "guid": "016452fb-7200-468f-8744-78825608fcd2",
+               "id": "76",
+               "name": "Modern \"Freedom\" Means Being a Slave to Impulses – Luke Smith",
+               "type": "url",
+               "url": "https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses"
             } ],
             "date_added": "13276697765567478",
-            "date_modified": "13289696745221921",
+            "date_modified": "13290713634210503",
             "guid": "8bf54575-0b9f-49b1-bca9-5ccb192af50f",
             "id": "20",
             "name": "ToRead",
@@ -294,7 +308,7 @@
             "type": "folder"
          } ],
          "date_added": "13276448815557596",
-         "date_modified": "13290380006038934",
+         "date_modified": "13290800613871924",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",

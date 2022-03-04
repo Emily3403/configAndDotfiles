@@ -1,8 +1,7 @@
 ---
-- hosts: garuda-gnome-vm
+
+# TODO: backup role
+- hosts: nas
 
   roles:
     - shell
-    - gui_basic
-    - password
-
