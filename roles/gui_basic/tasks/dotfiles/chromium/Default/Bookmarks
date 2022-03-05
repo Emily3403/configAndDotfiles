@@ -1,5 +1,5 @@
 {
-   "checksum": "166711b3d7a752e1502b502b5c7f640f",
+   "checksum": "e7d5e87b8f3c1674f0813313feec755e",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -123,9 +123,16 @@
                "name": "Learn",
                "type": "url",
                "url": "https://ziglearn.org/chapter-2/"
+            }, {
+               "date_added": "13290964674016728",
+               "guid": "916b9261-ae79-4e6a-81cb-612a39abee24",
+               "id": "86",
+               "name": "OS",
+               "type": "url",
+               "url": "https://github.com/Emily3403/OperatingSystem"
             } ],
             "date_added": "13290818453662089",
-            "date_modified": "13290818632929891",
+            "date_modified": "13290964674016728",
             "guid": "fdec807e-c227-44d9-bc5d-a30f5b5ea813",
             "id": "80",
             "name": "Zig",

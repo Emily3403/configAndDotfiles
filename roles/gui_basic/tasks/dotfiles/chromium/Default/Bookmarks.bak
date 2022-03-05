@@ -1,5 +1,5 @@
 {
-   "checksum": "9dab9758cda7727eabff06cf11e384e7",
+   "checksum": "166711b3d7a752e1502b502b5c7f640f",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -60,51 +60,6 @@
             "url": "https://meet.ffmuc.net/MartinsKleinerGartenverein"
          }, {
             "children": [ {
-               "date_added": "13278779200685392",
-               "guid": "177d7ac2-8b22-4214-9d50-c6b00245c7e8",
-               "id": "38",
-               "name": "Klausuren",
-               "type": "url",
-               "url": "https://docs.freitagsrunde.org/Klausuren/"
-            } ],
-            "date_added": "13278863966857893",
-            "date_modified": "13279461099742552",
-            "guid": "575c79e6-cbd8-4962-b828-f4ede1018a02",
-            "id": "44",
-            "name": "Uni",
-            "type": "folder"
-         }, {
-            "children": [ {
-               "date_added": "13276648757055620",
-               "guid": "2332e8e8-ad46-450f-b869-91849656044d",
-               "id": "10",
-               "name": "Shadyurl",
-               "type": "url",
-               "url": "http://www.shadyurl.com/"
-            } ],
-            "date_added": "13276648732990525",
-            "date_modified": "13277151328910530",
-            "guid": "2be4d299-74da-4c5d-9a56-1a24ed367015",
-            "id": "9",
-            "name": "Funny",
-            "type": "folder"
-         }, {
-            "children": [ {
-               "date_added": "13276648952125618",
-               "guid": "2174b7ab-1c8a-4263-93eb-0c88c56204c6",
-               "id": "12",
-               "name": "ClubFemboy",
-               "type": "url",
-               "url": "http://www.clubfemboy.com/login"
-            } ],
-            "date_added": "13276648946061299",
-            "date_modified": "13276649839516092",
-            "guid": "bafff461-ef0a-4d08-8c59-b4c4327f29d6",
-            "id": "11",
-            "name": "That Stuff",
-            "type": "folder"
-         }, {
-            "children": [ {
                "date_added": "13290092392104132",
                "guid": "2a4bbc3f-9cb1-44a6-b5fc-7146f7775ed5",
                "id": "71",
@@ -148,74 +103,32 @@
             "type": "folder"
          }, {
             "children": [ {
-               "date_added": "13276697774143881",
-               "guid": "9e9e765c-de3f-415c-9cc4-d963462396f6",
-               "id": "21",
-               "name": "Analyzing i3 keyboard shortcuts – rabbiticTranslator",
+               "date_added": "13290818581111925",
+               "guid": "d707f947-9503-45bd-b00b-b0eda74d5a5f",
+               "id": "82",
+               "name": "Github",
                "type": "url",
-               "url": "https://rabbitictranslator.com/wordpress/index.php/2020/01/12/analyzing-i3-keyboard-shortcuts/"
+               "url": "https://github.com/ziglang/zig"
             }, {
-               "date_added": "13276966977555791",
-               "guid": "aa56b778-b79d-4787-8434-3acd1a9b4dbe",
-               "id": "25",
-               "name": "Insights into Sexism: Male Status and Performance Moderates Female-Directed Hostile and Amicable Behaviour",
+               "date_added": "13290818606548778",
+               "guid": "4efb331e-5ec4-4597-a050-778116260fda",
+               "id": "83",
+               "name": "std library",
                "type": "url",
-               "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pone.0131613/1/pone.0131613.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wombat-sa%40plos-prod.iam.gserviceaccount.com%2F20210924%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210924T142252Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=4292c2c383b77aa038f9bb459cb76b33b9b2f9c33e66974a6733cf7d5ae484e94092c003868b12373b6917d3f504c33f5328f34f65739de6322229539dacc52450a3a067d2a9d80fc1c37ed67438e33ff9023ba739ce71c6310c4404f190e13c97c7f55ec1d124283832e24aea4b81bab70cf37c6dc81da8a40c15340292fb236358f06ce896b28a9d048ac2eb96eaf8f07a19ead1564cafff904c61df836f9b94b89c71a2ad39e1951d02381ce62360b51e738408dfa8c3515287c1f6340c33a77b669d55aaa348dd0dfba2c00349287df58d7cfe8cac20bbc472287bcd0fc23ef0e48747de09689a9552a31dedbdf96ceddb5f729975f860c8071d002210d9"
+               "url": "https://github.com/ziglang/zig/blob/master/lib/std/std.zig"
             }, {
-               "date_added": "13277573481168056",
-               "guid": "87cf2df6-31fc-417c-8c92-7b8580e93d65",
-               "id": "29",
-               "name": "A Complete Guide to Neovim Configuration for Python Development - jdhao's blog",
+               "date_added": "13290818632929891",
+               "guid": "893c950f-b2a3-44cf-b07d-812d1bbc4895",
+               "id": "84",
+               "name": "Learn",
                "type": "url",
-               "url": "https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/"
-            }, {
-               "date_added": "13284390846057401",
-               "guid": "68122be8-3a99-4949-b96a-d7ef01911ce7",
-               "id": "67",
-               "name": "DO YOUR GIN | DIY Gin-Set – für zu Hause oder als Geschenk | Bekannt aus Sat1, Vogue, Spiegel | 12 Botanicals im Glas | Craft Gin zum Selber-Machen",
-               "type": "url",
-               "url": "https://www.amazon.de/YOUR-GIN-selber-machen-Gew%C3%BCrz-Flaschen-Gin-Baukasten/dp/B07DNH72QT/ref=sr_1_6?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=gin&qid=1639917153&sr=8-6"
-            }, {
-               "date_added": "13278689580473391",
-               "guid": "495477ea-1ae1-4e25-a789-2609488c4c35",
-               "id": "35",
-               "name": "Insights into Sexism: Male Status and Performance Moderates Female-Directed Hostile and Amicable Behaviour",
-               "type": "url",
-               "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131613"
-            }, {
-               "date_added": "13278689585757307",
-               "guid": "5989d6ca-86b6-4ef5-9796-8c5a84006c21",
-               "id": "36",
-               "name": "‘Into the wolves’ den: an investigation of predictors of sexism in online games’: Behaviour & Information Technology: Vol 0, No 0",
-               "type": "url",
-               "url": "https://www.tandfonline.com/doi/full/10.1080/0144929X.2021.1899287"
-            }, {
-               "date_added": "13283127319748443",
-               "guid": "966a42e6-f58b-4b05-8c60-542fb9624f07",
-               "id": "57",
-               "name": "directory - What are directories, if everything on Linux is a file? - Ask Ubuntu",
-               "type": "url",
-               "url": "https://askubuntu.com/questions/1073802/what-are-directories-if-everything-on-linux-is-a-file"
-            }, {
-               "date_added": "13283520416980144",
-               "guid": "894e4892-17c3-4aba-82be-56c5d78923b4",
-               "id": "65",
-               "name": "danistefanovic/build-your-own-x: 🤓 Build your own (insert technology here)",
-               "type": "url",
-               "url": "https://github.com/danistefanovic/build-your-own-x"
-            }, {
-               "date_added": "13290387384327828",
-               "guid": "016452fb-7200-468f-8744-78825608fcd2",
-               "id": "76",
-               "name": "Modern \"Freedom\" Means Being a Slave to Impulses – Luke Smith",
-               "type": "url",
-               "url": "https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses"
+               "url": "https://ziglearn.org/chapter-2/"
             } ],
-            "date_added": "13276697765567478",
-            "date_modified": "13290713634210503",
-            "guid": "8bf54575-0b9f-49b1-bca9-5ccb192af50f",
-            "id": "20",
-            "name": "ToRead",
+            "date_added": "13290818453662089",
+            "date_modified": "13290818632929891",
+            "guid": "fdec807e-c227-44d9-bc5d-a30f5b5ea813",
+            "id": "80",
+            "name": "Zig",
             "type": "folder"
          }, {
             "children": [ {
@@ -226,29 +139,36 @@
                "type": "url",
                "url": "https://en.wikipedia.org/wiki/Box-drawing_character#Box_Drawing"
             }, {
-               "date_added": "13278070379696611",
-               "guid": "1e28968e-e88f-4a5b-946a-06c6d415f811",
-               "id": "31",
-               "name": "Bandbreite",
-               "type": "url",
-               "url": "https://www.heise.de/netze/tools/bandbreitenrechner/"
-            }, {
-               "date_added": "13279461099742552",
-               "guid": "6092042f-3c4c-4619-ae7a-0df850facfbe",
-               "id": "46",
-               "name": "Maybe Github",
-               "type": "url",
-               "url": "https://github.com/easimon/maximize-build-space"
-            }, {
                "date_added": "13283008094503016",
                "guid": "46a9848c-5074-4ea3-9d80-ced3db816188",
                "id": "55",
                "name": "TempMail",
                "type": "url",
                "url": "https://temp-mail.org/en/"
+            }, {
+               "date_added": "13278779200685392",
+               "guid": "177d7ac2-8b22-4214-9d50-c6b00245c7e8",
+               "id": "38",
+               "name": "Klausuren",
+               "type": "url",
+               "url": "https://docs.freitagsrunde.org/Klausuren/"
+            }, {
+               "date_added": "13276648757055620",
+               "guid": "2332e8e8-ad46-450f-b869-91849656044d",
+               "id": "10",
+               "name": "Shadyurl",
+               "type": "url",
+               "url": "http://www.shadyurl.com/"
+            }, {
+               "date_added": "13280260027315078",
+               "guid": "93cbe690-4adf-4ad3-812d-149829a2eafc",
+               "id": "51",
+               "name": "xcolor",
+               "type": "url",
+               "url": "http://www.latextemplates.com/svgnames-colors"
             } ],
             "date_added": "13276704705666458",
-            "date_modified": "13283127319748443",
+            "date_modified": "13290818581111925",
             "guid": "13a56004-0325-49a2-8a39-5b7a7d0d2366",
             "id": "22",
             "name": "Useful",
@@ -291,24 +211,9 @@
             "id": "41",
             "name": "Games",
             "type": "folder"
-         }, {
-            "children": [ {
-               "date_added": "13280260027315078",
-               "guid": "93cbe690-4adf-4ad3-812d-149829a2eafc",
-               "id": "51",
-               "name": "xcolor",
-               "type": "url",
-               "url": "http://www.latextemplates.com/svgnames-colors"
-            } ],
-            "date_added": "13280260024682894",
-            "date_modified": "13281060711863189",
-            "guid": "0ffd24f9-ce2b-4170-88cb-5612be8bb32d",
-            "id": "50",
-            "name": "LaTeX",
-            "type": "folder"
          } ],
          "date_added": "13276448815557596",
-         "date_modified": "13290800613871924",
+         "date_modified": "13290818552724767",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",
