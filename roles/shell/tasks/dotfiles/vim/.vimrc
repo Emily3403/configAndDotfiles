@@ -19,12 +19,11 @@
 "
 
 "--  Temp custom  --
-packadd! everforest
 
 
 "---------------  General Settings  ---------------
 if &shell =~# 'fish$'
-    set shell=sh
+    set shell=bash
 endif
 
 
@@ -42,8 +41,7 @@ set shortmess+=c
 set smartcase
 set smartindent
 set tabstop=4
-set number relativenumber
-set nu rnu
+set nu 
 let mapleader = " "
 syntax on
 
@@ -161,4 +159,16 @@ noremap j h
 
 "----------------  Fish ---------------
 
+
+"---------------- Zig ----------------
+autocmd BufNewFile,BufRead *.zig set filetype=zig
+let g:zig_fmt_autosave = 1
+let g:ycm_language_server =
+  \ [
+  \{
+  \     'name': 'zls',
+  \     'filetypes': [ 'zig' ],
+  \     'cmdline': [ '/home/emily/.vim/pack/vendor/start/zls/zls' ]
+  \    }
+  \ ]
 

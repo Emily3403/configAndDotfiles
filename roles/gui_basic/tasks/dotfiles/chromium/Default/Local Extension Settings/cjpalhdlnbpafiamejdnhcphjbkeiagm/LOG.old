@@ -1,3 +1,6 @@
-2022/03/04-22:07:50.930 1a86 Reusing MANIFEST /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
-2022/03/04-22:07:50.930 1a86 Recovering log #50
-2022/03/04-22:07:50.931 1a86 Reusing old log /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000050.log 
+2022/03/06-14:32:28.476 4656 Reusing MANIFEST /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2022/03/06-14:32:28.476 4656 Recovering log #60
+2022/03/06-14:32:28.477 4656 Reusing old log /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000060.log 
+2022/03/06-14:37:14.978 466d Level-0 table #65: started
+2022/03/06-14:37:14.996 466d Level-0 table #65: 2414563 bytes OK
+2022/03/06-14:37:15.001 466d Delete type=0 #60
