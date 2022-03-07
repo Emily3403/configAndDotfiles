@@ -161,7 +161,7 @@ noremap j h
 
 
 "---------------- Zig ----------------
-autocmd BufNewFile,BufRead *.zig set filetype=zig
+autocmd BufNewFile,BufRead *.zig set filetype=zig|nnoremap <C-S> :w<CR> :!./compiler/zig build qemu<CR> |nnoremap <C-A> :w<CR> :!./run/makeAndAttach.sh<CR><CR>
 let g:zig_fmt_autosave = 1
 let g:ycm_language_server =
   \ [

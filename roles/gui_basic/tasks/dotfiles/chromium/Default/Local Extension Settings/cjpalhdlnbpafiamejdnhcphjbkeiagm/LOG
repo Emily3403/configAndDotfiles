@@ -1,3 +1,27 @@
 2022/03/06-21:00:21.729 2790 Reusing MANIFEST /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
 2022/03/06-21:00:21.730 2790 Recovering log #64
 2022/03/06-21:00:21.737 2790 Reusing old log /home/emily/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000064.log 
+2022/03/07-01:02:07.427 27e834 Level-0 table #68: started
+2022/03/07-01:02:07.450 27e834 Level-0 table #68: 2298075 bytes OK
+2022/03/07-01:02:07.457 27e834 Delete type=0 #64
+2022/03/07-01:04:07.753 286fe4 Level-0 table #70: started
+2022/03/07-01:04:07.774 286fe4 Level-0 table #70: 1509428 bytes OK
+2022/03/07-01:04:07.783 286fe4 Delete type=0 #67
+2022/03/07-01:04:07.784 286fe4 Compacting 4@0 + 3@1 files
+2022/03/07-01:04:07.809 286fe4 Generated table #71@0: 17 keys, 2161590 bytes
+2022/03/07-01:04:07.839 286fe4 Generated table #72@0: 21 keys, 1906946 bytes
+2022/03/07-01:04:07.839 286fe4 Compacted 4@0 + 3@1 files => 4068536 bytes
+2022/03/07-01:04:07.844 286fe4 compacted to: files[ 0 2 1 0 0 0 0 ]
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #58
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #59
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #61
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #62
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #65
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #68
+2022/03/07-01:04:07.845 286fe4 Delete type=2 #70
+2022/03/07-01:08:39.616 286fe6 Level-0 table #74: started
+2022/03/07-01:08:39.627 286fe6 Level-0 table #74: 1357393 bytes OK
+2022/03/07-01:08:39.633 286fe6 Delete type=0 #69
+2022/03/07-01:11:40.810 294e40 Level-0 table #76: started
+2022/03/07-01:11:40.837 294e40 Level-0 table #76: 3039053 bytes OK
+2022/03/07-01:11:40.843 294e40 Delete type=0 #73
