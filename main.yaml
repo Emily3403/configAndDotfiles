@@ -1,7 +1,7 @@
 ---
 
 # TODO: backup role
-- hosts: nas
+- hosts: hetzner-vserver
 
   roles:
     - shell

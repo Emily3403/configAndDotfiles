@@ -1,5 +1,5 @@
 {
-   "checksum": "166711b3d7a752e1502b502b5c7f640f",
+   "checksum": "bb7d0c43ef368725f2918be811db2ab9",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -123,9 +123,37 @@
                "name": "Learn",
                "type": "url",
                "url": "https://ziglearn.org/chapter-2/"
+            }, {
+               "date_added": "13290964674016728",
+               "guid": "916b9261-ae79-4e6a-81cb-612a39abee24",
+               "id": "86",
+               "name": "OS",
+               "type": "url",
+               "url": "https://github.com/Emily3403/OperatingSystem"
+            }, {
+               "date_added": "13291257898656244",
+               "guid": "a398ae62-ff2e-4cf4-bf23-fbc0d93eab5a",
+               "id": "88",
+               "name": "Pluto",
+               "type": "url",
+               "url": "https://github.com/ZystemOS/pluto"
+            }, {
+               "date_added": "13291302002027287",
+               "guid": "2c6becf6-da3c-454a-a7e2-86ac2ade7020",
+               "id": "90",
+               "name": "ZenOS",
+               "type": "url",
+               "url": "https://github.com/AndreaOrru/zen"
+            }, {
+               "date_added": "13291315376290562",
+               "guid": "d6c70422-d444-4559-9d3a-7fa0c6f9b6f7",
+               "id": "92",
+               "name": "ClashOS",
+               "type": "url",
+               "url": "https://github.com/andrewrk/clashos"
             } ],
             "date_added": "13290818453662089",
-            "date_modified": "13290818632929891",
+            "date_modified": "13291315376290562",
             "guid": "fdec807e-c227-44d9-bc5d-a30f5b5ea813",
             "id": "80",
             "name": "Zig",
