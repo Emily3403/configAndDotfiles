@@ -1,0 +1,22 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "*://www.twitch.tv/*", "*://player.twitch.tv/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Block ads on that certain streaming website",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn+y04TX4lXnpOv4zyaFKJyuhsthJ3b8bvjsJPp5dVW0mb+hwftYK5lxToM7c/UL+giYsg9rbqsgQ1KnSlhJtJ1dF4ijrOd1/SjgGdaOv1OoaeLs7th1qg/ahCkain9y8cCO+bONSISLzcuE3XnxypcUwDc6vb1C5oBA5nzPFDjGvXzz2WgbAUvpb20ajZjmw66unpXj6EwJz/4O9ZzunfO9X7xTVkEz1PpfFcIQZviWegQ8IbZP2iryaufSfhzK4mA2754o5fF83wfky8RI7JZLfhWWHNoF/5YDqTRKF9EalnAcYyiCoGjGAr8z0jA4sy/CNVccQohgdAdmNutdoawIDAQAB",
+   "manifest_version": 2,
+   "name": "TTV ad-block",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "*://*.twitch.tv/*", "*://*.ttvnw.net/*", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.0"
+}

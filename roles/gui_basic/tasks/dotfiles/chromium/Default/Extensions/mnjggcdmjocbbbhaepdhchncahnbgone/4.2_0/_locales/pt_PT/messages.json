@@ -1,0 +1,238 @@
+{
+   "400": {
+      "message": "O servidor disse que este pedido foi inválido"
+   },
+   "409": {
+      "message": "Isso já foi enviado antes"
+   },
+   "429": {
+      "message": "Enviou muitos segmentos para este vídeo, tem certeza que tem assim tantos?"
+   },
+   "Description": {
+      "description": "Description of the extension.",
+      "message": "Salte patrocinios, pedidos de subscrição e mais em videos do YouTube. Submeta anúncios nos videos que visualiza para poupar tempo a outros."
+   },
+   "Dismiss": {
+      "message": "Ignorar"
+   },
+   "Hide": {
+      "message": "Nunca mostrar"
+   },
+   "Loading": {
+      "message": "A carregar..."
+   },
+   "Options": {
+      "message": "Opções"
+   },
+   "Segment": {
+      "message": "segmento"
+   },
+   "Segments": {
+      "message": "segmentos"
+   },
+   "Submissions": {
+      "message": "Submissões"
+   },
+   "SubmitTimes": {
+      "message": "Submeter Segmentos"
+   },
+   "Unknown": {
+      "message": "Erro ao enviar os seus segmentos, tente novamente mais tarde."
+   },
+   "Username": {
+      "message": "Nome de Utilizador"
+   },
+   "autoHideInfoButton": {
+      "message": "Ocultar automaticamente o Botão de Informação"
+   },
+   "channelWhitelisted": {
+      "message": "Canal adicionado à whitelist!"
+   },
+   "clearThis": {
+      "message": "Tem certeza que deseja limpar isto?\n\n"
+   },
+   "clearTimes": {
+      "message": "Limpar Segmentos"
+   },
+   "clearTimesButton": {
+      "message": "Limpar Intervalos"
+   },
+   "closePopup": {
+      "message": "Fechar Popup"
+   },
+   "confirmMSG": {
+      "message": "\n\nPara editar ou remover linhas individuais, carregue com o botão direito ou abra o popup da extensão pelo icone no canto superior direito."
+   },
+   "connectionError": {
+      "message": "Deu-se um erro de conecção: Código: "
+   },
+   "copyPublicID": {
+      "message": "Copiar UserID Publico"
+   },
+   "discordAdvert": {
+      "message": "Junte-se ao discord oficial para sugerir dicas e sugestões!"
+   },
+   "enableQueryByHashPrefix": {
+      "message": "Consulta por Prefixo de Hash"
+   },
+   "enableTrackDownvotes": {
+      "message": "Guardar segmentos de votos negativos"
+   },
+   "enableViewTracking": {
+      "message": "Ativar Rastreamento de Contagem de Saltos"
+   },
+   "enableViewTrackingInPrivate": {
+      "message": "Ativar o Rastreamento de Contagem de Saltos nas Guias Privadas/Anônimas"
+   },
+   "fullName": {
+      "description": "Name of the extension.",
+      "message": "SponsorBlock para o YouTube - Salte patrocínios"
+   },
+   "hideButtons": {
+      "message": "Esconder botões no player do Youtube"
+   },
+   "hideButtonsDescription": {
+      "message": "Isto esconde os botões que aparecem no player do Youtube para submeter patrocínios. Entendemos que possa ser\n incómodo a algumas pessoas. Em vez de usar esses botões pode usar os do popup. Para esconder a mensagem que aparece, \n ususe o botão na mesma que diz \"Don't show this again\". Pode sempre reactivar estas definições novamente."
+   },
+   "hideDeleteButton": {
+      "message": "Esconder botão de Apagar no player do Youtube"
+   },
+   "hideInfoButton": {
+      "message": "Esconder botão de Informações no player do Youtube"
+   },
+   "hideThis": {
+      "message": "Esconder isto"
+   },
+   "hitGoBack": {
+      "message": "Carregue em reverter salto para voltar a onde estava"
+   },
+   "manualPaused": {
+      "message": "Temporizador parado"
+   },
+   "noVideoID": {
+      "message": "Nenhum vídeo do YouTube encontrado.\nSe isto não estiver correto, atualize o separador."
+   },
+   "openPopup": {
+      "message": "Abrir o Popup SponsorBlock"
+   },
+   "paused": {
+      "message": "Pausado"
+   },
+   "popupHint": {
+      "message": "Dica: Você pode configurar atalhos de teclado para enviar nas opções"
+   },
+   "publicStats": {
+      "message": "Isto é usado na página pública de estatísticas que mostra o quanto já contríbuíu. Veje-a"
+   },
+   "recordTimesDescription": {
+      "message": "Enviar"
+   },
+   "refreshSegments": {
+      "message": "Atualizar segmentos"
+   },
+   "removeFromWhitelist": {
+      "message": "Remover canal da Lista Branca"
+   },
+   "reportButtonInfo": {
+      "message": "Reportar esta submissão como incorrecta."
+   },
+   "reportButtonTitle": {
+      "message": "Reportar"
+   },
+   "reskip": {
+      "message": "Saltar novamente"
+   },
+   "savedPeopleFrom": {
+      "message": "Salvaste pessoas de "
+   },
+   "serverDown": {
+      "message": "Parece que o servidor está em baixo. Contacte o desenvolvedor imediatamente."
+   },
+   "setUsername": {
+      "message": "Criar nomde de utilizador"
+   },
+   "showButtons": {
+      "message": "Mostrar botões no player do Youtube"
+   },
+   "showDeleteButton": {
+      "message": "Mostrar botão de Apagar no player do Youtube"
+   },
+   "showInfoButton": {
+      "message": "Mostrar botão de Informações no player do Youtube"
+   },
+   "showNotice": {
+      "message": "Mostrar notificação outra vez"
+   },
+   "showSkipButton": {
+      "message": "Mantenha o Botão Saltar para Destaque no Player"
+   },
+   "sourceCode": {
+      "description": "Used on Firefox Store Page",
+      "message": "Código fonte"
+   },
+   "sponsor404": {
+      "message": "Nenhum segmento encontrado"
+   },
+   "sponsorCancel": {
+      "message": "Cancelar Criação de Segmento"
+   },
+   "sponsorEnd": {
+      "message": "O Segmento Acaba Agora"
+   },
+   "sponsorFound": {
+      "message": "Este vídeo tem segmentos na base de dados!"
+   },
+   "sponsorStart": {
+      "message": "O Segmento Começa Agora"
+   },
+   "submissionEditHint": {
+      "description": "Appears in the popup to inform them that editing has been moved to the video player.",
+      "message": "A edição da seção aparecerá depois que você clicar em enviar"
+   },
+   "submitCheck": {
+      "message": "Tem a certeza que pretende submeter?"
+   },
+   "submitTimesButton": {
+      "message": "Submeter Intervalos"
+   },
+   "success": {
+      "message": "Sucesso!"
+   },
+   "trackDownvotesWarning": {
+      "message": "Aviso: Ao desabilitar isso excluirá todos os votos negativos armazenados anteriormente"
+   },
+   "unmute": {
+      "message": "Ativar som"
+   },
+   "unskip": {
+      "message": "Reverter salto"
+   },
+   "upvoteButtonInfo": {
+      "message": "Votar positivamente esta submissão"
+   },
+   "viewLeaderboard": {
+      "message": "Tabela de Classificação"
+   },
+   "voteOnTime": {
+      "message": "Votar em um segmento"
+   },
+   "voted": {
+      "message": "Votado!"
+   },
+   "website": {
+      "description": "Used on Firefox Store Page",
+      "message": "Site"
+   },
+   "whatQueryByHashPrefix": {
+      "message": "Em vez de solicitar segmentos do servidor usando o ID do Vídeo, são enviados os primeiros 4 caracteres do hash do ID do Vídeo. Este servidor enviará de volta dados para todos os vídeos com hashes semelhantes."
+   },
+   "whatTrackDownvotes": {
+      "message": "Quaisquer segmentos que você votar negativo permanecerão ocultos mesmo após a atualização"
+   },
+   "whatViewTracking": {
+      "message": "Esse recurso rastreia quais segmentos você pulou para permitir que os usuários saibam o quanto seu envio ajudou outras pessoas e é usado como métrica junto com votos positivos para garantir que o spam não entre no banco de dados. A extensão envia uma mensagem ao servidor cada vez que você pular um segmento. Espero que a maioria das pessoas não altere essa configuração para que os números de visualização sejam precisos. :)"
+   },
+   "whitelistChannel": {
+      "message": "Meter canal na Lista Branca"
+   }
+}

@@ -141,6 +141,10 @@
 
 
 - name: Install dotfiles
+  file: 
+    path: "{{ item.dest }}"
+    state: directory
+
   file:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"

@@ -1,5 +1,5 @@
 {
-   "checksum": "bb7d0c43ef368725f2918be811db2ab9",
+   "checksum": "ffb08a3109f43fdec8787756c771db3c",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -24,6 +24,13 @@
             "type": "url",
             "url": "https://www.reddit.com/"
          }, {
+            "date_added": "13293383600765101",
+            "guid": "9af85aa3-d13d-4741-ac9c-494b752d293f",
+            "id": "128",
+            "name": "Place",
+            "type": "url",
+            "url": "https://www.reddit.com/r/place"
+         }, {
             "date_added": "13277474224759655",
             "guid": "71bdfc9c-8e9f-4d85-8332-27a8e52fca55",
             "id": "27",
@@ -45,12 +52,12 @@
             "type": "url",
             "url": "http://192.168.1.1/"
          }, {
-            "date_added": "13290218437003099",
-            "guid": "3ee09ef8-c65c-4e18-a526-11117942d195",
-            "id": "74",
-            "name": "isisdl",
+            "date_added": "13291742861042584",
+            "guid": "1a2ad476-ee36-4b85-a145-9fb9425ab33d",
+            "id": "102",
+            "name": "GitHub",
             "type": "url",
-            "url": "https://github.com/Emily3403/isisdl"
+            "url": "https://github.com/"
          }, {
             "date_added": "13290713634210503",
             "guid": "dbae944f-f741-4810-973e-b7bbaeb5b2ef",
@@ -123,20 +130,21 @@
                "name": "Learn",
                "type": "url",
                "url": "https://ziglearn.org/chapter-2/"
-            }, {
+            } ],
+            "date_added": "13290818453662089",
+            "date_modified": "13291315376290562",
+            "guid": "fdec807e-c227-44d9-bc5d-a30f5b5ea813",
+            "id": "80",
+            "name": "Zig",
+            "type": "folder"
+         }, {
+            "children": [ {
                "date_added": "13290964674016728",
                "guid": "916b9261-ae79-4e6a-81cb-612a39abee24",
                "id": "86",
                "name": "OS",
                "type": "url",
                "url": "https://github.com/Emily3403/OperatingSystem"
-            }, {
-               "date_added": "13291257898656244",
-               "guid": "a398ae62-ff2e-4cf4-bf23-fbc0d93eab5a",
-               "id": "88",
-               "name": "Pluto",
-               "type": "url",
-               "url": "https://github.com/ZystemOS/pluto"
             }, {
                "date_added": "13291302002027287",
                "guid": "2c6becf6-da3c-454a-a7e2-86ac2ade7020",
@@ -151,12 +159,47 @@
                "name": "ClashOS",
                "type": "url",
                "url": "https://github.com/andrewrk/clashos"
+            }, {
+               "date_added": "13291257898656244",
+               "guid": "a398ae62-ff2e-4cf4-bf23-fbc0d93eab5a",
+               "id": "88",
+               "name": "Pluto",
+               "type": "url",
+               "url": "https://github.com/ZystemOS/pluto"
+            }, {
+               "date_added": "13291336308438925",
+               "guid": "e3b55926-57fb-4942-ab92-971a1728f6ec",
+               "id": "95",
+               "name": "BCM Manual",
+               "type": "url",
+               "url": "https://cs140e.sergio.bz/docs/BCM2837-ARM-Peripherals.pdf"
+            }, {
+               "date_added": "13291336335735496",
+               "guid": "238b82f7-60c2-417c-9983-cf4b142e3d8c",
+               "id": "96",
+               "name": "ArmV8",
+               "type": "url",
+               "url": "file:///home/emily/Downloads/DDI0487H_a_a-profile_architecture_reference_manual.pdf"
+            }, {
+               "date_added": "13291336773314092",
+               "guid": "df623bc5-fd1d-4fb4-a833-8b639acefded",
+               "id": "97",
+               "name": "Baremetal",
+               "type": "url",
+               "url": "http://umanovskis.se/files/arm-baremetal-ebook.pdf"
+            }, {
+               "date_added": "13291337153677408",
+               "guid": "6a80bce4-3705-4759-8459-dfdf4fae7555",
+               "id": "98",
+               "name": "Linux",
+               "type": "url",
+               "url": "https://github.com/torvalds/linux"
             } ],
-            "date_added": "13290818453662089",
-            "date_modified": "13291315376290562",
-            "guid": "fdec807e-c227-44d9-bc5d-a30f5b5ea813",
-            "id": "80",
-            "name": "Zig",
+            "date_added": "13291336288927512",
+            "date_modified": "13291668869162348",
+            "guid": "9519e305-8275-43d2-92a8-9c1cd3f93768",
+            "id": "94",
+            "name": "OS",
             "type": "folder"
          }, {
             "children": [ {
@@ -194,9 +237,23 @@
                "name": "xcolor",
                "type": "url",
                "url": "http://www.latextemplates.com/svgnames-colors"
+            }, {
+               "date_added": "13291668869162348",
+               "guid": "dbf6db7d-8d69-4a53-9354-b47009e2c216",
+               "id": "100",
+               "name": "Nginx Config",
+               "type": "url",
+               "url": "https://www.digitalocean.com/community/tools/nginx"
+            }, {
+               "date_added": "13292335338479648",
+               "guid": "eaf79d05-20f1-4415-9fdd-e8a0bb592a2c",
+               "id": "117",
+               "name": "Insults",
+               "type": "url",
+               "url": "https://jo.ie/doas-insults.html"
             } ],
             "date_added": "13276704705666458",
-            "date_modified": "13290818581111925",
+            "date_modified": "13293064667663183",
             "guid": "13a56004-0325-49a2-8a39-5b7a7d0d2366",
             "id": "22",
             "name": "Useful",
@@ -204,15 +261,80 @@
          }, {
             "children": [ {
                "children": [ {
-                  "date_added": "13278859673241349",
-                  "guid": "b8421ef8-81b5-4efb-b7a9-45279bc0c822",
-                  "id": "43",
+                  "date_added": "13293064667663183",
+                  "guid": "eeb23c29-0983-4399-9973-e77e81ae491d",
+                  "id": "119",
+                  "name": "Saved",
+                  "type": "url",
+                  "url": "https://www.reddit.com/user/Emily3403/saved/"
+               }, {
+                  "date_added": "13293064697544066",
+                  "guid": "3c93c944-5ae5-406c-b442-0585a34b124a",
+                  "id": "121",
+                  "name": "Overview",
+                  "type": "url",
+                  "url": "https://www.reddit.com/user/Emily3403/"
+               }, {
+                  "date_added": "13293064702222357",
+                  "guid": "be105962-364d-4b59-b063-5ae656de3e67",
+                  "id": "122",
+                  "name": "Posts",
+                  "type": "url",
+                  "url": "https://www.reddit.com/user/Emily3403/posts/"
+               } ],
+               "date_added": "13293064690807325",
+               "date_modified": "13293065054125984",
+               "guid": "9e5ff6af-674e-45ea-b567-0baf1124fa2c",
+               "id": "120",
+               "name": "Reddit",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13293064974258945",
+                  "guid": "a3e17129-ba55-42db-b622-f0eba3128788",
+                  "id": "123",
+                  "name": "WPM",
+                  "type": "url",
+                  "url": "https://www.typingtest.com/result.html?acc=100&nwpm=48&gwpm=48&ncpm=241&gcpm=241&dur=60&time=60&chksum=24113&unit=wpm&kh=998&td=null&err=0&hits=241&textfile=mediumText.txt"
+               }, {
+                  "date_added": "13293065082359273",
+                  "guid": "6d70f180-848b-496c-a60a-891f7f061972",
+                  "id": "125",
+                  "name": "Scylla prebuilt",
+                  "type": "url",
+                  "url": "https://bastardkb.com/product/scylla-prebuilt/"
+               }, {
+                  "date_added": "13293065102729741",
+                  "guid": "fb6e1309-1015-497e-b23a-c040e2903085",
+                  "id": "126",
+                  "name": "Scylla DIY Kit",
+                  "type": "url",
+                  "url": "https://bastardkb.com/product/scylla-diy-kit/"
+               } ],
+               "date_added": "13293064987812346",
+               "date_modified": "13293383600765101",
+               "guid": "5c823de5-7373-42bd-97c5-7772dd2a56b1",
+               "id": "124",
+               "name": "Keyboard",
+               "type": "folder"
+            }, {
+               "children": [ {
+                  "date_added": "13292077455196448",
+                  "guid": "cd745348-86fc-4b83-8b28-8b8d4d06db22",
+                  "id": "113",
                   "name": "Map",
                   "type": "url",
-                  "url": "https://preview.redd.it/lucls36yk1h71.jpg?width=732&format=pjpg&auto=webp&s=f5b03d31082da31dc5043c7f66487aa8959f474d"
+                  "url": "https://static.wikia.nocookie.net/deadcells_gamepedia_en/images/3/32/Biome_Map_Blurred.png/revision/latest/scale-to-width-down/2926?cb=20220118173814&format=original"
+               }, {
+                  "date_added": "13292194716633982",
+                  "guid": "aa56f4d7-d6fa-4b85-99d4-157c5974c50f",
+                  "id": "115",
+                  "name": "Wiki",
+                  "type": "url",
+                  "url": "https://deadcells.fandom.com/wiki/Dead_Cells_Wiki"
                } ],
                "date_added": "13278859670684919",
-               "date_modified": "13278859677724023",
+               "date_modified": "13293065055058340",
                "guid": "f5536fa9-d1a9-43cb-8650-ff771bde0f7a",
                "id": "42",
                "name": "DeadCells",
@@ -227,21 +349,50 @@
                   "url": "https://satisfactory.fandom.com/wiki/Satisfactory_Wiki"
                } ],
                "date_added": "13283480079176618",
-               "date_modified": "13283520416980144",
+               "date_modified": "13293065000225218",
                "guid": "5199a45a-527e-4f26-a07d-9a5e3e4f38ed",
                "id": "63",
                "name": "Satisfactory",
                "type": "folder"
+            }, {
+               "date_added": "13292027205448642",
+               "guid": "849dd664-96bb-4912-bd09-1fb680207998",
+               "id": "111",
+               "name": "SteamDB",
+               "type": "url",
+               "url": "https://steamdb.info/"
             } ],
             "date_added": "13278859663302835",
-            "date_modified": "13283480079176695",
+            "date_modified": "13293065082359273",
             "guid": "825050b7-5566-4432-8482-5aac82334ab7",
             "id": "41",
-            "name": "Games",
+            "name": "Games and Links",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13291778542439499",
+               "guid": "54f79688-36b3-443e-a491-38726172c14e",
+               "id": "106",
+               "name": "argonaut",
+               "type": "url",
+               "url": "https://github.com/eendroroy/alacritty-theme/blob/master/themes/argonaut.yaml"
+            }, {
+               "date_added": "13291778785754022",
+               "guid": "b6f8cc93-e0b3-48bf-ac11-480ddd15a2f3",
+               "id": "107",
+               "name": "dracula",
+               "type": "url",
+               "url": "https://github.com/eendroroy/alacritty-theme/blob/master/themes/dracula.yaml"
+            } ],
+            "date_added": "13291778527460247",
+            "date_modified": "13291948247086945",
+            "guid": "00db954a-0dbd-42eb-bf4c-432eb31526ab",
+            "id": "104",
+            "name": "Alacritty themes",
             "type": "folder"
          } ],
          "date_added": "13276448815557596",
-         "date_modified": "13290818552724767",
+         "date_modified": "13293456558843460",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",
