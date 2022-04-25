@@ -486,8 +486,13 @@ noremap l k
 noremap k j
 noremap j h
 
+noremap <Leader
+
 let g:gutentags_cache_dir = '~/.cache/gutentags/'
 lua require'nvim-tree'.setup()
 
 
 nmap <C-f> :NvimTreeToggle<CR>
+
+
+autocmd FileType zig nnoremap <C-A> :AsyncRun -save=2 -scroll=0 zig build run<CR>
