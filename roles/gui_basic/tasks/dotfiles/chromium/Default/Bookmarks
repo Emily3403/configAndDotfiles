@@ -1,5 +1,5 @@
 {
-   "checksum": "d69751c8e71739eec7c9529e5de2c8a8",
+   "checksum": "f7340325fc2e2ae3859624040bf36752",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -246,7 +246,7 @@
                "url": "https://jo.ie/doas-insults.html"
             } ],
             "date_added": "13276704705666458",
-            "date_modified": "13293064667663183",
+            "date_modified": "13295636296438213",
             "guid": "13a56004-0325-49a2-8a39-5b7a7d0d2366",
             "id": "22",
             "name": "Useful",
@@ -290,22 +290,22 @@
                   "type": "url",
                   "url": "https://www.typingtest.com/result.html?acc=100&nwpm=48&gwpm=48&ncpm=241&gcpm=241&dur=60&time=60&chksum=24113&unit=wpm&kh=998&td=null&err=0&hits=241&textfile=mediumText.txt"
                }, {
-                  "date_added": "13293065082359273",
-                  "guid": "6d70f180-848b-496c-a60a-891f7f061972",
-                  "id": "125",
-                  "name": "Scylla prebuilt",
+                  "date_added": "13295565033210825",
+                  "guid": "7c7f7a61-8d03-4b3b-a99f-bca576c26d43",
+                  "id": "128",
+                  "name": "QMK Configurator",
                   "type": "url",
-                  "url": "https://bastardkb.com/product/scylla-prebuilt/"
+                  "url": "https://config.qmk.fm/#/bastardkb/scylla/LAYOUT_split_4x6_5"
                }, {
-                  "date_added": "13293065102729741",
-                  "guid": "fb6e1309-1015-497e-b23a-c040e2903085",
-                  "id": "126",
-                  "name": "Scylla DIY Kit",
+                  "date_added": "13295636296438213",
+                  "guid": "945b591e-43cb-4b4b-84da-62c020d2479e",
+                  "id": "130",
+                  "name": "Dvorak keyboard training",
                   "type": "url",
-                  "url": "https://bastardkb.com/product/scylla-diy-kit/"
+                  "url": "https://learn.dvorak.nl/?lesson=3"
                } ],
                "date_added": "13293064987812346",
-               "date_modified": "13293383600765101",
+               "date_modified": "13295647465645916",
                "guid": "5c823de5-7373-42bd-97c5-7772dd2a56b1",
                "id": "124",
                "name": "Keyboard",
@@ -385,7 +385,7 @@
             "type": "folder"
          } ],
          "date_added": "13276448815557596",
-         "date_modified": "13293456558843460",
+         "date_modified": "13295565033210825",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
          "name": "Bookmarks bar",
