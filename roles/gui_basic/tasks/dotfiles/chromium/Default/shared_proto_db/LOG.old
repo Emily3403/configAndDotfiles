@@ -1,9 +1,8 @@
-2022/04/28-16:22:07.993 7994 Reusing MANIFEST /home/emily/.config/chromium/Default/shared_proto_db/MANIFEST-000001
-2022/04/28-16:22:07.994 7994 Recovering log #32
-2022/04/28-16:22:07.994 7994 Reusing old log /home/emily/.config/chromium/Default/shared_proto_db/000032.log 
-2022/04/29-01:23:07.396 1761cf Compacting 1@1 + 1@2 files
-2022/04/29-01:23:07.406 1761cf Generated table #35@1: 315 keys, 8763 bytes
-2022/04/29-01:23:07.406 1761cf Compacted 1@1 + 1@2 files => 8763 bytes
-2022/04/29-01:23:07.412 1761cf compacted to: files[ 0 0 1 0 0 0 0 ]
-2022/04/29-01:23:07.412 1761cf Delete type=2 #30
-2022/04/29-01:23:07.412 1761cf Delete type=2 #33
+2022/06/17-20:39:30.809 6f5c Reusing MANIFEST /home/emily/.config/chromium/Default/shared_proto_db/MANIFEST-000001
+2022/06/17-20:39:30.810 6f5c Recovering log #32
+2022/06/17-20:39:30.810 6f5c Level-0 table #37: started
+2022/06/17-20:39:30.813 6f5c Level-0 table #37: 81396 bytes OK
+2022/06/17-20:39:30.813 6f5c Recovering log #67
+2022/06/17-20:39:30.813 6f5c Reusing old log /home/emily/.config/chromium/Default/shared_proto_db/000067.log 
+2022/06/17-20:39:30.820 6f5c Delete type=2 #72
+2022/06/17-20:39:30.821 6f5c Delete type=0 #32

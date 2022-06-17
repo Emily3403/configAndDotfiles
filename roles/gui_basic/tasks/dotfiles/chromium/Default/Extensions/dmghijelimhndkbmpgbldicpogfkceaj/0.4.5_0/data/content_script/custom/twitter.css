@@ -1,0 +1,66 @@
+.Icon,
+.Grid-cell,
+.EdgeButton,
+.ProfileAvatar,
+.u-textUserColor,
+.twitter-hashtag,
+.js-view-all-link,
+.settings-alert-box,
+.EdgeButton:visited,
+.ProfileCanopy-header,
+.u-linkComplex-target,
+.DashboardProfileCard-bg,
+#global-actions > li > a,
+.SearchNavigation-canopy,
+.ProfileTweet-actionCount,
+.ProfileHeading-toggleItem,
+.u-textUserColorHover:hover,
+.u-textUserColorHover:hover,
+.u-textUserColorHover:focus,
+.ProfileAvatar-placeholderImage,
+.DashboardProfileCard-avatarImage {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.ProfileCard a {
+  color: #909090 !important;
+}
+
+.ProfileCard {
+  background-color: #000 !important;
+}
+
+.modal-container {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.r-urgr8i {
+  filter: contrast(0.7) !important;
+  background-color: rgb(242 117 29) !important;
+}
+
+.r-jwli3a {
+  color: rgb(0 0 0) !important;
+}
+
+.r-13gxpu9 {
+  color: rgb(29 163 242) !important;
+}
+
+.r-p1n3y5, .r-11mg6pl {
+  border-color: rgb(0 0 0) !important;
+}
+
+.r-5dk9ms {
+  background-color: rgb(255 255 255) !important;
+}
+
+.css-1dbjc4n.r-1pi2tsx.r-11yh6sk.r-buy8e9.r-bnwqim.r-13qz1uu {
+  background-color: rgb(224 224 224 / 80%) !important;
+}
+
+.css-1dbjc4n.r-z1a2ur,
+.css-1dbjc4n.r-1niwhzg {
+  background-color: rgb(185 185 185) !important;
+}

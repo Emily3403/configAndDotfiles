@@ -1,0 +1,107 @@
+#explore {
+  height: 90px;
+  margin: auto;
+  padding: 10px;
+  min-height: 16px;
+  min-height: 90px;
+  max-height: 90px;
+  user-select: none;
+  position: relative;
+  color: rgb(193, 193, 193);
+  background-color: transparent;
+}
+
+#explore span {
+  user-select: none;
+  vertical-align: middle;
+}
+
+#explore[data-loaded=true] {
+  font-size: 12px;
+  background-image: none;
+  font-family: arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#explore .container {
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  table-layout: fixed;
+}
+
+#explore .explore {
+  top: 0;
+  right: 1px;
+  padding: 0;
+  z-index: 12;
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+}
+
+#explore .close {
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 4px 10px;
+  position: absolute;
+  background-color: transparent;
+}
+
+#explore a {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+#explore .icon {
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  font-size: 10px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 48px;
+  display: inline-block;
+  color: rgb(228, 228, 228);
+  font-family: arial, sans-serif;
+}
+
+#explore .name {
+  padding: 0;
+  overflow: hidden;
+  margin: 0 0 0 7px;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  color: rgb(193, 193, 193);
+  font-family: arial, sans-serif;
+}
+
+#explore a, #explore .close, #explore .explore {
+  transition: 300ms ease all;
+}
+
+#explore .close:hover {
+  color: #FFF;
+  background-color: #d80000;
+}
+
+#explore a:hover, #explore .explore:hover {
+  background-color: rgba(0,0,0,0.03);
+}
+
+#explore .spacer {
+  padding: 0 10px;
+  border-left: solid 1px #545454;
+}

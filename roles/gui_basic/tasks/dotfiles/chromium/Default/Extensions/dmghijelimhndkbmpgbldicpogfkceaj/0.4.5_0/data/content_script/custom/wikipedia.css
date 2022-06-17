@@ -1,0 +1,28 @@
+html {
+  background-color: #ececec !important;
+}
+
+#p-logo,
+.mw-search-result-data,
+.navbox-inner, .navbox-subgroup {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+#p-logo {
+  background-color: #383838 !important;
+}
+
+a, .toctogglelabel {
+  color: #ad6206 !important;
+}
+
+#mw-panel,
+.mw-footer,
+.mw-mmv-image {
+  background-color: #e4e4e4 !important;
+}
+
+#simpleSearch input {
+  background-color: white !important;
+}

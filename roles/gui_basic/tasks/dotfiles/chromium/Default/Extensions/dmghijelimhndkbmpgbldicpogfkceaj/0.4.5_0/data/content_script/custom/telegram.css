@@ -1,0 +1,29 @@
+.im_dialog_peer,
+span[for-dialog],
+a[dropdown-toggle],
+span[class*="emoji"],
+span[class*="photo"],
+.composer_rich_textarea,
+.composer_emoji_tooltip_content {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.composer_rich_textarea img {
+  opacity: 1 !important;
+}
+
+.tg_head_split,
+.im_dialogs_scrollable_wrap .active a.im_dialog {
+  background-color: #b58265 !important;
+}
+
+a.im_dialog .im_short_message_media,
+a.im_dialog .im_short_message_service,
+a.im_dialog .im_dialog_chat_from_wrap {
+  color: #b58265 !important;
+}
+
+.active .im_dialog_peer {
+  color: #000 !important;
+}

@@ -1,0 +1,356 @@
+html {
+  border: 0;
+  padding: 5px;
+  background-color: rgb(33 37 43 / 90%);
+}
+
+body {
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 12px;
+  margin-top: 5px;
+  min-width: 700px;
+  max-width: 1080px;
+  overflow-y: scroll;
+  font-family: arial, sans-serif;
+  background-color: rgba(0,0,0,0.05);
+  border: solid 1px rgba(255, 255, 255, 0.05);
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type='radio']:checked, input[type='checkbox']:checked {
+  opacity: 1.0;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  opacity: 0.7;
+  margin-top: 0;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+input[type='button'] {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  width: 150px;
+  height: 42px;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 42px;
+  background: #dbdedf;
+  vertical-align: middle;
+  transition: 300ms ease all;
+  font-family: arial,sans-serif;
+}
+
+input[type='button']:hover {
+  background: #b3b3b3;
+}
+
+p {
+  padding: 0 10px;
+  line-height: 18px;
+}
+
+label {
+  padding: 0;
+  width: 100%;
+  height: 18px;
+  display: flex;
+  font-size: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 18px;
+  user-select: none;
+  white-space: nowrap;
+  align-items: center;
+  text-overflow: ellipsis;
+  color: rgb(140, 140, 140);
+  font-family: arial,sans-serif;
+}
+
+label[compatible]:after {
+  width: 10px;
+  content: '✶';
+  height: 10px;
+  color: #bb9727;
+  font-size: 12px;
+  margin-left: 5px;
+  line-height: 10px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: super;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+table {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  border-spacing: 0;
+}
+
+table tr td {
+  padding: 0;
+}
+
+details {
+  border: 0;
+  padding: 5px;
+  margin-bottom: 5px;
+  outline: none !important;
+  background-color: transparent;
+  border: solid 1px rgba(255, 255, 255, 0.01);
+}
+
+details.section-4 {
+  margin-bottom: 0;
+}
+
+details.section-4 summary {
+  position: relative;
+}
+
+details.section-4 summary:after {
+  top: 14px;
+  width: auto;
+  right: 12px;
+  height: 16px;
+  content: 'NEW';
+  display: block;
+  padding: 0 5px;
+  color: #5c96e0;
+  font-size: 11px;
+  line-height: 16px;
+  position: absolute;
+  letter-spacing: 1px;
+  font-family: arial,sans-serif;
+  background-color: transparent;
+}
+
+textarea {
+  margin: 0;
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  color: #ccc6c6;
+  font-size: 13px;
+  border-radius: 0;
+  line-height: 20px;
+  box-sizing: border-box;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+summary {
+  color: #c1c1c1;
+  cursor: pointer;
+  user-select: none;
+  padding: 15px 10px;
+  outline: none !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+details[open] summary {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.themes, .content {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  border-top: 0;
+}
+
+.themes {
+  height: 450px;
+  overflow: hidden;
+  max-height: 450px;
+  min-height: 450px;
+  overflow-y: scroll;
+}
+
+.section {
+  padding: 0;
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+.section tr td {
+  padding: 5px 10px;
+  vertical-align: top;
+}
+
+.section-2 .section tr td {
+  padding: 10px;
+}
+
+.comment {
+  color: #5c96e0;
+  font-size: 12px;
+  padding: 10px 0;
+  cursor: default;
+  user-select: none;
+}
+
+.options {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  table-layout: fixed;
+  border-spacing: 0 1px;
+}
+
+.options tr td {
+  padding: 7px;
+}
+
+.options tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.01);
+  border-right: solid 1px rgba(255, 255, 255, 0.05);
+}
+
+.hidden td {height: 25px}
+.hidden {visibility: hidden}
+
+.note {
+  margin: 0;
+  color: #bb9727;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.bullet {
+  border: 0;
+  padding: 0;
+  margin: 0 5px;
+  color: #c1c1c1;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.superscript, .native-options {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.superscript label {
+  color: #bb9727;
+  padding: 10px 0 0 10px;
+}
+
+.native-options[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.separator {
+  height: 1px;
+  margin: 5px auto;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cssvariables {
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 0;
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.cssvariables .comment {
+  display: flex;
+  color: #ccc6c6;
+  width: calc(100% - 2px);
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.05);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.cssvariables .comment:not(:last-child) {
+  margin: 0 auto 10px auto;
+}
+
+.cssvariables .comment .variable {
+  font-size: 13px;
+  text-indent: 10px;
+  font-family: monospace;
+}
+
+.cssvariables .comment input[type='color'] {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 64px;
+  height: 42px;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-left: solid 1px #4d4e4f;
+}
+
+.cssvariables .comment input[type='color']::-webkit-color-swatch {
+  border: 0;
+}
+
+.cssvariables .comment input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.cssvariables .comment input[type='text'] {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 42px;
+  outline: none;
+  color: #ccc6c6;
+  font-size: 13px;
+  line-height: 42px;
+  text-indent: 10px;
+  background: #303439;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+#cookie {min-height: 150px}
+#whitelist {min-height: 450px}
+#custom, #nativecssrules {min-height: 450px}
+
+#explore {
+  background: url("resources/icons/dark-mode.png") no-repeat center center;
+  background-size: 64px;
+}
+
+@-moz-document url-prefix() {
+  textarea {
+    font-size: 11px;
+    font-weight: normal;
+    font-family: monaco, "andale mono", "lucida console", "courier new", monospace;
+  }
+  #whitelist {
+    margin-bottom: 5px;
+  }
+}

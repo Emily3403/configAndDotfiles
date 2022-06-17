@@ -1,0 +1,50 @@
+{
+   "customColors": {
+      "message": "Benutzerdefinierte Farben für Dislike-Leiste und Buttons"
+   },
+   "customNumberFormats": {
+      "message": "Benutzerdefinierte Zahlenformate"
+   },
+   "extensionDesc": {
+      "message": "Macht Dislikes wieder sichtbar"
+   },
+   "extensionName": {
+      "message": "Return YouTube Dislike"
+   },
+   "legendSettings": {
+      "message": "Einstellungen"
+   },
+   "linkDonate": {
+      "message": "Spenden"
+   },
+   "linkFAQ": {
+      "message": "FAQ"
+   },
+   "linkHelp": {
+      "message": "Hilfe"
+   },
+   "linkWebsite": {
+      "message": "Website"
+   },
+   "shortsSupport": {
+      "message": "YouTube Shorts Unterstützung"
+   },
+   "textDeveloper": {
+      "message": "von Dmitry Selivanov & Community"
+   },
+   "textSettings": {
+      "message": "Deaktiviere Like/Dislike-Übermittlung"
+   },
+   "textSettingsHover": {
+      "message": "Stoppt deine Likes und Dislikes zu zählen."
+   },
+   "textUpdate": {
+      "message": "aktualisieren auf"
+   },
+   "version30installed": {
+      "message": "Version 3.0.0.1 installiert"
+   },
+   "whatsnew": {
+      "message": "Was ist neu"
+   }
+}

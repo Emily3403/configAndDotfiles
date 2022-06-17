@@ -1,0 +1,27 @@
+img,
+.logo,
+.search2,
+.path__item,
+.pager__item,
+.thumb__image,
+.favicon__icon,
+.worldwide__icon,
+.tabs__item-image,
+.Thumb-Image:empty,
+.organic__url-text,
+.serp-footer__main,
+.button2_theme_action,
+.promo-popup__social-icon,
+.serp-footer__main .thumb,
+.Scroller-Arrow_direction_left,
+.Scroller-Arrow_direction_right {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.Path-Item,
+.Organic-Url,
+.link_theme_minor,
+.link_theme_normal {
+  color: #c1c1c1 !important
+}

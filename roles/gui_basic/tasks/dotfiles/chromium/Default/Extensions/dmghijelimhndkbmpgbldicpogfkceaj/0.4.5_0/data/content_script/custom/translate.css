@@ -1,0 +1,43 @@
+.gt-cd-pos,
+.input-button,
+.gt-score-dot,
+.gb_pe:not(.gb_3),
+.notification-container .history-icon,
+.gt-lc.gt-lc-mobile .gt-rw-div .gt-cd-cl,
+.notification-container .acknowledge-button {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+a[href*="./"],
+a[href*="?tab="],
+a[href*="&tab="],
+a[aria-label*="@gmail.com"],
+div[class*="-button-checked"] {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+svg:not([fill]) {
+  fill: #7d7d7d !important;
+}
+
+a[href*="?tab="] span,
+a[href*="&tab="] span {
+  color: rgba(177, 177, 177, 0.87) !important;
+}
+
+textarea {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.result, 
+.gt-edit, 
+.results-container, 
+.contribute-target,
+.gt-baf-word-selected,
+.gt-lc.gt-lc-mobile .gt-cd,
+.gt-lc.gt-lc-mobile .gt-cd-cl, 
+.gt-lc.gt-lc-mobile .gt-cd-ncl {
+  background-color: #e8e8e8 !important;
+}

@@ -1,0 +1,16 @@
+::-moz-scrollbar {background: #28292a !important}
+::-webkit-scrollbar {background: #28292a !important}
+::-moz-scrollbar-track {background: #343637 !important}
+::-webkit-scrollbar-track {background: #343637 !important}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4e4f !important;
+  border-left: 1px solid #343637 !important;
+  border-right: 1px solid #343637 !important;
+}
+
+::-moz-scrollbar-thumb {
+  background: #4d4e4f !important;
+  border-left: 1px solid #343637 !important;
+  border-right: 1px solid #343637 !important;
+}

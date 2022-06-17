@@ -1,4 +1,4 @@
-2022/04/29-11:52:13.113 ddd7 Reusing MANIFEST /home/emily/.config/chromium/Default/shared_proto_db/metadata/MANIFEST-000001
-2022/04/29-11:52:13.113 ddd7 Recovering log #3
-2022/04/29-11:52:13.113 ddd7 (ignoring error) /home/emily/.config/chromium/Default/shared_proto_db/metadata/000003.log: dropping 4 bytes; Corruption: missing start of fragmented record(2)
-2022/04/29-11:52:13.113 ddd7 Reusing old log /home/emily/.config/chromium/Default/shared_proto_db/metadata/000003.log 
+2022/06/17-20:39:52.798 858b Reusing MANIFEST /home/emily/.config/chromium/Default/shared_proto_db/metadata/MANIFEST-000001
+2022/06/17-20:39:52.798 858b Recovering log #3
+2022/06/17-20:39:52.798 858b (ignoring error) /home/emily/.config/chromium/Default/shared_proto_db/metadata/000003.log: dropping 4 bytes; Corruption: missing start of fragmented record(2)
+2022/06/17-20:39:52.798 858b Reusing old log /home/emily/.config/chromium/Default/shared_proto_db/metadata/000003.log 

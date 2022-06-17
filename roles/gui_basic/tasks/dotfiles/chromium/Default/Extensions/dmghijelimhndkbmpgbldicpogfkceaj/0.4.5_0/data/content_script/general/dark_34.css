@@ -1,0 +1,47 @@
+html {
+  background: #2b2b2b !important;
+}
+
+body {
+  background-color: #e6e6e6 !important;
+  filter: invert(100%) grayscale(100%) !important;
+  -moz-filter: invert(100%) grayscale(100%) !important;
+  -webkit-filter: invert(100%) grayscale(100%) !important;
+}
+
+em,
+img,
+svg,
+form,
+image,
+video,
+audio,
+embed,
+object,
+button,
+canvas,
+figure:empty {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+form em,
+form img,
+form svg,
+form image,
+form video,
+form embed,
+form object,
+form button,
+form canvas,
+form figure:empty {
+  filter: invert(0) !important;
+  -webkit-filter: invert(0) !important;
+}
+
+[style*='background:url']:not(html):not(body):not(input),
+[style*='background: url']:not(html):not(body):not(input),
+[style*='background-image']:not(html):not(body):not(input) {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
