@@ -361,6 +361,7 @@
   <action id="GotoCustomRegion" />
   <action id="GotoDeclaration">
     <keyboard-shortcut first-keystroke="alt h" />
+    <mouse-shortcut keystroke="control button1" />
   </action>
   <action id="GotoFile">
     <keyboard-shortcut first-keystroke="shift alt c" />
