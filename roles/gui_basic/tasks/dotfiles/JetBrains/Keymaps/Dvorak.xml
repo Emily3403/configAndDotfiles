@@ -184,7 +184,7 @@
     <keyboard-shortcut first-keystroke="ctrl up" />
   </action>
   <action id="EditorBackwardParagraphWithSelection">
-    <keyboard-shortcut first-keystroke="shift alt up" />
+    <keyboard-shortcut first-keystroke="shift ctrl up" />
   </action>
   <action id="EditorChooseLookupItemDot">
     <keyboard-shortcut first-keystroke="shift enter" />
@@ -221,7 +221,7 @@
     <keyboard-shortcut first-keystroke="ctrl down" />
   </action>
   <action id="EditorForwardParagraphWithSelection">
-    <keyboard-shortcut first-keystroke="shift alt down" />
+    <keyboard-shortcut first-keystroke="shift ctrl down" />
   </action>
   <action id="EditorJoinLines" />
   <action id="EditorLookupDown" />
@@ -540,7 +540,6 @@
   <action id="ReopenClosedTab">
     <keyboard-shortcut first-keystroke="shift ctrl t" />
   </action>
-  <action id="Replace" />
   <action id="RerunTests" />
   <action id="ResizeToolWindowDown">
     <keyboard-shortcut first-keystroke="shift alt n" />
