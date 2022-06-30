@@ -211,7 +211,7 @@
     <keyboard-shortcut first-keystroke="ctrl d" />
   </action>
   <action id="EditorDeleteToWordStartInDifferentHumpsMode">
-    <keyboard-shortcut first-keystroke="shift ctrl back_space" />
+    <keyboard-shortcut first-keystroke="alt back_space" />
   </action>
   <action id="EditorDuplicate">
     <keyboard-shortcut first-keystroke="shift ctrl d" />
@@ -266,6 +266,7 @@
   </action>
   <action id="EmmetNextEditPoint" />
   <action id="EmmetPreviousEditPoint" />
+  <action id="EmojiPicker.Open" />
   <action id="EvaluateExpression">
     <keyboard-shortcut first-keystroke="subtract" />
   </action>
@@ -526,7 +527,9 @@
   <action id="QuickEvaluateExpression" />
   <action id="QuickImplementations" />
   <action id="RecentChanges" />
-  <action id="Refactorings.QuickListPopupAction" />
+  <action id="Refactorings.QuickListPopupAction">
+    <keyboard-shortcut first-keystroke="paste" />
+  </action>
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl k" />
   </action>
