@@ -30,3 +30,7 @@ Host martin
 	User root
 	PreferredAuthentications publickey
 
+
+Host beagle
+    User debian
+    HostName 192.168.1.106

@@ -133,12 +133,6 @@
     state: directory
 
 
-- name: Clone config Repo
-  git:
-    repo: https://github.com/Emily3403/configAndDotfiles
-    dest: ~/configAndDotfiles
-    force: true
-
 
 - name: Install dotfiles
   file: 

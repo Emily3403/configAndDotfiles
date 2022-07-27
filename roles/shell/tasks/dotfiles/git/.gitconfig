@@ -34,3 +34,7 @@
 		git commit -F $TMPFILE; \
 		rm -f $TMPFILE \
 		"
+[push]
+	default = current
+[pull]
+	default = current

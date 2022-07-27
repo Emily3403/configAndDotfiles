@@ -51,7 +51,7 @@ end
 
 
 # Add the "usual" stuff to the path. This may vary for you!
-add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin
+add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin
 
 # Re-add ~/bin at the end so it is considered first
 remove_from_path ~/bin

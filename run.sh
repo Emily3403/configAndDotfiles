@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-playbook -i ~/configAndDotfiles/hosts ~/configAndDotfiles/main.yaml
+ansible-playbook -K -i hosts main.yaml

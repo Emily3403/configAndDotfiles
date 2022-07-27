@@ -50,7 +50,7 @@ yay -Syu --noconfirm
 
 # notfiy i3blocks
 if [[ $XDG_CURRENT_DESKTOP == "i3" ]]; then
-    pkill -SIGRTMIN+11 i3blocks
+    pkill -SIGRTMIN+12 i3blocks
 fi
 
 
