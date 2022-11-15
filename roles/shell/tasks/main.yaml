@@ -132,6 +132,7 @@
       - sympy
       - numpy
       - pynvim
+      - notedown
 
 
 # Install Rust
