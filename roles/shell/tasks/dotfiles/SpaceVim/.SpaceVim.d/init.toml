@@ -1,0 +1,114 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg@outlook.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "everforest"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+    
+
+    autocomplete_method = "coc"
+    snippet_engine = "ultisnips"
+
+
+# Enable autocomplete layer
+[[custom_plugins]]
+  repo = "sainnhe/everforest"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "neoclide/coc-snippets"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "xuhdev/vim-latex-live-preview"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "ARM9/arm-syntax-vim"
+  merged = 0
+
+[[layers]]
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "cycle"
+
+
+[[layers]]
+  name = "format"
+  format_on_save = true
+
+[[layers]]
+  name = "git"
+  git_plugin = 'fugitive'
+
+
+# Language Layers
+[[layers]]
+  name = "lang#assembly"
+
+[[layers]]
+  name = "lang#c"
+
+[[layers]]
+  name = "lang#dockerfile"
+
+[[layers]]
+  name = "lang#extra"
+
+[[layers]]
+  name = "lang#ipynb"
+
+[[layers]]
+  name = "lang#kotlin"
+
+[[layers]]
+  name = "lang#latex"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#python"
+
+[[layers]]
+  name = "lang#rust"
+
+[[layers]]
+  name = "lang#sh"
+
+[[layers]]
+  name = "lang#vim"
+
+[[layers]]
+  name = "lang#zig"
+  
+[[layers]]
+  name = "sudo"
+
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
