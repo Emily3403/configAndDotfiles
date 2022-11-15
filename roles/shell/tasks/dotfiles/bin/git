@@ -1,3 +1,0 @@
-#!/bin/sh
-export LD_PRELOAD=/home/emily/bin/gitbslr.so
-exec /usr/bin/git "$@"

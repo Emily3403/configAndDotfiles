@@ -191,8 +191,6 @@
 
   with_items:
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/alacritty/alacritty.yml', dest: '~/.config/alacritty/alacritty.yml' }
-    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/bin/git', dest: '~/bin/git' }
-    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/bin/gitbslr.so', dest: '~/bin/gitbslr.so' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/bin/bash_functions_for_fish/update', dest: '~/bin/bash_functions_for_fish/update' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/fish/config.fish', dest: '~/.config/fish/config.fish' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }

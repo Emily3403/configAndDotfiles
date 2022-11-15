@@ -1,7 +1,6 @@
 # Home stuff
-Host nas 192.168.1.69E
+Host nas 192.168.1.69
     HostName 192.168.1.69
-    Port 3007
     User emily
 
 Host laptop 192.168.1.13 
