@@ -1,0 +1,36 @@
+- name: Install packages
+  become: yes
+  package:
+    name:
+      - paperkey
+      - gnupg
+      - pass
+
+
+- name: Clone the passwords repo
+  git:
+    repo: https://github.com/Emily3403/Passwords
+    dest: ~/.password-store
+    force: yes
+
+
+- pause:
+    prompt: "Please enter your GPG password!"
+    echo: no
+
+  register: gpg_password
+  no_log: yes
+
+- name: Install the private gpg key
+  shell:
+    cmd: ~/.password-store/bootstrap/decrypt.sh
+    chdir: ~/.password-store/bootstrap
+    stdin: "{{ gpg_password.user_input }}"
+
+- name: Set the trust level of the key
+  shell: 'echo -e "5\ny\nsave\n" | gpg --command-fd 0 --no-tty --no-greeting -q --edit-key 5E817E912FA7808B trust'
+
+- name: Install ssh key
+  shell:
+    cmd: ~/configAndDotfiles/roles/password/tasks/dotfiles/ssh/bootstrap.sh
+    stdin: "{{ gpg_password.user_input }}"

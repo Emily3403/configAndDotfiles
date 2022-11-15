@@ -1,0 +1,53 @@
+#!/bin/bash
+
+if [ -n "$1" ]; then
+  attrs=$(echo "
+lookup = {
+  'grs': 'GRS, german',
+  'ig': 'IG, german',
+}
+
+print(lookup['$1'.lower()])
+  " | python3)
+fi
+
+if [ -n "$2" ]; then
+  exdirname=$(printf "Exercise%02d" $2)
+  mkdir "$exdirname" || exit
+  cd "$exdirname" || exit
+  ex=", Ex=$2"
+fi
+
+sha=$(sha1sum "$HOME/Documents/Uni/LaTeX/compile/clatex/templateAll.fmt" | head -c 40)
+
+cwd=$(pwd)
+cd "$HOME/Documents/Uni/LaTeX/" || exit
+last_commit=$(git rev-parse HEAD)
+cd "$cwd" || exit
+
+ln -s "$HOME/Documents/Uni/LaTeX/compile/clatex/" .
+ln -s "$HOME/Documents/Uni/LaTeX/src/" .
+
+
+echo "%&clatex/templateAll
+\endofdump
+
+%\documentclass[11pt]{article}
+%\usepackage{template}
+%\useTemplateStatic[a]
+
+%\usepackage{src/template}
+
+%! Generated with commit hash: \"$last_commit\"
+%! sha1sum of templateAll.fmt: \"$sha\"
+
+\date{$(date +"%Y -- %m -- X")}
+\useTemplate[$attrs$ex]
+
+
+\begin{document}
+    \maketitle
+
+
+\end{document}
+" >main.tex

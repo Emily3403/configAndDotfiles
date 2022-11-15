@@ -1,0 +1,79 @@
+#/bin/bash
+
+#if [[ $EUID -ne 0 ]]; then
+#	exec sudo /home/emily/bin/bash_functions_for_fish/update "$@"
+#	exit 1
+#fi
+
+# Colors
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+
+function pnotify {
+  printf "${BLUE}[ NOTIFICATION ]:${NORMAL} ${1}\n"
+}
+
+function pwarn {
+  printf "${YELLOW}[ WARNING ]:${NORMAL} ${1}\n"
+}
+
+function perror {
+  printf "${RED}[ ERROR ]:${NORMAL} ${1}\n"
+}
+
+function psuccess {
+  printf "${GREEN}[ SUCCESS ]:${NORMAL} ${1}\n"
+}
+
+# This file is partially based on Garuda linux implementation.
+sudo sh -c ""
+
+
+pnotify "Starting to upgrade packages ..."
+sudo pacman -Syu --noconfirm
+
+
+# notfiy i3blocks
+if [[ $XDG_CURRENT_DESKTOP == "i3" ]]; then
+    pkill -SIGRTMIN+11 i3blocks
+fi
+
+
+pnotify "Starting to update pip packages ..."
+if [[ "$VIRTUAL_ENV" == "" ]]; then
+    pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user
+fi
+
+pnotify "Starting to upgrade vim plugins ..."
+$HOME/.vim/pack/vendor/start/update.sh
+
+
+
+if [ -x /usr/bin/locate ]; then
+    pnotify "Updating mlocate index ..."
+    sudo updatedb
+fi
+
+
+if [ -x /usr/bin/fish ] && [ ! -z "$SUDO_UID" ]; then
+    pnotify "Updating fish completions ..."
+    sudo -u "#$SUDO_UID" fish -c fish_update_completions
+fi
+
+
+
+printf "\nSystem updated! 🐧\n"

@@ -1,0 +1,38 @@
+
+- name: Install programming packages
+  ansible.builtin.package:
+    name:
+      - jetbrains-toolbox
+      - zig
+      - lapce
+      - shellcheck
+      - texlive-most
+      - mold
+
+    state: latest
+  become: true
+
+
+
+- name: Install dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/bin/initLaTeX', dest: '~/bin/initLaTeX' }
+
+
+- pause:
+    prompt: "Go ahead and authenticate the Jetbrains Toolbox!\nPress Enter when done!"
+    echo: yes
+
+
+
+- name: Bootstrap keymaps
+  shell: "~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/JetBrains/bootstrap.sh"
+
+
+

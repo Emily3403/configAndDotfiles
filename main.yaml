@@ -1,0 +1,15 @@
+---
+
+# TODO: backup role
+# Add pacman.conf / makepkg.conf
+- hosts: laptop
+
+  roles:
+    - gui_programming
+#    - gui_programming
+#    - gui_basic
+
+  environment:
+    PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}
+
+

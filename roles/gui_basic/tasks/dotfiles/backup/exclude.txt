@@ -1,0 +1,25 @@
+# Cache directories
+zig-cache
+.ccache
+.java
+.gvfs
+.tox
+.mypy_cache
+.dmypy.json
+.pytest_cache
+__pycache__
+.cmake
+cmake-build*
+target
+
+
+# Bad Symlinks
+SingletonLock
+SingletonCookie
+SingletonSocket
+
+discord/SS
+
+chromium*/null
+
+.thunderbird/*/lock

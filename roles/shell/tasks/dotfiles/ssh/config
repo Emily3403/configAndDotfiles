@@ -1,0 +1,44 @@
+# Home stuff
+Host nas 192.168.1.69E
+    HostName 192.168.1.69
+    Port 3007
+    User emily
+
+Host laptop 192.168.1.13 
+	HostName 192.168.1.13
+    User emily
+
+Host hp-laptop 192.168.1.15
+    HostName 192.168.1.15
+    User emily
+
+Host pc 192.168.1.42
+	HostName 192.168.1.42
+	User emily
+
+Host router 192.168.1.1
+    HostName 192.168.1.1
+    User root
+
+# Other Websites
+
+Host github.com
+	User git
+	PreferredAuthentications publickey
+
+Host git.tu-berlin.de
+	User git
+	PreferredAuthentications publickey
+
+Host martin
+	HostName static.246.42.12.49.clients.your-server.de
+	User root
+	PreferredAuthentications publickey
+
+Host ruwuschOnRails
+  HostName 5.9.147.135
+  User root
+
+Host beagle
+    User debian
+    HostName 192.168.1.106

@@ -1,0 +1,209 @@
+# Missing packages
+#   alacritty
+#   discord
+#   exa
+
+
+
+# Maybe:
+#   ansible
+#   standard bluetooth
+#   ffmpeg
+#   gimp
+#   gscan2pdf
+#   jetbrains toolbox + products
+#   jupyter
+#   nmap
+#   qbittorrent
+#   shellcheck
+#   spotify
+#   steam
+#   telegram-desktop
+#   texlive
+#   thunderbird
+#   vlc
+
+
+# Idk
+#   Timeshift
+
+# Uni specific
+#   mumble
+#   zotero
+
+# Arch specific
+#   find-the-command
+#   yay
+
+
+# Garuda dependencies
+
+
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "package_translation/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yaml"
+    - "package_translation/{{ ansible_distribution }}.yaml"
+    - "package_translation/{{ ansible_os_family }}.yaml"
+  when: apache_package_name is not defined or apache_service_name is not defined
+
+
+
+- name: Install really core packages
+  ansible.builtin.package:
+    name:
+      - curl
+      - wget
+      - git
+  become: true
+
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+    force: yes
+
+
+- name: Add deadsnakes repository
+  become: true
+  apt_repository: repo="ppa:deadsnakes/ppa"
+  when: ansible_os_family == 'Debian'
+
+
+- name: Update cache apt
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600 upgrade=dist force_apt_get=yes
+  when: ansible_os_family == 'Debian'
+  become: true
+
+
+
+
+- name: Install starship
+  shell: wget -P /tmp https://starship.rs/install.sh; sh -c "$(cat /tmp/install.sh)" -- -y; mv /usr/local/bin/starship /usr/bin/starship
+  become: true
+  args:
+    creates: /usr/bin/starship
+
+
+- name: Core packages
+  ansible.builtin.package:
+    name:
+      - bat
+      - btop
+      - gcc
+      - cmake
+      - "{{ exa_package_name | default('') }}"
+      - make
+      - nmap
+      - cowsay
+      - direnv
+      - fish
+      - git
+      - htop
+      - jq
+      - neofetch
+      - neovim
+      - "{{ openssh_package_name }}"
+      - onefetch
+      - "{{ pip_package_name }}"
+      - "{{ python_package_name }}"
+      - rsync
+      - ripgrep
+      - vim
+      - nodejs
+      - yarn
+      - ctags
+      - lrzip
+      - yay
+
+    state: latest
+  become: true
+
+- name: Set login shell to fish
+  ansible.builtin.command: usermod --shell /bin/fish {{ ansible_env.USER }}
+  become: true
+  changed_when: false
+
+- name: Install pip packages
+  pip:
+    name:
+      - thefuck
+      - tldr
+      - ipython
+      - sympy
+      - numpy
+      - pynvim
+
+
+# Install Rust
+
+- name: check if cargo is installed
+  shell: "~/.cargo/bin/rustc"
+  register: cargo_exists
+  ignore_errors: yes
+
+- name: Download Installer
+  when: cargo_exists is failed
+  get_url:
+    url: https://sh.rustup.rs
+    dest: /tmp/sh.rustup.rs
+    mode: '0755'
+    force: 'yes'
+  tags:
+    - rust
+
+- name: install rust/cargo
+  when: cargo_exists is failed
+  shell: /tmp/sh.rustup.rs -y
+  tags:
+    - rust
+
+
+# Install cargo packages
+- name: Install cargo packages
+  community.general.cargo:
+    name: ripdrag
+
+
+# Start distributing dotfiles
+
+- name: Make dotfile dirs
+  file:
+    dest: "{{ item }}"
+    state: directory
+
+  with_items:
+    - '~/bin/bash_functions_for_fish'
+    - '~/.config/neofetch'
+    - '~/.config/alacritty'
+    - '~/.config/fish'
+    - '~/.config/htop'
+    - '~/.config/btop'
+
+
+
+
+- name: Install dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/alacritty/alacritty.yml', dest: '~/.config/alacritty/alacritty.yml' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/bin/git', dest: '~/bin/git' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/bin/gitbslr.so', dest: '~/bin/gitbslr.so' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/bin/bash_functions_for_fish/update', dest: '~/bin/bash_functions_for_fish/update' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/fish/config.fish', dest: '~/.config/fish/config.fish' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/git/.gitconfig', dest: '~/.gitconfig' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/neofetch/config.conf', dest: '~/.config/neofetch/config.conf' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/neofetch/current_image.txt', dest: '~/.config/neofetch/current_image.txt' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/ssh/config', dest: '~/.ssh/config' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/starship/starship.toml', dest: '~/.config/starship.toml' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/htop/htoprc', dest: '~/.config/htop/htoprc' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/btop/btop.conf', dest: '~/.config/btop/btop.conf' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/nvim', dest: '~/.config/nvim' }
+
+
+
+

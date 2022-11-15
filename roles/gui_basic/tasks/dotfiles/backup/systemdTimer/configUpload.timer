@@ -1,0 +1,10 @@
+[Unit]
+Description=configUpload
+Wants=configUpload.service
+
+[Timer]
+Unit=configUpload.service
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
