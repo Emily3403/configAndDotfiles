@@ -34,6 +34,7 @@ deleted = "x"
 min_time = 1
 format = "took [$duration]($style)"
 disabled = false
+show_milliseconds = true
 
 
 ## SECOND LINE/ROW: Prompt
