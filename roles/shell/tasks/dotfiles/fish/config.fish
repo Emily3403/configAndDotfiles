@@ -1,4 +1,102 @@
-﻿# Hide welcome message
+﻿alias .. 'cd ..'
+alias ... 'cd ../..'
+alias .... 'cd ../../..'
+alias ..... 'cd ../../../..'
+alias ...... 'cd ../../../../..'
+alias C 'xclip -sel clip'
+alias b btop
+alias c sed\\\ -z\\\ \\\'\\\$\\\ s/\\\\n\\\$//\\\'\\\ \\\|\\\ xclip\\\ -sel\\\ clip
+alias cat 'bat --style header --style snip --style changes --style header'
+alias compress 'lrzip -z'
+alias cpd 'pwd | c'
+alias cr chromium
+alias dc cd
+alias dir 'exa -lb --color=always --group-directories-first --icons --time-style=long-iso'
+alias ds 'du -shx * | sort -h'
+alias ds. 'du -shx * .* | sort -h'
+alias fi firefox
+alias findbu find\\\ \\\~\\\ -mount\\\ -name\\\ \\\'\\\*.bak\\\*\\\'\\\ -exec\\\ du\\\ -sh\\\ \\\{\\\}\\\ \\\\\\\;\\\ \\\|\\\ sort
+alias findstr 'find ~ -mount -type f -print0 | xargs -0 -P 32 grep -s '
+alias fishe 'vim /home/emily/.config/fish/config.fish'
+alias fuck. 'fuck --hard'
+alias ga 'git add'
+alias gaa 'git add --all'
+alias gau 'git add -u'
+alias gb 'git branch'
+alias gc 'git commit -m'
+alias gcl 'git clone'
+alias gcl. 'git clone --depth 1'
+alias gco 'git checkout'
+alias git. /usr/bin/git
+alias gl 'git pull'
+alias gp 'git push'
+alias grep 'grep --color=auto'
+alias grm 'git stash; git stash drop'
+alias grs python3\\\ -c\\\ \\\"import\\\ os\\\;\\\ from\\\ subprocess\\\ import\\\ check_output\\\;\\\ from\\\ urllib.parse\\\ import\\\ urlparse\\\;\\\ it=urlparse\\\(check_output\\\(\\\[\\\'git\\\',\\\ \\\'config\\\',\\\ \\\'--get\\\',\\\ \\\'remote.origin.url\\\'\\\]\\\)\\\)\\\;\\\ \\\(print\\\(\\\'Remote\\\ is\\\ already\\\ ssh\\\'\\\),\\\ exit\\\(0\\\)\\\)\\\ if\\\ it.path.decode\\\(\\\).startswith\\\(\\\'git@\\\'\\\)\\\ else\\\ None\\\;\\\ ssh_url=f\\\'git@\\\{it.hostname.decode\\\(\\\)\\\}:\\\{it.path.decode\\\(\\\)\\\}\\\'\\\;\\\ os.system\\\(f\\\'git\\\ remote\\\ set-url\\\ origin\\\ \\\{ssh_url\\\}\\\'\\\)\\\;\\\ print\\\(\\\'Succeeded\\\ in\\\ changing\\\ the\\\ remote\\\ url\\\ to\\\ ssh\\\'\\\)\\\ if\\\ all\\\(ssh_url\\\ in\\\ out\\\ for\\\ out\\\ in\\\ check_output\\\(\\\[\\\'git\\\',\\\ \\\'remote\\\',\\\ \\\'-v\\\'\\\]\\\).decode\\\(\\\).split\\\(\\\'\\\\n\\\'\\\)\\\[:-1\\\]\\\)\\\ else\\\ print\\\(\\\'Could\\\ not\\\ set\\\ the\\\ remote\\\ url\\\ ...\\\ Why\\\?\\\'\\\)\\\"
+alias gs 'git status'
+alias gu 'git add -u; git commit && git push'
+alias gul 'git add -u; git commit-status; git push '
+alias gun git\\\ add\\\ -u\\\;\\\ git\\\ commit\\\ -m\\\ \\\'no\\\ message.\\\'\\\;\\\ git\\\ push
+alias htop btop
+alias htop. 'htop -d 0.1'
+alias i 'ipython --no-confirm-exit'
+alias i3e 'vim /home/emily/.config/i3/config'
+alias jn 'jupyter notebook'
+alias jn. 'jupyter notebook stop'
+alias la 'exa -lba --color=always --group-directories-first --icons --time-style=long-iso'
+alias ls 'exa -lb --color=always --group-directories-first --icons --time-style=long-iso'
+alias lsfs 'lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS'
+alias lsr 'ls | sort -R | tail -10'
+alias lt 'exa -T --color=always --group-directories-first --icons --sort=size --level=3'
+alias mi mediainfo
+alias mypy 'dmypy run'
+alias neofetch 'neofetch --ascii /home/emily/.config/neofetch/current_image.txt --ascii_colors 9 10 22 12 13 14'
+alias nmap-home 'nmap -sn 192.168.1.*'
+alias nt 'clear && neofetch && builtin cd'
+alias nvime 'vim /home/emily/.config/nvim/init.vim'
+alias pdf 'chromium ./out/main.pdf'
+alias pi 'pip install'
+alias pie 'pip install -e .[extra]'
+alias pin 'pip install neovim pynvim'
+alias pir 'pip install -r requirements.txt'
+alias pird 'pip install -r requirements_dev.txt'
+alias piu pip\\\ list\\\ --outdated\\\ --format=freeze\\\ \\\|\\\ grep\\\ -v\\\ \\\'^\\\\-e\\\'\\\ \\\|\\\ cut\\\ -d\\\ =\\\ -f\\\ 1\\\ \\\ \\\|\\\ xargs\\\ -n1\\\ pip\\\ install\\\ -U\\\ --user
+alias piuf pip\\\ list\\\ --outdated\\\ --format=freeze\\\ \\\|\\\ grep\\\ -v\\\ \\\'^\\\\-e\\\'\\\ \\\|\\\ cut\\\ -d\\\ =\\\ -f\\\ 1\\\ \\\ \\\|\\\ xargs\\\ -n1\\\ -P\\\(nproc\\\)\\\ pip\\\ install
+alias please sudo
+alias quote 'fortune | cowsay | lolcat'
+alias rmb 'rm -rf build'
+alias rmf 'rm -rf'
+alias rmg 'rm -rf .git'
+alias rmi 'rm -rf .idea'
+alias rmo 'rm -rf out'
+alias rmt 'rm -rf target'
+alias rmv 'rm -rf venv'
+alias rmz 'rm -rf zig-out zig-cache'
+alias sl. 'pkill -9 sl'
+alias ss 'source sauce'
+alias sse 'vim /home/emily/.config/starship.toml'
+alias sshc 'cat /home/emily/.ssh/id_rsa.pub | xclip -sel clip'
+alias sshe 'vim /home/emily/.ssh/config'
+alias sshke 'vim /home/emily/.ssh/known_hosts'
+alias start-ssh 'sudo systemctl start sshd'
+alias sysS 'sudo systemctl start'
+alias sysd 'sudo systemctl disable'
+alias syse 'sudo systemctl enable --now'
+alias sysr 'sudo systemctl daemon-reload'
+alias syss 'systemctl status'
+alias sysuS 'systemctl --user start'
+alias sysud 'systemctl --user disable'
+alias sysue 'systemctl --user enable --now'
+alias sysur 'systemctl --user daemon-reload'
+alias sysus 'systemctl --user status'
+alias tar. 'tar caf'
+alias uncompress lrunzip
+alias untar 'tar xvf'
+alias updatee 'vim /home/emily/bin/bash_functions_for_fish/update'
+alias vim nvim
+alias vime 'vim /home/emily/.vimrc'
+alias visudo 'sudo EDITOR=vim visudo'
+# Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT 1
 
@@ -187,13 +285,12 @@ alias lsr="ls | sort -R | tail -10"
 alias dir="exa -lb --color=always --group-directories-first --icons --time-style=long-iso" # But why would anyone use this? :D
 alias findstr="find ~ -mount -type f -print0 | xargs -0 -P 32 grep -s $argv"
 
+alias sudo='sudo -E'
 alias compress="lrzip -z"
 alias uncompress="lrunzip"
 alias tar.='tar caf'
 alias untar="tar xvf"
 alias grep='grep --color=auto'
-
-alias visudo="sudo EDITOR=vim visudo"
 
 alias dc="cd"
 alias ds="du -shx * | sort -h"
@@ -210,10 +307,11 @@ alias nmap-home="nmap -sn 192.168.1.*"
 
 
 # Systemd
-alias sysr="sudo systemctl daemon-reload"
+alias sysr="sudo systemctl restart"
+alias sysdr="sudo systemctl daemon-reload"
 alias syse="sudo systemctl enable --now"
 alias syss="systemctl status"
-alias sysS="sudo systemctl start"
+alias sysst="sudo systemctl start"
 alias sysd="sudo systemctl disable"
 
 alias sysur="systemctl --user daemon-reload"
@@ -287,23 +385,39 @@ end
 
 if type -q btop
     alias htop='btop'
+    alias b='btop'
+
+    # Wrong spelling
+    alias bpto='btop'
+    alias btpo='btop'
+
 end
 
 if type -q pass
     alias pc="pass -c"
 end
 
+if type -q vim
+    export EDITOR='vim'
+    alias v='vim'
+end
+
+
+if type -q nvim
+    export EDITOR='nvim'
+    alias v='nvim'
+end
 
 
 function unfuck
     switch $argv
         case bt
             sudo systemctl restart bluetooth
-        case vim nvim 
+        case vim nvim
             pip install pynvim
 
 
-   end 
+    end
 end
 
 # ====/ Useful aliases =====
