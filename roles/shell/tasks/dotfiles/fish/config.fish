@@ -394,6 +394,10 @@ if type -q btop
 
 end
 
+if type -q gix
+    alias gcl!="gix -v clone"
+end
+
 if type -q pass
     alias pc="pass -c"
 end

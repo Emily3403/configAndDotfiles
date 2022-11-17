@@ -162,7 +162,10 @@
 # Install cargo packages
 - name: Install cargo packages
   community.general.cargo:
-    name: ripdrag
+    name: 
+      - ripdrag
+      - gitoxide
+
 
 
 # Start distributing dotfiles
