@@ -4,5 +4,6 @@
       "command": "zls",
       "filetypes": ["zig"]
     }
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
