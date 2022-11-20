@@ -209,6 +209,7 @@ alias fuck.="fuck --hard"
 alias findbu="find ~ -mount -name '*.bak*' -exec du -sh {} \; | sort"
 alias nmap-home="nmap -sn 192.168.1.*"
 alias convert-image-pdf='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf\' -- it'
+alias convert-image-pdf.='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf; rm "$1"\' -- it'
 
 
 # Systemd
