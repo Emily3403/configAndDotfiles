@@ -187,7 +187,7 @@ alias cdmk='mkdir -p $argv; cd $argv'
 alias lsr="ls | sort -R | tail -10"
 alias dir="exa -lb --color=always --group-directories-first --icons --time-style=long-iso" # But why would anyone use this? :D
 alias findstr="find ~ -mount -type f -print0 | xargs -0 -P 32 grep -s $argv"
-
+alias takeover="sudo chown -R $USER ."
 alias compress="lrzip -z"
 alias uncompress="lrunzip"
 alias tar.='tar caf'
@@ -304,11 +304,11 @@ function unfuck
     switch $argv
         case bt
             sudo systemctl restart bluetooth
-        case vim nvim 
+        case vim nvim
             pip install pynvim
 
 
-   end 
+    end
 end
 
 # ====/ Useful aliases =====
