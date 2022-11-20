@@ -208,6 +208,7 @@ alias please="sudo"
 alias fuck.="fuck --hard"
 alias findbu="find ~ -mount -name '*.bak*' -exec du -sh {} \; | sort"
 alias nmap-home="nmap -sn 192.168.1.*"
+alias convert-image-pdf='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf\' -- it'
 
 
 # Systemd
@@ -227,6 +228,7 @@ alias start-ssh="sudo systemctl start sshd"
 
 # Shortcut for too long names
 alias rmf="rm -rf"
+alias rmd="rm -d"
 alias rmo="rm -rf out"
 alias rmv="rm -rf venv"
 alias rmg="rm -rf .git"
@@ -271,7 +273,7 @@ alias cr="chromium"
 alias fi="firefox"
 set -g browser chromium
 export BROWSER=chromium
-alias pdf="$BROWSER ./out/main.pdf"
+alias pdf="$BROWSER ./target/main.pdf"
 
 # Replace commands with better commands (if they exist)
 
