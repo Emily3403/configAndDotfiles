@@ -66,10 +66,11 @@ function upfish
     chmod +x "$HOME/.config/fish/config.fish"
 end
 
+# Replace the `cd` implementation of fish. Also save it in `standard_cd` so it can be reused.
+functions -c cd standard_cd
 
-# Have cd show usefull stuff about repos
 function cd
-    builtin cd $argv
+    standard_cd $argv
 
     # If `onefetch` is install show a 
     #    git rev-parse &>/dev/null
@@ -421,6 +422,10 @@ end
 
 if type -q thefuck
     thefuck --alias | source
+end
+
+if test -e /usr/share/doc/find-the-command/ftc.fish
+    source /usr/share/doc/find-the-command/ftc.fish
 end
 
 
