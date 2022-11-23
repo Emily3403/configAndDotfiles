@@ -160,7 +160,7 @@ alias jn.="jupyter notebook stop"
 # Pip aliases
 alias pi="pip install"
 alias pir="pip install -r requirements.txt"
-alias pie="pip install -e .[extra]"
+alias pie="pip install -e .\[extra\]"
 alias pird="pip install -r requirements_dev.txt"
 alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
 alias piuf="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 -P(nproc) pip install"
