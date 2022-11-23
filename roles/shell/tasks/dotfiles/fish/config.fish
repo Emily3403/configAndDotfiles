@@ -208,22 +208,24 @@ alias b="bluetoothctl"
 alias please="sudo"
 alias fuck.="fuck --hard"
 alias findbu="find ~ -mount -name '*.bak*' -exec du -sh {} \; | sort"
-alias nmap-home="nmap -sn 192.168.1.*"
+alias nmap-home="nmap -sn \"192.168.1.*\""
 alias convert-image-pdf='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf\' -- it'
 alias convert-image-pdf.='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf; rm "$1"\' -- it'
 
 
 # Systemd
-alias sysr="sudo systemctl daemon-reload"
+alias sysr="sudo systemctl restart"
+alias sysdr="sudo systemctl daemon-reload"
 alias syse="sudo systemctl enable --now"
 alias syss="systemctl status"
-alias sysS="sudo systemctl start"
+alias sysst="sudo systemctl start"
 alias sysd="sudo systemctl disable"
 
-alias sysur="systemctl --user daemon-reload"
+alias sysur="systemctl --user restart"
+alias sysudr="systemctl --user daemon-reload"
 alias sysue="systemctl --user enable --now"
 alias sysus="systemctl --user status"
-alias sysuS="systemctl --user start"
+alias sysust="systemctl --user start"
 alias sysud="systemctl --user disable"
 
 alias start-ssh="sudo systemctl start sshd"
