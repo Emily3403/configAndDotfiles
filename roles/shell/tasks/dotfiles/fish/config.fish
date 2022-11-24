@@ -184,7 +184,7 @@ alias ......='cd ../../../../..'
 
 
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
-alias cdmk='mkdir -p $argv; cd $argv'
+alias cdmk='mkdir -p $argv; cd'
 alias lsr="ls | sort -R | tail -10"
 alias dir="exa -lb --color=always --group-directories-first --icons --time-style=long-iso" # But why would anyone use this? :D
 alias findstr="find ~ -mount -type f -print0 | xargs -0 -P 32 grep -s $argv"
@@ -219,6 +219,7 @@ alias sysdr="sudo systemctl daemon-reload"
 alias syse="sudo systemctl enable --now"
 alias syss="systemctl status"
 alias sysst="sudo systemctl start"
+alias sysp="sudo systemctl stop"
 alias sysd="sudo systemctl disable"
 
 alias sysur="systemctl --user restart"
@@ -260,6 +261,7 @@ alias gc="git commit -m"
 alias gco="git checkout"
 alias gp="git push"
 alias gl="git pull"
+alias glr="git pull --rebase"
 alias grm="git stash; git stash drop" # Danger!
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
