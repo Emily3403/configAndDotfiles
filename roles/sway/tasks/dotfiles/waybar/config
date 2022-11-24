@@ -59,15 +59,16 @@
     },
     "memory": {
         "format": " {: >3}%",
-        "on-click": "alacritty -e htop"
+        "on-click": "alacritty -e btop"
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+        "critical-threshold": 85,
         // "format-critical": "{temperatureC}°C",
         "format": " {temperatureC}°C",
-        "interval": 1
+        "interval": 1,
+        "on-click": "alacritty -e btop"
     },
     "backlight": {
         // "device": "acpi_video1",
