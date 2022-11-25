@@ -112,6 +112,7 @@ alias sse="vim $HOME/.config/starship.toml"
 alias sshe="vim $HOME/.ssh/config"
 alias sshke="vim $HOME/.ssh/known_hosts"
 alias updatee="vim $HOME/bin/bash_functions_for_fish/update"
+alias waybare="vim $HOME/.config/waybar/config"
 
 # Copy files
 alias sshc="cat $HOME/.ssh/id_rsa.pub | xclip -sel clip"
@@ -292,10 +293,12 @@ end
 
 if type -q bat
     alias cat='bat --style header --style snip --style changes --style header'
+    alias cat.="/usr/bin/cat"
 end
 
 if type -q btop
-    alias htop='btop'
+    alias htop="btop"
+    alias htop.="/usr/bin/htop"
 end
 
 if type -q gix
@@ -306,17 +309,12 @@ if type -q pass
     alias pc="pass -c"
 end
 
+if type -q vim
+    alias v="vim"
+end
 
-
-function unfuck
-    switch $argv
-        case bt
-            sudo systemctl restart bluetooth
-        case vim nvim
-            pip install pynvim
-
-
-    end
+if type -q nvim
+    alias v="nvim"
 end
 
 # ====/ Useful aliases =====
@@ -348,21 +346,32 @@ end
 add_to_path ~/arm/bin ~/bin/i3programs ~/.local/share/gem/ruby/3.0.0/bin
 
 
-# Function to get to by common places
-# _ue
+# Function to get to my common places
 function u
     switch (string lower $argv)
         # configs
         case nvim
             cd "$HOME/.config/nvim"
-        case cs
-            cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
+        case v svim
+            cd "$HOME/.SpaceVim.d/"
         case bu
             cd "$HOME/Documents/Programs/Bash/BackupScript"
         case key
             cd "$HOME/Documents/Programs/Bash/Keyboard/qmk_firmware"
 
-            # programming 
+        # configAndDotfiles
+        case csh
+            cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
+        case cwy
+            cd "$HOME/configAndDotfiles/roles/sway/tasks/dotfiles"
+        case ci3
+            cd "$HOME/configAndDotfiles/roles/i3/tasks/dotfiles"
+        case cgb
+            cd "$HOME/configAndDotfiles/roles/gui_basic/tasks/dotfiles"
+        case cgp
+            cd "$HOME/configAndDotfiles/roles/gui_programming/tasks/dotfiles"
+
+        # programming 
         case zig
             cd "$HOME/Documents/Programs/Zig/OperatingSystem"
         case zigl
@@ -392,6 +401,18 @@ function u
     end
 end
 
+function unfuck
+    switch $argv
+        case bt
+            sudo systemctl restart bluetooth
+        case v vim nvim
+            pip install pynvim
+
+
+    end
+end
+
+
 
 export GPG_TTY=(tty)
 
@@ -420,6 +441,10 @@ if type -q nvim
 end
 
 # Hooks for packages
+if type -q starship
+    source (starship init fish --print-full-init | psub)
+end
+
 if type -q direnv
     direnv hook fish | source
 end
@@ -433,8 +458,7 @@ if test -e /usr/share/doc/find-the-command/ftc.fish
 end
 
 
-# Display the final prompt
+# Display neofetch only in iteractive mode so connections are not affected
 if status --is-interactive
-    source (starship init fish --print-full-init | psub)
     neofetch
 end
