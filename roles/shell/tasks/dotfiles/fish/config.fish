@@ -105,6 +105,7 @@ end
 # Aliases for config files
 alias fishe="vim $HOME/.config/fish/config.fish"
 alias i3e="vim $HOME/.config/i3/config"
+alias swaye="vim $HOME/.config/sway/config"
 alias vime="vim $HOME/.vimrc"
 alias nvime="vim $HOME/.config/nvim/init.vim"
 alias vim="nvim"
@@ -219,7 +220,7 @@ alias sysr="sudo systemctl restart"
 alias sysdr="sudo systemctl daemon-reload"
 alias syse="sudo systemctl enable --now"
 alias syss="systemctl status"
-alias sysst="sudo systemctl start"
+alias syst="sudo systemctl start"
 alias sysp="sudo systemctl stop"
 alias sysd="sudo systemctl disable"
 
@@ -353,7 +354,11 @@ function u
         case nvim
             cd "$HOME/.config/nvim"
         case v svim
-            cd "$HOME/.SpaceVim.d/"
+            cd "$HOME/.SpaceVim.d"
+        case i3
+            cd "$HOME/.config/i3"
+        case sway
+            cd "$HOME/.config/sway"
         case bu
             cd "$HOME/Documents/Programs/Bash/BackupScript"
         case key
