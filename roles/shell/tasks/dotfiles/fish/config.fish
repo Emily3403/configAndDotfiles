@@ -359,7 +359,7 @@ function u
         case key
             cd "$HOME/Documents/Programs/Bash/Keyboard/qmk_firmware"
 
-        # configAndDotfiles
+            # configAndDotfiles
         case csh
             cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
         case cwy
@@ -371,7 +371,7 @@ function u
         case cgp
             cd "$HOME/configAndDotfiles/roles/gui_programming/tasks/dotfiles"
 
-        # programming 
+            # programming 
         case zig
             cd "$HOME/Documents/Programs/Zig/OperatingSystem"
         case zigl
@@ -394,6 +394,15 @@ function u
             cd "$HOME/Documents/Uni/6/AOT/Exercises"
         case aot.
             cd "$HOME/isisdl/[SS22] AOT B.Sc./"
+
+        case ppb
+            cd "$HOME/Documents/Uni/7/PPB/"
+        case ppbb
+            cd "$HOME/Documents/Uni/7/PPB/Backend" && ac
+        case ppbf
+            cd "$HOME/Documents/Uni/7/PPB/Frontend"
+        case ppbm
+            cd "$HOME/Documents/Uni/7/PPB/Meta"
 
         case b
             cd "$HOME/Documents/Uni/Bachelorarbeit"
