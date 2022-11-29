@@ -1,0 +1,58 @@
+#!/bin/bash
+
+if [[ -z $FAILED_COLOR ]]
+then
+    FAILED_COLOR=red
+fi
+
+
+if [[ -z $DOING_COLOR ]]
+then
+    DOING_COLOR=yellow
+fi
+
+
+if [[ -z $ACTIVE_COLOR ]]
+then
+    ACTIVE_COLOR=green
+fi
+
+
+# First check if we are currently doing the backup
+if grep -q "doing" "$HOME/Documents/Programs/Bash/BackupScript/bi.out";
+then
+    is_doing=true
+fi
+
+# Check if there is any indication of failure
+has_failed=false
+
+if [ "$(systemctl --user is-failed $UNIT_NAME)" == "failed" ];
+then
+    has_failed=true
+fi
+
+if ! grep -q "true" "$HOME/Documents/Programs/Bash/BackupScript/bi.out";
+then
+    has_failed=true
+fi
+
+if ! grep -q $(date --iso-8601) "$HOME/Documents/Programs/Bash/BackupScript/bi.out" && [ "$(date -d "6 hours ago" --iso-8601)" == $(date --iso-8601) ] && [ "$(systemctl --user is-active $UNIT_NAME)" == "inactive" ];
+then
+    has_failed=true
+fi
+
+
+# Now handle if we have failed
+if [ "$is_doing" == "true" ];
+then
+    COLOR=$DOING_COLOR
+
+elif [ "$has_failed" == "true" ];
+then
+    COLOR=$FAILED_COLOR
+else
+    COLOR=$ACTIVE_COLOR
+fi
+
+echo "<span color=\"$COLOR\">Backup</span>"
