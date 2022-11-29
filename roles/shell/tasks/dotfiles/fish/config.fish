@@ -186,7 +186,8 @@ alias ......='cd ../../../../..'
 
 
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
-alias cdmk='mkdir -p $argv; cd'
+alias cdmk="mkdir -p $argv; cd"
+alias mkcd="mkdir -p $argv; cd"
 alias lsr="ls | sort -R | tail -10"
 alias dir="exa -lb --color=always --group-directories-first --icons --time-style=long-iso" # But why would anyone use this? :D
 alias findstr="find ~ -mount -type f -print0 | xargs -0 -P 32 grep -s $argv"

@@ -1,0 +1,135 @@
+{
+  "bttv_emotes": {
+    "usageHistory": {
+      "twitch-305954156": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "twitch-120232": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "twitch-425618": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "bttv-566ca06065dbbdab32ec054e": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "bttv-566ca38765dbbdab32ec0560": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "bttv-566c9fc265dbbdab32ec053b": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "bttv-566c9fde65dbbdab32ec053e": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "bttv-56e9f494fff3cc5c35e5287e": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      },
+      "bttv-555981336ba1901877765555": {
+        "recentUses": [
+          1667553634740
+        ],
+        "totalUses": 1,
+        "score": 20
+      }
+    },
+    "favorites": []
+  },
+  "bttv_settings": {
+    "anonChat": false,
+    "autoTheatreMode": true,
+    "splitChat": false,
+    "deletedMessages": 1,
+    "reverseChatDirection": false,
+    "pinnedHighlights": true,
+    "timeoutHighlights": true,
+    "highlightFeedback": false,
+    "chatLayout": 2,
+    "tabCompletionTooltip": false,
+    "tabCompletionEmotePriority": true,
+    "whispers": true,
+    "showDirectoryLiveTab": false,
+    "channelPointsMessageHighlights": true,
+    "clickTwitchEmotes": true,
+    "darkenedMode": false,
+    "primePromotions": false,
+    "hostButton": false,
+    "playerExtensions": false,
+    "clickToPlay": true,
+    "muteInvisiblePlayer": false,
+    "scrollVolumeControl": false,
+    "emoteAutocomplete": true,
+    "blacklistKeywords": {},
+    "highlightKeywords": {
+      "0": {
+        "id": 0,
+        "type": 0,
+        "status": null,
+        "keyword": "efaile3403"
+      },
+      "1": {
+        "id": 1,
+        "status": null,
+        "type": 0,
+        "keyword": "emily3403"
+      }
+    },
+    "sidebar": [
+      26,
+      16
+    ],
+    "emotes": [
+      7,
+      0
+    ],
+    "chat": [
+      127,
+      0
+    ],
+    "autoPlay": [
+      0,
+      7
+    ],
+    "usernames": [
+      7,
+      0
+    ],
+    "channelPoints": [
+      7,
+      2
+    ],
+    "version": "7.4.40"
+  }
+}
