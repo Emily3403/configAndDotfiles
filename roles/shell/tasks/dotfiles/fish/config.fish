@@ -174,6 +174,13 @@ alias pin="pip install neovim pynvim"
 # ====/ Python Stuff =====
 
 
+# ===== Rust Stuff =====
+
+alias rustdbg="export RUST_LOG=trace; export RUST_BACKTRACE=short"
+
+# ====/ Rust Stuff =====
+
+
 # ===== Useful aliases =====
 
 
