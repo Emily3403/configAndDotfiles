@@ -46,7 +46,7 @@
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
         //"format": " {:%a %d %b  %I:%M %p}",	//12 hour format
-        "format": " {:%d-%m-%Y  %H:%M:%S}",
+        "format": " {:%Y-%m-%d  %H:%M:%S}",
         "format-alt": " {:%a %d %b  %H:%M:%S}",	//24 hour format
         //"timezones": [ "Kolkata" ],
         //"max-length": 200
@@ -55,7 +55,8 @@
     "cpu": {
         "format": "﬙{usage: >3}%",
         "on-click": "alacritty -e btop",
-        "interval": 1
+        "interval": 1,
+        "align": 1,
     },
     "memory": {
         "format": " {: >3}%",
@@ -65,9 +66,11 @@
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 85,
-        // "format-critical": "{temperatureC}°C",
+
+        "format-critical": " {temperatureC}°C",
         "format": " {temperatureC}°C",
         "interval": 1,
+        "align": 0,
         "on-click": "alacritty -e btop"
     },
     "backlight": {
@@ -77,7 +80,8 @@
         "on-scroll-down": "brightnessctl -c backlight set +1%",
         "on-scroll-up": "brightnessctl -c backlight set 1%-",
         "on-click": "brightnessctl -c backlight set +10%",
-        "on-right-click":"brightnessctl -c backlight set +10%-",
+        "on-click-right":"brightnessctl -c backlight set +10%-",
+        "align": 1,
     },
     "battery": {
         "states": {
@@ -89,7 +93,9 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         //"format-icons": ["", "", "", "", ""]
-        "format-icons": ["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "⚡️ "]
+        "format-icons": ["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "⚡️ "],
+        "interval": 1,
+        "align": 1,
   
     },
      "network": {
@@ -101,7 +107,7 @@
         "on-click": "alacritty -e nmtui"
     },
     "pulseaudio": {
-        "scroll-step": 1,
+        "scroll-step": 1.5,
         "format": "{icon} {volume: >3}%",
         "format-bluetooth": "{icon} {volume: >3}%",
         "format-muted":" muted",
@@ -114,7 +120,8 @@
             "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "reverse-scrolling": 1
     },
      "custom/pacman": {
         "format": " {}",
