@@ -1,53 +1,53 @@
 #!/bin/bash
 
 if [ -n "$1" ]; then
-  attrs=$(echo "
-lookup = {
-  'grs': 'GRS, german',
-  'ig': 'IG, german',
-}
-
-print(lookup['$1'.lower()])
-  " | python3)
+    case $1 in
+        AOT)
+            attrs="AOT, german"
+            ;;
+        PPL)
+            attrs="PPL, german"
+            ;;
+        *)
+            attrs=""
+            ;;
+    esac
 fi
 
-if [ -n "$2" ]; then
-  exdirname=$(printf "Exercise%02d" $2)
-  mkdir "$exdirname" || exit
-  cd "$exdirname" || exit
-  ex=", Ex=$2"
-fi
-
-sha=$(sha1sum "$HOME/Documents/Uni/LaTeX/compile/clatex/templateAll.fmt" | head -c 40)
+sha=$(sha1sum "$HOME/Documents/Programs/LaTeX/emily_template/compile/template.fmt" | head -c 40)
 
 cwd=$(pwd)
-cd "$HOME/Documents/Uni/LaTeX/" || exit
+cd "$HOME/Documents/Programs/LaTeX/emily_template/" || exit
 last_commit=$(git rev-parse HEAD)
 cd "$cwd" || exit
 
-ln -s "$HOME/Documents/Uni/LaTeX/compile/clatex/" .
-ln -s "$HOME/Documents/Uni/LaTeX/src/" .
+ln -s "$HOME/Documents/Programs/LaTeX/emily_template/compile/template.fmt" .
+ln -s "$HOME/Documents/Programs/LaTeX/emily_template/src/" .
+mkdir -p out
 
-
-echo "%&clatex/templateAll
-\endofdump
+if [ ! -f "main.tex" ]; then
+    echo "%&template
 
 %\documentclass[11pt]{article}
 %\usepackage{template}
-%\useTemplateStatic[a]
-
 %\usepackage{src/template}
 
-%! Generated with commit hash: \"$last_commit\"
-%! sha1sum of templateAll.fmt: \"$sha\"
+% Generated with commit hash: \"$last_commit\"
+% sha1sum of template.fmt: \"$sha\"
+% Repository URL: https://github.com/Emily3403/LaTeXtemplate
+
+\endofdump
 
 \date{$(date +"%Y -- %m -- X")}
-\useTemplate[$attrs$ex]
-
+\useTemplate[$attrs]
+\author{X}
+\title{X}
 
 \begin{document}
-    \maketitle
+\maketitle
 
 
 \end{document}
-" >main.tex
+" > main.tex
+
+fi

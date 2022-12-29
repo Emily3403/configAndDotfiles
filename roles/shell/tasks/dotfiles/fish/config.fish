@@ -143,6 +143,7 @@ function ac
     end
 
     source venv/bin/activate.fish
+    pip install pynvim ipython
 end
 
 
@@ -156,6 +157,7 @@ end
 
 
 # Anaconda packages
+alias py="python"
 alias i="ipython --no-confirm-exit"
 alias jn="jupyter notebook"
 alias jn.="jupyter notebook stop"
@@ -166,7 +168,8 @@ alias pi="pip install"
 alias pir="pip install -r requirements.txt"
 alias pie="pip install -e .\[extra\]"
 alias pird="pip install -r requirements_dev.txt"
-alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U --user"
+alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install"
+alias pipup="pip install --upgrade pip"
 alias piuf="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 -P(nproc) pip install"
 alias pin="pip install neovim pynvim"
 
@@ -192,7 +195,32 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
-
+# Mount stuff
+alias mntu="sudo umount /mnt"
+alias mnta1='sudo mount /dev/sda1 /mnt'
+alias mnta2='sudo mount /dev/sda2 /mnt'
+alias mnta3='sudo mount /dev/sda3 /mnt'
+alias mntb1='sudo mount /dev/sdb1 /mnt'
+alias mntb2='sudo mount /dev/sdb2 /mnt'
+alias mntb3='sudo mount /dev/sdb3 /mnt'
+alias mntc1='sudo mount /dev/sdc1 /mnt'
+alias mntc2='sudo mount /dev/sdc2 /mnt'
+alias mntc3='sudo mount /dev/sdc3 /mnt'
+alias mntd1='sudo mount /dev/sdd1 /mnt'
+alias mntd2='sudo mount /dev/sdd2 /mnt'
+alias mntd3='sudo mount /dev/sdd3 /mnt'
+alias mnte1='sudo mount /dev/sde1 /mnt'
+alias mnte2='sudo mount /dev/sde2 /mnt'
+alias mnte3='sudo mount /dev/sde3 /mnt'
+alias mntn11='sudo mount /dev/nvme0n1p1 /mnt'
+alias mntn12='sudo mount /dev/nvme0n1p2 /mnt'
+alias mntn13='sudo mount /dev/nvme0n1p3 /mnt'
+alias mntn21='sudo mount /dev/nvme0n2p1 /mnt'
+alias mntn22='sudo mount /dev/nvme0n2p2 /mnt'
+alias mntn23='sudo mount /dev/nvme0n2p3 /mnt'
+alias mntn31='sudo mount /dev/nvme0n3p1 /mnt'
+alias mntn32='sudo mount /dev/nvme0n3p2 /mnt'
+alias mntn33='sudo mount /dev/nvme0n3p3 /mnt'
 
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
 alias cdmk="mkdir -p $argv; cd"
@@ -208,6 +236,7 @@ alias untar="tar xvf"
 alias grep='grep --color=auto'
 
 alias visudo="sudo EDITOR=vim visudo"
+alias sudo="sudo -E"
 
 alias dc="cd"
 alias ds="du -shx * | sort -h"
@@ -243,8 +272,9 @@ alias sysusus="systemctl --user suspend"
 alias sysust="systemctl --user start"
 alias sysud="systemctl --user disable"
 
-alias start-mariadb="sudo systemctl start mariadb.service"
-alias start-ssh="sudo systemctl start sshd"
+alias mst="sudo systemctl start mariadb.service"
+alias bst="sudo systemctl start bluetooth.service"
+alias sshst="sudo systemctl start sshd"
 
 # Shortcut for too long names
 alias rmf="rm -rf"
@@ -329,6 +359,10 @@ end
 
 if type -q nvim
     alias v="nvim"
+end
+
+if type -q ripdrag
+    alias rd="ripdrag"
 end
 
 # ====/ Useful aliases =====
