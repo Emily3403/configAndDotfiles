@@ -317,10 +317,10 @@ alias grs="python3 -c \"import os; from subprocess import check_output; from url
 
 
 if [ "$XDG_SESSION_TYPE" = x11 ]
-    alias c='sed "s/\n//g" | xclip -sel clip' # strip newline
+    alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
     alias C="xclip -sel clip" # don't strip newline
 else if [ "$XDG_SESSION_TYPE" = wayland ]
-    alias c='sed "s/\n//g" | wl-copy'
+    alias c="sed -z '\$ s/\n\$//' | wl-copy"
     alias C="wl-copy"
 else
     echo "Unable to determine display server!"
