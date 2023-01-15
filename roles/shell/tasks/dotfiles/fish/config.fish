@@ -316,9 +316,16 @@ alias gcl.="git clone --depth 1"
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
 
 
+if [ "$XDG_SESSION_TYPE" = x11 ]
+    alias c='sed "s/\n//g" | xclip -sel clip' # strip newline
+    alias C="xclip -sel clip" # don't strip newline
+else if [ "$XDG_SESSION_TYPE" = wayland ]
+    alias c='sed "s/\n//g" | wl-copy'
+    alias C="wl-copy"
+else
+    echo "Unable to determine display server!"
+end
 
-# Copy to clipboard
-alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # stripping newline
 alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
 
