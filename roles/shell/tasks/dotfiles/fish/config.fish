@@ -116,6 +116,7 @@ alias sshe="vim $HOME/.ssh/config"
 alias sshke="vim $HOME/.ssh/known_hosts"
 alias updatee="vim $HOME/bin/bash_functions_for_fish/update"
 alias waybare="vim $HOME/.config/waybar/config"
+alias btope="vim $HOME/.config/btop/btop.conf"
 
 # Copy files
 alias sshc="cat $HOME/.ssh/id_rsa.pub | xclip -sel clip"
@@ -290,7 +291,7 @@ alias rmt="rm -rf target"
 alias mi="mediainfo"
 alias mypy="dmypy run"
 alias ss="source sauce"
-alias htop.="htop -d 0.1"
+alias htop.="htop --delay 3"
 
 # Git aliases
 alias git.="/usr/bin/git"
@@ -305,8 +306,10 @@ alias gb="git branch"
 alias gc="git commit -m"
 alias gco="git checkout"
 alias gp="git push"
+alias gpf="git push --force"
 alias gl="git pull"
 alias glr="git pull --rebase"
+alias gls="git stash; git pull; git stash pop"
 alias grm="git stash; git stash drop" # Danger!
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
@@ -326,6 +329,167 @@ set -g browser chromium
 export BROWSER=chromium
 alias pdf="$BROWSER ./target/main.pdf"
 
+# Written by ChatGPT
+function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
+    switch $argv[1]
+        case "alpha"
+            echo "α" | c
+        case "beta"
+            echo "β" | c
+        case "gamma"
+            echo "γ" | c
+        case "delta"
+            echo "δ" | c
+        case "epsilon"
+            echo "ε" | c
+        case "zeta"
+            echo "ζ" | c
+        case "eta"
+            echo "η" | c
+        case "theta"
+            echo "θ" | c
+        case "iota"
+            echo "ι" | c
+        case "kappa"
+            echo "κ" | c
+        case "lambda"
+            echo "λ" | c
+        case "mu"
+            echo "μ" | c
+        case "nu"
+            echo "ν" | c
+        case "xi"
+            echo "ξ" | c
+        case "omicron"
+            echo "ο" | c
+        case "pi"
+            echo "π" | c
+        case "rho"
+            echo "ρ" | c
+        case "sigma"
+            echo "σ" | c
+        case "tau"
+            echo "τ" | c
+        case "upsilon"
+            echo "υ" | c
+        case "phi"
+            echo "φ" | c
+        case "chi"
+            echo "χ" | c
+        case "psi"
+            echo "ψ" | c
+        case "omega"
+            echo "ω" | c
+        case "leq"
+            echo "≤" | c
+        case "geq"
+            echo "≥" | c
+        case "neq"
+            echo "≠" | c
+        case "times"
+            echo "×" | c
+        case "div"
+            echo "÷" | c
+        case "pm"
+            echo "±" | c
+        case "infty"
+            echo "∞" | c
+        case "deg"
+            echo "°" | c
+        case "cdot"
+            echo "·" | c
+        case "ldots"
+            echo "…" | c
+        case "prime"
+            echo "′" | c
+        case "ldotp"
+            echo "⋅" | c
+        case "propto"
+            echo "∝" | c
+        case "rightarrow"
+            echo "→" | c
+        case "leftarrow"
+            echo "←" | c
+        case "uparrow"
+            echo "↑" | c
+        case "downarrow"
+            echo "↓" | c
+        case "angle"
+            echo "∠" | c
+        case "nabla"
+            echo "∇" | c
+        case "in"
+            echo "∈" | c
+        case "ni"
+            echo "∋" | c
+        case "subset"
+            echo "⊂" | c
+        case "supset"
+            echo "⊃" | c
+        case "subseteq"
+            echo "⊆" | c
+        case "supseteq"
+            echo "⊇" | c
+        case "cap"
+            echo "∩" | c
+        case "cup"
+            echo "∪" | c
+        case "int"
+            echo "∫" | c
+        case "sum"
+            echo "∑" | c
+        case "prod"
+            echo "∏" | c
+        case "wedge"
+            echo "∧" | c
+        case "vee"
+            echo "∨" | c
+        case "oplus"
+            echo "⊕" | c
+        case "otimes"
+            echo "⊗" | c
+        case "bigcirc"
+            echo "◯" | c
+        case "dagger"
+            echo "†" | c
+        case "ddagger"
+            echo "‡" | c
+        case "amalg"
+            echo "⨿" | c
+        case "forall"
+            echo "∀" | c
+        case "exists"
+            echo "∃" | c
+        case "neg"
+            echo "¬" | c
+        case "in"
+            echo "∈" | c
+        case "ni"
+            echo "∋" | c
+        case "subset"
+            echo "⊂" | c
+        case "supset"
+            echo "⊃" | c
+        case "subseteq"
+            echo "⊆" | c
+        case "supseteq"
+            echo "⊇" | c
+        case "equiv"
+            echo "≡" | c
+        case "cong"
+            echo "≅" | c
+        case "approx"
+            echo "≈" | c
+        case "sim"
+            echo "~" | c
+        case "perp"
+            echo "⊥" | c
+        case "parallel"
+            echo "∥" | c
+        default echo "Invalid input"
+    end
+end
+
 # Replace commands with better commands (if they exist)
 
 if type -q exa
@@ -342,7 +506,7 @@ end
 
 if type -q btop
     alias htop="btop"
-    alias htop.="/usr/bin/htop"
+    alias htop.="/usr/bin/htop --delay 3"
 end
 
 if type -q gix
