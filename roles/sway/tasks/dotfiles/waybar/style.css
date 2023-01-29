@@ -73,8 +73,8 @@ window#waybar {
     color: #ebcb8b;
 }
 
-#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #tray, #window,#custom-launcher,#custom-power,#custom-pacman {
-    padding: 0 3px;
+#clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #tray, #window,#custom-launcher, #custom-power, #custom-pacman {
+    padding: 0 0px;
     border-bottom: 2px;
     border-style: solid;
 }
