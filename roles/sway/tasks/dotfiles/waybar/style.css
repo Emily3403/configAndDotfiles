@@ -74,7 +74,7 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #tray, #window,#custom-launcher, #custom-power, #custom-pacman {
-    padding: 0 0px;
+    padding: 0 0.8px;
     border-bottom: 2px;
     border-style: solid;
 }
@@ -99,6 +99,7 @@ window#waybar {
 #battery.charging {
     color: #81a1c1;
 }
+
 
 @keyframes blink {
     to {

@@ -2,12 +2,13 @@
   // Generel configuration
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "width": 15,
+    "height": 25,
+    "width": 1000,
 
   // Module arrangement
-    "modules-center": ["sway/workspaces", "sway/mode" ],
-    "modules-right": ["cpu", "temperature", "battery", "pulseaudio","tray", "clock", "backlight"], 
-    "spacing": 0,
+    "modules-left": ["sway/workspaces", "sway/mode" ],
+    "modules-right": ["custom/pacman", "cpu", "temperature", "battery", "pulseaudio","tray", "clock", "backlight"], 
+//    "spacing": 0,
   
     
    // Module configuration
@@ -103,9 +104,9 @@
             "critical": 20
         },
         "format": "{icon}{capacity: >3}%",
-        "format-good": "{icon}{capacity: >3} UwU",
-        "format-full": "{icon}{capacity: >3} UwU",
-        "format-icons": ["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "⚡️ "],
+        "format-good": "{icon}{capacity: >3}%",
+        "format-full": "{icon}{capacity: >3}%",
+        "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " ", "⚡️"],
         "interval": 1,
         "align": 1,
         "on-click": "alacritty -e btop"
@@ -124,7 +125,7 @@
         "scroll-step": 1.5,
         "reverse-scrolling": 1,
         "format": "{icon}{volume: >3}%",
-        "format-bluetooth": "{icon} {volume: >3}%",
+        "format-bluetooth": "{icon}{volume: >3}%",
         "format-muted":" muted",
         "format-icons": {
             "headphones": "",
@@ -143,7 +144,7 @@
         "interval": 600,                     // every 10 minutes
         "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",       // # of updates and tooltip details
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
-        "on-click": "alacritty -e garuda-update --aur --noconfirm", // update system
+        "on-click": "alacritty -e 'echo UwU; garuda-update --aur --noconfirm'", // update system
         "signal": 8
     },
 
