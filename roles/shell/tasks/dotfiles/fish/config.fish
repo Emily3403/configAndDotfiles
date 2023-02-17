@@ -295,24 +295,36 @@ alias htop.="htop --delay 3"
 
 # Git aliases
 alias git.="/usr/bin/git"
+alias gs="git status"
+alias grm="git stash; git stash drop" # Danger!
+
+alias gb="git branch"
+alias gco="git switch"
+alias gsw="git switch"
+
 alias ga="git add"
 alias gaa="git add --all"
 alias gau="git add -u"
+
 alias gu="git add -u; git commit && git push"
 alias gul="git add -u; git commit-status; git push "
 alias gun="git add -u; git commit -m 'no message.'; git push"
-alias gs="git status"
-alias gb="git branch"
+alias guw="git add -u; git commit -m 'WIP Sync'; git push"
+alias gua="git add -u; git commit --amend --no-edit; git push"
+
 alias gc="git commit -m"
-alias gco="git checkout"
+alias gca="git commit --amend --no-edit"
+
 alias gp="git push"
 alias gpf="git push --force"
 alias gl="git pull"
 alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
-alias grm="git stash; git stash drop" # Danger!
+
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
+
+# Change the remote from HTTPS to ssh
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
 
 
@@ -339,161 +351,161 @@ alias pdf="$BROWSER ./target/main.pdf"
 # Written by ChatGPT
 function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
     switch $argv[1]
-        case "alpha"
-            echo "α" | c
-        case "beta"
-            echo "β" | c
-        case "gamma"
-            echo "γ" | c
-        case "delta"
-            echo "δ" | c
-        case "epsilon"
-            echo "ε" | c
-        case "zeta"
-            echo "ζ" | c
-        case "eta"
-            echo "η" | c
-        case "theta"
-            echo "θ" | c
-        case "iota"
-            echo "ι" | c
-        case "kappa"
-            echo "κ" | c
-        case "lambda"
-            echo "λ" | c
-        case "mu"
-            echo "μ" | c
-        case "nu"
-            echo "ν" | c
-        case "xi"
-            echo "ξ" | c
-        case "omicron"
-            echo "ο" | c
-        case "pi"
-            echo "π" | c
-        case "rho"
-            echo "ρ" | c
-        case "sigma"
-            echo "σ" | c
-        case "tau"
-            echo "τ" | c
-        case "upsilon"
-            echo "υ" | c
-        case "phi"
-            echo "φ" | c
-        case "chi"
-            echo "χ" | c
-        case "psi"
-            echo "ψ" | c
-        case "omega"
-            echo "ω" | c
-        case "leq"
+        case alpha
+            echo α | c
+        case beta
+            echo β | c
+        case gamma
+            echo γ | c
+        case delta
+            echo δ | c
+        case epsilon
+            echo ε | c
+        case zeta
+            echo ζ | c
+        case eta
+            echo η | c
+        case theta
+            echo θ | c
+        case iota
+            echo ι | c
+        case kappa
+            echo κ | c
+        case lambda
+            echo λ | c
+        case mu
+            echo μ | c
+        case nu
+            echo ν | c
+        case xi
+            echo ξ | c
+        case omicron
+            echo ο | c
+        case pi
+            echo π | c
+        case rho
+            echo ρ | c
+        case sigma
+            echo σ | c
+        case tau
+            echo τ | c
+        case upsilon
+            echo υ | c
+        case phi
+            echo φ | c
+        case chi
+            echo χ | c
+        case psi
+            echo ψ | c
+        case omega
+            echo ω | c
+        case leq
             echo "≤" | c
-        case "geq"
+        case geq
             echo "≥" | c
-        case "neq"
+        case neq
             echo "≠" | c
-        case "times"
+        case times
             echo "×" | c
-        case "div"
+        case div
             echo "÷" | c
-        case "pm"
+        case pm
             echo "±" | c
-        case "infty"
+        case infty
             echo "∞" | c
-        case "deg"
+        case deg
             echo "°" | c
-        case "cdot"
+        case cdot
             echo "·" | c
-        case "ldots"
+        case ldots
             echo "…" | c
-        case "prime"
+        case prime
             echo "′" | c
-        case "ldotp"
+        case ldotp
             echo "⋅" | c
-        case "propto"
+        case propto
             echo "∝" | c
-        case "rightarrow"
+        case rightarrow
             echo "→" | c
-        case "leftarrow"
+        case leftarrow
             echo "←" | c
-        case "uparrow"
+        case uparrow
             echo "↑" | c
-        case "downarrow"
+        case downarrow
             echo "↓" | c
-        case "angle"
+        case angle
             echo "∠" | c
-        case "nabla"
+        case nabla
             echo "∇" | c
-        case "in"
+        case in
             echo "∈" | c
-        case "ni"
+        case ni
             echo "∋" | c
-        case "subset"
+        case subset
             echo "⊂" | c
-        case "supset"
+        case supset
             echo "⊃" | c
-        case "subseteq"
+        case subseteq
             echo "⊆" | c
-        case "supseteq"
+        case supseteq
             echo "⊇" | c
-        case "cap"
+        case cap
             echo "∩" | c
-        case "cup"
+        case cup
             echo "∪" | c
-        case "int"
+        case int
             echo "∫" | c
-        case "sum"
+        case sum
             echo "∑" | c
-        case "prod"
+        case prod
             echo "∏" | c
-        case "wedge"
+        case wedge
             echo "∧" | c
-        case "vee"
+        case vee
             echo "∨" | c
-        case "oplus"
+        case oplus
             echo "⊕" | c
-        case "otimes"
+        case otimes
             echo "⊗" | c
-        case "bigcirc"
+        case bigcirc
             echo "◯" | c
-        case "dagger"
+        case dagger
             echo "†" | c
-        case "ddagger"
+        case ddagger
             echo "‡" | c
-        case "amalg"
+        case amalg
             echo "⨿" | c
-        case "forall"
+        case forall
             echo "∀" | c
-        case "exists"
+        case exists
             echo "∃" | c
-        case "neg"
+        case neg
             echo "¬" | c
-        case "in"
+        case in
             echo "∈" | c
-        case "ni"
+        case ni
             echo "∋" | c
-        case "subset"
+        case subset
             echo "⊂" | c
-        case "supset"
+        case supset
             echo "⊃" | c
-        case "subseteq"
+        case subseteq
             echo "⊆" | c
-        case "supseteq"
+        case supseteq
             echo "⊇" | c
-        case "equiv"
+        case equiv
             echo "≡" | c
-        case "cong"
+        case cong
             echo "≅" | c
-        case "approx"
+        case approx
             echo "≈" | c
-        case "sim"
+        case sim
             echo "~" | c
-        case "perp"
+        case perp
             echo "⊥" | c
-        case "parallel"
+        case parallel
             echo "∥" | c
-        default echo "Invalid input"
+            default echo "Invalid input"
     end
 end
 
