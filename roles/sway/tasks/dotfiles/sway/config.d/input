@@ -1,0 +1,17 @@
+### Input configuration
+#
+# Example configuration:
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Put your touchpad's ID to replace "Touchpad-ID" (keep the quotation marks)
+
+input type:touchpad {
+      dwt enabled
+      tap enabled
+      natural_scroll enabled
+}
+
+# Read `man 5 sway-input` for more information about this section.
+#
+
+
+

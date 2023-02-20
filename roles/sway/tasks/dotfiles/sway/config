@@ -1,0 +1,41 @@
+# Config for sway
+#
+# Read `man 5 sway` for a complete reference.
+
+# user config directory
+include $HOME/.config/sway/config.d/*
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable
+
+output * scale 2
+
+exec_always 'xprop -root -f _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2'
+
+input "type:keyboard" {           
+    xkb_layout de
+    xkb_variant ,nodeadkeys
+    xkb_options grp:alt_shift_toggle,caps:escape
+}
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+bindsym $mod+Shift+s border toggle
+
+bindsym $mod+dead_circumflex workspace number 0
+bindsym $mod+Shift+dead_circumflex move container to workspace number 0
+#bindsym $mod+ß workspace number 0
+#bindsym $mod+Shift+ß move container to workspace number 0
+#bindsym $mod+´ workspace number 12
+#bindsym $mod+Shift+´ move container to workspace number 0
+
+assign [class="jetbrains-pycharm"] workspace number 0
+assign [class="jetbrains-idea"] workspace number 0
+assign [class="jetbrains-clion"] workspace number 0
+assign [app_id="chromium"] workspace number 2
+assign [app_id="thunderbird"] workspace number 7
+assign [app_id="superProductivity"] workspace number 8
+assign [app_id="telegram"] workspace number 9
+assign [app_id="spotify"] workspace number 10
