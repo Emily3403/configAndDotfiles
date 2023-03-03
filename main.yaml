@@ -2,7 +2,7 @@
 
 # TODO: backup role
 # Add pacman.conf / makepkg.conf
-- hosts: laptop
+- hosts: nixvm
 
   roles:
     - gui_programming
