@@ -51,7 +51,7 @@ end
 
 
 # Add the "usual" stuff to the path. This may vary for you!
-add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin
+add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin ~/go/bin
 
 # Re-add ~/bin at the end so it is considered first
 remove_from_path ~/bin
@@ -290,6 +290,7 @@ alias rmt="rm -rf target"
 
 alias mi="mediainfo"
 alias mypy="dmypy run"
+alias mypy.="mypy"
 alias ss="source sauce"
 alias htop.="htop --delay 3"
 
@@ -297,6 +298,8 @@ alias htop.="htop --delay 3"
 alias git.="/usr/bin/git"
 alias gs="git status"
 alias grm="git stash; git stash drop" # Danger!
+alias grh="git reset --hard origin/main"
+alias gfo="git fetch origin"
 
 alias gb="git branch"
 alias gco="git switch"
@@ -310,10 +313,14 @@ alias gu="git add -u; git commit && git push"
 alias gul="git add -u; git commit-status; git push "
 alias gun="git add -u; git commit -m 'no message.'; git push"
 alias guw="git add -u; git commit -m 'WIP Sync'; git push"
-alias gua="git add -u; git commit --amend --no-edit; git push"
+alias gua="git add -u; git commit --amend --no-edit; git push --force"
 
 alias gc="git commit -m"
 alias gca="git commit --amend --no-edit"
+
+alias gm="git merge"
+alias gma="git merge --abort"
+alias gmc="git merge --contiue"
 
 alias gp="git push"
 alias gpf="git push --force"
@@ -323,6 +330,9 @@ alias gls="git stash; git pull; git stash pop"
 
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
+
+alias gsd="git stash drop"
+alias gsp="git stash pop"
 
 # Change the remote from HTTPS to ssh
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
@@ -335,7 +345,9 @@ else if [ "$XDG_SESSION_TYPE" = wayland ]
     alias c="sed -z '\$ s/\n\$//' | wl-copy"
     alias C="wl-copy"
 else
-    echo "Unable to determine display server!"
+    if status --is-interactive
+        echo "Unable to determine display server!"
+    end
 end
 
 alias C="xclip -sel clip" # don't strip newline
@@ -548,6 +560,16 @@ if type -q ripdrag
     alias rd="ripdrag"
 end
 
+if type -q fd
+    alias find="fd"
+    alias find.="/usr/bin/find"
+end
+
+if type -q cargo-mommy
+    alias cargo="cargo mommy"
+    alias cargo.="$HOME/.cargo/bin/cargo"
+end
+
 # ====/ Useful aliases =====
 
 
@@ -556,7 +578,7 @@ end
 # Connect to the VPN of Technische Universität Berlin
 function tuvpn-connect
     pnotify "Connecting to the VPN of Technische Universität Berlin ..."
-    vtuvpn-disconnect &>/dev/null
+    tuvpn-disconnect &>/dev/null
     sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u mattis3403
     psuccess "Connection established."
 end
@@ -693,9 +715,6 @@ if type -q direnv
     direnv hook fish | source
 end
 
-if type -q thefuck
-    thefuck --alias | source
-end
 
 if test -e /usr/share/doc/find-the-command/ftc.fish
     source /usr/share/doc/find-the-command/ftc.fish
