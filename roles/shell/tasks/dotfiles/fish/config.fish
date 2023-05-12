@@ -302,8 +302,11 @@ alias grh="git reset --hard origin/main"
 alias gfo="git fetch origin"
 
 alias gb="git branch"
+alias gbd="git branch -D"
 alias gco="git switch"
+alias gcob="git switch -c"
 alias gsw="git switch"
+alias gswb="git switch -c"
 
 alias ga="git add"
 alias gaa="git add --all"
@@ -546,6 +549,14 @@ end
 
 if type -q pass
     alias pc="pass -c"
+    function passsecret
+        set -gx PASSWORD_STORE_DIR "$HOME/Pictures/.git/secret-passwords"
+        pass $argv
+        set -e PASSWORD_STORE_DIR
+    end
+
+    alias psc="passsecret -c"
+
 end
 
 if type -q vim
@@ -715,6 +726,12 @@ if type -q direnv
     direnv hook fish | source
 end
 
+<<<<<<< Updated upstream
+=======
+#if type -q thefuck
+#    thefuck --alias | source
+#end
+>>>>>>> Stashed changes
 
 if test -e /usr/share/doc/find-the-command/ftc.fish
     source /usr/share/doc/find-the-command/ftc.fish

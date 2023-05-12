@@ -14,7 +14,7 @@ zpool create \
     -O mountpoint=/boot \
     -R /mnt \
     bpool \
-    mirror
+    raidz1 \
     $(for i in ${DISK}; do
        printf "$i-part2 ";
       done)

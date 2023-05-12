@@ -106,7 +106,7 @@
         "format": "{icon}{capacity: >3}%",
         "format-good": "{icon}{capacity: >3}%",
         "format-full": "{icon}{capacity: >3}%",
-        "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " ", "⚡️"],
+        "format-icons": ["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "⚡️ "],
         "interval": 1,
         "align": 1,
         "on-click": "alacritty -e btop"
@@ -140,7 +140,7 @@
     },
 
      "custom/pacman": {
-        "format": " {}",
+        "format": "  {}",
         "interval": 600,                     // every 10 minutes
         "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",       // # of updates and tooltip details
         "exec-if": "exit 0",                  // always run; consider advanced run conditions

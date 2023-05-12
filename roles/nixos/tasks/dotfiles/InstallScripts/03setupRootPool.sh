@@ -5,7 +5,7 @@ zpool create \
     -o autotrim=on \
     -R /mnt \
     -O acltype=posixacl \
-    -O canmount=off \
+    -O canmount=noauto \
     -O compression=zstd \
     -O dnodesize=auto \
     -O normalization=formD \
