@@ -726,15 +726,9 @@ if type -q direnv
     direnv hook fish | source
 end
 
-<<<<<<< Updated upstream
-=======
-#if type -q thefuck
-#    thefuck --alias | source
-#end
->>>>>>> Stashed changes
 
 if test -e /usr/share/doc/find-the-command/ftc.fish
-    source /usr/share/doc/find-the-command/ftc.fish
+    source /usr/share/doc/find-the-command/ftc.fish noupdate
 end
 
 
