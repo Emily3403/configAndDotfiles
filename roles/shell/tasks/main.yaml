@@ -90,6 +90,7 @@
       - bat
       - btop
       - gcc
+      - cairo
       - cmake
       - "{{ exa_package_name | default('') }}"
       - make
@@ -98,12 +99,15 @@
       - direnv
       - fish
       - git
+      - gdk-pixbuf2
+      - gtk4
       - htop
       - jq
       - neofetch
       - neovim
       - "{{ openssh_package_name }}"
       - onefetch
+      - pango
       - "{{ pip_package_name }}"
       - "{{ python_package_name }}"
       - rsync
