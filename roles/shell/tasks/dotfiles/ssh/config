@@ -33,7 +33,12 @@ Host gh_second
 
 Host git.tu-berlin.de
 	User git
-	PreferredAuthentications publickey
+  PreferredAuthentications publickey
+
+Host gh_second
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/second_git_id
 
 Host martin
 	HostName static.246.42.12.49.clients.your-server.de
@@ -47,3 +52,8 @@ Host ruwuschOnRails
 Host beagle
     User debian
     HostName 192.168.1.106
+
+Host nixvm
+  User nixos
+  HostName localhost
+  Port 2345

@@ -1,4 +1,4 @@
-﻿# Hide welcome message
+W# Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT 1
 
@@ -213,6 +213,9 @@ alias mntd3='sudo mount /dev/sdd3 /mnt'
 alias mnte1='sudo mount /dev/sde1 /mnt'
 alias mnte2='sudo mount /dev/sde2 /mnt'
 alias mnte3='sudo mount /dev/sde3 /mnt'
+alias mntf1='sudo mount /dev/sdf1 /mnt'
+alias mntf2='sudo mount /dev/sdf2 /mnt'
+alias mntf3='sudo mount /dev/sdf3 /mnt'
 alias mntn11='sudo mount /dev/nvme0n1p1 /mnt'
 alias mntn12='sudo mount /dev/nvme0n1p2 /mnt'
 alias mntn13='sudo mount /dev/nvme0n1p3 /mnt'
@@ -725,7 +728,6 @@ end
 if type -q direnv
     direnv hook fish | source
 end
-
 
 if test -e /usr/share/doc/find-the-command/ftc.fish
     source /usr/share/doc/find-the-command/ftc.fish noupdate
