@@ -48,6 +48,7 @@ Host martin
 Host ruwuschOnRails
   HostName 5.9.147.135
   User root
+  LocalForward 9091 localhost:9091
 
 Host beagle
     User debian
