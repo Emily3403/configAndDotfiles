@@ -246,7 +246,6 @@ alias dc="cd"
 alias ds="du -shx * | sort -h"
 alias ds.="du -shx * .* | sort -h"
 alias sl.="pkill -9 sl"
-alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 22 12 13 14"
 alias nt="clear && neofetch && builtin cd"
 alias quote="fortune | cowsay | lolcat"
 alias b="bluetoothctl"
@@ -529,6 +528,10 @@ end
 
 # Replace commands with better commands (if they exist)
 
+if type -q neofetch
+    alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 22 12 13 14"
+end
+
 if type -q exa
     alias ls='exa -lb --color=always --group-directories-first --icons --time-style=long-iso'
     alias la='exa -lba --color=always --group-directories-first --icons --time-style=long-iso'
@@ -707,6 +710,8 @@ if type qtile >>/dev/null 2>&1
     export QT_QPA_PLATFORMTHEME="qt5ct"
 end
 
+
+
 # Colorful man pages
 if type -q bat
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -735,6 +740,6 @@ end
 
 
 # Display neofetch only in iteractive mode so connections are not affected
-if status --is-interactive
+if type -q neofetch && status --is-interactive
     neofetch
 end
