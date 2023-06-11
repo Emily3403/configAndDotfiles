@@ -302,6 +302,7 @@ alias gs="git status"
 alias grm="git stash; git stash drop" # Danger!
 alias grh="git reset --hard origin/main"
 alias gfo="git fetch origin"
+alias gd="git diff"
 
 alias gb="git branch"
 alias gbd="git branch -D"
@@ -314,11 +315,12 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gau="git add -u"
 
-alias gu="git add -u; git commit && git push"
+alias gu="git add -u; git commit; git push"
 alias gul="git add -u; git commit-status; git push "
 alias gun="git add -u; git commit -m 'no message.'; git push"
 alias guw="git add -u; git commit -m 'WIP Sync'; git push"
 alias gua="git add -u; git commit --amend --no-edit; git push --force"
+alias gufun="git add -u; git commit -m (curl -s https://whatthecommit.com/index.txt) && git push"
 
 alias gc="git commit -m"
 alias gca="git commit --amend --no-edit"
@@ -424,6 +426,10 @@ function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
             echo "≠" | c
         case times
             echo "×" | c
+        case cross
+            echo "✗" | c
+        case check
+            echo "✓" | c
         case div
             echo "÷" | c
         case pm
@@ -575,6 +581,10 @@ end
 
 if type -q ripdrag
     alias rd="ripdrag"
+end
+
+if type -q libreoffice
+    alias lo="libreoffice"
 end
 
 if type -q fd
