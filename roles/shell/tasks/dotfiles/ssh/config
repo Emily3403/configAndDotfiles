@@ -58,3 +58,22 @@ Host nixvm
   User nixos
   HostName localhost
   Port 2345
+
+# Work
+Host *.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-tst1
+  HostName tst1.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-vpnc
+  HostName vpnc.inet.tu-berlin.de
+  ProxyJump work-tst1
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey

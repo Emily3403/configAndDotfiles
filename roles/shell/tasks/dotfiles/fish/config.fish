@@ -321,6 +321,7 @@ alias gun="git add -u; git commit -m 'no message.'; git push"
 alias guw="git add -u; git commit -m 'WIP Sync'; git push"
 alias gua="git add -u; git commit --amend --no-edit; git push --force"
 alias gufun="git add -u; git commit -m (curl -s https://whatthecommit.com/index.txt) && git push"
+alias guam="git add -u; git commit --amend; git push --force"
 
 alias gc="git commit -m"
 alias gca="git commit --amend --no-edit"
