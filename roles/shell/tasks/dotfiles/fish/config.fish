@@ -618,6 +618,17 @@ function tuvpn-disconnect
     psuccess "Disconnected from the VPN of Technische Universität Berlin."
 end
 
+function workvpn-connect
+    pnotify "Connecting to the Work VPN ..."
+    sudo sudo wg-quick up wg-work && psuccess "Successfully connected from the Work VPN" || perror "Error in connecting the work VPN!"
+end
+
+function workvpn-disconnect
+    sudo sudo wg-quick down wg-work && psuccess "Successfully disconnected from the Work VPN" || perror "Error in disconnecting from the work VPN!"
+end
+
+alias wvpnc=workvpn-connect
+alias wvpnd=workvpn-disconnect
 
 # ====/ VPN Stuff =====
 
