@@ -65,6 +65,12 @@ Host *.inet.tu-berlin.de
   IdentityFile ~/.ssh/id_inet
   PreferredAuthentications publickey
 
+Host nixie
+  HostName 130.149.220.7
+  User root
+  IdentityFile ~/.ssh/id_rsa  # TODO: Change this to inet
+  PreferredAuthentications publickey
+
 Host work-tst1
   HostName tst1.inet.tu-berlin.de
   User root
