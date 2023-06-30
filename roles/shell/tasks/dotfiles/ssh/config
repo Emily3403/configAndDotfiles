@@ -87,7 +87,7 @@ Host work-vpnc
 Host work-dns
   HostName 130.149.220.253
   User root
-  IdentityFile ~/.ssh/id_inet
+  IdentityFile ~/.ssh/id_inet2
   PreferredAuthentications publickey
 
 

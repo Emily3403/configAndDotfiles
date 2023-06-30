@@ -562,13 +562,24 @@ end
 
 if type -q pass
     alias pc="pass -c"
+
     function passsecret
         set -gx PASSWORD_STORE_DIR "$HOME/Pictures/.git/secret-passwords"
         pass $argv
         set -e PASSWORD_STORE_DIR
     end
 
+    alias ps="passwork"
     alias psc="passsecret -c"
+
+    function passwork
+        set -gx PASSWORD_STORE_DIR "$HOME/Pictures/.git/work-passwords"
+        pass $argv
+        set -e PASSWORD_STORE_DIR
+    end
+
+    alias pw="passwork"
+    alias pwc="passwork -c"
 
 end
 
