@@ -84,14 +84,30 @@ Host work-vpnc
   IdentityFile ~/.ssh/id_inet
   PreferredAuthentications publickey
 
+# --- DNS ---
+
 Host work-dns
   HostName 130.149.220.253
   User root
   IdentityFile ~/.ssh/id_inet2
   PreferredAuthentications publickey
 
+Host work-dns2
+  HostName 130.149.152.187
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-dns2
+  HostName 85.214.78.63
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+  
+# -/- DNS ---
 
 # --- Xen Cluster ---
+
 Host work-xenmgmt
   HostName 192.168.200.118
   User root
