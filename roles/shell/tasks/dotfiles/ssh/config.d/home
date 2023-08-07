@@ -1,0 +1,23 @@
+### Emily Home SSH-Config ###
+
+Host router 192.168.1.1
+    HostName 192.168.1.1
+    User root
+
+Host nas 192.168.1.69
+    HostName 192.168.1.69
+    User emily
+
+Host laptop 192.168.1.13 
+	HostName 192.168.1.13
+    User emily
+
+Host hp-laptop 192.168.1.15
+    HostName 192.168.1.15
+    User emily
+
+Host pc 192.168.1.42
+	HostName 192.168.1.42
+	User emily
+
+

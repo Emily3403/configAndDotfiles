@@ -1,0 +1,152 @@
+# Work
+Host *.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host nixie
+  HostName 130.149.220.7
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-tst1
+  HostName tst1.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-don
+  HostName don.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-tst1
+  PreferredAuthentications publickey
+
+Host work-marbackup
+  HostName marbackup.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-tst1
+  PreferredAuthentications publickey
+
+# --- Admin Services ---
+
+Host work-vpnc
+  HostName vpnc.inet.tu-berlin.de
+  ProxyJump work-tst1
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-marwall
+  HostName 130.149.235.194
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+
+# -/- Admin Services
+
+# --- DNS ---
+
+Host work-dns
+  HostName 130.149.220.253
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-dns2
+  HostName 130.149.152.187
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-dns2
+  HostName 85.214.78.63
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+  
+# -/- DNS ---
+
+# --- Xen Cluster ---
+
+Host work-xenmgmt
+  HostName 192.168.200.118
+  User root
+  IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-xenserver-1
+  HostName 192.168.200.190
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-xenserver-2
+  HostName 192.168.200.189
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-xenserver-3
+  HostName 192.168.200.188
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-xenserver-4
+  HostName 192.168.200.187
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-xenserver-5
+  HostName 192.168.200.186
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+# -/- Xen Cluster ---
+
+# --- Projects ---
+
+Host work-project-qingyun-p2p
+  HostName 130.149.221.193
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-project-taha-snmp
+  HostName 130.149.221.193
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-project-arash-ilp1
+  HostName 130.149.221.203
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-project-arash-ilp2
+  HostName 130.149.221.204
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-project-persian-wordle-webserver
+  HostName 130.149.221.206
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-project-persian-wordle-cruncher
+  HostName 130.149.221.212
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+# -/- Projects ---
+
