@@ -114,6 +114,9 @@ alias vim="nvim"
 alias sse="vim $HOME/.config/starship.toml"
 alias sshe="vim $HOME/.ssh/config"
 alias sshke="vim $HOME/.ssh/known_hosts"
+alias sshwe="vim $HOME/.ssh/config.d/work"
+alias sshoe="vim $HOME/.ssh/config.d/other"
+alias sshhe="vim $HOME/.ssh/config.d/home"
 alias updatee="vim $HOME/bin/bash_functions_for_fish/update"
 alias waybare="vim $HOME/.config/waybar/config"
 alias btope="vim $HOME/.config/btop/btop.conf"
@@ -277,6 +280,7 @@ alias sysud="systemctl --user disable"
 
 alias mst="sudo systemctl start mariadb.service"
 alias bst="sudo systemctl start bluetooth.service"
+alias bsp="sudo systemctl stop bluetooth.service"
 alias sshst="sudo systemctl start sshd"
 
 # Shortcut for too long names
@@ -597,6 +601,7 @@ end
 
 if type -q libreoffice
     alias lo="libreoffice"
+    alias li="libreoffice"
 end
 
 if type -q fd
