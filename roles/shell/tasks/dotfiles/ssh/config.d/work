@@ -67,6 +67,13 @@ Host work-kerberos
   IdentityFile ~/.ssh/id_inet2
   PreferredAuthentications publickey
 
+Host work-ldap
+  HostName ldap2.inet.tu-berlin.de
+  ProxyJump work-tst1
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
 Host work-marwall
   HostName 130.149.235.194
   User root
