@@ -55,7 +55,7 @@
 
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
-        "format": " {:%Y-%m-%d  %H:%M:%S}",
+        "format": " {:%Y-%m-%d  %H:%M:%OS}",
         "format-alt": " {:%a %d %b  %H:%M:%S}",	// Sun 29 Jan
         "interval": 1
     },

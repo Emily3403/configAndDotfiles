@@ -30,6 +30,27 @@ Host work-marbackup
   ProxyJump work-tst1
   PreferredAuthentications publickey
 
+Host work-mail
+  HostName mail1.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-tst1
+  PreferredAuthentications publickey
+
+Host work-mailman
+  HostName mailman.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-tst1
+  PreferredAuthentications publickey
+
+Host work-webmail
+  HostName webmail.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-tst1
+  PreferredAuthentications publickey
+
 # --- Admin Services ---
 
 Host work-vpnc
@@ -37,6 +58,13 @@ Host work-vpnc
   ProxyJump work-tst1
   User root
   IdentityFile ~/.ssh/id_inet
+  PreferredAuthentications publickey
+
+Host work-kerberos
+  HostName kerberos.inet.tu-berlin.de
+  ProxyJump work-tst1
+  User root
+  IdentityFile ~/.ssh/id_inet2
   PreferredAuthentications publickey
 
 Host work-marwall
@@ -119,7 +147,7 @@ Host work-project-qingyun-p2p
   PreferredAuthentications publickey
 
 Host work-project-taha-snmp
-  HostName 130.149.221.193
+  HostName 130.149.221.198
   User root
   IdentityFile ~/.ssh/id_inet2
   PreferredAuthentications publickey

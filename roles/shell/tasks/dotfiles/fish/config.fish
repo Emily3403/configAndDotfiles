@@ -170,7 +170,7 @@ alias jn.="jupyter notebook stop"
 # Pip aliases
 alias pi="pip install"
 alias pir="pip install -r requirements.txt"
-alias pie="pip install -e .\[extra\]"
+alias pie="pip install -e .\[testing\]"
 alias pird="pip install -r requirements_dev.txt"
 alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install"
 alias pipup="pip install --upgrade pip"
@@ -296,7 +296,7 @@ alias rmt="rm -rf target"
 
 alias mi="mediainfo"
 alias mypy="dmypy run"
-alias mypy.="mypy"
+alias mypy.="/usr/bin/mypy"
 alias ss="source sauce"
 alias htop.="htop --delay 3"
 
@@ -328,7 +328,7 @@ alias gufun="git add -u; git commit -m (curl -s https://whatthecommit.com/index.
 alias guam="git add -u; git commit --amend; git push --force"
 
 alias gc="git commit -m"
-alias gca="git commit --amend --no-edit"
+alias gca="git commit --amend"
 
 alias gm="git merge"
 alias gma="git merge --abort"
@@ -484,7 +484,7 @@ function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
         case int
             echo "∫" | c
         case sum
-            echo "∑" | c
+            echo Σ | c
         case prod
             echo "∏" | c
         case wedge
