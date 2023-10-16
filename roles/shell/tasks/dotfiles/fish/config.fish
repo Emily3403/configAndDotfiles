@@ -168,9 +168,10 @@ alias jn.="jupyter notebook stop"
 
 
 # Pip aliases
-alias pi="pip install"
-alias pir="pip install -r requirements.txt"
-alias pie="pip install -e .\[testing\]"
+alias pi="pip install --break-system-packages"
+alias pu="pip uninstall --break-system-packages"
+alias pir="pip install -r requirements.txt --break-system-packages"
+alias pie="pip install -e .\[testing\] --break-system-packages"
 alias pird="pip install -r requirements_dev.txt"
 alias piu="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install"
 alias pipup="pip install --upgrade pip"
