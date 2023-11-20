@@ -7,7 +7,20 @@ Host *.inet.tu-berlin.de
 Host nixie
   HostName 130.149.220.242
   User root
-  IdentityFile ~/.ssh/id_inet
+  IdentityFile ~/.ssh/id_rsa
+  PreferredAuthentications publickey
+
+Host work-afs1
+  HostName 130.149.220.110
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-afsbackup
+  HostName 2001:638:809:ff10:130:149:220:177
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-marwall
   PreferredAuthentications publickey
 
 Host work-tst1
@@ -51,7 +64,7 @@ Host work-marbackup
 HostName marbackup.inet.tu-berlin.de
 User root
 IdentityFile ~/.ssh/id_inet2
-ProxyJump work-tst1
+ProxyJump work-marwall
 PreferredAuthentications publickey
 
 # -/- Backups ---
@@ -159,8 +172,6 @@ Host work-abbadon
   HostName 192.168.201.189
   User root
   IdentityFile ~/.ssh/id_inet
-#  PreferredAuthentications publickey
-
   KexAlgorithms +diffie-hellman-group-exchange-sha1
   HostKeyAlgorithms +ssh-rsa
 
@@ -221,9 +232,15 @@ Host work-project-persian-wordle-cruncher
   PreferredAuthentications publickey
 
 Host work-project-arne-experiment
-  HostName 130.149.221.213
+  HostName 130.149.221.202
   User root
   IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host grs-teaching
+  HostName 130.149.221.201
+  User root
+  IdentityFile ~/.ssh/id_inet
   PreferredAuthentications publickey
 
 # -/- Projects ---

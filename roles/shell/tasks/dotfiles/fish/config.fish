@@ -124,7 +124,8 @@ alias btope="vim $HOME/.config/btop/btop.conf"
 # Copy files
 alias sshc="cat $HOME/.ssh/id_rsa.pub | xclip -sel clip"
 
-
+# SSH Aliases
+alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
 # ===== Python Stuff =====
 
@@ -311,7 +312,7 @@ alias gd="git diff"
 
 alias gb="git branch"
 alias gbd="git branch -D"
-alias gco="git switch"
+alias gco="git checkout"
 alias gcob="git switch -c"
 alias gsw="git switch"
 alias gswb="git switch -c"
