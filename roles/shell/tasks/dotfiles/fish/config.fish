@@ -358,10 +358,6 @@ if [ "$XDG_SESSION_TYPE" = x11 ]
 else if [ "$XDG_SESSION_TYPE" = wayland ]
     alias c="sed -z '\$ s/\n\$//' | wl-copy"
     alias C="wl-copy"
-else
-    if status --is-interactive
-        echo "Unable to determine display server!"
-    end
 end
 
 alias C="xclip -sel clip" # don't strip newline
