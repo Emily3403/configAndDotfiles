@@ -602,10 +602,6 @@ if type -q libreoffice
     alias li="libreoffice"
 end
 
-if type -q fd
-    alias find="fd"
-    alias find.="/usr/bin/find"
-end
 
 if type -q cargo-mommy
     alias cargo="cargo mommy"

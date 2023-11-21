@@ -4,8 +4,8 @@ Host router 192.168.1.1
     HostName 192.168.1.1
     User root
 
-Host nas 192.168.1.69
-    HostName 192.168.1.69
+Host nas 192.168.2.102
+    HostName 192.168.2.102
     User emily
 
 Host laptop 192.168.1.13 
