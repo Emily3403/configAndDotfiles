@@ -61,11 +61,27 @@ Host work-webmail
 # --- Backups ---
 
 Host work-marbackup
-HostName marbackup.inet.tu-berlin.de
-User root
-IdentityFile ~/.ssh/id_inet2
-ProxyJump work-marwall
-PreferredAuthentications publickey
+  HostName marbackup.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-marwall
+  PreferredAuthentications publickey
+
+Host work-enbackup
+  HostName 130.149.152.130
+  User root
+  IdentityFile ~/.ssh/id_rsa
+  ProxyJump work-enwall
+  PreferredAuthentications publickey
+
+
+Host work-test
+  HostName 130.149.152.165
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  ProxyJump work-enwall
+  PreferredAuthentications publickey
+  HostKeyAlgorithms ssh-rsa
 
 # -/- Backups ---
 
@@ -129,6 +145,19 @@ Host work-dns2
   
 # -/- DNS ---
 
+# --- Switches ---
+
+Host work-core0
+  HostName 192.168.200.64
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  KexAlgorithms diffie-hellman-group-exchange-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+
+# -/- Switches ---
+
 # --- Xen Cluster ---
 
 Host work-xenmgmt
@@ -159,7 +188,6 @@ Host work-xenserver-4
   HostName 192.168.200.187
   User root
   IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
 
 Host work-xenserver-5
   HostName 192.168.200.186
@@ -173,7 +201,7 @@ Host work-abbadon
   User root
   IdentityFile ~/.ssh/id_inet
   KexAlgorithms +diffie-hellman-group-exchange-sha1
-  HostKeyAlgorithms +ssh-rsa
+  HostKeyAlgorithms ssh-rsa
 
 Host work-abbadon-storage
   HostName 192.168.140.100
@@ -183,7 +211,7 @@ Host work-abbadon-storage
   ProxyJump work-abbadon
 
   KexAlgorithms +diffie-hellman-group-exchange-sha1
-  HostKeyAlgorithms +ssh-rsa
+  HostKeyAlgorithms ssh-rsa
 
 # -/- Xen Cluster ---
 

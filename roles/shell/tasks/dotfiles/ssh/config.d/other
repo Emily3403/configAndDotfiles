@@ -28,6 +28,10 @@ Host ruwuschOnRails
   User root
   LocalForward 9091 localhost:9091
 
+Host ruwuschOnNix
+  HostName 94.130.66.61
+  User root
+
 Host nixvm
   User nixos
   HostName localhost

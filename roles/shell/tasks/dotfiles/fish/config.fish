@@ -246,6 +246,7 @@ alias grep='grep --color=auto'
 
 alias visudo="sudo EDITOR=vim visudo"
 alias sudo="sudo -E"
+alias sudo.="/usr/bin/sudo"
 
 alias dc="cd"
 alias ds="du -shx * | sort -h"
@@ -342,6 +343,8 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
 
+alias grc="git rebase --continue"
+
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
 
@@ -351,6 +354,11 @@ alias gsp="git stash pop"
 # Change the remote from HTTPS to ssh
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
 
+
+# Optional server service aliases
+alias podmail="podman exec -ti mail"
+alias podmm="podman exec -ti mailman"
+alias podyou="podman exec -ti youtrack"
 
 if [ "$XDG_SESSION_TYPE" = x11 ]
     alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
@@ -545,6 +553,7 @@ if type -q exa
     alias ls='exa -lb --color=always --group-directories-first --icons --time-style=long-iso'
     alias la='exa -lba --color=always --group-directories-first --icons --time-style=long-iso'
     alias lt='exa -T --color=always --group-directories-first --icons --sort=size --level=3'
+    alias l=ls
 end
 
 
@@ -647,6 +656,7 @@ alias wvpnd=workvpn-disconnect
 
 add_to_path ~/arm/bin ~/bin/i3programs ~/.local/share/gem/ruby/3.0.0/bin
 
+export XDG_SCREENSHOTS_DIR="~/Pictures/Screenshots"
 
 # Function to get to my common places
 function u
