@@ -1,0 +1,34 @@
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+    force: yes
+
+- name: Set up sway dir
+  file:
+    path: "~/.config/sway"
+    state: directory
+
+- name: Delete sway config.d dir
+  file:
+    path: "~/.config/sway/config.d"
+    state: absent
+
+- name: Set up waybar dir
+  file:
+    path: "~/.config/waybar"
+    state: directory
+
+- name: Install sway dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/sway/config", dest: "~/.config/sway/config" }
+    - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/sway/config.d", dest: "~/.config/sway/config.d" }
+    - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/waybar/config", dest: "~/.config/waybar/config" }
+    - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/waybar/style.css", dest: "~/.config/waybar/style.css" }
+

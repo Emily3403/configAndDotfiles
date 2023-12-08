@@ -97,6 +97,7 @@
       - nmap
       - cowsay
       - direnv
+      - dust
       - fish
       - git
       - gdk-pixbuf2
@@ -129,6 +130,7 @@
 
 - name: Install pip packages
   pip:
+    extra_args: --break-system-packages
     name:
       - thefuck
       - tldr

@@ -2,12 +2,13 @@
 
 # TODO: backup role
 # Add pacman.conf / makepkg.conf
-- hosts: nixvm
+- hosts: localhost
 
   roles:
-    - gui_programming
-#    - gui_programming
-#    - gui_basic
+    #    - shell
+    #    - gui_programming
+    #    - gui_basic
+    - sway
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}

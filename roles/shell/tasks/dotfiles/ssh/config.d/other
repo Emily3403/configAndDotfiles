@@ -32,6 +32,10 @@ Host ruwuschOnNix
   HostName 94.130.66.61
   User root
 
+Host ruwuschOnNix2
+  HostName 138.201.195.105
+  User root
+
 Host nixvm
   User nixos
   HostName localhost

@@ -148,7 +148,7 @@ function ac
     end
 
     source venv/bin/activate.fish
-    pip install pynvim ipython
+    pip install pynvim ipython --break-system-packages
 end
 
 
@@ -722,6 +722,10 @@ function u
 
         case b
             cd "$HOME/Documents/Uni/Bachelorarbeit"
+
+            # Work
+        case work
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin"
 
     end
 end
