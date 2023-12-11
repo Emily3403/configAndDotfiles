@@ -220,7 +220,7 @@ assign [class="jetbrains-clion"] workspace number 0
 bindsym $mod+Shift+s border toggle
 # Keys for applications
 
-set $browser chromium
+set $browser firefox
 
 bindsym $mod+F1 exec $browser
 bindsym $mod+F2 exec discord

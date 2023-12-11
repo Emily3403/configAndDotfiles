@@ -342,12 +342,14 @@ alias gpf="git push --force"
 alias gl="git pull"
 alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
+alias glrs="git stash; git pull --rebase; git stash pop"
 
 alias grc="git rebase --continue"
 
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
 
+alias gst="git stash"
 alias gsd="git stash drop"
 alias gsp="git stash pop"
 
@@ -372,7 +374,7 @@ alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
 
 # Browser Stuff
-alias cr="chromium"
+alias cr="firefox"
 alias fi="firefox"
 set -g browser chromium
 export BROWSER=chromium

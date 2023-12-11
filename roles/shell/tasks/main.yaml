@@ -113,6 +113,9 @@
       - "{{ python_package_name }}"
       - rsync
       - ripgrep
+      - ttf-jetbrains-mono-nerd
+      - ttf-fantasque-nerd
+      - nerd-fonts-noto-sans-regular-complete 
       - vim
       - nodejs
       - yarn

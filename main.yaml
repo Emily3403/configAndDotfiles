@@ -5,10 +5,10 @@
 - hosts: localhost
 
   roles:
-    #    - shell
-    #    - gui_programming
-    #    - gui_basic
-    - sway
+    - shell
+    - gui_programming
+    - gui_basic
+    - i3
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}
