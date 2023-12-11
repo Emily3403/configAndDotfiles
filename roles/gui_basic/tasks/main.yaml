@@ -20,6 +20,7 @@
       - ibus
       - okular
       - spotify
+      - superproductivity-bin
 
 
 - name: Configure ibus support

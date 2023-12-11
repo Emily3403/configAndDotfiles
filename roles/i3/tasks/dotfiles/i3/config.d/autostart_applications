@@ -1,0 +1,15 @@
+# Monitor
+exec --no-startup-id ~/.config/i3/monitor_setup
+
+# Applications for layout
+exec --no-startup-id alacritty
+exec --no-startup-id blueberry
+exec --no-startup-id superproductivity
+exec --no-startup-id thunderbird
+
+exec --no-startup-id telegram-desktop
+exec --no-startup-id spotify
+
+exec --no-startup-id firefox
+exec --no-startup-id firefox
+exec --no-startup-id firefox

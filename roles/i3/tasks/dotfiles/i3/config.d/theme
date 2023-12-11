@@ -1,0 +1,8 @@
+# Font
+font pango:JetBrains Mono 9
+
+# Status Bar
+bar {
+    status_command i3blocks
+    tray_output primary
+}

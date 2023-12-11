@@ -1,0 +1,51 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "none",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1269,
+       "width": 1440,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Mozilla Firefox",
+    "percent": 0.5,
+    "swallows": [
+       {
+        "class": "^firefox$"
+       // "instance": "^Navigator$",
+       // "machine": "^MightyMarshmellow$",
+       // "title": "^Mozilla\\ Firefox$",
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "none",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1269,
+       "width": 1440,
+       "x": 0,
+       "y": 1268
+    },
+    "marks": [],
+    "name": "Mozilla Firefox",
+    "percent": 0.5,
+    "swallows": [
+       {
+        "class": "^firefox$"
+       // "instance": "^Navigator$",
+       // "machine": "^MightyMarshmellow$",
+       // "title": "^Mozilla\\ Firefox$",
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+

@@ -1,0 +1,233 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            // splitv split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "marks": [],
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "none",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1268,
+                       "width": 1440,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Mozilla Firefox",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                        "class": "^firefox$"
+                       // "instance": "^Navigator$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^Mozilla\\ Firefox$",
+                       // "window_role": "^browser$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // tabbed split container with 4 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [],
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 600,
+                       "width": 800,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "~",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                        "class": "^Alacritty$"
+                       // "instance": "^Alacritty$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^\\~$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "none",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 444,
+                       "width": 644,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Bluetooth",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                        "class": "^Blueberry\\.py$"
+                       // "instance": "^blueberry\\.py$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^Bluetooth$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 800,
+                       "width": 800,
+                       "x": 320,
+                       "y": 880
+                    },
+                    "marks": [],
+                    "name": "Super Productivity",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                        "class": "^superProductivity$"
+                       // "instance": "^superproductivity$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^Super\\ Productivity$",
+                       // "window_role": "^browser\\-window$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1041,
+                       "width": 1916,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Drafts - admins@inet.tu-berlin.de - Mozilla Thunderbird",
+                    "percent": 0.25,
+                    "swallows": [
+                       {
+                        "class": "^thunderbird$"
+                       // "instance": "^Mail$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^Drafts\\ \\-\\ admins\\@inet\\.tu\\-berlin\\.de\\ \\-\\ Mozilla\\ Thunderbird$",
+                       // "window_role": "^3pane$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            // tabbed split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [],
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "none",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 2135,
+                       "width": 1920,
+                       "x": 4480,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "Telegram (3)",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                        "class": "^TelegramDesktop$"
+                       // "instance": "^telegram\\-desktop$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^Telegram\\ \\(3\\)$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // tabbed split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "tabbed",
+            "marks": [],
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "none",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 600,
+                       "width": 800,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "SICK LEGEND - FEEL THIS MOMENT HARDSTYLE",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                        "class": "^Spotify$"
+                       // "instance": "^spotify$",
+                       // "machine": "^MightyMarshmellow$",
+                       // "title": "^SICK\\ LEGEND\\ \\-\\ FEEL\\ THIS\\ MOMENT\\ HARDSTYLE$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+

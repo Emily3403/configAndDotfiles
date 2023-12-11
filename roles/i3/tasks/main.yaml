@@ -19,4 +19,5 @@
   with_items:
     - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/i3/config", dest: "~/.config/i3/config" }
     - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/i3/config.d", dest: "~/.config/i3/config.d" }
+    - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/i3/layouts", dest: "~/.config/i3/layouts" }
 

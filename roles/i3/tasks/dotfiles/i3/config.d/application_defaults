@@ -1,0 +1,31 @@
+set $BROWSER firefox
+set $TERMINAL alacritty
+set $FILE_MANAGER thunar
+set $MAIL_CLIENT thunderbird
+set $SCREENSHOT_TOOL flameshot gui
+
+# Bind applications to workspaces
+assign [class="jetbrains-pycharm"] workspace number 0
+assign [class="jetbrains-idea"] workspace number 0
+assign [class="jetbrains-clion"] workspace number 0
+
+# Disable Borders
+for_window [class="Chromium"] border none
+for_window [class="firefox"] border none
+for_window [class="Spotify"] border none
+for_window [class="Telegram"] border none
+for_window [class="jetbrains-pycharm"] border none
+for_window [class="jetbrains-idea"] border none
+for_window [class="jetbrains-clion"] border none
+for_window [class="discord"] border none
+
+
+# Commonly used applications
+bindsym $super+F1 exec $BROWSER
+bindsym $super+d exec rofi -show run
+bindsym $super+Return exec $TERMINAL
+bindsym $super+KP_Enter exec $TERMINAL
+bindsym $super+Shift+Return exec $TERMINAL -e fish --private
+bindsym $super+Shift+KP_Enter exec $TERMINAL -e fish --private
+
+bindsym Print exec $SCREENSHOT_TOOL
