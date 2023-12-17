@@ -210,6 +210,7 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/neofetch/config.conf', dest: '~/.config/neofetch/config.conf' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/neofetch/current_image.txt', dest: '~/.config/neofetch/current_image.txt' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/ssh/config', dest: '~/.ssh/config' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/ssh/config.d', dest: '~/.ssh/config.d' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/starship/starship.toml', dest: '~/.config/starship.toml' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/htop/htoprc', dest: '~/.config/htop/htoprc' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/btop/btop.conf', dest: '~/.config/btop/btop.conf' }

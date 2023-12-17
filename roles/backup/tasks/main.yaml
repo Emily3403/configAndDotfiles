@@ -1,0 +1,17 @@
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+    force: yes
+
+- name: Install Kopia dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/kopia", dest: "~/.config/kopia" }
+    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/kopia-ui", dest: "~/.config/i3/kopa-ui" }
+

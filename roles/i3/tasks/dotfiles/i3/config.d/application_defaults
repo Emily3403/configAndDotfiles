@@ -22,7 +22,7 @@ for_window [class="discord"] border none
 
 # Commonly used applications
 bindsym $super+F1 exec $BROWSER
-bindsym $super+d exec rofi -show run
+bindsym $super+d exec rofi -show drun
 bindsym $super+Return exec $TERMINAL
 bindsym $super+KP_Enter exec $TERMINAL
 bindsym $super+Shift+Return exec $TERMINAL -e fish --private

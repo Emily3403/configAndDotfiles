@@ -1,3 +1,5 @@
 .idea
 venv
 /.envrc
+.stversions
+.stignore

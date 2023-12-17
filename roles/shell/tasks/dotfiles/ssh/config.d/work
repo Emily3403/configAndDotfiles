@@ -71,7 +71,6 @@ Host work-enbackup
   HostName 130.149.152.130
   User root
   IdentityFile ~/.ssh/id_rsa
-  ProxyJump work-enwall
   PreferredAuthentications publickey
 
 
@@ -90,6 +89,13 @@ Host work-test
 
 Host work-vpnc
   HostName 130.149.220.47
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet2
+  PreferredAuthentications publickey
+
+Host work-wachturm
+  HostName 130.149.220.4
   ProxyJump work-marwall
   User root
   IdentityFile ~/.ssh/id_inet2

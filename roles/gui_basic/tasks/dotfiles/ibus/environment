@@ -6,3 +6,6 @@
 GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
+
+GTK_THEME=Adwaita:dark
+QT_STYLE_OVERRIDE=adwaita-dark
