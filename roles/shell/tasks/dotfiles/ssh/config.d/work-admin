@@ -1,0 +1,113 @@
+Host work-vpnc
+  HostName 130.149.220.47
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-wachturm
+  HostName 130.149.220.4
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-kerberos
+  HostName kerberos.inet.tu-berlin.de
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-ldap
+  HostName ldap2.inet.tu-berlin.de
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-marwall
+  HostName 130.149.235.194
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-enwall
+  HostName 130.149.152.129
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+# -/- Admin Services
+
+# --- DNS ---
+
+Host work-dns
+  HostName 130.149.220.253
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-dns1
+  HostName 130.149.152.187
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+
+Host work-dns2
+  HostName 85.214.78.63
+  User root
+  IdentityFile ~/.ssh/id_inet
+  
+# -/- DNS ---
+
+# --- Switches ---
+
+Host work-core0
+  HostName 192.168.200.64
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  KexAlgorithms diffie-hellman-group-exchange-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+
+# -/- Switches ---
+
+# --- Xen Cluster ---
+
+Host work-xenserver-1
+  HostName 192.168.200.190
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+
+Host work-xenserver-2
+  HostName 192.168.200.189
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+
+Host work-xenserver-3
+  HostName 192.168.200.188
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+
+Host work-xenserver-4
+  HostName 192.168.200.187
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+
+Host work-xenserver-5
+  HostName 192.168.200.186
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  ProxyJump work-marwall
+
+Host work-abbadon
+  HostName 192.168.201.189
+  User root
+  IdentityFile ~/.ssh/id_inet
+  KexAlgorithms +diffie-hellman-group-exchange-sha1
+  HostKeyAlgorithms ssh-rsa
+
+Host work-abbadon-storage
+  HostName 192.168.140.100
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  ProxyJump work-abbadon
+  KexAlgorithms +diffie-hellman-group-exchange-sha1
+  HostKeyAlgorithms ssh-rsa
+
+# -/- Xen Cluster ---
+

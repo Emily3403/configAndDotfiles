@@ -51,7 +51,7 @@ end
 
 
 # Add the "usual" stuff to the path. This may vary for you!
-add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin ~/go/bin
+add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin ~/go/bin /opt/KopiaUI/
 
 # Re-add ~/bin at the end so it is considered first
 remove_from_path ~/bin
@@ -111,12 +111,6 @@ alias nvime="vim $HOME/.config/nvim/init.vim"
 alias svime="vim $HOME/.SpaceVim.d/init.toml"
 alias svimae="vim $HOME/.SpaceVim.d/autoload/myspacevim.vim"
 alias vim="nvim"
-alias sse="vim $HOME/.config/starship.toml"
-alias sshe="vim $HOME/.ssh/config"
-alias sshke="vim $HOME/.ssh/known_hosts"
-alias sshwe="vim $HOME/.ssh/config.d/work"
-alias sshoe="vim $HOME/.ssh/config.d/other"
-alias sshhe="vim $HOME/.ssh/config.d/home"
 alias updatee="vim $HOME/bin/bash_functions_for_fish/update"
 alias waybare="vim $HOME/.config/waybar/config"
 alias btope="vim $HOME/.config/btop/btop.conf"
@@ -126,6 +120,12 @@ alias sshc="cat $HOME/.ssh/id_rsa.pub | xclip -sel clip"
 
 # SSH Aliases
 alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+alias sse="vim $HOME/.config/starship.toml"
+alias sshe="vim $HOME/.ssh/config"
+alias sshke="vim $HOME/.ssh/known_hosts"
+alias sshwe="vim $HOME/.ssh/config.d/work"
+alias sshse="vim $HOME/.ssh/config.d/servers"
+alias sshhe="vim $HOME/.ssh/config.d/home"
 
 # ===== Python Stuff =====
 
@@ -278,7 +278,7 @@ alias sysudr="systemctl --user daemon-reload"
 alias sysue="systemctl --user enable --now"
 alias sysus="systemctl --user status"
 alias sysusus="systemctl --user suspend"
-alias sysust="systemctl --user start"
+alias sysut="systemctl --user start"
 alias sysud="systemctl --user disable"
 
 alias mst="sudo systemctl start mariadb.service"
@@ -310,6 +310,8 @@ alias grm="git stash; git stash drop" # Danger!
 alias grh="git reset --hard origin/main"
 alias gfo="git fetch origin"
 alias gd="git diff"
+alias gdh="git diff HEAD"
+alias gdh1="git diff HEAD~1"
 
 alias gb="git branch"
 alias gbd="git branch -D"
@@ -771,6 +773,10 @@ end
 
 if type -q nvim
     export EDITOR=nvim
+end
+
+if test -e /run/user/1000/ssh-agent.socket
+    export SSH_AUTH_SOCK=/run/user/1000/ssh-agent.socket
 end
 
 # Hooks for packages

@@ -1,0 +1,12 @@
+[Unit]
+Description=Kopia UI
+After=graphical.target
+
+[Service]
+ExecStart=/opt/KopiaUI/kopia-ui
+User=emily
+Environment="DISPLAY=:0"
+EnvironmentFile=/etc/environment
+
+[Install]
+WantedBy=graphical.target

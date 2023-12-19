@@ -1,23 +1,21 @@
 ### Emily Home SSH-Config ###
 
 Host router 192.168.1.1
-    HostName 192.168.1.1
-    User root
+  HostName 192.168.1.1
+  User root
 
 Host nas 192.168.2.102
-    HostName 192.168.2.102
-    User emily
+  HostName 192.168.2.102
+  User emily
 
-Host laptop 192.168.1.13 
-	HostName 192.168.1.13
-    User emily
+Host nyaa 192.168.2.13 
+	HostName 192.168.1.150
+  User emily
 
-Host hp-laptop 192.168.1.15
-    HostName 192.168.1.15
-    User emily
-
-Host pc 192.168.1.42
-	HostName 192.168.1.42
+Host uwu 192.168.2.100
+	HostName 192.168.2.100
 	User emily
 
-
+Host pixelpanda 192.168.2.149
+  HostName 192.168.2.149
+  User emily

@@ -1,0 +1,45 @@
+Host work-vm-init
+  HostName 130.149.220.116
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-qingyun-p2p
+  HostName 130.149.221.193
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-taha-snmp
+  HostName 130.149.221.198
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-arash-ilp1
+  HostName 130.149.221.203
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-arash-ilp2
+  HostName 130.149.221.204
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-persian-wordle-webserver
+  HostName 130.149.221.206
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-persian-wordle-cruncher
+  HostName 130.149.221.212
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host work-project-arne-experiment
+  HostName 130.149.221.202
+  User root
+  IdentityFile ~/.ssh/id_inet2
+
+Host grs-teaching
+  HostName 130.149.221.201
+  User root
+  IdentityFile ~/.ssh/id_inet
+

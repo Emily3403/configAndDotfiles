@@ -1,0 +1,6 @@
+# TODO:
+#   Install keepassxc
+#     Maybe provide default config with SSH Agent override + browser integration
+#   Setup syncthing → maybe in gui_basic?
+#   Link ssh keys
+#   Add ssh agent service

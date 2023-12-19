@@ -1,0 +1,12 @@
+Host martin
+	HostName 49.12.42.246
+	User root
+
+Host ruwuschOnRails
+  HostName 5.9.147.135
+  User root
+
+Host ruwuschOnNix
+  HostName 138.201.195.105
+  User root
+

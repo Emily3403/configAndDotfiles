@@ -1,61 +1,42 @@
-# Work
+# Match assoiaced addresses and domains for easier access
 Host *.inet.tu-berlin.de
   User root
   IdentityFile ~/.ssh/id_inet
-  PreferredAuthentications publickey
+
+Host 130.149.220.* 130.149.221.* 130.149.152.1*
+  User root
+  IdentityFile ~/.ssh/id_inet
 
 Host nixie
   HostName 130.149.220.242
   User root
-  IdentityFile ~/.ssh/id_rsa
-  PreferredAuthentications publickey
-
-Host work-afs1
-  HostName 130.149.220.110
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-afsbackup
-  HostName 2001:638:809:ff10:130:149:220:177
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-marwall
-  PreferredAuthentications publickey
-
-Host work-tst1
-  HostName tst1.inet.tu-berlin.de
-  User root
   IdentityFile ~/.ssh/id_inet
-  PreferredAuthentications publickey
-
-Host work-don
-  HostName don.inet.tu-berlin.de
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-tst1
-  PreferredAuthentications publickey
-
-
-Host work-mail
-  HostName 130.149.220.248
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-tst1
-  PreferredAuthentications publickey
-
-Host work-mailman
-  HostName mailman.inet.tu-berlin.de
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-tst1
   PreferredAuthentications publickey
 
 Host work-webmail
   HostName webmail.inet.tu-berlin.de
   User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-tst1
+  IdentityFile ~/.ssh/id_inet
+  ProxyJump work-marwall
+  PreferredAuthentications publickey
+
+Host work-afs1
+  HostName 130.149.220.110
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  PreferredAuthentications publickey
+
+Host work-afs2
+  HostName 130.149.220.111
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  PreferredAuthentications publickey
+
+Host work-don
+  HostName don.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet
+  ProxyJump work-marwall
   PreferredAuthentications publickey
 
 # --- Backups ---
@@ -63,227 +44,14 @@ Host work-webmail
 Host work-marbackup
   HostName marbackup.inet.tu-berlin.de
   User root
-  IdentityFile ~/.ssh/id_inet2
+  IdentityFile ~/.ssh/id_inet
   ProxyJump work-marwall
   PreferredAuthentications publickey
 
 Host work-enbackup
   HostName 130.149.152.130
   User root
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_inet
   PreferredAuthentications publickey
-
-
-Host work-test
-  HostName 130.149.152.165
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-enwall
-  PreferredAuthentications publickey
-  HostKeyAlgorithms ssh-rsa
 
 # -/- Backups ---
-
-
-# --- Admin Services ---
-
-Host work-vpnc
-  HostName 130.149.220.47
-  ProxyJump work-marwall
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-wachturm
-  HostName 130.149.220.4
-  ProxyJump work-marwall
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-kerberos
-  HostName kerberos.inet.tu-berlin.de
-  ProxyJump work-marwall
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-ldap
-  HostName ldap2.inet.tu-berlin.de
-  ProxyJump work-marwall
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-marwall
-  HostName 130.149.235.194
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-enwall
-  HostName 130.149.152.129
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-# -/- Admin Services
-
-# --- DNS ---
-
-Host work-dns
-  HostName 130.149.220.253
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-dns2
-  HostName 130.149.152.187
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-dns2
-  HostName 85.214.78.63
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-  
-# -/- DNS ---
-
-# --- Switches ---
-
-Host work-core0
-  HostName 192.168.200.64
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  KexAlgorithms diffie-hellman-group-exchange-sha1
-  HostKeyAlgorithms ssh-rsa
-  Ciphers aes256-cbc
-
-
-# -/- Switches ---
-
-# --- Xen Cluster ---
-
-Host work-xenmgmt
-  HostName 192.168.200.118
-  User root
-  IdentityFile ~/.ssh/id_inet
-  PreferredAuthentications publickey
-
-Host work-xenserver-1
-  HostName 192.168.200.190
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-xenserver-2
-  HostName 192.168.200.189
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-xenserver-3
-  HostName 192.168.200.188
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-xenserver-4
-  HostName 192.168.200.187
-  User root
-  IdentityFile ~/.ssh/id_inet2
-
-Host work-xenserver-5
-  HostName 192.168.200.186
-  User root
-  IdentityFile ~/.ssh/id_inet2
-#  PreferredAuthentications publickey
-  ProxyJump work-marwall
-
-Host work-abbadon
-  HostName 192.168.201.189
-  User root
-  IdentityFile ~/.ssh/id_inet
-  KexAlgorithms +diffie-hellman-group-exchange-sha1
-  HostKeyAlgorithms ssh-rsa
-
-Host work-abbadon-storage
-  HostName 192.168.140.100
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-  ProxyJump work-abbadon
-
-  KexAlgorithms +diffie-hellman-group-exchange-sha1
-  HostKeyAlgorithms ssh-rsa
-
-# -/- Xen Cluster ---
-
-# --- Projects ---
-
-Host work-vm-init
-  HostName 130.149.220.116
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-qingyun-p2p
-  HostName 130.149.221.193
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-taha-snmp
-  HostName 130.149.221.198
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-arash-ilp1
-  HostName 130.149.221.203
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-arash-ilp2
-  HostName 130.149.221.204
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-persian-wordle-webserver
-  HostName 130.149.221.206
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-persian-wordle-cruncher
-  HostName 130.149.221.212
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host work-project-arne-experiment
-  HostName 130.149.221.202
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  PreferredAuthentications publickey
-
-Host grs-teaching
-  HostName 130.149.221.201
-  User root
-  IdentityFile ~/.ssh/id_inet
-  PreferredAuthentications publickey
-
-# -/- Projects ---
-
-
-# Temp for Shutdown
-
-Host work-sd-glados
-  HostName 130.149.221.173
-  User root
-  IdentityFile ~/.ssh/id_inet2
-  ProxyJump work-tst1

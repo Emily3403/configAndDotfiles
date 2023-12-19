@@ -1,1 +1,7 @@
 Include config.d/*
+
+Host github.com
+  User git
+
+Host git.tu-berlin.de
+	User git
