@@ -10,3 +10,8 @@ Host ruwuschOnNix
   HostName 138.201.195.105
   User root
 
+Host emilyOnRuwusch
+  HostName 138.201.195.105
+  User emily
+  IdentityFile ~/.ssh/id_user
+

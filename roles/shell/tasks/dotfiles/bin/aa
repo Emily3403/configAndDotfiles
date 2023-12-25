@@ -1786,7 +1786,7 @@ def main():
             cprint(f"Verschlüsselte Datei aus {clean_file} erfolgreich erstellt", "green")
 
         elif state == "bug":
-            cprint(f"Es ist ein Bug aufgetreten! Dieser Zustand sollte nie erreicht werden... Super Arbeit Mattis!", "red")
+            cprint(f"Es ist ein Bug aufgetreten! Dieser Zustand sollte nie erreicht werden... Super Arbeit Emily!", "red")
 
         elif state == "enter_pw written":
             cprint(f"Erfolgreich eingegeben", "green")

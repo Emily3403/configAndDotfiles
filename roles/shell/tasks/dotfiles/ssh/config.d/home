@@ -6,6 +6,7 @@ Host router 192.168.1.1
 
 Host nas 192.168.2.102
   HostName 192.168.2.102
+  IdentityFile ~/.ssh/id_user
   User emily
 
 Host nyaa 192.168.2.13 

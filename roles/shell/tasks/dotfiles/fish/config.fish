@@ -2,6 +2,9 @@
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT 1
 
+if ! status --is-interactive
+    return
+end
 
 # Logging
 function pnotify
@@ -104,28 +107,27 @@ end
 
 # Aliases for config files
 alias fishe="vim $HOME/.config/fish/config.fish"
+alias fished="cd $HOME/.config/fish"
+
 alias i3e="vim $HOME/.config/i3/config"
+alias i3ed="cd $HOME/.config/i3/config.d"
+
 alias swaye="vim $HOME/.config/sway/config"
+alias swayed="cd $HOME/.config/sway/config.d"
+
 alias vime="vim $HOME/.vimrc"
 alias nvime="vim $HOME/.config/nvim/init.vim"
+alias nvimed="cd $HOME/.config/nvim"
+
 alias svime="vim $HOME/.SpaceVim.d/init.toml"
 alias svimae="vim $HOME/.SpaceVim.d/autoload/myspacevim.vim"
-alias vim="nvim"
-alias updatee="vim $HOME/bin/bash_functions_for_fish/update"
+alias svimed="cd $HOME/.SpaceVim.d"
+
 alias waybare="vim $HOME/.config/waybar/config"
+alias waybared="cd $HOME/.config/waybar"
+
 alias btope="vim $HOME/.config/btop/btop.conf"
-
-# Copy files
-alias sshc="cat $HOME/.ssh/id_rsa.pub | xclip -sel clip"
-
-# SSH Aliases
-alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-alias sse="vim $HOME/.config/starship.toml"
-alias sshe="vim $HOME/.ssh/config"
-alias sshke="vim $HOME/.ssh/known_hosts"
-alias sshwe="vim $HOME/.ssh/config.d/work"
-alias sshse="vim $HOME/.ssh/config.d/servers"
-alias sshhe="vim $HOME/.ssh/config.d/home"
+alias btoped="cd $HOME/.config/btop"
 
 # ===== Python Stuff =====
 
@@ -231,6 +233,15 @@ alias mntn31='sudo mount /dev/nvme0n3p1 /mnt'
 alias mntn32='sudo mount /dev/nvme0n3p2 /mnt'
 alias mntn33='sudo mount /dev/nvme0n3p3 /mnt'
 
+# SSH Aliases
+alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+alias sse="vim $HOME/.config/starship.toml"
+alias sshe="vim $HOME/.ssh/config"
+alias sshke="vim $HOME/.ssh/known_hosts"
+alias sshwe="vim $HOME/.ssh/config.d/work"
+alias sshse="vim $HOME/.ssh/config.d/servers"
+alias sshhe="vim $HOME/.ssh/config.d/home"
+
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
 alias cdmk="mkdir -p $argv; cd"
 alias mkcd="mkdir -p $argv; cd"
@@ -261,7 +272,6 @@ alias findbu="find ~ -mount -name '*.bak*' -exec du -sh {} \; | sort"
 alias nmap-home="nmap -sn \"192.168.1.*\""
 alias convert-image-pdf='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf\' -- it'
 alias convert-image-pdf.='find . -type f -exec file --mime-type {} \+ | awk -F: \'{if ($2 ~/image\//) print $1}\' | xargs -P "$(nproc)" -I it sh -c \'img2pdf $1 -o ${1%.*}.pdf; rm "$1"\' -- it'
-
 
 # Systemd
 alias sysr="sudo systemctl restart"
@@ -318,6 +328,7 @@ alias gbd="git branch -D"
 alias gco="git checkout"
 alias gcob="git switch -c"
 alias gsw="git switch"
+alias gswm="git switch main"
 alias gswb="git switch -c"
 
 alias ga="git add"
@@ -358,11 +369,6 @@ alias gsp="git stash pop"
 # Change the remote from HTTPS to ssh
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
 
-
-# Optional server service aliases
-alias podmail="podman exec -ti mail"
-alias podmm="podman exec -ti mailman"
-alias podyou="podman exec -ti youtrack"
 
 if [ "$XDG_SESSION_TYPE" = x11 ]
     alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
@@ -553,6 +559,11 @@ if type -q neofetch
     alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 22 12 13 14"
 end
 
+if type -q nvim
+    alias vi="nvim"
+    alias vim="nvim"
+end
+
 if type -q exa
     alias ls='exa -lb --color=always --group-directories-first --icons --time-style=long-iso'
     alias la='exa -lba --color=always --group-directories-first --icons --time-style=long-iso'
@@ -630,7 +641,7 @@ end
 function tuvpn-connect
     pnotify "Connecting to the VPN of Technische Universität Berlin ..."
     tuvpn-disconnect &>/dev/null
-    sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u mattis3403
+    sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u emily3403
     psuccess "Connection established."
 end
 
@@ -692,13 +703,7 @@ function u
             cd "$HOME/configAndDotfiles/roles/gui_programming/tasks/dotfiles"
 
             # programming 
-        case zig
-            cd "$HOME/Documents/Programs/Zig/OperatingSystem"
-        case zigl
-            cd "$HOME/Documents/Programs/Zig/Learn"
-        case zig.
-            cd "$HOME/Documents/Uni/5/BSPrak/Exercises/ZigTest2"
-        case isisdl is
+        case isisdl
             cd "$HOME/Documents/Programs/Python/isisdl" && ac
         case iss
             cd "$HOME/Documents/Programs/Bash/ServerConfig/" && ac
@@ -709,22 +714,7 @@ function u
         case latex
             cd "$HOME/Documents/Programs/LaTeX/emily_template"
 
-            # Uni
-        case aot
-            cd "$HOME/Documents/Uni/6/AOT/Exercises"
-        case aot.
-            cd "$HOME/isisdl/[SS22] AOT B.Sc./"
-
-        case ppb
-            cd "$HOME/Documents/Uni/7/PPB/"
-        case ppbb
-            cd "$HOME/Documents/Uni/7/PPB/Backend" && ac
-        case ppbf
-            cd "$HOME/Documents/Uni/7/PPB/Frontend"
-        case ppbm
-            cd "$HOME/Documents/Uni/7/PPB/Meta"
-
-        case b
+        case bach
             cd "$HOME/Documents/Uni/Bachelorarbeit"
 
             # Work
@@ -746,8 +736,15 @@ function unfuck
 end
 
 
+# Server service aliases
+alias podtrans="podman exec -ti transmission"
+alias podyou="podman exec -ti youtrack"
 
-export GPG_TTY=(tty)
+# For Work
+alias podmail="podman exec -ti mail"
+alias podmm="podman exec -ti mailman"
+alias podbak="podman exec -ti backuppc"
+alias podpassb="podman exec -ti passbolt"
 
 # ====/ Personal Config =====
 
@@ -794,6 +791,6 @@ end
 
 
 # Display neofetch only in iteractive mode so connections are not affected
-if type -q neofetch && status --is-interactive
+if type -q neofetch && status --is-interactive && ! set -q SSH_CONNECTION
     neofetch
 end

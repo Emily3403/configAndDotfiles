@@ -19,7 +19,7 @@ fi
 
 
 # First check if we are currently doing the backup
-if grep -q "doing" "$HOME/Documents/Programs/Bash/BackupScript/bi.out";
+if grep -q "doing" "$HOME/Documents/Projects/Programming/Bash/BackupScript/bi.out";
 then
     is_doing=true
 fi
@@ -32,12 +32,12 @@ then
     has_failed=true
 fi
 
-if ! grep -q "true" "$HOME/Documents/Programs/Bash/BackupScript/bi.out";
+if ! grep -q "true" "$HOME/Documents/Projects/Programming/Bash/BackupScript/bi.out";
 then
     has_failed=true
 fi
 
-if ! grep -q $(date --iso-8601) "$HOME/Documents/Programs/Bash/BackupScript/bi.out" && [ "$(date -d "6 hours ago" --iso-8601)" == $(date --iso-8601) ] && [ "$(systemctl --user is-active $UNIT_NAME)" == "inactive" ];
+if ! grep -q $(date --iso-8601) "$HOME/Documents/Projects/Programming/Bash/BackupScript/bi.out" && [ "$(date -d "6 hours ago" --iso-8601)" == $(date --iso-8601) ] && [ "$(systemctl --user is-active $UNIT_NAME)" == "inactive" ];
 then
     has_failed=true
 fi

@@ -14,15 +14,15 @@ if [ -n "$1" ]; then
     esac
 fi
 
-sha=$(sha1sum "$HOME/Documents/Programs/LaTeX/emily_template/compile/template.fmt" | head -c 40)
+sha=$(sha1sum "$HOME/Documents/Projects/Programming/LaTeX/emily_template/compile/template.fmt" | head -c 40)
 
 cwd=$(pwd)
-cd "$HOME/Documents/Programs/LaTeX/emily_template/" || exit
+cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template/" || exit
 last_commit=$(git rev-parse HEAD)
 cd "$cwd" || exit
 
-ln -s "$HOME/Documents/Programs/LaTeX/emily_template/compile/template.fmt" .
-ln -s "$HOME/Documents/Programs/LaTeX/emily_template/src/" .
+ln -s "$HOME/Documents/Projects/Programming/LaTeX/emily_template/compile/template.fmt" .
+ln -s "$HOME/Documents/Projects/Programming/LaTeX/emily_template/src/" .
 mkdir -p out
 
 if [ ! -f "main.tex" ]; then
