@@ -8,6 +8,6 @@ exec --no-startup-id superproductivity
 exec --no-startup-id thunderbird
 
 exec --no-startup-id telegram-desktop
-exec --no-startup-id spotify
+exec --no-startup-id spotify --force-device-scale-factor=1.3
 
 exec --no-startup-id firefox
