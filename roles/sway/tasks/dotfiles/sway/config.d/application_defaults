@@ -17,5 +17,7 @@ for_window [title="Picture in picture"] floating enable, sticky enable
 for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
 
+for_window [class="firefox" instance="Toolkit"] floating disable
+
 # Inhibit idle
 for_window [app_id="Chromium"] inhibit_idle fullscreen
