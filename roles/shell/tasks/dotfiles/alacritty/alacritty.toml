@@ -45,7 +45,7 @@ text = "#000000"
 TERM = "xterm-256color"
 
 [font]
-size = 11.0
+size = 10.0
 
 [font.bold]
 family = "Jetbrains Mono Nerd Font"

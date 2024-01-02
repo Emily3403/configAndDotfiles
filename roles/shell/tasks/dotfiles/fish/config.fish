@@ -129,6 +129,8 @@ alias waybared="cd $HOME/.config/waybar"
 alias btope="vim $HOME/.config/btop/btop.conf"
 alias btoped="cd $HOME/.config/btop"
 
+alias fwctle="vim $HOME/.config/fw-fanctrl/config.json"
+
 # ===== Python Stuff =====
 
 
@@ -559,6 +561,10 @@ if type -q neofetch
     alias neofetch="neofetch --ascii $HOME/.config/neofetch/current_image.txt --ascii_colors 9 10 22 12 13 14"
 end
 
+if type -q hyfetch
+    alias hyfetch="hyfetch --ascii $HOME/.config/neofetch/current_image.txt"
+end
+
 if type -q nvim
     alias vi="nvim"
     alias vim="nvim"
@@ -569,6 +575,7 @@ if type -q exa
     alias la='exa -lba --color=always --group-directories-first --icons --time-style=long-iso'
     alias lt='exa -T --color=always --group-directories-first --icons --sort=size --level=3'
     alias l=ls
+    alias ls.="/usr/bin/ls"
 end
 
 
@@ -584,6 +591,11 @@ end
 
 if type -q gix
     alias gcl!="gix -v clone"
+end
+
+if type -q unzrip
+    alias unzip="unzrip"
+    alias unzip.="/usr/bin/unzip"
 end
 
 if type -q pass
@@ -669,57 +681,65 @@ alias wvpnd=workvpn-disconnect
 
 # ===== Personal config =====
 
-add_to_path ~/arm/bin ~/bin/i3programs ~/.local/share/gem/ruby/3.0.0/bin
-
-export XDG_SCREENSHOTS_DIR="~/Pictures/Screenshots"
-
 # Function to get to my common places
 function u
     switch (string lower $argv)
-        # configs
-        case nvim
-            cd "$HOME/.config/nvim"
-        case v svim
-            cd "$HOME/.SpaceVim.d"
-        case i3
-            cd "$HOME/.config/i3"
-        case sway
-            cd "$HOME/.config/sway"
-        case bu
-            cd "$HOME/Documents/Programs/Bash/BackupScript"
-        case key
-            cd "$HOME/Documents/Programs/Bash/Keyboard/qmk_firmware"
+
+        case bach
+            cd "$HOME/Documents/Uni/Study/Bachelorarbeit"
+
+            # Proejct: Programming 
+        case py
+            cd "$HOME/Documents/Projects/Programming/Python"
+        case hss
+            cd "$HOME/Documents/Projects/Programming/Python/hetzner-server-scouter"
+        case is isisdl
+            cd "$HOME/Documents/Projects/Programming/Python/isisdl" && ac
+        case sha
+            cd "$HOME/Documents/Projects/Programming/Python/shabot" && ac
+        case uwu
+            cd "$HOME/Documents/Projects/Programming/Python/Suwudo" && ac
+        case latex
+            cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template"^
+
+            # Projects: Servers
+        case snix
+            cd "$HOME/Documents/Projects/Servers/NixOServer"
+        case smar
+            cd "$HOME/Documents/Projects/Servers/MartinAnsible"
 
             # configAndDotfiles
-        case csh
-            cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
-        case cwy
-            cd "$HOME/configAndDotfiles/roles/sway/tasks/dotfiles"
-        case ci3
-            cd "$HOME/configAndDotfiles/roles/i3/tasks/dotfiles"
+        case cbu
+            cd "$HOME/configAndDotfiles/roles/backup/tasks/dotfiles"
         case cgb
             cd "$HOME/configAndDotfiles/roles/gui_basic/tasks/dotfiles"
         case cgp
             cd "$HOME/configAndDotfiles/roles/gui_programming/tasks/dotfiles"
-
-            # programming 
-        case isisdl
-            cd "$HOME/Documents/Programs/Python/isisdl" && ac
-        case iss
-            cd "$HOME/Documents/Programs/Bash/ServerConfig/" && ac
-        case sha
-            cd "$HOME/Documents/Programs/Python/shabot" && ac
-        case uwu
-            cd "$HOME/Documents/Programs/Python/Suwudo/" && ac
-        case latex
-            cd "$HOME/Documents/Programs/LaTeX/emily_template"
-
-        case bach
-            cd "$HOME/Documents/Uni/Bachelorarbeit"
+        case ci3
+            cd "$HOME/configAndDotfiles/roles/i3/tasks/dotfiles"
+        case cpw
+            cd "$HOME/configAndDotfiles/roles/password/tasks/dotfiles"
+        case csh
+            cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
+        case csw
+            cd "$HOME/configAndDotfiles/roles/sway/tasks/dotfiles"
 
             # Work
         case work
             cd "$HOME/Documents/Work/2023_INET/Sysadmin"
+        case wans
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Ansible"
+        case wcert
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Certs/$(date +%Y)"
+        case wser
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers"
+        case wnix
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS"
+        case wsbin
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/StaticBinaries"
+        case wscr
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Scripts"
+
 
     end
 end
@@ -730,8 +750,6 @@ function unfuck
             sudo systemctl restart bluetooth
         case v vim nvim
             pip install pynvim
-
-
     end
 end
 
