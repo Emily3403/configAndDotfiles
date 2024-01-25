@@ -1,10 +1,16 @@
-# My Config and Dotfile backup
-This repository is meant as a backup for my personal linux configuration.
-It can easily be installed to any system using [Ansible](https://www.ansible.com/). 
+# My Config and Dotfile Repo
 
-# Scope 
-The installation should be as seamless as executing a file and letting it run.
+This repository contains my personal configuration files for my linux systems as well as a way to install them on a new system using [Ansible](https://www.ansible.com/).
 
+# Installation
+To install the configuration files on a new system, simply run the following command:
+```bash
+./run.sh
+```
 
-# Attention
-This repository is currely **unstable**. The only possible thing is to view the backuped config and download that. 
+You need to have Ansible installed and ssh access to `localhost` without password using a public key. It can be installed using the following command: `ssh-copy-id localhost`.
+
+You will then be prompted for your sudo (become) password.
+
+# License
+Unless otherwise specified, all files in this repository are licensed under the GPL v3 license. See the LICENSE file for more information. The `dotfiles` of each `role` are subject to the licensing terms of their respective original projects.

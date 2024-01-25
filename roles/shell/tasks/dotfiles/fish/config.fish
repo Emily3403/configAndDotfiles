@@ -366,6 +366,7 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
 alias glrs="git stash; git pull --rebase; git stash pop"
+alias glg="git log"
 
 alias grc="git rebase --continue"
 

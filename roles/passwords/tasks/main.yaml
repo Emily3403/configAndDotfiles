@@ -20,9 +20,9 @@
     - { src: '~/Passwords/SSH-Keys/id_ed25519.pub', dest: '~/.ssh/id_ed25519.pub' }
     - { src: '~/Passwords/SSH-Keys/id_user', dest: '~/.ssh/id_user' }
     - { src: '~/Passwords/SSH-Keys/id_user.pub', dest: '~/.ssh/id_user.pub' }
-    - { src: '~/Passwords/SSH-Keys/id_inet', dest: '~/.ssh/id_inet' }
-    - { src: '~/Passwords/SSH-Keys/id_inet.pub', dest: '~/.ssh/id_inet.pub' }
-    - { src: '~/Passwords/SSH-Keys/id_inet_admin', dest: '~/.ssh/id_inet_admin' }
+    - { src: '~/Passwords/SSH-Keys/Work/id_inet', dest: '~/.ssh/id_inet' }
+    - { src: '~/Passwords/SSH-Keys/Work/id_inet.pub', dest: '~/.ssh/id_inet.pub' }
+    - { src: '~/Passwords/SSH-Keys/Work/id_inet_admin', dest: '~/.ssh/id_inet_admin' }
 
 - name: Enable ssh agent
   systemd_service:
