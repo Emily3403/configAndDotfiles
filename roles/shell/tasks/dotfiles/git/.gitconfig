@@ -1,6 +1,6 @@
 [user]
 	email = seebeckemily3403@gmail.com
-    name = Emily3403
+  name = Emily3403
 
 [core]
     excludesfile = ~/configAndDotfiles/roles/shell/tasks/dotfiles/git/.gitignore
@@ -16,6 +16,9 @@
 	grep = auto
 	decorate = auto
 	showbranch = auto
+
+[commit]
+	gpgsign = true
 
 [init]
     defaultBranch = main

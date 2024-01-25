@@ -1,0 +1,32 @@
+- name: Install packages
+  become: yes
+  package:
+    name:
+      - keepassxc
+      - gnupg
+      - pinentry
+
+- name: Install dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: '~/configAndDotfiles/roles/passwords/tasks/dotfiles/keepassxc/keepassxc.ini', dest: '~/.config/keepassxc/keepassxc.ini' }
+    - { src: '~/configAndDotfiles/roles/passwords/tasks/dotfiles/gnupg/gpg-agent.conf', dest: '~/.gnupg/gpg-agent.conf' }
+    - { src: '~/Passwords/SSH-Keys/id_ed25519', dest: '~/.ssh/id_ed25519' }
+    - { src: '~/Passwords/SSH-Keys/id_ed25519.pub', dest: '~/.ssh/id_ed25519.pub' }
+    - { src: '~/Passwords/SSH-Keys/id_user', dest: '~/.ssh/id_user' }
+    - { src: '~/Passwords/SSH-Keys/id_user.pub', dest: '~/.ssh/id_user.pub' }
+    - { src: '~/Passwords/SSH-Keys/id_inet', dest: '~/.ssh/id_inet' }
+    - { src: '~/Passwords/SSH-Keys/id_inet.pub', dest: '~/.ssh/id_inet.pub' }
+    - { src: '~/Passwords/SSH-Keys/id_inet_admin', dest: '~/.ssh/id_inet_admin' }
+
+- name: Enable ssh agent
+  systemd_service:
+    name: ssh-agent
+    state: started
+    enabled: true
+    scope: user

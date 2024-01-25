@@ -1,44 +1,3 @@
-# Missing packages
-#   alacritty
-#   discord
-#   exa
-
-
-
-# Maybe:
-#   ansible
-#   standard bluetooth
-#   ffmpeg
-#   gimp
-#   gscan2pdf
-#   jetbrains toolbox + products
-#   jupyter
-#   nmap
-#   qbittorrent
-#   shellcheck
-#   spotify
-#   steam
-#   telegram-desktop
-#   texlive
-#   thunderbird
-#   vlc
-
-
-# Idk
-#   Timeshift
-
-# Uni specific
-#   mumble
-#   zotero
-
-# Arch specific
-#   find-the-command
-#   yay
-
-
-# Garuda dependencies
-
-
 - include_vars: "{{ item }}"
   with_first_found:
     - "package_translation/{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yaml"
@@ -87,12 +46,13 @@
 - name: Core packages
   ansible.builtin.package:
     name:
+      - alacritty
       - bat
       - btop
       - gcc
       - cairo
       - cmake
-      - "{{ exa_package_name | default('') }}"
+      - "{{ eza_package_name | default('') }}"
       - make
       - nmap
       - cowsay
@@ -100,6 +60,7 @@
       - dust
       - fish
       - git
+      - git-extras
       - gdk-pixbuf2
       - gtk4
       - htop
@@ -136,7 +97,6 @@
     extra_args: --break-system-packages
     name:
       - thefuck
-      - tldr
       - ipython
       - sympy
       - numpy
@@ -175,6 +135,17 @@
       - ripdrag
       - gitoxide
 
+
+- name: Download Suwudo
+  git:
+    repo: https://github.com/Emily3403/Suwudo
+    dest: ~/Downloads/Suwudo
+    force: yes
+
+- name: Install Suwudo
+  become: true
+  command:
+    cmd: /home/emily/Downloads/Suwudo/suwudo.py
 
 
 # Start distributing dotfiles

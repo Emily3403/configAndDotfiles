@@ -21,6 +21,10 @@
       - okular
       - spotify
       - superproductivity-bin
+      - thunderbird
+      - blueberry
+      - discord
+      - gimp
 
 
 - name: Configure ibus support

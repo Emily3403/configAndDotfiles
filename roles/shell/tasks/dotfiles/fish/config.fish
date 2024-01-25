@@ -109,8 +109,18 @@ end
 alias fishe="vim $HOME/.config/fish/config.fish"
 alias fished="cd $HOME/.config/fish"
 
+alias sshe="vim $HOME/.ssh/config"
+alias sshed="cd $HOME/.ssh/config.d"
+alias sshke="vim $HOME/.ssh/known_hosts"
+alias sshwe="vim $HOME/.ssh/config.d/work"
+alias sshwpe="vim $HOME/.ssh/config.d/work-projects"
+alias sshwae="vim $HOME/.ssh/config.d/work-admin"
+alias sshse="vim $HOME/.ssh/config.d/servers"
+alias sshhe="vim $HOME/.ssh/config.d/home"
+
 alias i3e="vim $HOME/.config/i3/config"
 alias i3ed="cd $HOME/.config/i3/config.d"
+alias i3ec="vim $HOME/.config/i3/custom_conf"
 
 alias swaye="vim $HOME/.config/sway/config"
 alias swayed="cd $HOME/.config/sway/config.d"
@@ -235,14 +245,11 @@ alias mntn31='sudo mount /dev/nvme0n3p1 /mnt'
 alias mntn32='sudo mount /dev/nvme0n3p2 /mnt'
 alias mntn33='sudo mount /dev/nvme0n3p3 /mnt'
 
+alias mkfs.fat32="sudo mkfs.fat -F 32"
+
 # SSH Aliases
 alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 alias sse="vim $HOME/.config/starship.toml"
-alias sshe="vim $HOME/.ssh/config"
-alias sshke="vim $HOME/.ssh/known_hosts"
-alias sshwe="vim $HOME/.ssh/config.d/work"
-alias sshse="vim $HOME/.ssh/config.d/servers"
-alias sshhe="vim $HOME/.ssh/config.d/home"
 
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
 alias cdmk="mkdir -p $argv; cd"
@@ -251,8 +258,8 @@ alias lsr="ls | sort -R | tail -10"
 alias dir="exa -lb --color=always --group-directories-first --icons --time-style=long-iso" # But why would anyone use this? :D
 alias findstr="find ~ -mount -type f -print0 | xargs -0 -P 32 grep -s $argv"
 alias takeover="sudo chown -R $USER ."
-alias compress="lrzip -z"
-alias uncompress="lrunzip"
+alias compress="lrzip -z -p $(nproc)"
+alias uncompress="lrunzip -p $(nproc)"
 alias tar.='tar caf'
 alias untar="tar xvf"
 alias grep='grep --color=auto'
@@ -284,6 +291,7 @@ alias syssus="sudo systemctl suspend"
 alias syst="sudo systemctl start"
 alias sysp="sudo systemctl stop"
 alias sysd="sudo systemctl disable"
+alias sysed="sudo systemctl edit"
 
 alias sysur="systemctl --user restart"
 alias sysudr="systemctl --user daemon-reload"
@@ -300,7 +308,7 @@ alias sshst="sudo systemctl start sshd"
 
 # Shortcut for too long names
 alias rmf="rm -rf"
-alias rmd="rm -d"
+alias rmd="rmdir"
 alias rmo="rm -rf out"
 alias rmv="rm -rf venv"
 alias rmg="rm -rf .git"
@@ -601,15 +609,6 @@ end
 if type -q pass
     alias pc="pass -c"
 
-    function passsecret
-        set -gx PASSWORD_STORE_DIR "$HOME/Pictures/.git/secret-passwords"
-        pass $argv
-        set -e PASSWORD_STORE_DIR
-    end
-
-    alias ps="passwork"
-    alias psc="passsecret -c"
-
     function passwork
         set -gx PASSWORD_STORE_DIR "$HOME/Pictures/.git/work-passwords"
         pass $argv
@@ -686,9 +685,9 @@ function u
     switch (string lower $argv)
 
         case bach
-            cd "$HOME/Documents/Uni/Study/Bachelorarbeit"
+            cd "$HOME/Documents/Uni/Study/Bachelorarbeit.new"
 
-            # Proejct: Programming 
+            # Projects: Programming 
         case py
             cd "$HOME/Documents/Projects/Programming/Python"
         case hss
@@ -700,13 +699,21 @@ function u
         case uwu
             cd "$HOME/Documents/Projects/Programming/Python/Suwudo" && ac
         case latex
-            cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template"^
+            cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template"
 
             # Projects: Servers
         case snix
             cd "$HOME/Documents/Projects/Servers/NixOServer"
         case smar
             cd "$HOME/Documents/Projects/Servers/MartinAnsible"
+
+            # Projects: Talks
+        case talks
+            cd "$HOME/Documents/Projects/Talks"
+        case tlatex
+            cd "$HOME/Documents/Projects/Talks/Advanced-LaTeX-Talk"
+        case unix
+            cd "$HOME/Documents/Projects/Talks/Unix-Sysadmin"
 
             # configAndDotfiles
         case cbu
@@ -739,6 +746,10 @@ function u
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/StaticBinaries"
         case wscr
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Scripts"
+
+            # Uni
+        case shila
+            cd "$HOME/Documents/Uni/Shila"
 
 
     end
@@ -780,6 +791,7 @@ end
 # Colorful man pages
 if type -q bat
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+    export MANROFFOPT='-c'
 end
 
 if type -q vim

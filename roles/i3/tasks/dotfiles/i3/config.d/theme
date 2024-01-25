@@ -1,5 +1,5 @@
 # Font
-font pango:JetBrains Mono 9
+font pango:JetBrains Mono 11
 
 # Status Bar
 bar {

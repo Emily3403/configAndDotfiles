@@ -6,9 +6,10 @@
 
   roles:
     - shell
-      #    - gui_programming
-      #    - gui_basic
-      #    - i3
+    - gui_programming
+    - gui_basic
+    - i3
+    - passwords
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}

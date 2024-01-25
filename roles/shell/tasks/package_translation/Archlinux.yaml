@@ -1,4 +1,4 @@
 openssh_package_name: openssh
 python_package_name: python3
 pip_package_name: python-pip
-exa_package_name: exa
+exa_package_name: eza

@@ -22,6 +22,13 @@ Host work-ldap
   User root
   IdentityFile ~/.ssh/id_inet
 
+Host work-lion
+  HostName lion.inet.tu-berlin.de
+  ProxyJump work-enwall
+  User root
+  HostKeyAlgorithms ssh-rsa
+  IdentityFile ~/.ssh/id_inet
+
 Host work-marwall
   HostName 130.149.235.194
   User root
@@ -44,7 +51,7 @@ Host work-dns
 Host work-dns1
   HostName 130.149.152.187
   User root
-  IdentityFile ~/.ssh/id_inet_admin
+  IdentityFile ~/.ssh/id_inet
 
 Host work-dns2
   HostName 85.214.78.63

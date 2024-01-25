@@ -23,7 +23,7 @@ Host work-webmail
 Host work-afs1
   HostName 130.149.220.110
   User root
-  IdentityFile ~/.ssh/id_inet_admin
+  IdentityFile ~/.ssh/id_inet
   PreferredAuthentications publickey
 
 Host work-afs2
