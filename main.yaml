@@ -1,7 +1,5 @@
 ---
 
-# TODO: backup role
-# Add pacman.conf / makepkg.conf
 - hosts: localhost
 
   roles:

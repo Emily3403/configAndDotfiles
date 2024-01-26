@@ -57,4 +57,3 @@ function! myspacevim#after() abort
       \ coc#refresh()
   
 endfunction
-
