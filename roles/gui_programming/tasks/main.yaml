@@ -12,6 +12,15 @@
   become: true
 
 
+- name: Make dotfile dirs
+  file:
+    dest: "{{ item }}"
+    state: directory
+
+  with_items:
+    - '~/bin'
+    - '~/.cargo'
+    - '~/.config/pip'
 
 - name: Install dotfiles
   file:
@@ -22,4 +31,5 @@
 
   with_items:
     - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/bin/initLaTeX', dest: '~/bin/initLaTeX' }
-
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/cargo/config.toml', dest: '~/.cargo/config.toml' }
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/pip/pip.conf', dest: '~/.config/pip/pip.conf' }

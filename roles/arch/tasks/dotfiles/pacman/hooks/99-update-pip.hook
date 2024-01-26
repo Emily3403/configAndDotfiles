@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Path
+Target = *
+
+[Action]
+Description = Updating other packages
+When = PostTransaction
+
+Exec = /usr/bin/python3 -m pip_review -a

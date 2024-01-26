@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Path
+Target = *
+
+[Action]
+Description = Updating other packages
+When = PostTransaction
+
+Exec = /home/emily/.cargo/bin/cargo install-update -a

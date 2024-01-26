@@ -1,0 +1,20 @@
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+    force: yes
+
+- name: Install arch dotfiles
+  become: true
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0644
+
+  with_items:
+    - { src: "~/configAndDotfiles/roles/arch/tasks/dotfiles/pacman/pacman.conf", dest: "/etc/pacman.conf" }
+    - { src: "~/configAndDotfiles/roles/arch/tasks/dotfiles/pacman/hooks/99-update-cargo.hook", dest: "/etc/pacman.d/hooks/99-update-cargo.hook" }
+    - { src: "~/configAndDotfiles/roles/arch/tasks/dotfiles/pacman/hooks/99-update-pip.hook", dest: "/etc/pacman.d/hooks/99-update-pip.hook" }
+

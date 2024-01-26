@@ -134,7 +134,6 @@
     name: 
       - ripdrag
       - gitoxide
-      - unzrip
 
 
 - name: Download Suwudo

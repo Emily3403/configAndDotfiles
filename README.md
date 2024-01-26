@@ -7,7 +7,7 @@ To install the configuration files on a new system, first configure the `main.ya
 
 Also, make sure you have Ansible installed and ssh access to `localhost` without password using a public key. It can be installed using the following command: `ssh-copy-id localhost`.
 
-Then, simply execute the `./run.sh` script. You will be prompted for your sudo (become) password and the installation will start.
+Then, simply execute the `./run.sh` script. You will be prompted for your sudo (become) password and the installation will start. It will clone this repository to `~/.config/dotfiles` and symlink all configuration to there.
 
 # Scope
 This repository is meant for **installing** a new system, not for maintaining a system. For example, the `.SpaceVim` directory in the `shell` role is a git repository that is only created, and not updated. This has to be done manually.
