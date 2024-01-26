@@ -148,6 +148,11 @@
     cmd: /home/emily/Downloads/Suwudo/suwudo.py
 
 
+- name: Install SpaceVim
+  shell:
+    cmd: curl -sLf https://spacevim.org/install.sh | bash
+    creates: ~/.SpaceVim
+
 # Start distributing dotfiles
 
 - name: Make dotfile dirs
@@ -185,6 +190,7 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/starship/starship.toml', dest: '~/.config/starship.toml' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/htop/htoprc', dest: '~/.config/htop/htoprc' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/btop/btop.conf', dest: '~/.config/btop/btop.conf' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/SpaceVim/.SpaceVim.d', dest: '~/.SpaceVim.d' }
 
 
 

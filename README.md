@@ -13,4 +13,6 @@ You need to have Ansible installed and ssh access to `localhost` without passwor
 You will then be prompted for your sudo (become) password.
 
 # License
-Unless otherwise specified, all files in this repository are licensed under the GPL v3 license. See the LICENSE file for more information. The `dotfiles` of each `role` are subject to the licensing terms of their respective original projects.
+Unless otherwise specified, all files in this repository are licensed under the GPL v3 license. See the LICENSE file for more information. 
+
+The `dotfiles` of each `role` are subject to the licensing terms of their respective original projects.
