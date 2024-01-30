@@ -689,6 +689,10 @@ function u
             cd "$HOME/Documents/Uni/Study/Bachelorarbeit.new"
 
             # Projects: Programming 
+        case proj
+            cd "$HOME/Documents/Projects/"
+        case prog
+            cd "$HOME/Documents/Projects/Programming"
         case py
             cd "$HOME/Documents/Projects/Programming/Python"
         case hss
@@ -772,7 +776,7 @@ alias podyou="podman exec -ti youtrack"
 
 # For Work
 alias podmail="podman exec -ti mail"
-alias podmm="podman exec -ti mailman"
+alias podmm="podman exec -ti mailman-core"
 alias podbak="podman exec -ti backuppc"
 alias podpassb="podman exec -ti passbolt"
 

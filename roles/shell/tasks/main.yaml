@@ -102,6 +102,7 @@
       - numpy
       - pynvim
       - notedown
+      - pip_review
 
 
 # Install Rust
@@ -134,6 +135,7 @@
     name: 
       - ripdrag
       - gitoxide
+      - cargo-update
 
 
 - name: Download Suwudo
@@ -167,6 +169,7 @@
     - '~/.config/fish'
     - '~/.config/htop'
     - '~/.config/btop'
+    - '~/.config/pip'
 
 
 
@@ -190,6 +193,7 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/starship/starship.toml', dest: '~/.config/starship.toml' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/htop/htoprc', dest: '~/.config/htop/htoprc' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/btop/btop.conf', dest: '~/.config/btop/btop.conf' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/pip/pip.conf', dest: '~/.config/pip/pip.conf' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/SpaceVim/.SpaceVim.d', dest: '~/.SpaceVim.d' }
 
 

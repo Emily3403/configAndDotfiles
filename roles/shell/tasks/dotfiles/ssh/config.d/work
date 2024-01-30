@@ -23,7 +23,7 @@ Host work-webmail
 Host work-afs1
   HostName 130.149.220.110
   User root
-  IdentityFile ~/.ssh/id_inet
+  IdentityFile ~/.ssh/id_inet_admin
   PreferredAuthentications publickey
 
 Host work-afs2
@@ -55,3 +55,29 @@ Host work-enbackup
   PreferredAuthentications publickey
 
 # -/- Backups ---
+
+# --- Routerlab ---
+
+Host work-lion
+  HostName lion.inet.tu-berlin.de
+  ProxyJump work-enwall
+  User root
+  HostKeyAlgorithms ssh-rsa
+  IdentityFile ~/.ssh/id_inet
+
+Host work-cheetah
+  HostName cheetah.inet.tu-berlin.de
+  ProxyJump work-enwall
+  User root
+  HostKeyAlgorithms ssh-rsa
+  IdentityFile ~/.ssh/id_inet
+
+Host work-infrabox
+  HostName infrabox.inet.tu-berlin.de
+  ProxyJump work-enwall
+  User root
+  HostKeyAlgorithms ssh-rsa
+  IdentityFile ~/.ssh/id_inet
+
+# -/- Routerlab ---
+
