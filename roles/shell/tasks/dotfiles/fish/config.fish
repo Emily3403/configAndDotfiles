@@ -109,6 +109,9 @@ end
 alias fishe="vim $HOME/.config/fish/config.fish"
 alias fished="cd $HOME/.config/fish"
 
+alias alacrittye="vim $HOME/.config/alacritty/alacritty.toml"
+alias alacrittyed="cd $HOME/.config/alacritty"
+
 alias sshe="vim $HOME/.ssh/config"
 alias sshed="cd $HOME/.ssh/config.d"
 alias sshke="vim $HOME/.ssh/known_hosts"
@@ -121,6 +124,9 @@ alias sshhe="vim $HOME/.ssh/config.d/home"
 alias i3e="vim $HOME/.config/i3/config"
 alias i3ed="cd $HOME/.config/i3/config.d"
 alias i3ec="vim $HOME/.config/i3/custom_conf"
+
+alias pbare="vim $HOME/.config/polybar/config.ini"
+alias pbared="cd $HOME/.config/polybar"
 
 alias swaye="vim $HOME/.config/sway/config"
 alias swayed="cd $HOME/.config/sway/config.d"
@@ -317,6 +323,7 @@ alias rmz="rm -rf zig-out zig-cache"
 alias rmb="rm -rf build"
 alias rmt="rm -rf target"
 
+alias da="direnv allow"
 alias mi="mediainfo"
 alias mypy="dmypy run"
 alias mypy.="/usr/bin/mypy"
@@ -484,9 +491,9 @@ function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
             echo "→" | c
         case leftarrow
             echo "←" | c
-        case uparrow
+        case uparrow up
             echo "↑" | c
-        case downarrow
+        case downarrow down
             echo "↓" | c
         case angle
             echo "∠" | c

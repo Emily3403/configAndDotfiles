@@ -5,6 +5,7 @@
   roles:
     - shell
     - arch
+    - i3
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}

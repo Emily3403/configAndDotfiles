@@ -1,7 +1,0 @@
-#!/bin/bash
-i3-msg append_layout $HOME/i3bin/i3layouts/layout_pycharm.json
-i3-msg "[title=PycharmUnique] move scratchpad"
-i3-msg append_layout $HOME/i3bin/i3layouts/layout_pycharm.json
-i3-msg "[title=PycharmUnique] border none"
-
-$HOME/bin/programs/pycharm

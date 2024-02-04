@@ -4,10 +4,14 @@
     dest: ~/configAndDotfiles
     force: yes
 
-- name: Set up i3 dir
+- name: Make dotfile dirs
   file:
-    path: "~/.config/sway"
+    dest: "{{ item }}"
     state: directory
+
+  with_items:
+    - '~/.config/i3'
+    - '~/.config/polybar'
 
 - name: Install i3 dotfiles
   file:
@@ -20,4 +24,7 @@
     - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/i3/config", dest: "~/.config/i3/config" }
     - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/i3/config.d", dest: "~/.config/i3/config.d" }
     - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/i3/layouts", dest: "~/.config/i3/layouts" }
-
+    - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/polybar/config.ini", dest: "~/.config/polybar/config.ini" }
+    - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/polybar/macchiato.ini", dest: "~/.config/polybar/macchiato.ini" }
+    - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/polybar/launch.sh", dest: "~/.config/polybar/launch.sh" }
+    - { src: "~/configAndDotfiles/roles/i3/tasks/dotfiles/polybar/scripts", dest: "~/.config/polybar/scripts" }

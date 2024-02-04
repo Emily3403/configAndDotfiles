@@ -11,8 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded, if you want to use more colorscheme, please load the colorscheme layer
     automatic_update = true
 
-    colorscheme = "gruvbox"
-    colorscheme_bg = "dark"
+    colorscheme = "catppuccin-macchiato"
     enable_guicolors = true
     statusline_separator = "arrow"
     statusline_iseparator = "arrow"
@@ -30,7 +29,7 @@
 # Enable autocomplete layer
 # Enable autocomplete layer
 [[custom_plugins]]
-  repo = "morhetz/gruvbox"
+  repo = "catppuccin/nvim"
 
 [[custom_plugins]]
   repo = "sainnhe/everforest"

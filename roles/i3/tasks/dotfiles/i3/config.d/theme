@@ -1,8 +1,5 @@
 # Font
 font pango:JetBrains Mono 11
 
-# Status Bar
-bar {
-    status_command i3blocks
-    tray_output primary
-}
+# Bar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
