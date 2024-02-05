@@ -18,3 +18,4 @@ Further, this repository is meant for my personal use. If you find something use
 Unless otherwise specified, all files in this repository are licensed under the GPL v3 license. See the LICENSE file for more information. 
 
 The `dotfiles` of each `role` are subject to the licensing terms of their respective original projects.
+

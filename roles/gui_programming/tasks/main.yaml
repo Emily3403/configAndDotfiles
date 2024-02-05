@@ -7,6 +7,7 @@
       - shellcheck
       - texlive
       - mold
+      - nix
 
     state: latest
   become: true
@@ -33,3 +34,10 @@
     - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/bin/initLaTeX', dest: '~/bin/initLaTeX' }
     - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/cargo/config.toml', dest: '~/.cargo/config.toml' }
     - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/pip/pip.conf', dest: '~/.config/pip/pip.conf' }
+
+- name: Make emily part of the nix-users group
+  become: true
+  ansible.builtin.user:
+    name: emily
+    groups: nix-users
+    append: yes
