@@ -22,7 +22,7 @@ Host work-ldap
   User root
   IdentityFile ~/.ssh/id_inet
 
-Host work-monitoring
+Host work-enmon work-enobs
   HostName 130.149.152.135
   ProxyJump work-enwall
   User root

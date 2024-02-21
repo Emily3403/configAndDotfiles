@@ -255,6 +255,7 @@ alias mkfs.fat32="sudo mkfs.fat -F 32"
 
 # SSH Aliases
 alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+alias ssh!!="ssh -oHostKeyAlgorithms=+ssh-rsa"
 alias sse="vim $HOME/.config/starship.toml"
 
 alias lsfs="lsblk -o NAME,STATE,SIZE,FSAVAIL,FSUSED,FSUSE%,FSTYPE,MOUNTPOINTS"
@@ -334,11 +335,16 @@ alias htop.="htop --delay 3"
 alias git.="/usr/bin/git"
 alias gs="git status"
 alias grm="git stash; git stash drop" # Danger!
+alias grmrf="git stash --all; git stash drop" # Danger!
 alias grh="git reset --hard origin/main"
 alias gfo="git fetch origin"
 alias gd="git diff"
 alias gdh="git diff HEAD"
 alias gdh1="git diff HEAD~1"
+alias gdh2="git diff HEAD~2"
+alias gdh3="git diff HEAD~3"
+alias gdh4="git diff HEAD~4"
+alias gdh5="git diff HEAD~5"
 
 alias gb="git branch"
 alias gbd="git branch -D"
@@ -356,9 +362,9 @@ alias gu="git add -u; git commit; git push"
 alias gul="git add -u; git commit-status; git push "
 alias gun="git add -u; git commit -m 'no message.'; git push"
 alias guw="git add -u; git commit -m 'WIP Sync'; git push"
-alias gua="git add -u; git commit --amend --no-edit; git push --force"
+alias gua="git add -u; git commit --amend --no-edit; git push --force-with-lease"
 alias gufun="git add -u; git commit -m (curl -s https://whatthecommit.com/index.txt) && git push"
-alias guam="git add -u; git commit --amend; git push --force"
+alias guam="git add -u; git commit --amend; git push --force-with-lease"
 
 alias gc="git commit -m"
 alias gca="git commit --amend"
@@ -368,7 +374,8 @@ alias gma="git merge --abort"
 alias gmc="git merge --contiue"
 
 alias gp="git push"
-alias gpf="git push --force"
+alias gpf="git push --force-with-lease"
+alias gpf!="git push --force"
 alias gl="git pull"
 alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
@@ -692,7 +699,7 @@ alias wvpnd=workvpn-disconnect
 function u
     switch (string lower $argv)
 
-        case bach
+        case bach ba
             cd "$HOME/Documents/Uni/Study/Bachelorarbeit.new"
 
             # Projects: Programming 
@@ -823,6 +830,7 @@ if type -q starship
     source (starship init fish --print-full-init | psub)
 end
 
+
 if type -q direnv
     direnv hook fish | source
 end
@@ -831,6 +839,10 @@ if test -e /usr/share/doc/find-the-command/ftc.fish
     source /usr/share/doc/find-the-command/ftc.fish noupdate
 end
 
+# Enable zoxide
+if type -q zoxide
+    zoxide init fish | source
+end
 
 # Display neofetch only in iteractive mode so connections are not affected
 if type -q neofetch && status --is-interactive && ! set -q SSH_CONNECTION

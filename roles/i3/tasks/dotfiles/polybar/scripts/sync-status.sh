@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+DISABLED_COLOR="%{F#696969}"
+DISABLED_MESSAGE="${DISABLED_COLOR}Sync"
+
+FAILED_COLOR="%{F#ED8796}"
+FAILED_MESSAGE="${FAILED_COLOR}Sync ✗"
+SETUP_ERROR_MESSAGE="${FAILED_COLOR}Setup Error"
+
+WAITING_COLOR="%{F#EED49F}"
+WAITING_MESSAGE="${WAITING_COLOR}Sync …"
+
+SUCESSFUL_COLOR="%{F#A6DA95}"
+SUCESSFUL_MESSAGE="${SUCESSFUL_COLOR}Sync ✓"
+
+if ! systemctl is-active syncthing@emily.service &> /dev/null; then
+    echo "$DISABLED_MESSAGE"
+    exit 1
+fi
+
+if ! ping -c 1 sync.ruwusch.de &> /dev/null; then
+    echo "!$FAILED_MESSAGE"
+    exit 1
+fi
+
+if ! curl -I https://sync.ruwusch.de --max-time 5 &> /dev/null; then
+    echo "$FAILED_MESSAGE"
+    exit 1
+fi
+
+if ! source /home/emily/.config/polybar/syncthing-api-key &> /dev/null; then
+    echo "$SETUP_ERROR_MESSAGE: No API Key File!"
+    exit 1
+fi
+
+if [ -z "$SYNCTHING_API_KEY" ]; then
+    echo "$SETUP_ERROR_MESSAGE: No API Key!"
+    exit 1
+fi
+
+connected=$(curl -s -H "X-API-Key: $SYNCTHING_API_KEY" http://127.0.0.1:8080/rest/system/connections | jq '.connections["TRTUNYG-VGHUPJQ-7RLEDW7-YMIQCDY-5TIUCUR-QFV24JC-FCWPIHE-6RG7KQM"].connected')
+if [ "$connected" = "false" ]; then
+    echo "$WAITING_MESSAGE"
+    exit 0
+fi
+
+echo "$SUCESSFUL_MESSAGE"
+

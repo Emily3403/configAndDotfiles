@@ -5,6 +5,7 @@
 [core]
     excludesfile = ~/configAndDotfiles/roles/shell/tasks/dotfiles/git/.gitignore
     pager = delta
+	fsmonitor = false
 
 [color]
 	diff = auto
@@ -62,3 +63,13 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /home/emily/Documents/Projects/Programming/Python/isisdl
+[fetch]
+	writeCommitGraph = true

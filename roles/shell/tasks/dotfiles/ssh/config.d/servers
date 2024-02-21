@@ -2,11 +2,7 @@ Host martin
 	HostName 49.12.42.246
 	User root
 
-Host ruwuschOnRails
-  HostName 5.9.147.135
-  User root
-
-Host ruwuschOnNix
+Host ruwusch
   HostName 138.201.195.105
   User root
 
@@ -14,4 +10,12 @@ Host emilyOnRuwusch
   HostName 138.201.195.105
   User emily
   IdentityFile ~/.ssh/id_user
+
+Host hscout
+  HostName 138.201.195.105
+  User hscout
+
+Host backupOnRuwusch
+  HostName 138.201.195.105
+  User backup
 
