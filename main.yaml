@@ -3,9 +3,7 @@
 - hosts: localhost
 
   roles:
-    - shell
-    - arch
-    - i3
+    - backup
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}

@@ -5,7 +5,7 @@ Host work-vpnc
   IdentityFile ~/.ssh/id_inet
 
 Host work-wachturm
-  HostName 130.149.220.4
+  HostName 130.149.220.178
   ProxyJump work-marwall
   User root
   IdentityFile ~/.ssh/id_inet
@@ -73,6 +73,14 @@ Host work-dns2
 
 Host work-core0
   HostName 192.168.200.64
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  KexAlgorithms diffie-hellman-group-exchange-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+Host work-core1
+  HostName 192.168.200.65
   User root
   IdentityFile ~/.ssh/id_inet_admin
   KexAlgorithms diffie-hellman-group-exchange-sha1

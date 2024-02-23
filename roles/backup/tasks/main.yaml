@@ -4,17 +4,27 @@
     dest: ~/configAndDotfiles
     force: yes
 
-- name: Install Kopia dotfiles
-  file:
+
+- name: Install Kopia
+  package:
+    name:
+        - kopia-ui-bin
+
+- name: Install Kopia Systemd Service
+  become: true
+  copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-    state: link
-    force: yes
+    owner: root
+    group: root
+    mode: 0644
 
   with_items:
-    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/kopia", dest: "~/.config/kopia" }
-    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/kopia-ui", dest: "~/.config/i3/kopa-ui" }
+    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/systemd/kopia-ui.service", dest: "/etc/systemd/system/kopia-ui.service" }
 
-
-
-
+- name: Enable Kopia Service
+  systemd_service:
+    name: kopia-ui
+    state: started
+    enabled: true
+    daemon_reload: yes

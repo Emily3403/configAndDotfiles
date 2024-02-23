@@ -23,11 +23,11 @@
 		        "4": "4",
 		        "5": "5",
 		        "6": "6",
-		        "7": "7",
+		        "7": "Email",
 		        "8": "Prod",
-		        "9": "Telegram",
-		        "10": "Spotify",
-            "11": "Thunderbird",
+		        "9": "Tg",
+		        "10": "Spot",
+            "11": "Email",
             "12": "System"
         }
     },
@@ -106,7 +106,7 @@
         "format": "{icon}{capacity: >3}%",
         "format-good": "{icon}{capacity: >3}%",
         "format-full": "{icon}{capacity: >3}%",
-        "format-icons": ["  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "⚡️ "],
+        "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " ", "⚡️"],
         "interval": 1,
         "align": 1,
         "on-click": "alacritty -e btop"
@@ -126,7 +126,7 @@
         "reverse-scrolling": 1,
         "format": "{icon}{volume: >3}%",
         "format-bluetooth": "{icon}{volume: >3}%",
-        "format-muted":" muted",
+        "format-muted":"  ✗",
         "format-icons": {
             "headphones": "",
             "handsfree": "",

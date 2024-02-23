@@ -719,6 +719,8 @@ function u
             cd "$HOME/Documents/Projects/Programming/Python/Suwudo" && ac
         case latex
             cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template"
+        case img
+            cd "$HOME/Documents/Projects/Programming/Rust/YetAnotherImageViewer"
 
             # Projects: Servers
         case snix
