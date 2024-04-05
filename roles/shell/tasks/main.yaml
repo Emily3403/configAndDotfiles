@@ -60,7 +60,7 @@
       - dust
       - fish
       - git
-      - git-extras
+#      - git-extras  # TODO: yay
       - gdk-pixbuf2
       - gtk4
       - htop
@@ -76,7 +76,7 @@
       - ripgrep
       - ttf-jetbrains-mono-nerd
       - ttf-fantasque-nerd
-      - nerd-fonts-noto-sans-regular-complete 
+#      - nerd-fonts-noto-sans-regular-complete  # TODO: yay
       - vim
       - nodejs
       - yarn

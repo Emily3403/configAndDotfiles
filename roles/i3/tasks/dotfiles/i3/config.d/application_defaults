@@ -17,6 +17,7 @@ for_window [class="Telegram"] border none
 for_window [class="jetbrains-pycharm"] border none
 for_window [class="jetbrains-idea"] border none
 for_window [class="jetbrains-clion"] border none
+for_window [class="jetbrains-rustrover"] border none
 for_window [class="discord"] border none
 
 for_window [class="firefox" instance="Toolkit"] floating disable

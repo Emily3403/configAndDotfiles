@@ -93,7 +93,7 @@ mode "resize" {
 bindsym $super+Shift+e mode "$mode_system"
 set $mode_system [l]ock, [e]xit, [r]eboot, [s]hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym l exec --no-startup-id ~/bin/lock-i3 -i ~/Pictures/Background/Images/DefaultWallpaper.png, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym s exec --no-startup-id i3exit shutdown, mode "default"

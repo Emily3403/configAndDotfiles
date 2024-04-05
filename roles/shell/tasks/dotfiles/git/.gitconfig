@@ -69,7 +69,5 @@
 	ui = auto
 [branch]
 	sort = -committerdate
-[maintenance]
-	repo = /home/emily/Documents/Projects/Programming/Python/isisdl
 [fetch]
 	writeCommitGraph = true

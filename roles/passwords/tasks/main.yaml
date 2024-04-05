@@ -6,6 +6,16 @@
       - gnupg
       - pinentry
 
+- name: Make password dirs
+  file:
+    dest: "{{ item }}"
+    state: directory
+
+  with_items:
+    - '~/.config/keepassxc'
+    - '~/.gnupg'
+    - '~/Passwords/SSH-Keys/Work'
+
 - name: Install dotfiles
   file:
     src: "{{ item.src }}"

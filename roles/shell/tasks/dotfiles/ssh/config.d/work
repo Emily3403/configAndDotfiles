@@ -72,12 +72,24 @@ Host work-cheetah
   HostKeyAlgorithms ssh-rsa
   IdentityFile ~/.ssh/id_inet
 
+Host work-giant
+  HostName giant.inet.tu-berlin.de
+  User root
+  IdentityFile ~/.ssh/id_inet
+
 Host work-infrabox
   HostName infrabox.inet.tu-berlin.de
   ProxyJump work-enwall
   User root
   HostKeyAlgorithms ssh-rsa
   IdentityFile ~/.ssh/id_inet
+
+Host work-infrabox
+  HostName 172.16.255.254
+  ProxyJump work-lion
+  User root
+  HostKeyAlgorithms ssh-rsa
+  IdentityFile ~/.ssh/id_inet_admin
 
 # -/- Routerlab ---
 

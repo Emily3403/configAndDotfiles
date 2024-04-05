@@ -306,6 +306,7 @@ alias sysue="systemctl --user enable --now"
 alias sysus="systemctl --user status"
 alias sysusus="systemctl --user suspend"
 alias sysut="systemctl --user start"
+alias sysup="systemctl --user stop"
 alias sysud="systemctl --user disable"
 
 alias mst="sudo systemctl start mariadb.service"
@@ -349,9 +350,12 @@ alias gdh5="git diff HEAD~5"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gco="git checkout"
+alias gcom="git checkout main"
+alias gcoh="git checkout HEAD"
 alias gcob="git switch -c"
 alias gsw="git switch"
 alias gswm="git switch main"
+alias gswh="git switch HEAD"
 alias gswb="git switch -c"
 
 alias ga="git add"
@@ -574,6 +578,8 @@ function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
             echo "⊥" | c
         case parallel
             echo "∥" | c
+        case baht
+            echo "฿" | c
             default echo "Invalid input"
     end
 end
@@ -667,8 +673,7 @@ end
 function tuvpn-connect
     pnotify "Connecting to the VPN of Technische Universität Berlin ..."
     tuvpn-disconnect &>/dev/null
-    sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u emily3403
-    psuccess "Connection established."
+    sudo openconnect https://vpn.tu-berlin.de/ -q -b --no-dtls -u emily3403 && psuccess "Connection established." || perror "Error in connecting."
 end
 
 
@@ -687,8 +692,20 @@ function workvpn-disconnect
     sudo sudo wg-quick down wg-work && psuccess "Successfully disconnected from the Work VPN" || perror "Error in disconnecting from the work VPN!"
 end
 
+function ruwuschvpn-connect
+    pnotify "Connecting to the Work VPN ..."
+    sudo sudo wg-quick up wg-ruwusch && psuccess "Successfully connected from the Work VPN" || perror "Error in connecting the work VPN!"
+end
+
+function ruwuschvpn-disconnect
+    sudo sudo wg-quick down wg-ruwusch && psuccess "Successfully disconnected from the Work VPN" || perror "Error in disconnecting from the work VPN!"
+end
+
 alias wvpnc=workvpn-connect
 alias wvpnd=workvpn-disconnect
+
+alias rvpnc=ruwuschvpn-connect
+alias rvpnd=ruwuschvpn-disconnect
 
 # ====/ VPN Stuff =====
 
@@ -735,6 +752,16 @@ function u
             cd "$HOME/Documents/Projects/Talks/Advanced-LaTeX-Talk"
         case unix
             cd "$HOME/Documents/Projects/Talks/Unix-Sysadmin"
+
+            # Private
+        case priv
+            cd "$HOME/Documents/Private"
+        case tb
+            set it "$HOME/Documents/Private/Tagebuch/$(date +%Y)/$(date +%m)/"
+            mkdir -p "$it"
+            cd "$it"
+            init-tagebuch
+            vim "$(date +%d).md"
 
             # configAndDotfiles
         case cbu
