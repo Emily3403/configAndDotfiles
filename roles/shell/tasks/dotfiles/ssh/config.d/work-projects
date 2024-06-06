@@ -28,6 +28,7 @@ Host work-project-persian-wordle-webserver
   HostName 130.149.221.206
   User root
   IdentityFile ~/.ssh/id_inet_admin
+  ProxyJump work-marwall
 
 Host work-project-wordle-logging
   HostName 130.149.221.207
@@ -49,3 +50,7 @@ Host grs-teaching
   User root
   IdentityFile ~/.ssh/id_inet
 
+Host work-daniel-cloud
+  HostName 130.149.221.209
+  User root
+  IdentityFile ~/.ssh/id_inet

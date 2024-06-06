@@ -78,6 +78,7 @@
     <keyboard-shortcut first-keystroke="shift f6" />
   </action>
   <action id="ChangesView.Revert" />
+  <action id="ChangesView.SetDefault" />
   <action id="ChangesView.ToggleCommitUi" />
   <action id="CheckinProject">
     <keyboard-shortcut first-keystroke="ctrl f10" />
@@ -92,13 +93,17 @@
     <keyboard-shortcut first-keystroke="ctrl alt v" />
   </action>
   <action id="CloseContent">
-    <keyboard-shortcut first-keystroke="ctrl w" />
+    <keyboard-shortcut first-keystroke="shift ctrl w" />
   </action>
   <action id="CloseProject">
     <keyboard-shortcut first-keystroke="ctrl alt 2" />
   </action>
   <action id="CodeCleanup">
     <keyboard-shortcut first-keystroke="shift ctrl k" />
+  </action>
+  <action id="CodeCompletion">
+    <keyboard-shortcut first-keystroke="ctrl space" />
+    <keyboard-shortcut first-keystroke="alt space" />
   </action>
   <action id="CollapseAll" />
   <action id="CollapseAllRegions">
@@ -118,7 +123,9 @@
   </action>
   <action id="CompareTwoFiles" />
   <action id="Compile" />
-  <action id="CompileDirty" />
+  <action id="CompileDirty">
+    <keyboard-shortcut first-keystroke="find" />
+  </action>
   <action id="Console.DbmsOutput" />
   <action id="Console.Execute.Multiline" />
   <action id="Console.SplitLine" />
@@ -130,6 +137,11 @@
   <action id="Console.TableResult.EditValueMaximized">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
+  <action id="Console.TableResult.GotoReferencedResult">
+    <mouse-shortcut keystroke="button1 doubleClick" />
+    <keyboard-shortcut first-keystroke="enter" />
+    <keyboard-shortcut first-keystroke="alt enter" />
+  </action>
   <action id="Console.TableResult.MaximizeEditingCell" />
   <action id="Console.TableResult.NavigateForeignAction" />
   <action id="ContextHelp" />
@@ -140,7 +152,7 @@
   <action id="DatabaseView.PropertiesAction" />
   <action id="DatabaseView.SqlGenerator" />
   <action id="Debug">
-    <keyboard-shortcut first-keystroke="shift undo" />
+    <keyboard-shortcut first-keystroke="shift f1" />
   </action>
   <action id="Debugger.AddToWatch">
     <keyboard-shortcut first-keystroke="ctrl props" />
@@ -155,6 +167,7 @@
   </action>
   <action id="DeviceAndSnapshotComboBox" />
   <action id="Diff.ApplyLeftSide" />
+  <action id="Diff.FocusOppositePane" />
   <action id="Diff.NextChange" />
   <action id="Diff.PrevChange" />
   <action id="Diff.ShowDiff" />
@@ -209,6 +222,13 @@
   </action>
   <action id="EditorDeleteLine">
     <keyboard-shortcut first-keystroke="ctrl d" />
+  </action>
+  <action id="EditorDeleteToWordEndInDifferentHumpsMode">
+    <keyboard-shortcut first-keystroke="alt delete" />
+  </action>
+  <action id="EditorDeleteToWordStart">
+    <keyboard-shortcut first-keystroke="ctrl back_space" />
+    <keyboard-shortcut first-keystroke="ctrl w" />
   </action>
   <action id="EditorDeleteToWordStartInDifferentHumpsMode">
     <keyboard-shortcut first-keystroke="alt back_space" />
@@ -410,21 +430,18 @@
   </action>
   <action id="Images.Editor.ToggleGrid" />
   <action id="Images.Editor.ZoomOut" />
+  <action id="Images.Thumbnails.Hide" />
   <action id="ImplementMethods" />
   <action id="Inline" />
   <action id="InsertLiveTemplate" />
-  <action id="IntroduceConstant">
-    <keyboard-shortcut first-keystroke="shift f2" />
-  </action>
+  <action id="IntroduceConstant" />
   <action id="IntroduceField" />
   <action id="IntroduceFunctionalParameter" />
   <action id="IntroduceParameter">
     <keyboard-shortcut first-keystroke="f3" />
   </action>
   <action id="IntroduceTypeAlias" />
-  <action id="IntroduceVariable">
-    <keyboard-shortcut first-keystroke="f2" />
-  </action>
+  <action id="IntroduceVariable" />
   <action id="Jdbc.OpenEditor.Data" />
   <action id="JumpToLastChange">
     <keyboard-shortcut first-keystroke="ctrl n" />
@@ -435,9 +452,7 @@
   <action id="JumpToNextChange">
     <keyboard-shortcut first-keystroke="ctrl s" />
   </action>
-  <action id="JupyterNotebookMoveCellDownCommandModeAction">
-    <keyboard-shortcut first-keystroke="alt j" />
-  </action>
+  <action id="JupyterNotebookMoveCellDownCommandModeAction" />
   <action id="JupyterNotebookMoveCellUpCommandModeAction" />
   <action id="JupyterNotebookPasteCellAboveCommandModeAction">
     <keyboard-shortcut first-keystroke="shift v" />
@@ -490,6 +505,7 @@
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="ctrl alt minus" />
+    <keyboard-shortcut first-keystroke="ctrl tab" />
   </action>
   <action id="NotebookInsertCellBelowAction" />
   <action id="NotebookRunCellAction" />
@@ -520,6 +536,7 @@
   <action id="PreviousProjectWindow" />
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="ctrl alt t" />
+    <keyboard-shortcut first-keystroke="shift ctrl tab" />
   </action>
   <action id="ProjectViewEditSource" />
   <action id="PublishGroup.UploadTo" />
@@ -527,18 +544,17 @@
   <action id="QuickEvaluateExpression" />
   <action id="QuickImplementations" />
   <action id="RecentChanges" />
-  <action id="Refactorings.QuickListPopupAction">
-    <keyboard-shortcut first-keystroke="paste" />
-  </action>
+  <action id="RecentFiles" />
+  <action id="Refactorings.QuickListPopupAction" />
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl k" />
   </action>
   <action id="RemoteHostView.EditSource" />
   <action id="RenameElement">
-    <keyboard-shortcut first-keystroke="f1" />
+    <keyboard-shortcut first-keystroke="f2" />
   </action>
   <action id="RenameFile">
-    <keyboard-shortcut first-keystroke="shift f1" />
+    <keyboard-shortcut first-keystroke="shift f2" />
   </action>
   <action id="ReopenClosedTab">
     <keyboard-shortcut first-keystroke="shift ctrl t" />
@@ -562,14 +578,16 @@
     <keyboard-shortcut first-keystroke="scroll_lock" />
   </action>
   <action id="Run">
-    <keyboard-shortcut first-keystroke="undo" />
+    <keyboard-shortcut first-keystroke="f1" />
   </action>
   <action id="RunDashboard.Stop" />
   <action id="RunInspection" />
   <action id="RunJsbtTask" />
   <action id="RunToCursor" />
   <action id="SafeDelete" />
-  <action id="SaveAll" />
+  <action id="SaveAll">
+    <keyboard-shortcut first-keystroke="ctrl j" />
+  </action>
   <action id="SearchEverywhere.NavigateToNextGroup">
     <keyboard-shortcut first-keystroke="page_down" />
   </action>
@@ -610,6 +628,7 @@
     <keyboard-shortcut first-keystroke="shift ctrl 3" />
   </action>
   <action id="SmartStepInto" />
+  <action id="SmartTypeCompletion" />
   <action id="SmartUnSelect" />
   <action id="SplitChooser.Duplicate" />
   <action id="SplitHorizontally">
@@ -646,14 +665,27 @@
     <keyboard-shortcut first-keystroke="shift ctrl alt z" />
   </action>
   <action id="SurroundWith" />
+  <action id="Switcher" />
+  <action id="SwitcherIterateItems" />
   <action id="SwitcherPreviousProblem" />
+  <action id="SwitcherRecentEditedChangedToggleCheckBox" />
   <action id="Synchronize" />
   <action id="Table-startEditing" />
   <action id="TableResult.ShrinkSelection" />
   <action id="Terminal.ClearBuffer" />
+  <action id="Terminal.CloseTab" />
+  <action id="Terminal.NextSplitter">
+    <keyboard-shortcut first-keystroke="shift ctrl alt minus" />
+  </action>
+  <action id="Terminal.OpenInTerminal">
+    <keyboard-shortcut first-keystroke="alt j" />
+  </action>
   <action id="Terminal.Paste">
     <keyboard-shortcut first-keystroke="ctrl v" />
     <keyboard-shortcut first-keystroke="shift insert" />
+  </action>
+  <action id="Terminal.PrevSplitter">
+    <keyboard-shortcut first-keystroke="shift ctrl alt t" />
   </action>
   <action id="Terminal.SmartCommandExecution.Run" />
   <action id="TextSearchAction" />
@@ -717,6 +749,9 @@
   </action>
   <action id="context.save">
     <keyboard-shortcut first-keystroke="f7" />
+  </action>
+  <action id="copilot.applyInlays">
+    <keyboard-shortcut first-keystroke="ctrl e" />
   </action>
   <action id="hg4idea.QFold" />
   <action id="hg4idea.QGotoFromPatches" />

@@ -145,7 +145,7 @@ alias waybared="cd $HOME/.config/waybar"
 alias btope="vim $HOME/.config/btop/btop.conf"
 alias btoped="cd $HOME/.config/btop"
 
-alias fwctle="vim $HOME/.config/fw-fanctrl/config.json"
+alias fane="vim $HOME/.config/fw-fanctrl/config.json && sudo systemctl restart fw-fanctrl"
 
 # ===== Python Stuff =====
 
@@ -411,7 +411,7 @@ alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
 
 # Browser Stuff
-alias cr="firefox"
+alias cr="chromium"
 alias fi="firefox"
 set -g browser chromium
 export BROWSER=chromium
@@ -738,12 +738,18 @@ function u
             cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template"
         case img
             cd "$HOME/Documents/Projects/Programming/Rust/YetAnotherImageViewer"
+        case l lager
+            cd "$HOME/Documents/Projects/Programming/Python/Shila-Lager" && ac
+        case cc ccc
+            cd "$HOME/Documents/Projects/Programming/LaTeX/CocktailCards"
 
             # Projects: Servers
         case snix
             cd "$HOME/Documents/Projects/Servers/NixOServer"
         case smar
             cd "$HOME/Documents/Projects/Servers/MartinAnsible"
+
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Scripts"
 
             # Projects: Talks
         case talks
@@ -753,31 +759,20 @@ function u
         case unix
             cd "$HOME/Documents/Projects/Talks/Unix-Sysadmin"
 
-            # Private
-        case priv
-            cd "$HOME/Documents/Private"
-        case tb
-            set it "$HOME/Documents/Private/Tagebuch/$(date +%Y)/$(date +%m)/"
-            mkdir -p "$it"
-            cd "$it"
-            init-tagebuch
-            vim "$(date +%d).md"
+            # Uni
+        case shila
+            cd "$HOME/Documents/Uni/Shila"
+        case sla
+            cd "$HOME/Documents/Uni/Shila/Lager" && libreoffice "Getränke.ods"
 
-            # configAndDotfiles
-        case cbu
-            cd "$HOME/configAndDotfiles/roles/backup/tasks/dotfiles"
-        case cgb
-            cd "$HOME/configAndDotfiles/roles/gui_basic/tasks/dotfiles"
-        case cgp
-            cd "$HOME/configAndDotfiles/roles/gui_programming/tasks/dotfiles"
-        case ci3
-            cd "$HOME/configAndDotfiles/roles/i3/tasks/dotfiles"
-        case cpw
-            cd "$HOME/configAndDotfiles/roles/password/tasks/dotfiles"
-        case csh
-            cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
-        case csw
-            cd "$HOME/configAndDotfiles/roles/sway/tasks/dotfiles"
+        case cw1
+            cd "$HOME/Documents/Uni/Study/10/CT/coursework-1" && ac
+        case cw2
+            cd "$HOME/Documents/Uni/Study/10/CT/coursework-2" && ac
+        case cw3
+            cd "$HOME/Documents/Uni/Study/10/CT/coursework-3" && ac
+        case cw cw4
+            cd "$HOME/Documents/Uni/Study/10/CT/coursework-4" && ac
 
             # Work
         case work
@@ -795,10 +790,15 @@ function u
         case wscr
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Scripts"
 
-            # Uni
-        case shila
-            cd "$HOME/Documents/Uni/Shila"
-
+            # Private
+        case priv
+            cd "$HOME/Documents/Private"
+        case tb
+            set it "$HOME/Documents/Private/Tagebuch/$(date +%Y)/$(date +%m)/"
+            mkdir -p "$it"
+            cd "$it"
+            init-tagebuch
+            vim "$(date +%d).md"
 
     end
 end
@@ -817,11 +817,15 @@ end
 alias podtrans="podman exec -ti transmission"
 alias podyou="podman exec -ti youtrack"
 
+alias getsr="rsync -a ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
+
 # For Work
 alias podmail="podman exec -ti mail"
 alias podmm="podman exec -ti mailman-core"
 alias podbak="podman exec -ti backuppc"
 alias podpassb="podman exec -ti passbolt"
+
+alias getsn="rsync -a nixie:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/NixDotfiles/secrets"
 
 # ====/ Personal Config =====
 
