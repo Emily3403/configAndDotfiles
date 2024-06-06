@@ -100,8 +100,22 @@ end
 
 # Backup a directory
 function bu
-    set actual (basename $argv)
-    cp -a $actual "$actual.bak"
+    if test -d "$argv.bak"
+        perror "Error: Refusing to overwrite existing path"
+        return
+    end
+    cp -a "$argv" "$argv.bak"
+end
+
+# TODO: Make this into a stack-concept, with .bak.1, .2, etc. 
+function rebu
+    rm -rf "$argv.bak"
+    cp -a "$argv" "$argv.bak"
+end
+
+function unbu
+    rmf "$argv"
+    mv "$argv.bak" "$argv"
 end
 
 
@@ -145,7 +159,7 @@ alias waybared="cd $HOME/.config/waybar"
 alias btope="vim $HOME/.config/btop/btop.conf"
 alias btoped="cd $HOME/.config/btop"
 
-alias fwctle="vim $HOME/.config/fw-fanctrl/config.json"
+alias fane="vim $HOME/.config/fw-fanctrl/config.json && sudo systemctl restart fw-fanctrl"
 
 # ===== Python Stuff =====
 
@@ -411,7 +425,7 @@ alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
 
 # Browser Stuff
-alias cr="firefox"
+alias cr="chromium"
 alias fi="firefox"
 set -g browser chromium
 export BROWSER=chromium
@@ -738,6 +752,8 @@ function u
             cd "$HOME/Documents/Projects/Programming/LaTeX/emily_template"
         case img
             cd "$HOME/Documents/Projects/Programming/Rust/YetAnotherImageViewer"
+        case l lager
+            cd "$HOME/Documents/Projects/Programming/Python/Shila-Lager" && ac
 
             # Projects: Servers
         case snix
@@ -798,8 +814,11 @@ function u
             # Uni
         case shila
             cd "$HOME/Documents/Uni/Shila"
+        case sla
+            cd "$HOME/Documents/Uni/Shila/Lager" && libreoffice "Getränke.ods"
 
-
+        case ct
+            cd "$HOME/Documents/Uni/Study/10/CT/coursework-2" && ac
     end
 end
 
@@ -811,7 +830,6 @@ function unfuck
             pip install pynvim
     end
 end
-
 
 # Server service aliases
 alias podtrans="podman exec -ti transmission"

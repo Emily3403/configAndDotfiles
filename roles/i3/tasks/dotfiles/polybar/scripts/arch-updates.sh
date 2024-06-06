@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # When starting up, internet is not available just yet. This should be fixed some other way but this is a workaround for now
-sleep 3
+sleep 5
 
 lockfile="/tmp/.arch-update.lock"
 

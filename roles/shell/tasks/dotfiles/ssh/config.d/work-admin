@@ -70,7 +70,7 @@ Host work-dns2
 
 # --- Switches ---
 
-Host work-core0
+Host work-marcore0
   HostName 192.168.200.64
   User root
   IdentityFile ~/.ssh/id_inet_admin
@@ -78,7 +78,7 @@ Host work-core0
   HostKeyAlgorithms ssh-rsa
   Ciphers aes256-cbc
 
-Host work-core1
+Host work-marcore1
   HostName 192.168.200.65
   User root
   IdentityFile ~/.ssh/id_inet_admin
@@ -86,6 +86,36 @@ Host work-core1
   HostKeyAlgorithms ssh-rsa
   Ciphers aes256-cbc
 
+Host work-encore0
+  HostName 192.168.201.5
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+Host work-encore1
+  HostName 192.168.201.6
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+
+Host work-infra-sc1
+  HostName 192.168.201.8
+  User root
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+Host work-infra-sc2
+  HostName 192.168.201.9
+  User root
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
 
 # -/- Switches ---
 

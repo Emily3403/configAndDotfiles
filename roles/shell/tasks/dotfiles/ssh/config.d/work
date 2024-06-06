@@ -78,18 +78,11 @@ Host work-giant
   IdentityFile ~/.ssh/id_inet
 
 Host work-infrabox
-  HostName infrabox.inet.tu-berlin.de
+  HostName 130.149.152.132
   ProxyJump work-enwall
   User root
   HostKeyAlgorithms ssh-rsa
   IdentityFile ~/.ssh/id_inet
-
-Host work-infrabox
-  HostName 172.16.255.254
-  ProxyJump work-lion
-  User root
-  HostKeyAlgorithms ssh-rsa
-  IdentityFile ~/.ssh/id_inet_admin
 
 # -/- Routerlab ---
 
