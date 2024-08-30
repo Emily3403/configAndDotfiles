@@ -1,5 +1,5 @@
 Host work-vm-init
-  HostName 130.149.220.116
+  HostName 130.149.221.221
   User root
   IdentityFile ~/.ssh/id_inet
 

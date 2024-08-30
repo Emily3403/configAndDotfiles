@@ -29,7 +29,7 @@ Host work-ldap
   User root
   IdentityFile ~/.ssh/id_inet
 
-Host work-enmon work-enobs
+Host work-enmon work-enobs work-en-observertory
   HostName 130.149.152.135
   ProxyJump work-enwall
   User root
@@ -42,6 +42,11 @@ Host work-auth
 
 Host work-admin
   HostName 130.149.152.137
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-enmail
+  HostName 130.149.152.138
   User root
   IdentityFile ~/.ssh/id_inet
 
@@ -92,6 +97,14 @@ Host work-marcore1
   IdentityFile ~/.ssh/id_inet_admin
   KexAlgorithms diffie-hellman-group-exchange-sha1
   HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
+Host work-marcore2
+  HostName 192.168.200.66
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  KexAlgorithms diffie-hellman-group1-sha1
+#  HostKeyAlgorithms ssh-dss
   Ciphers aes256-cbc
 
 Host work-encore0

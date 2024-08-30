@@ -100,8 +100,22 @@ end
 
 # Backup a directory
 function bu
-    set actual (basename $argv)
-    cp -a $actual "$actual.bak"
+    if test -d "$argv.bak"
+        perror "Error: Refusing to overwrite existing path"
+        return
+    end
+    cp -a "$argv" "$argv.bak"
+end
+
+# TODO: Make this into a stack-concept, with .bak.1, .2, etc. 
+function rebu
+    rm -rf "$argv.bak"
+    cp -a "$argv" "$argv.bak"
+end
+
+function unbu
+    rmf "$argv"
+    mv "$argv.bak" "$argv"
 end
 
 
@@ -749,8 +763,6 @@ function u
         case smar
             cd "$HOME/Documents/Projects/Servers/MartinAnsible"
 
-            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Scripts"
-
             # Projects: Talks
         case talks
             cd "$HOME/Documents/Projects/Talks"
@@ -759,20 +771,31 @@ function u
         case unix
             cd "$HOME/Documents/Projects/Talks/Unix-Sysadmin"
 
-            # Uni
-        case shila
-            cd "$HOME/Documents/Uni/Shila"
-        case sla
-            cd "$HOME/Documents/Uni/Shila/Lager" && libreoffice "Getränke.ods"
+            # Private
+        case priv
+            cd "$HOME/Documents/Private"
+        case tb
+            set it "$HOME/Documents/Private/Tagebuch/$(date +%Y)/$(date +%m)/"
+            mkdir -p "$it"
+            cd "$it"
+            init-tagebuch
+            vim "$(date +%d).md"
 
-        case cw1
-            cd "$HOME/Documents/Uni/Study/10/CT/coursework-1" && ac
-        case cw2
-            cd "$HOME/Documents/Uni/Study/10/CT/coursework-2" && ac
-        case cw3
-            cd "$HOME/Documents/Uni/Study/10/CT/coursework-3" && ac
-        case cw cw4
-            cd "$HOME/Documents/Uni/Study/10/CT/coursework-4" && ac
+            # configAndDotfiles
+        case cbu
+            cd "$HOME/configAndDotfiles/roles/backup/tasks/dotfiles"
+        case cgb
+            cd "$HOME/configAndDotfiles/roles/gui_basic/tasks/dotfiles"
+        case cgp
+            cd "$HOME/configAndDotfiles/roles/gui_programming/tasks/dotfiles"
+        case ci3
+            cd "$HOME/configAndDotfiles/roles/i3/tasks/dotfiles"
+        case cpw
+            cd "$HOME/configAndDotfiles/roles/password/tasks/dotfiles"
+        case csh
+            cd "$HOME/configAndDotfiles/roles/shell/tasks/dotfiles"
+        case csw
+            cd "$HOME/configAndDotfiles/roles/sway/tasks/dotfiles"
 
             # Work
         case work
@@ -785,21 +808,21 @@ function u
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers"
         case wnix
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS"
+        case ferm
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/ferm" && vim ferm.conf hosts.ferm
         case wsbin
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/StaticBinaries"
         case wscr
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Scripts"
 
-            # Private
-        case priv
-            cd "$HOME/Documents/Private"
-        case tb
-            set it "$HOME/Documents/Private/Tagebuch/$(date +%Y)/$(date +%m)/"
-            mkdir -p "$it"
-            cd "$it"
-            init-tagebuch
-            vim "$(date +%d).md"
+            # Uni
+        case shila
+            cd "$HOME/Documents/Uni/Shila"
+        case sla
+            cd "$HOME/Documents/Uni/Shila/Lager" && libreoffice "Getränke.ods"
 
+        case ct cw
+            cd "$HOME/Documents/Uni/Study/10/CT/coursework-3" && ac
     end
 end
 
@@ -812,20 +835,15 @@ function unfuck
     end
 end
 
-
 # Server service aliases
 alias podtrans="podman exec -ti transmission"
 alias podyou="podman exec -ti youtrack"
-
-alias getsr="rsync -a ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
 
 # For Work
 alias podmail="podman exec -ti mail"
 alias podmm="podman exec -ti mailman-core"
 alias podbak="podman exec -ti backuppc"
 alias podpassb="podman exec -ti passbolt"
-
-alias getsn="rsync -a nixie:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/NixDotfiles/secrets"
 
 # ====/ Personal Config =====
 

@@ -1,9 +1,9 @@
 ---
 
-- hosts: localhost
+- hosts: bach
 
   roles:
-    - backup
+    - shell
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}

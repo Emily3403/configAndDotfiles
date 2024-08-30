@@ -45,6 +45,10 @@
   repo = "ARM9/arm-syntax-vim"
   merged = 0
 
+[[custom_plugins]]
+  repo = "cometsong/ferm.vim"
+  merged = 0
+
 [[layers]]
   name = 'autocomplete'
   auto_completion_return_key_behavior = "complete"

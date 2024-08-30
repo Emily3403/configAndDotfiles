@@ -19,3 +19,7 @@ Host backupOnRuwusch
   HostName 138.201.195.105
   User backup
 
+Host b bach
+  HostName 141.23.28.180
+  User emily
+  IdentityFile ~/.ssh/id_user

@@ -3,3 +3,4 @@ venv
 /.envrc
 .stversions
 .stignore
+.stfolder

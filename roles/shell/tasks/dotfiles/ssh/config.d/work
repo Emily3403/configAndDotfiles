@@ -46,13 +46,16 @@ Host work-marbackup
   User root
   IdentityFile ~/.ssh/id_inet
   ProxyJump work-marwall
-  PreferredAuthentications publickey
 
-Host work-enbackup
+Host work-mar2backup work-mar2bu
+  HostName 130.149.220.3
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-enbackup work-enbu
   HostName 130.149.152.130
   User root
   IdentityFile ~/.ssh/id_inet
-  PreferredAuthentications publickey
 
 # -/- Backups ---
 
@@ -73,7 +76,7 @@ Host work-cheetah
   IdentityFile ~/.ssh/id_inet
 
 Host work-giant
-  HostName giant.inet.tu-berlin.de
+  HostName 130.149.152.146
   User root
   IdentityFile ~/.ssh/id_inet
 

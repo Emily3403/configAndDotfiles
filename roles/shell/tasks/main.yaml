@@ -22,19 +22,10 @@
     force: yes
 
 
-- name: Add deadsnakes repository
-  become: true
-  apt_repository: repo="ppa:deadsnakes/ppa"
-  when: ansible_os_family == 'Debian'
-
-
 - name: Update cache apt
   apt: update_cache=yes force_apt_get=yes cache_valid_time=3600 upgrade=dist force_apt_get=yes
   when: ansible_os_family == 'Debian'
   become: true
-
-
-
 
 - name: Install starship
   shell: wget -P /tmp https://starship.rs/install.sh; sh -c "$(cat /tmp/install.sh)" -- -y; mv /usr/local/bin/starship /usr/bin/starship
