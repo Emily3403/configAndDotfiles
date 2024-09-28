@@ -6,6 +6,7 @@
 
 
 - name: Install Kopia
+  become: true
   package:
     name:
         - kopia-ui-bin

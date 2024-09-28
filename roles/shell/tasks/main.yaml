@@ -50,8 +50,10 @@
       - direnv
       - dust
       - fish
+      - fd
       - git
 #      - git-extras  # TODO: yay
+      - git-delta
       - gdk-pixbuf2
       - gtk4
       - htop
@@ -70,9 +72,8 @@
 #      - nerd-fonts-noto-sans-regular-complete  # TODO: yay
       - vim
       - nodejs
-      - yarn
+      - pnpm
       - ctags
-      - lrzip
       - yay
 
     state: latest
@@ -124,6 +125,7 @@
 - name: Install cargo packages
   community.general.cargo:
     name: 
+      - du-dust
       - ripdrag
       - gitoxide
       - cargo-update

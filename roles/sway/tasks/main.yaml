@@ -14,11 +14,6 @@
     path: "~/.config/sway/config.d"
     state: absent
 
-- name: Set up waybar dir
-  file:
-    path: "~/.config/waybar"
-    state: directory
-
 - name: Install sway dotfiles
   file:
     src: "{{ item.src }}"
@@ -29,6 +24,3 @@
   with_items:
     - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/sway/config", dest: "~/.config/sway/config" }
     - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/sway/config.d", dest: "~/.config/sway/config.d" }
-    - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/waybar/config", dest: "~/.config/waybar/config" }
-    - { src: "~/configAndDotfiles/roles/sway/tasks/dotfiles/waybar/style.css", dest: "~/.config/waybar/style.css" }
-

@@ -145,6 +145,9 @@ alias pbared="cd $HOME/.config/polybar"
 alias swaye="vim $HOME/.config/sway/config"
 alias swayed="cd $HOME/.config/sway/config.d"
 
+alias hypre="vim $HOME/.config/hypr/hyprland.conf"
+alias hypred="cd $HOME/.config/hypr/"
+
 alias vime="vim $HOME/.vimrc"
 alias nvime="vim $HOME/.config/nvim/init.vim"
 alias nvimed="cd $HOME/.config/nvim"
@@ -810,6 +813,8 @@ function u
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS"
         case ferm
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/ferm" && vim ferm.conf hosts.ferm
+        case dns bind
+            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/bind" && vim inet.tu-berlin.de
         case wsbin
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/StaticBinaries"
         case wscr

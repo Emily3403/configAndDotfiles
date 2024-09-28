@@ -1,0 +1,17 @@
+#!/bin/sh
+
+cd ~
+
+# user preferred settings
+
+#cursor size
+export XCURSOR_SIZE=24
+
+# text editor
+export EDITOR=/usr/bin/nvim
+
+export BROWSER=firedragon
+export TERM=foot
+export MAIL=thunderbird
+
+# check /usr/local/bin/hyprstart 

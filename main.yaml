@@ -1,8 +1,12 @@
 ---
 
-- hosts: bach
+- hosts: localhost
 
   roles:
+    - gui_basic
+    - gui_programming
+    - wayland
+    - passwords
     - shell
 
   environment:

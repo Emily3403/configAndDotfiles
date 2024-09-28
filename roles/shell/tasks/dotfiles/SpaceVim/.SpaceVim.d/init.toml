@@ -49,6 +49,10 @@
   repo = "cometsong/ferm.vim"
   merged = 0
 
+[[custom_plugins]]
+  repo = "egberts/vim-syntax-bind-named"
+  merged = 0
+
 [[layers]]
   name = 'autocomplete'
   auto_completion_return_key_behavior = "complete"

@@ -19,7 +19,7 @@
 	showbranch = auto
 
 [commit]
-	gpgsign = true
+	#gpgsign = true
 
 [init]
     defaultBranch = main

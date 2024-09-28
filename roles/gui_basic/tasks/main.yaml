@@ -27,12 +27,13 @@
       - gimp
 
 
-- name: Configure ibus support
-  shell: "ibus-daemon -drxR"
+# TODO: Make this only on X11
+# - name: Configure ibus support
+#  shell: "ibus-daemon -drxR"
 
-- name: Set ibus environment variables
-  copy:
-    src: "~/configAndDotfiles/roles/gui_basic/tasks/dotfiles/ibus/environment"
-    dest: "/etc/environment"
-  become: yes
+# - name: Set ibus environment variables
+#  copy:
+#    src: "~/configAndDotfiles/roles/gui_basic/tasks/dotfiles/ibus/environment"
+#    dest: "/etc/environment"
+#  become: yes
 
