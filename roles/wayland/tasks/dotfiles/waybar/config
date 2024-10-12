@@ -1,17 +1,17 @@
 {
-  // Generel configuration
+    // Generel configuration
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 25,
-    "width": 1000,
+    "height": 30,
+    "width": 1420,
 
-  // Module arrangement
-    "modules-left": ["sway/workspaces", "sway/mode" ],
+    // Module arrangement
+    "modules-left": ["sway/workspaces", "sway/mode", "hyprland/workspaces", "hyprland/mode" ],
     "modules-right": ["custom/pacman", "cpu", "temperature", "battery", "pulseaudio","tray", "clock", "backlight"], 
-//    "spacing": 0,
+    "spacing": 0,
   
     
-   // Module configuration
+    // Module configuration
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -19,16 +19,34 @@
         "format-icons": {
             "0": "IDE",
             "2": "Fi",
-		        "3": "3",
-		        "4": "4",
-		        "5": "5",
-		        "6": "6",
-		        "7": "Mail",
-		        "8": "Prod",
-		        "9": "Tg",
-		        "10": "Spot",
-            "11": "Email",
-            "12": "System"
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "Mail",
+            "8": "Prod",
+            "9": "Tg",
+            "10": "Spot"
+        }
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        // Workspaces are shifted by 1 as hyprland only allows for workspace ID's >0
+        "format-icons": {
+            "1": "IDE",
+            "2": "1",
+            "3": "Fi",
+            "4": "3",
+            "5": "4",
+            "6": "5",
+            "7": "6",
+            "8": "Mail",
+            "9": "Prod",
+            "10": "Tg",
+            "11": "Spot"
         }
     },
 
@@ -36,7 +54,15 @@
         "format": "<span style=\"italic\">{}</span>"
     },
 
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
     "sway/window": {
+        "format": "{}"
+    },
+
+    "hyprland/window": {
         "format": "{}"
     },
 
@@ -56,7 +82,7 @@
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
         "format": " {:%Y-%m-%d  %H:%M:%OS}",
-        "format-alt": " {:%a %d %b  %H:%M:%S}",	// Sun 29 Jan
+        "format-alt": " {:%a %d %b  %H:%M:%S}", // Sun 29 Jan
         "interval": 1
     },
 
@@ -124,8 +150,8 @@
     "pulseaudio": {
         "scroll-step": 1.5,
         "reverse-scrolling": 1,
-        "format": "{icon}{volume: >3}%",
-        "format-bluetooth": "{icon}{volume: >3}%",
+        "format": "{icon}{volume: >4}%",
+        "format-bluetooth": "{icon}{volume: >4}%",
         "format-muted":" muted",
         "format-icons": {
             "headphones": "",
@@ -150,25 +176,25 @@
     },
 
     "custom/power-off": {
-      	"format":"⏻",
-       	"on-click": "nwg-bar",
-      	"tooltip": false
+        "format":"⏻",
+        "on-click": "nwg-bar",
+        "tooltip": false
    },
 
    "custom/keyboard-layout": {
-      	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-      	// Interval set only as a fallback, as the value is updated by signal
-      	"interval": 30,
-      	"format": "  {}", // Icon: keyboard
-      	// Signal sent by Sway key binding (~/.config/sway/key-bindings)
-      	"signal": 1, // SIGHUP
-      	"tooltip": false,
+        "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+        // Interval set only as a fallback, as the value is updated by signal
+        "interval": 30,
+        "format": "  {}", // Icon: keyboard
+        // Signal sent by Sway key binding (~/.config/sway/key-bindings)
+        "signal": 1, // SIGHUP
+        "tooltip": false,
         "on-click": "~/.config/waybar/scripts/keyhint.sh"
    },
 
      "custom/launcher": {
-    	"format":" ",
-    	"on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
-    	"tooltip": false
+      "format":" ",
+      "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
+      "tooltip": false
    }
 }

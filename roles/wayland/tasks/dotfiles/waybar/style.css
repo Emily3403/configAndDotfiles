@@ -69,6 +69,10 @@ window#waybar {
     border-color: #81a1c1;
 }
 
+#workspaces button.active {
+    border-color: #81a1c1;
+}
+
 #mode {
     color: #ebcb8b;
 }

@@ -416,6 +416,9 @@ alias gsp="git stash pop"
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
 
 
+# Aliases specific to devices
+alias powerbtn='sudo bash -c "echo 0 > /sys/class/leds/tpacpi::power/brightness"' # Disable power LED
+
 if [ "$XDG_SESSION_TYPE" = x11 ]
     alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
     alias C="xclip -sel clip" # don't strip newline
@@ -428,10 +431,10 @@ alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
 
 # Browser Stuff
-alias cr="chromium"
+alias cr="firefox"
 alias fi="firefox"
-set -g browser chromium
-export BROWSER=chromium
+set -g browser firefox
+export BROWSER=firefox
 alias pdf="$BROWSER ./target/main.pdf"
 
 # Written by ChatGPT
@@ -734,7 +737,7 @@ function u
     switch (string lower $argv)
 
         case bach ba
-            cd "$HOME/Documents/Uni/Study/Bachelorarbeit.new"
+            cd "$HOME/Documents/Uni/Study/Bachelor-Thesis"
 
             # Projects: Programming 
         case proj
@@ -811,8 +814,6 @@ function u
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers"
         case wnix
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS"
-        case ferm
-            cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/ferm" && vim ferm.conf hosts.ferm
         case dns bind
             cd "$HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/bind" && vim inet.tu-berlin.de
         case wsbin
