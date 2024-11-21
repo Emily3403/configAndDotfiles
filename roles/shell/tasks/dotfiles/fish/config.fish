@@ -269,6 +269,7 @@ alias mntn32='sudo mount /dev/nvme0n3p2 /mnt'
 alias mntn33='sudo mount /dev/nvme0n3p3 /mnt'
 
 alias mkfs.fat32="sudo mkfs.fat -F 32"
+alias ip="ip -c"
 
 # SSH Aliases
 alias ssh!="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
@@ -402,6 +403,10 @@ alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
 alias glrs="git stash; git pull --rebase; git stash pop"
 alias glg="git log"
+
+if type -q tig
+    alias glg="tig log"
+end
 
 alias grc="git rebase --continue"
 
@@ -738,6 +743,8 @@ function u
 
         case bach ba
             cd "$HOME/Documents/Uni/Study/Bachelor-Thesis"
+        case bs
+            cd "$HOME/Documents/Uni/Study/5/BSPrak/Exercises/Exercise02/code/"
 
             # Projects: Programming 
         case proj
@@ -892,6 +899,20 @@ if type -q direnv
     direnv hook fish | source
 end
 
+if type -q mtr
+    alias traceroute.="sudo /usr/bin/traceroute"
+    alias traceroute="sudo mtr"
+end
+if type -q trip
+    alias traceroute.="sudo /usr/bin/traceroute"
+    alias traceroute="sudo trip"
+end
+
+if type -q curl
+    alias weather="curl wttr.in/berlin"
+    alias weather.="curl v2.wttr.in"
+    alias weather!="curl wttr.in"
+end
 if test -e /usr/share/doc/find-the-command/ftc.fish
     source /usr/share/doc/find-the-command/ftc.fish noupdate
 end

@@ -64,6 +64,7 @@
   <action id="AutoIndentLines" />
   <action id="Back">
     <keyboard-shortcut first-keystroke="alt s" />
+    <mouse-shortcut keystroke="button4" />
   </action>
   <action id="BookmarksView.Rename" />
   <action id="CIDR.Debugger.ShowInMemoryView" />
@@ -352,6 +353,7 @@
   </action>
   <action id="Forward">
     <keyboard-shortcut first-keystroke="alt n" />
+    <mouse-shortcut keystroke="button5" />
   </action>
   <action id="Generate" />
   <action id="Generate.Missing.Members.ES6" />
@@ -518,6 +520,9 @@
   </action>
   <action id="OpenInRightSplit">
     <mouse-shortcut keystroke="alt button1 doubleClick" />
+  </action>
+  <action id="OpenInlineChatAction">
+    <keyboard-shortcut first-keystroke="shift ctrl g" />
   </action>
   <action id="OpenModuleSettings" />
   <action id="OptimizeImports" />

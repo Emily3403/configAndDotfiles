@@ -11,20 +11,22 @@ Host nixie
   HostName 130.149.220.242
   User root
   IdentityFile ~/.ssh/id_inet
-  PreferredAuthentications publickey
+
+Host work-truenas
+  Hostname 130.149.220.5
+  User root
+  IdentityFile ~/.ssh/id_inet
 
 Host work-webmail
   HostName webmail.inet.tu-berlin.de
   User root
   IdentityFile ~/.ssh/id_inet
   ProxyJump work-marwall
-  PreferredAuthentications publickey
 
 Host work-afs1
   HostName 130.149.220.110
   User root
   IdentityFile ~/.ssh/id_inet_admin
-  PreferredAuthentications publickey
 
 Host work-afs2
   HostName 130.149.220.111

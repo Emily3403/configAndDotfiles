@@ -107,6 +107,14 @@ Host work-marcore2
 #  HostKeyAlgorithms ssh-dss
   Ciphers aes256-cbc
 
+Host work-marcore3
+  HostName 192.168.200.67
+  User root
+  IdentityFile ~/.ssh/id_inet_admin
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-cbc
+
 Host work-encore0
   HostName 192.168.201.5
   User root
