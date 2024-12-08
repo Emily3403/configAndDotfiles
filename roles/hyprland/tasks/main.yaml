@@ -1,0 +1,26 @@
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+    force: yes
+
+- name: Set up hyprland dir
+  file:
+    path: "~/.config/hypr"
+    state: directory
+
+- name: Delete hyprland config.d dir
+  file:
+    path: "~/.config/sway/config.d"
+    state: absent
+
+- name: Install hyprland dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: "~/configAndDotfiles/roles/hyprland/tasks/dotfiles/hypr/hyprland.conf", dest: "~/.config/hypr/hyprland.conf" }
+    - { src: "~/configAndDotfiles/roles/hyprland/tasks/dotfiles/hypr/config.d", dest: "~/.config/hypr/config.d" }

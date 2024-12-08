@@ -25,7 +25,14 @@
       - blueberry
       - discord
       - gimp
+      - syncthing
 
+
+- name: Enable Syncthing Service
+  systemd_service:
+    name: syncthing@emily
+    state: started
+    enabled: true
 
 # TODO: Make this only on X11
 # - name: Configure ibus support
