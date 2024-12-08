@@ -7,7 +7,7 @@ Host 130.149.220.* 130.149.221.* 130.149.152.1*
   User root
   IdentityFile ~/.ssh/id_inet
 
-Host nixie
+Host work-nixie
   HostName 130.149.220.242
   User root
   IdentityFile ~/.ssh/id_inet

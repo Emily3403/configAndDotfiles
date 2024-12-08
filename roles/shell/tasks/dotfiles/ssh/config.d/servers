@@ -3,6 +3,10 @@ Host martin
 	User root
 
 Host ruwusch
+  HostName 136.243.43.251
+  User root
+
+Host old-ruwusch
   HostName 138.201.195.105
   User root
 
@@ -23,3 +27,16 @@ Host b bach
   HostName 141.23.28.180
   User emily
   IdentityFile ~/.ssh/id_user
+
+Host nixie
+  HostName 130.149.220.19
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+
+Host nixie-ipmi
+  HostName 192.168.200.30
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+

@@ -6,8 +6,10 @@
       - zig
       - shellcheck
       - texlive
+      - texlive-langgerman
       - mold
       - nix
+      - cargo-edit
 
     state: latest
   become: true

@@ -64,7 +64,7 @@ add_to_path ~/bin
 # Automatically get the newest update of the config
 function upfish
     set id (tr -dc A-Za-z0-9 </dev/urandom | head -c 8 ; echo '')
-    wget https://raw.githubusercontent.com/Emily3403/configAndDotfiles/main/roles/shell/tasks/dotfiles/fish/config.fish --directory-prefix /tmp/$id
+    wget -4 https://raw.githubusercontent.com/Emily3403/configAndDotfiles/main/roles/shell/tasks/dotfiles/fish/config.fish --directory-prefix /tmp/$id
     mv /tmp/$id/config.fish "$HOME/.config/fish/config.fish"
     chmod +x "$HOME/.config/fish/config.fish"
 end
@@ -298,6 +298,8 @@ alias ds="du -shx * | sort -h"
 alias ds.="du -shx * .* | sort -h"
 alias sl.="pkill -9 sl"
 alias nt="clear && neofetch && builtin cd"
+alias mhz="cat /proc/cpuinfo | grep MHz | sort" # TODO: Sort numerically
+alias MHz=mhz
 alias quote="fortune | cowsay | lolcat"
 alias b="bluetoothctl"
 alias please="sudo"
@@ -354,7 +356,8 @@ alias htop.="htop --delay 3"
 alias git.="/usr/bin/git"
 alias gs="git status"
 alias grm="git stash; git stash drop" # Danger!
-alias grmrf="git stash --all; git stash drop" # Danger!
+alias grmf="git stash --all; git stash drop" # Danger!
+alias grmrf=grmf
 alias grh="git reset --hard origin/main"
 alias gfo="git fetch origin"
 alias gd="git diff"
@@ -409,6 +412,7 @@ if type -q tig
 end
 
 alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 alias gcl="git clone"
 alias gcl.="git clone --depth 1"
@@ -422,7 +426,9 @@ alias grs="python3 -c \"import os; from subprocess import check_output; from url
 
 
 # Aliases specific to devices
-alias powerbtn='sudo bash -c "echo 0 > /sys/class/leds/tpacpi::power/brightness"' # Disable power LED
+alias powerbtn='sudo bash -c \'echo 0 > /sys/class/leds/tpacpi::power/brightness; echo 0 >  /sys/class/leds/platform::micmute/brightness\'' # Disable power LED
+alias liftoff='sudo bash -c \'echo level 7 > /proc/acpi/ibm/fan\''
+alias takedown='sudo bash -c \'echo level 1 > /proc/acpi/ibm/fan\''
 
 if [ "$XDG_SESSION_TYPE" = x11 ]
     alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
@@ -434,6 +440,10 @@ end
 
 alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
+
+# Application stuff
+alias ytdl="yt-dlp"
+
 
 # Browser Stuff
 alias cr="firefox"
@@ -599,6 +609,16 @@ function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
             echo "≈" | c
         case sim
             echo "~" | c
+        case avg
+            echo "⌀" | c
+        case tm
+            echo "™" | c
+        case lra
+            echo "⇔" | c
+        case --
+            echo "–" | c
+        case ---
+            echo "—" | c
         case perp
             echo "⊥" | c
         case parallel
@@ -684,6 +704,7 @@ if type -q libreoffice
 end
 
 
+
 if type -q cargo-mommy
     alias cargo="cargo mommy"
     alias cargo.="$HOME/.cargo/bin/cargo"
@@ -740,7 +761,6 @@ alias rvpnd=ruwuschvpn-disconnect
 # Function to get to my common places
 function u
     switch (string lower $argv)
-
         case bach ba
             cd "$HOME/Documents/Uni/Study/Bachelor-Thesis"
         case bs
@@ -753,7 +773,7 @@ function u
             cd "$HOME/Documents/Projects/Programming"
         case py
             cd "$HOME/Documents/Projects/Programming/Python"
-        case hss
+        case hss hscout hs
             cd "$HOME/Documents/Projects/Programming/Python/hetzner-server-scouter"
         case is isisdl
             cd "$HOME/Documents/Projects/Programming/Python/isisdl" && ac
@@ -843,6 +863,8 @@ function unfuck
     switch $argv
         case bt
             sudo systemctl restart bluetooth
+        case fp fprint frpintd fingerprint
+            sudo systemctl restart fprintd
         case v vim nvim
             pip install pynvim
     end
@@ -857,6 +879,11 @@ alias podmail="podman exec -ti mail"
 alias podmm="podman exec -ti mailman-core"
 alias podbak="podman exec -ti backuppc"
 alias podpassb="podman exec -ti passbolt"
+
+# Get secrets
+alias getsn="rsync -a nixie:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
+alias getsr="rsync -a ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
+alias getsor="rsync -a old-ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
 
 # ====/ Personal Config =====
 

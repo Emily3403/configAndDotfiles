@@ -1,8 +1,17 @@
-Host work-vpnc
-  HostName 130.149.220.47
+Host work-vm-init
+  HostName 130.149.221.221
+  User root
+  IdentityFile ~/.ssh/id_inet
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
+Host work-marinstall
+  HostName 130.149.220.10
   ProxyJump work-marwall
   User root
   IdentityFile ~/.ssh/id_inet
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
 
 Host work-eninstall
   HostName 130.149.152.159
@@ -10,6 +19,13 @@ Host work-eninstall
   IdentityFile ~/.ssh/id_inet
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
+
+Host work-vpnc
+  HostName 130.149.220.47
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet
+
 
 Host work-wachturm
   HostName 130.149.220.4
@@ -174,7 +190,7 @@ Host work-xenserver-5
   HostName 192.168.200.186
   User root
   IdentityFile ~/.ssh/id_inet_admin
-  ProxyJump nixie
+  ProxyJump work-marwall 
 
 Host work-abbadon
   HostName 192.168.201.189

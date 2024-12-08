@@ -10,7 +10,7 @@ export XCURSOR_SIZE=24
 # text editor
 export EDITOR=/usr/bin/nvim
 
-export BROWSER=firedragon
+export BROWSER=firefox
 export TERM=foot
 export MAIL=thunderbird
 
