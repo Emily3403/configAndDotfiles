@@ -418,6 +418,7 @@ alias gcl="git clone"
 alias gcl.="git clone --depth 1"
 
 alias gst="git stash"
+alias gsa="git stash apply"
 alias gsd="git stash drop"
 alias gsp="git stash pop"
 
