@@ -6,6 +6,7 @@
       - zig
       - shellcheck
       - texlive
+      - texlive-langgerman
       - mold
       - nix
 

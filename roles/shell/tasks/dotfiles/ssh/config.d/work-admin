@@ -1,3 +1,14 @@
+Host work-vm-init
+  HostName 130.149.221.221
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host work-server-init
+  HostName 130.149.220.10
+  ProxyJump work-marwall
+  User root
+  IdentityFile ~/.ssh/id_inet
+
 Host work-vpnc
   HostName 130.149.220.47
   ProxyJump work-marwall

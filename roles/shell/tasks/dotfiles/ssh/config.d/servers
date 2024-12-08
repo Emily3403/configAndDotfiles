@@ -23,3 +23,17 @@ Host b bach
   HostName 141.23.28.180
   User emily
   IdentityFile ~/.ssh/id_user
+
+Host nixie
+  HostName 130.140.220.10
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+  ProxyJump work-marwall
+
+Host nixie-ipmi
+  HostName 192.168.200.30
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+  KexAlgorithms diffie-hellman-group1-sha1
+  HostKeyAlgorithms ssh-rsa
+

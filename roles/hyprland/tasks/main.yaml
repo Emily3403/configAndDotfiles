@@ -1,0 +1,38 @@
+- name: Clone config Repo
+  git:
+    repo: https://github.com/Emily3403/configAndDotfiles
+    dest: ~/configAndDotfiles
+    force: yes
+
+- name: Hyprland packages
+  become: true
+  ansible.builtin.package:
+    name:
+      - hyprland
+      - hypridle
+      - hyprlock
+
+
+- name: Set up hyprland dir
+  file:
+    path: "~/.config/hypr"
+    state: directory
+
+- name: Delete hyprland config.d dir
+  file:
+    path: "~/.config/sway/config.d"
+    state: absent
+
+- name: Install hyprland dotfiles
+  file:
+    src: "~/configAndDotfiles/roles/hyprland/tasks/dotfiles/hypr/{{ item.it }}"
+    dest: "~/.config/hypr/{{ item.it }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { it: "config.d" }
+    - { it: "hyprland.conf" }
+    - { it: "hypridle.conf" }
+    - { it: "hyprlock.conf" }
+    - { it: "hyprstart" }

@@ -17,6 +17,6 @@ Host uwu 192.168.2.100
 	HostName 192.168.2.100
 	User emily
 
-Host pixelpanda 192.168.2.149
-  HostName 192.168.2.149
+Host laptop owo 192.168.2.158
+  HostName 192.168.2.158
   User emily

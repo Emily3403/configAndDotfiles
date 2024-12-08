@@ -422,7 +422,9 @@ alias grs="python3 -c \"import os; from subprocess import check_output; from url
 
 
 # Aliases specific to devices
-alias powerbtn='sudo bash -c "echo 0 > /sys/class/leds/tpacpi::power/brightness"' # Disable power LED
+alias powerbtn='sudo bash -c \'echo 0 > /sys/class/leds/tpacpi::power/brightness; echo 0 >  /sys/class/leds/platform::micmute/brightness\'' # Disable power LED
+alias liftoff='sudo bash -c \'echo level 7 > /proc/acpi/ibm/fan\''
+alias takedown='sudo bash -c \'echo level 1 > /proc/acpi/ibm/fan\''
 
 if [ "$XDG_SESSION_TYPE" = x11 ]
     alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
