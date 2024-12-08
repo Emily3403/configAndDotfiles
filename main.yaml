@@ -3,11 +3,7 @@
 - hosts: localhost
 
   roles:
-    - gui_basic
-    - gui_programming
-    - wayland
-    - passwords
-    - shell
+    - hyprland
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}

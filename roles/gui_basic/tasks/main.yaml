@@ -1,5 +1,3 @@
-# TODO: Thunderbird
-
 - name: Clone config Repo
   git:
     repo: https://github.com/Emily3403/configAndDotfiles
@@ -25,7 +23,16 @@
       - blueberry
       - discord
       - gimp
+      - syncthing
+      - mpv
+      - mediainfo
 
+
+- name: Enable Syncthing Service
+  systemd_service:
+    name: syncthing@emily
+    state: started
+    enabled: true
 
 # TODO: Make this only on X11
 # - name: Configure ibus support

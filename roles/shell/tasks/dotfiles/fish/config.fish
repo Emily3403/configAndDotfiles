@@ -422,7 +422,9 @@ alias grs="python3 -c \"import os; from subprocess import check_output; from url
 
 
 # Aliases specific to devices
-alias powerbtn='sudo bash -c "echo 0 > /sys/class/leds/tpacpi::power/brightness"' # Disable power LED
+alias powerbtn='sudo bash -c \'echo 0 > /sys/class/leds/tpacpi::power/brightness; echo 0 >  /sys/class/leds/platform::micmute/brightness\'' # Disable power LED
+alias liftoff='sudo bash -c \'echo level 7 > /proc/acpi/ibm/fan\''
+alias takedown='sudo bash -c \'echo level 1 > /proc/acpi/ibm/fan\''
 
 if [ "$XDG_SESSION_TYPE" = x11 ]
     alias c="sed -z '\$ s/\n\$//' | xclip -sel clip" # strip newline
@@ -434,6 +436,10 @@ end
 
 alias C="xclip -sel clip" # don't strip newline
 alias cpd="pwd | c" # Current directory to clipboard
+
+# Application stuff
+alias ytdl="yt-dlp"
+
 
 # Browser Stuff
 alias cr="firefox"
@@ -684,6 +690,7 @@ if type -q libreoffice
 end
 
 
+
 if type -q cargo-mommy
     alias cargo="cargo mommy"
     alias cargo.="$HOME/.cargo/bin/cargo"
@@ -740,7 +747,6 @@ alias rvpnd=ruwuschvpn-disconnect
 # Function to get to my common places
 function u
     switch (string lower $argv)
-
         case bach ba
             cd "$HOME/Documents/Uni/Study/Bachelor-Thesis"
         case bs
@@ -753,7 +759,7 @@ function u
             cd "$HOME/Documents/Projects/Programming"
         case py
             cd "$HOME/Documents/Projects/Programming/Python"
-        case hss
+        case hss hscout hs
             cd "$HOME/Documents/Projects/Programming/Python/hetzner-server-scouter"
         case is isisdl
             cd "$HOME/Documents/Projects/Programming/Python/isisdl" && ac
@@ -843,6 +849,8 @@ function unfuck
     switch $argv
         case bt
             sudo systemctl restart bluetooth
+        case fp fprint frpintd fingerprint
+            sudo systemctl restart fprintd
         case v vim nvim
             pip install pynvim
     end
