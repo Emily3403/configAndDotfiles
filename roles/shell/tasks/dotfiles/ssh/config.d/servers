@@ -16,6 +16,10 @@ Host emilyOnRuwusch
   IdentityFile ~/.ssh/id_user
 
 Host hscout
+  HostName 130.149.220.19
+  User hscout
+
+Host old-hscout
   HostName 138.201.195.105
   User hscout
 

@@ -334,6 +334,9 @@ alias bst="sudo systemctl start bluetooth.service"
 alias bsp="sudo systemctl stop bluetooth.service"
 alias sshst="sudo systemctl start sshd"
 
+alias log="journalctl -xeu"
+alias loga="journalctl -xe"
+
 # Shortcut for too long names
 alias rmf="rm -rf"
 alias rmd="rmdir"
