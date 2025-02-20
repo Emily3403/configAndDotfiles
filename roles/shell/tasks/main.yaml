@@ -47,6 +47,7 @@
       - make
       - nmap
       - cowsay
+      - cyme
       - direnv
       - dust
       - fish
@@ -188,6 +189,7 @@
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/btop/btop.conf', dest: '~/.config/btop/btop.conf' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/pip/pip.conf', dest: '~/.config/pip/pip.conf' }
     - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/SpaceVim/.SpaceVim.d', dest: '~/.SpaceVim.d' }
+    - { src: '~/configAndDotfiles/roles/shell/tasks/dotfiles/wireguard/add-route.sh', dest: '~/bin/add-route.sh' }
 
 
 

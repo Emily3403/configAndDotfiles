@@ -2,11 +2,11 @@ Host martin
 	HostName 49.12.42.246
 	User root
 
-Host ruwusch
+Host new-ruwusch
   HostName 136.243.43.251
   User root
 
-Host old-ruwusch
+Host old-ruwusch ruwusch
   HostName 138.201.195.105
   User root
 

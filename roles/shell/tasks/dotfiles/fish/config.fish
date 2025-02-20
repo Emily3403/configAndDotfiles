@@ -676,6 +676,11 @@ if type -q unzrip
     alias unzip.="/usr/bin/unzip"
 end
 
+if type -q cyme
+    alias lsusb="cyme"
+    alias lsusb.="/usr/bin/lsusb"
+end
+
 if type -q pass
     alias pc="pass -c"
 
@@ -727,35 +732,25 @@ function tuvpn-connect
 end
 
 
-# Disconnect from the VPN of Technische Universität Berlin
-function tuvpn-disconnect
-    sudo pkill openconnect
-    psuccess "Disconnected from the VPN of Technische Universität Berlin."
+function vpn-connect
+    sudo wg-quick up $argv && psuccess "Successfully connected to $argv VPN" || perror "Error in connecting to $argv VPN!"
 end
 
-function workvpn-connect
-    pnotify "Connecting to the Work VPN ..."
-    sudo sudo wg-quick up wg-work && psuccess "Successfully connected from the Work VPN" || perror "Error in connecting the work VPN!"
+function vpn-disconnect
+    sudo wg-quick down $argv && psuccess "Successfully connected to $argv VPN" || perror "Error in connecting to $argv VPN!"
 end
 
-function workvpn-disconnect
-    sudo sudo wg-quick down wg-work && psuccess "Successfully disconnected from the Work VPN" || perror "Error in disconnecting from the work VPN!"
-end
+alias wvpnc="vpn-connect work"
+alias wvpnd="vpn-disconnect work"
 
-function ruwuschvpn-connect
-    pnotify "Connecting to the Work VPN ..."
-    sudo sudo wg-quick up wg-ruwusch && psuccess "Successfully connected from the Work VPN" || perror "Error in connecting the work VPN!"
-end
+alias rvpnc="vpn-connect ruwusch"
+alias rvpnd="vpn-disconnect ruwusch"
 
-function ruwuschvpn-disconnect
-    sudo sudo wg-quick down wg-ruwusch && psuccess "Successfully disconnected from the Work VPN" || perror "Error in disconnecting from the work VPN!"
-end
+alias rtvpnc="vpn-connect ruwusch-tunnel"
+alias rtvpnd="vpn-disconnect ruwusch-tunnel"
 
-alias wvpnc=workvpn-connect
-alias wvpnd=workvpn-disconnect
-
-alias rvpnc=ruwuschvpn-connect
-alias rvpnd=ruwuschvpn-disconnect
+alias hvpnc="vpn-connect home"
+alias hvpnd="vpn-disconnect home"
 
 # ====/ VPN Stuff =====
 
