@@ -1,0 +1,34 @@
+unstable_features = true
+edition = "2024"
+style_edition = "2024"
+
+array_width = 200
+attr_fn_like_width = 200
+chain_width = 200
+comment_width = 200
+fn_call_width = 200
+doc_comment_code_block_width = 200
+max_width = 200
+short_array_element_width_threshold = 200
+single_line_if_else_max_width = 200
+single_line_let_else_max_width = 200
+struct_lit_width = 50
+struct_variant_width = 200
+
+blank_lines_upper_bound = 2
+condense_wildcard_suffixes = true
+control_brace_style = "ClosingNextLine"
+enum_discrim_align_threshold = 5
+struct_field_align_threshold = 5
+fn_params_layout = "Compressed"
+format_code_in_doc_comments = true
+format_macro_matchers = true
+imports_layout = "Horizontal"
+newline_style = "Unix"
+normalize_comments = true
+normalize_doc_attributes = true
+overflow_delimited_expr = true
+reorder_impl_items = true
+use_field_init_shorthand = true
+use_small_heuristics = "Off"
+use_try_shorthand = true

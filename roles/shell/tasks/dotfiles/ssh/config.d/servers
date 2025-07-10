@@ -2,11 +2,7 @@ Host martin
 	HostName 49.12.42.246
 	User root
 
-Host new-ruwusch
-  HostName 136.243.43.251
-  User root
-
-Host old-ruwusch ruwusch
+Host ruwusch
   HostName 138.201.195.105
   User root
 
@@ -29,13 +25,21 @@ Host backupOnRuwusch
 
 Host b1 bach1 bach-1
   HostName 141.23.28.180
-  User emily
+  User root
   IdentityFile ~/.ssh/id_user
 
 Host b2 bach2 bach-2
   HostName 141.23.28.146
-  User emily
+  User root
   IdentityFile ~/.ssh/id_user
+
+Host b1! bach1! bach-1!
+  HostName 141.23.28.180
+  User root
+
+Host b2! bach2! bach-2!
+  HostName 141.23.28.146
+  User root
 
 Host nixie
   HostName 130.149.220.19

@@ -18,23 +18,28 @@ if ! systemctl is-active syncthing@emily.service &> /dev/null; then
     exit 1
 fi
 
-if ! ping -c 1 sync.ruwusch.de &> /dev/null; then
-    echo "!$FAILED_MESSAGE"
+if ! ping -c 1 130.149.220.19 &> /dev/null; then
+    echo "!$FAILED_MESSAGE Server is offline"
     exit 1
 fi
 
-if ! curl -I https://sync.ruwusch.de --max-time 5 &> /dev/null; then
-    echo "$FAILED_MESSAGE"
+if ! dig sync.ruwusch.de &> /dev/null; then
+    echo "!$FAILED_MESSAGE Server is offline"
+    exit 1
+fi
+
+if ! curl -I https://sync.ruwusch.de --max-time 10 &> /dev/null; then
+    echo "$FAILED_MESSAGE No HTTP"
     exit 1
 fi
 
 if ! source /home/emily/.config/polybar/syncthing-api-key &> /dev/null; then
-    echo "$SETUP_ERROR_MESSAGE: No API Key File!"
+    echo "$SETUP_ERROR_MESSAGE No API Key File!"
     exit 1
 fi
 
 if [ -z "$SYNCTHING_API_KEY" ]; then
-    echo "$SETUP_ERROR_MESSAGE: No API Key!"
+    echo "$SETUP_ERROR_MESSAGE No API Key!"
     exit 1
 fi
 

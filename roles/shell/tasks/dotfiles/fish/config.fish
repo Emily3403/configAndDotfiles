@@ -35,7 +35,6 @@ function psuccess
     printf "$argv\n"
 end
 
-
 function add_to_path
     for arg in $argv
         if test -d $arg; and not contains -- $arg $PATH
@@ -52,14 +51,12 @@ function remove_from_path
     end
 end
 
-
 # Add the "usual" stuff to the path. This may vary for you!
-add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin ~/go/bin /opt/KopiaUI/
+add_to_path ~/bin/bash_functions_for_fish ~/.local/bin ~/arm/bin ~/.cargo/bin ~/go/bin /opt/KopiaUI/ /nix/store/ny27jv71wnrkljdfm7xxw2848lnfji3a-devenv-1.4.1/bin/
 
 # Re-add ~/bin at the end so it is considered first
 remove_from_path ~/bin
 add_to_path ~/bin
-
 
 # Automatically get the newest update of the config
 function upfish
@@ -85,7 +82,6 @@ function cd
     #end
     ls
 end
-
 
 # Faster remove with big files
 function rmf.
@@ -117,7 +113,6 @@ function unbu
     rmf "$argv"
     mv "$argv.bak" "$argv"
 end
-
 
 # Aliases for config files
 alias fishe="vim $HOME/.config/fish/config.fish"
@@ -166,7 +161,6 @@ alias fane="vim $HOME/.config/fw-fanctrl/config.json && sudo systemctl restart f
 
 # ===== Python Stuff =====
 
-
 # Activate a python virtual environment
 # Usage:
 #   `ac`    → activate a python3   environment
@@ -188,7 +182,6 @@ function ac
     pip install pynvim ipython --break-system-packages
 end
 
-
 # Profile a python script
 function profile
     echo "Running Program…"
@@ -197,13 +190,11 @@ function profile
     snakeviz profiled.dat
 end
 
-
 # Anaconda packages
 alias py="python"
 alias i="ipython --no-confirm-exit"
 alias jn="jupyter notebook"
 alias jn.="jupyter notebook stop"
-
 
 # Pip aliases
 alias pi="pip install --break-system-packages"
@@ -216,9 +207,7 @@ alias pipup="pip install --upgrade pip"
 alias piuf="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 -P(nproc) pip install"
 alias pin="pip install neovim pynvim"
 
-
 # ====/ Python Stuff =====
-
 
 # ===== Rust Stuff =====
 
@@ -226,9 +215,7 @@ alias rustdbg="export RUST_LOG=trace; export RUST_BACKTRACE=short"
 
 # ====/ Rust Stuff =====
 
-
 # ===== Useful aliases =====
-
 
 # Aliases for posix-commands
 
@@ -240,6 +227,7 @@ alias ......='cd ../../../../..'
 
 # Mount stuff
 alias mntu="sudo umount /mnt"
+alias mnta='sudo mount /dev/sda /mnt'
 alias mnta1='sudo mount /dev/sda1 /mnt'
 alias mnta2='sudo mount /dev/sda2 /mnt'
 alias mnta3='sudo mount /dev/sda3 /mnt'
@@ -287,6 +275,7 @@ alias compress="lrzip -z -p $(nproc)"
 alias uncompress="lrunzip -p $(nproc)"
 alias tar.='tar caf'
 alias untar="tar xvf"
+alias ungz="gunzip"
 alias grep='grep --color=auto'
 
 alias visudo="sudo EDITOR=vim visudo"
@@ -408,12 +397,8 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gls="git stash; git pull; git stash pop"
 alias glrs="git stash; git pull --rebase; git stash pop"
-alias glg="git log"
 
-if type -q tig
-    alias glg="tig log"
-end
-
+alias gri="git rebase --interactive"
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 
@@ -425,9 +410,12 @@ alias gsa="git stash apply"
 alias gsd="git stash drop"
 alias gsp="git stash pop"
 
+alias glg="git log"
+if type -q tig
+    alias glg="tig log"
+end
 # Change the remote from HTTPS to ssh
 alias grs="python3 -c \"import os; from subprocess import check_output; from urllib.parse import urlparse; it=urlparse(check_output(['git', 'config', '--get', 'remote.origin.url'])); (print('Remote is already ssh'), exit(0)) if it.path.decode().startswith('git@') else None; ssh_url=f'git@{it.hostname.decode()}:{it.path.decode()}'; os.system(f'git remote set-url origin {ssh_url}'); print('Succeeded in changing the remote url to ssh') if all(ssh_url in out for out in check_output(['git', 'remote', '-v']).decode().split('\n')[:-1]) else print('Could not set the remote url ... Why?')\""
-
 
 # Aliases specific to devices
 alias powerbtn='sudo bash -c \'echo 0 > /sys/class/leds/tpacpi::power/brightness; echo 0 >  /sys/class/leds/platform::micmute/brightness\'' # Disable power LED
@@ -447,7 +435,6 @@ alias cpd="pwd | c" # Current directory to clipboard
 
 # Application stuff
 alias ytdl="yt-dlp"
-
 
 # Browser Stuff
 alias cr="firefox"
@@ -519,6 +506,8 @@ function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
             echo "✗" | c
         case check
             echo "✓" | c
+        case wcheck
+            echo "✅" | c
         case div
             echo "÷" | c
         case pm
@@ -656,7 +645,6 @@ if type -q exa
     alias ls.="/usr/bin/ls"
 end
 
-
 if type -q bat
     alias cat='bat --style header --style snip --style changes --style header'
     alias cat.="/usr/bin/cat"
@@ -712,15 +700,12 @@ if type -q libreoffice
     alias li="libreoffice"
 end
 
-
-
 if type -q cargo-mommy
     alias cargo="cargo mommy"
     alias cargo.="$HOME/.cargo/bin/cargo"
 end
 
 # ====/ Useful aliases =====
-
 
 # ===== VPN Stuff =====
 
@@ -745,7 +730,6 @@ alias hvpnc="vpn-connect home"
 alias hvpnd="vpn-disconnect home"
 
 # ====/ VPN Stuff =====
-
 
 # ===== Personal config =====
 
@@ -780,6 +764,10 @@ function u
             cd "$HOME/Documents/Projects/Programming/Python/Shila-Lager" && ac
         case cc ccc
             cd "$HOME/Documents/Projects/Programming/LaTeX/CocktailCards"
+        case jf
+            cd "$HOME/Documents/Projects/Programming/Rust/Prometheus-Exporters/jellyfin"
+        case alg
+            cd "$HOME/Documents/ToArchive/alg-calc"
 
             # Projects: Servers
         case snix
@@ -876,9 +864,12 @@ alias getsn="rsync -a nixie:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Proj
 alias getsr="rsync -a ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
 alias getsor="rsync -a old-ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documents/Projects/Servers/NixOServer/NixDotfiles/secrets/"
 
+alias getsw-aw="rsync -a work-admin:Nix-Servers/NixDotfiles/secrets/ $HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/NixDotfiles/secrets"
+alias getsw-n="rsync -a work-nixie:Nix-Servers/NixDotfiles/secrets/ $HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/NixDotfiles/secrets"
+alias getsw-auth="rsync -a work-auth:Nix-Servers/NixDotfiles/secrets/ $HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/NixDotfiles/secrets"
+alias getsw-enm="rsync -a work-enmail:Nix-Servers/NixDotfiles/secrets/ $HOME/Documents/Work/2023_INET/Sysadmin/Servers/NixOS/NixDotfiles/secrets"
+
 # ====/ Personal Config =====
-
-
 
 # Finally, export and set variables accordingly.
 
@@ -886,8 +877,6 @@ alias getsor="rsync -a old-ruwusch:NixOServer/NixDotfiles/secrets/ $HOME/Documen
 if type qtile >>/dev/null 2>&1
     export QT_QPA_PLATFORMTHEME="qt5ct"
 end
-
-
 
 # Colorful man pages
 if type -q bat
@@ -911,7 +900,6 @@ end
 if type -q starship
     source (starship init fish --print-full-init | psub)
 end
-
 
 if type -q direnv
     direnv hook fish | source

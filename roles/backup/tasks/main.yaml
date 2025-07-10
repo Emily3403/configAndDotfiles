@@ -9,7 +9,7 @@
   become: true
   package:
     name:
-        - kopia-ui-bin
+        - kopia-bin
 
 - name: Install Kopia Systemd Service
   become: true
@@ -21,11 +21,11 @@
     mode: 0644
 
   with_items:
-    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/systemd/kopia-ui.service", dest: "/etc/systemd/system/kopia-ui.service" }
+    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/systemd/kopia.service", dest: "/etc/systemd/system/kopia.service" }
 
 - name: Enable Kopia Service
   systemd_service:
-    name: kopia-ui
+    name: kopia
     state: started
     enabled: true
     daemon_reload: yes

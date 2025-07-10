@@ -1,0 +1,47 @@
+[Unit]
+Description=Kopia Backup (Nixie)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/kopia server start --description=Nixie --config-file=/home/emily/.config/kopia/Nixie/config.json \
+  --refresh-interval=1h --no-persist-credentials --no-check-for-updates --no-grpc --cache-directory=/root/.cache/kopia/Nixie \
+  --log-dir=/home/emily/.config/kopia/Nixie/log/ --file-log-level=warning --log-level=warning \
+  --address=https://127.0.0.1:8385 --tls-cert-file=/home/emily/.config/kopia/Nixie/cert.pem --tls-key-file=/home/emily/.config/kopia/Nixie/key.pem
+
+# We run kopia as root for security reasons: I don't want my user (emily) to be able to read the kopia password without root priviledges.
+# Also, I don't like ACLs and other users as I haven't made good experiences in the past. We only want read-only access to /home/emily, nothing else
+# This is *probably* enough, but who knows... kopia can't be exploited anyway as it needs the password (only accesible as root) or my password manager where the sudo password is inside anyways.
+User=root
+Group=root
+EnvironmentFile=/etc/kopia/Nixie.env
+
+# Filesystem sandboxing - deny access to everything by default
+ProtectSystem=full  
+ProtectHome=read-only
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+PrivateMounts=true
+
+# Hides process environment/cmdline from non-root users
+ProtectProc=invisible  
+ProcSubset=pid
+
+# Additional security measures
+NoNewPrivileges=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+RemoveIPC=true
+RestrictNamespaces=true
+MemoryDenyWriteExecute=true
+
+# Explicitly bind-mount only /home/emily as read-only
+BindReadOnlyPaths=/home/emily/
+BindPaths=/home/emily/.config/kopia/Nixie/log
+BindPaths=/root/.cache/
+
+[Install]
+WantedBy=graphical.target

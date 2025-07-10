@@ -58,6 +58,7 @@
       - gdk-pixbuf2
       - gtk4
       - htop
+      - just
       - jq
       - neofetch
       - neovim

@@ -116,11 +116,6 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# Bind to Monitors
-workspace $ws0 output DP-4
-workspace $ws1 output DP-0
-workspace $ws2 output DP-2
-
 bindsym $super+dead_circumflex workspace number $ws0
 bindsym $super+Escape workspace number $ws0
 bindsym $super+1 workspace number $ws1

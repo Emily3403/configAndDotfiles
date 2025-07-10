@@ -53,6 +53,10 @@
   repo = "egberts/vim-syntax-bind-named"
   merged = 0
 
+[[custom_plugins]]
+  repo = "NoahTheDuke/vim-just"
+  merged = 0
+
 [[layers]]
   name = 'autocomplete'
   auto_completion_return_key_behavior = "complete"

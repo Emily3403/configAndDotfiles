@@ -1,0 +1,8 @@
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+
+[org/gtk/settings/debug]
+enable-inspector-keybinding=true
+
+[   
