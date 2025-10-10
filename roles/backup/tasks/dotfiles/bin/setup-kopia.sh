@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root."
+if [[ $EUID -eq 0 ]]; then
+   echo "This script should not be run as root."
    exit 1
 fi
 
@@ -23,7 +23,7 @@ source $SCRIPT_DIR/generate-cert.sh $1
 
 read  -n 1 -p "Please edit the /etc/kopia/$1.env file to contain passwords. Afterwards, please press enter!"
 
-source "/etc/kopia/$1.env"
+source <(sudo cat "/etc/kopia/$1.env")
 if [ -z "$KOPIA_PASSWORD" ];
 then
     echo "No password given. Aborting!"
@@ -51,7 +51,7 @@ KEYFILE="$HOME/.ssh/id_user"
 mkdir -p /home/emily/.config/kopia/$1/log
 
 kopia repository connect sftp --description=$1 --config-file=/home/emily/.config/kopia/$1/config.json --no-persist-credentials --no-check-for-updates \
-    --log-file=/home/emily/.config/kopia/$1/kopia.log --file-log-level=warning --log-level=warning --cache-directory=/root/.cache/kopia \
+    --log-file=/home/emily/.config/kopia/$1/kopia.log --file-log-level=warning --log-level=warning --cache-directory=/home/emily/.cache/kopia \
     --path="$KOPIA_PATH" --host="$HOST" --known-hosts-data="$KNOWN_HOSTS_DATA" \
     --username="$USERNAME" --keyfile="$KEYFILE" --password="$KOPIA_PASSWORD" --override-username=emily
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root." 
+if [[ $EUID -eq 0 ]]; then
+   echo "This script should not be run as root."
    exit 1
 fi
 
@@ -19,8 +19,7 @@ fi
 
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-mkdir -p /etc/kopia/
-chown root:root /etc/kopia/
-chmod 0700 /etc/kopia
-
-cp "$SCRIPT_DIR/../systemd/kopia-${$1,,}.env" "/etc/kopia/$1.env"
+sudo mkdir -p /etc/kopia/
+sudo chown root:root /etc/kopia/
+sudo chmod 0700 /etc/kopia
+sudo cp "$SCRIPT_DIR/../systemd/kopia-${1,,}.env" "/etc/kopia/$1.env"
