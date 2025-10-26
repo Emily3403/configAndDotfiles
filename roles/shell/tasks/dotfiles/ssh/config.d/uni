@@ -1,0 +1,5 @@
+Host rorg rorg-pr
+  HostName rorg.aes.tu-berlin.de
+  User stud_emily.seebeck
+  ProxyJump nixie
+

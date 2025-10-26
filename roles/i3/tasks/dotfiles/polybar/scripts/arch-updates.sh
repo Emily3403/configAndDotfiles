@@ -15,3 +15,5 @@ elif [ "$status" == 2 ]; then
 fi
 
 echo "$updates" | wc -l
+
+# 󰇥

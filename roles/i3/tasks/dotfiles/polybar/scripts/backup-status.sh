@@ -9,7 +9,7 @@ SETUP_ERROR_MESSAGE="${FAILED_COLOR} Backup Setup Error"
 
 
 WAITING_COLOR="%{F#EED49F}"
-WAITING_MESSAGE="${WAITING_COLOR}Backup …"
+WAITING_MESSAGE="${WAITING_COLOR}  Backup …"
 
 SUCESSFUL_COLOR="%{F#A6DA95}"
 SUCESSFUL_MESSAGE="${SUCESSFUL_COLOR}  Backup"
@@ -24,6 +24,7 @@ if [ -z "$KOPIA_PASSWORD" ]; then
     exit 1
 fi
 
+echo "$WAITING_MESSAGE"
 
 if ! systemctl is-active kopia-nixie &> /dev/null; then
     echo "$DISABLED_MESSAGE"

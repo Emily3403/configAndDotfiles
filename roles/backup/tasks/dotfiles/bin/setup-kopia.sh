@@ -55,5 +55,3 @@ kopia repository connect sftp --description=$1 --config-file=/home/emily/.config
     --path="$KOPIA_PATH" --host="$HOST" --known-hosts-data="$KNOWN_HOSTS_DATA" \
     --username="$USERNAME" --keyfile="$KEYFILE" --password="$KOPIA_PASSWORD" --override-username=emily
 
-chown -R emily:emily "/home/emily/.config/kopia/"
-chown -R emily:emily "/home/emily/.cache/kopia"

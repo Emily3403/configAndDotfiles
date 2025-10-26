@@ -3,7 +3,7 @@ Host martin
 	User root
 
 Host ruwusch
-  HostName 138.201.195.105
+  HostName 94.130.66.56
   User root
 
 Host emilyOnRuwusch
