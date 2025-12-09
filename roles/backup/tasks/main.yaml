@@ -5,11 +5,12 @@
     force: yes
 
 
-- name: Install Kopia
-  become: true
-  package:
-    name:
-        - kopia-bin
+# TODO: AUR
+#- name: Install Kopia
+#  become: true
+#  package:
+#    name:
+#        - kopia-bin
 
 - name: Install Kopia Systemd Service
   become: true
@@ -21,7 +22,7 @@
     mode: 0644
 
   with_items:
-    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/systemd/kopia.service", dest: "/etc/systemd/system/kopia.service" }
+    - { src: "~/configAndDotfiles/roles/backup/tasks/dotfiles/systemd/kopia-nixie.service", dest: "/etc/systemd/system/kopia-nixie.service" }
 
 - name: Enable Kopia Service
   systemd_service:

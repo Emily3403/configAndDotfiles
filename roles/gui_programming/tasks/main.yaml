@@ -2,7 +2,6 @@
 - name: Install programming packages
   ansible.builtin.package:
     name:
-      - jetbrains-toolbox
       - zig
       - shellcheck
       - texlive
@@ -14,6 +13,12 @@
     state: latest
   become: true
 
+- name: Install AUR Packages
+  aur:
+    name:
+      - jetbrains-toolbox
+  become: true
+  become_user: aur_builder
 
 - name: Make dotfile dirs
   file:
@@ -39,9 +44,9 @@
     - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/rustfmt', dest: '~/.config/rustfmt' }
     - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/pip/pip.conf', dest: '~/.config/pip/pip.conf' }
 
-- name: Make emily part of the nix-users group
-  become: true
-  ansible.builtin.user:
-    name: emily
-    groups: nix-users
-    append: yes
+#- name: Make emily part of the nix-users group
+#  become: true
+#  ansible.builtin.user:
+#    name: emily
+#    groups: nix-users
+#    append: yes

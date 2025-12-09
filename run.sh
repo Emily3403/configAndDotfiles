@@ -7,4 +7,4 @@ else
   extra_params="--extra-vars \"ansible_become_password=$VM_PASSWORD\""
 fi
 
-ansible-playbook -i hosts main.yaml $extra_params
+ansible-playbook -i hosts main.yaml $extra_params $@

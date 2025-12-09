@@ -97,6 +97,7 @@
       - pynvim
       - notedown
       - pip_review
+      - distro
 
 
 # Install Rust
@@ -139,16 +140,16 @@
     dest: ~/Downloads/Suwudo
     force: yes
 
-- name: Install Suwudo
-  become: true
-  command:
-    cmd: /home/emily/Downloads/Suwudo/suwudo.py
+#- name: Install Suwudo
+#  become: true
+#  command:
+#    cmd: /home/emily/Downloads/Suwudo/suwudo.py
 
 
-- name: Install SpaceVim
-  shell:
-    cmd: curl -sLf https://spacevim.org/install.sh | bash
-    creates: ~/.SpaceVim
+#- name: Install SpaceVim
+#  shell:
+#    cmd: curl -sLf https://spacevim.org/install.sh | bash
+#    creates: ~/.SpaceVim
 
 # Start distributing dotfiles
 

@@ -3,9 +3,13 @@
 - hosts: localhost
 
   roles:
+#    - backup
+    - shell
+    - wayland
     - hyprland
 
   environment:
     PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}
+
 
 
