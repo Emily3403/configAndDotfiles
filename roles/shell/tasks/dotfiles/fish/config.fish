@@ -344,7 +344,7 @@ alias mypy.="/usr/bin/mypy"
 alias ss="source sauce"
 alias htop.="htop --delay 3"
 
-# Git aliases
+# Git with Matteo
 alias git.="/usr/bin/git"
 alias gs="git status"
 alias grm="git stash; git stash drop" # Danger!

@@ -2,6 +2,10 @@ Host martin
 	HostName 49.12.42.246
 	User root
 
+Host yolo yolocolo
+  HostName 2001:67c:20a1:1561:5054:ff:fe8e:6935
+  User emily
+
 Host ruwusch
   HostName 94.130.66.56
   User root

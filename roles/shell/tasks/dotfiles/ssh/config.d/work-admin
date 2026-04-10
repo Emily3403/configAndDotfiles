@@ -1,5 +1,5 @@
 Host work-vm-init
-  HostName 130.149.221.221
+  HostName 130.149.220.116
   User root
   IdentityFile ~/.ssh/id_inet
   StrictHostKeyChecking no
@@ -209,3 +209,12 @@ Host work-abbadon-storage
 
 # -/- Xen Cluster ---
 
+
+# Who knows?
+
+Host work-admin-unknown
+  HostName 192.168.200.192
+  User root
+  IdentityFile ~/.ssh/id_inet
+  KexAlgorithms +diffie-hellman-group-exchange-sha1
+  HostKeyAlgorithms ssh-rsa

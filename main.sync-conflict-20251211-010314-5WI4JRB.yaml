@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+
+  roles:
+    - hyprland
+
+  environment:
+    PATH: /home/emily/.cargo/bin:{{ ansible_env.PATH }}
+
+

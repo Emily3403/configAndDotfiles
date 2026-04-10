@@ -9,6 +9,9 @@ ExecStart=/usr/bin/kopia server start --description=Nixie --config-file=/home/em
   --log-dir=/home/emily/.config/kopia/Nixie/log/ --file-log-level=warning --log-level=warning \
   --address=https://127.0.0.1:8385 --tls-cert-file=/home/emily/.config/kopia/Nixie/cert.pem --tls-key-file=/home/emily/.config/kopia/Nixie/key.pem
 
+Restart=on-failure
+RestartSec=5s
+
 User=emily
 Group=emily
 EnvironmentFile=/etc/kopia/Nixie.env

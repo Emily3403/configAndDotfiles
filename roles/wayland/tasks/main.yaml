@@ -4,6 +4,12 @@
     dest: ~/configAndDotfiles
     force: yes
 
+- name: Hyprland packages
+  become: true
+  ansible.builtin.package:
+    name:
+      - waybar
+
 - name: Set up waybar dir
   file:
     path: "~/.config/waybar"

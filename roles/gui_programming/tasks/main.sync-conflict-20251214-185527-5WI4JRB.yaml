@@ -1,0 +1,47 @@
+
+- name: Install programming packages
+  ansible.builtin.package:
+    name:
+      - jetbrains-toolbox
+      - zig
+      - shellcheck
+      - texlive
+      - texlive-langgerman
+      - mold
+      - nix
+      - cargo-edit
+
+    state: latest
+  become: true
+
+
+- name: Make dotfile dirs
+  file:
+    dest: "{{ item }}"
+    state: directory
+
+  with_items:
+    - '~/bin'
+    - '~/.cargo'
+    - '~/.config/rustfmt'
+    - '~/.config/pip'
+
+- name: Install dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+
+  with_items:
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/bin/initLaTeX', dest: '~/bin/initLaTeX' }
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/cargo/config.toml', dest: '~/.cargo/config.toml' }
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/rustfmt', dest: '~/.config/rustfmt' }
+    - { src: '~/configAndDotfiles/roles/gui_programming/tasks/dotfiles/pip/pip.conf', dest: '~/.config/pip/pip.conf' }
+
+- name: Make emily part of the nix-users group
+  become: true
+  ansible.builtin.user:
+    name: emily
+    groups: nix-users
+    append: yes

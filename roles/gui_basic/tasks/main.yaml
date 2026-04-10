@@ -40,6 +40,7 @@
       - syncthing
       - mpv
       - mediainfo
+      - brightnessctl
 
 - name: Install AUR Packages
   aur:
