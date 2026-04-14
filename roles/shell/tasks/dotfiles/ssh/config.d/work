@@ -91,3 +91,22 @@ Host work-infrabox
 
 # -/- Routerlab ---
 
+# -- Dan's Harvester ---
+
+Host work-harv1
+  HostName 130.149.152.141
+  ProxyJump work-enwall
+  User rancher
+  IdentityFile ~/.ssh/id_inet
+
+Host work-harv2
+  HostName 130.149.152.142
+  ProxyJump work-enwall
+  User rancher
+  IdentityFile ~/.ssh/id_inet
+
+Host work-harv3
+  HostName 130.149.152.143
+  ProxyJump work-enwall
+  User rancher
+  IdentityFile ~/.ssh/id_inet

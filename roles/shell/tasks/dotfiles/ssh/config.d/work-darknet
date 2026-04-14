@@ -1,0 +1,5 @@
+Host csaba
+  HostName 130.149.221.194
+  User root
+  ProxyJump work-marwall
+  IdentityFile ~/.ssh/id_inet

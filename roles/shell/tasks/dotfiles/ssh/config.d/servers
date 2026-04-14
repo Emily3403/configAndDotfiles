@@ -1,3 +1,29 @@
+Host work-nas
+  HostName 130.149.220.5
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+
+Host cthesis
+  HostName 130.149.220.6
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+
+Host tamago
+  HostName 130.149.220.9
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+
+Host data-grave
+  HostName 130.149.220.10
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+
+Host ruwusch
+  HostName 94.130.66.56
+  User root
+
+# --- CCC ---
+
 Host martin
 	HostName 49.12.42.246
 	User root
@@ -6,14 +32,11 @@ Host yolo yolocolo
   HostName 2001:67c:20a1:1561:5054:ff:fe8e:6935
   User emily
 
-Host ruwusch
-  HostName 94.130.66.56
-  User root
 
 Host emilyOnRuwusch
   HostName 138.201.195.105
   User emily
-  IdentityFile ~/.ssh/id_user
+  IdentityFile ~/.ssh/id_inet
 
 Host hscout
   HostName 130.149.220.19
