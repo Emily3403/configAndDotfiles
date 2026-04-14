@@ -16,7 +16,7 @@ Host tamago
 Host data-grave
   HostName 130.149.220.10
   User root
-  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/id_khaled
 
 Host ruwusch
   HostName 94.130.66.56
