@@ -8,6 +8,16 @@ Host cthesis
   User root
   IdentityFile ~/.ssh/id_ed25519
 
+Host aalwines
+  HostName 130.149.220.7
+  User root
+  IdentityFile ~/.ssh/id_inet
+
+Host bluesky
+  HostName 130.149.220.8
+  User root
+  IdentityFile ~/.ssh/id_inet
+
 Host tamago
   HostName 130.149.220.9
   User root
@@ -15,6 +25,11 @@ Host tamago
 
 Host data-grave
   HostName 130.149.220.10
+  User root
+  IdentityFile ~/.ssh/id_khaled
+
+Host mdns
+  HostName 130.149.220.11
   User root
   IdentityFile ~/.ssh/id_khaled
 
