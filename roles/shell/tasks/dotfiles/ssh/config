@@ -69,3 +69,51 @@ Host git.tu-berlin.de
 # mail._domainkey.lists IN TXT | "v=DKIM1; k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz9fG60EXOuEEEu8mTSdsMCY+Z53GRE43/3lhuapNBWyoQivX50UuZzXr90mOknL2zsdNuznj4rXIdjLdBhDFbUb7ZS3T8hZeDkrv8cOLVHyks4YXeiKBnBOv0VOfQT1sptKN/WRmaNV1klkZCX7/pZdH8+bTg10FktyZtT8BuT4CiZfFxYUQTqhscn9ADPyIeIN5qibgMsZb2KUQ+wSW7n6vz0uI0fxYAEwjW/5REiUR44wfT+HRH2/9CfDkPCC3qE8YHk4MJP/CmJqEN/IGAQOKoSYpSZlAODC+pPHe/K6DDmTeucrpE3xFyzmfMCHWeMSJrbvMm5r6z4nFtdnbnwIDAQAB"
 
 # mail.inet.tu-berlin.de \mapsto → 130.149.220.242
+
+
+
+
+# –––––––– Now, for something completely different:
+
+#  
+#  
+#  # Crypto
+#  https://ssh.ruwusch.de
+#  https://gpg.ruwusch.de
+#  
+#  # Thesis
+#  https://thesis.ruwusch.de
+#  https://ba.ruwusch.de
+#  https://clash.ruwusch.de
+#  
+#  
+#  
+#  
+#  
+#  # configAndDotfiles
+#  https://config.ruwusch.de
+#  https://btop.ruwusch.de
+#  https://fish.ruwusch.de
+#  https://shell.ruwusch.de
+#  https://neo.ruwusch.de
+#  
+#  
+#  # –– Top Secret ––
+#  https://vpn.ruwusch.de
+#  https://bernd-vpn.ruwusch.de
+#  
+#  
+#  
+#  
+#  
+#  # Services (ruwusch)
+#  https://kino.ruwusch.de
+#  https://transui.ruwusch.de
+#  https://files.ruwusch.de
+#  https://cloud.ruwusch.de
+#  
+#  # Services (nixie)
+#  https://recipes.ruwusch.de
+#  https://pdf.ruwusch.de
+
+
