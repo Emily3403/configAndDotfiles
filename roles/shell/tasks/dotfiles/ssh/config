@@ -52,12 +52,12 @@ Host git.tu-berlin.de
 #	cafeshila.de
 #	tu-wien.de [my domain]
 
-# In DMARC / SPF / DKIM with
-#	@inet.tu-berlin.de
-#	@tu-berlin.de
-#	@gmail.com
+# In DMARC / SPF / DKIM **sync** with:
+# –––––––
+#	@tu-berlin: inet. | math. | akt. | cg. | sect. | ias. | 3s. | dams. | dima. | tkn. | sese. | is. | ise. | compl. | netIT. | mkp. | sbe. | tet. | mo. | mlsec. | qcc. | ht. | rs. | NI. | mtv. | ida. | qu. | av. | cp. | snet. | las. | eet. | mtec. | hfs. 
+#	@freitagsrunde.org
+#	@gmail.com | @outlook.de
 #	@mpi
-#	@outlook
 
 # _dmarc IN TXT | "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@inet.tu-berlin.de; ruf=mailto:abuse@inet.tu-berlin.de; sp=quarantine; fo=1; ri=3600"
 # @ SPF | "v=spf1 ip4:130.149.220.242 ip6:2001:638:809:ff11:130:149:220:242 ~all"
