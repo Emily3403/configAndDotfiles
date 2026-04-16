@@ -114,6 +114,10 @@ function unbu
     mv "$argv.bak" "$argv"
 end
 
+# Package Manager
+alias yay="paru"
+alias pacman="paru"
+
 # Aliases for config files
 alias fishe="vim $HOME/.config/fish/config.fish"
 alias fished="cd $HOME/.config/fish"
