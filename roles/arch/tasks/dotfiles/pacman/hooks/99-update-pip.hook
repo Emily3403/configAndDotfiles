@@ -7,4 +7,4 @@ Target = *
 Description = Updating other packages
 When = PostTransaction
 
-Exec = /usr/bin/python3 -m pip_review -a
+Exec = sudo -u emily pip-review -a -C

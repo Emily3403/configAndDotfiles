@@ -116,7 +116,6 @@ end
 
 # Package Manager
 alias yay="paru"
-alias pacman="paru"
 
 # Aliases for config files
 alias fishe="vim $HOME/.config/fish/config.fish"
@@ -451,177 +450,177 @@ alias pdf="$BROWSER ./target/main.pdf"
 function tex2u -d "Translate LaTeX escape sequences to unicode equivalents"
     switch $argv[1]
         case alpha
-            echo α | c
+            echo α
         case beta
-            echo β | c
+            echo β
         case gamma
-            echo γ | c
+            echo γ
         case delta
-            echo δ | c
+            echo δ
         case epsilon
-            echo ε | c
+            echo ε
         case zeta
-            echo ζ | c
+            echo ζ
         case eta
-            echo η | c
+            echo η
         case theta
-            echo θ | c
+            echo θ
         case iota
-            echo ι | c
+            echo ι
         case kappa
-            echo κ | c
+            echo κ
         case lambda
-            echo λ | c
+            echo λ
         case mu
-            echo μ | c
+            echo μ
         case nu
-            echo ν | c
+            echo ν
         case xi
-            echo ξ | c
+            echo ξ
         case omicron
-            echo ο | c
+            echo ο
         case pi
-            echo π | c
+            echo π
         case rho
-            echo ρ | c
+            echo ρ
         case sigma
-            echo σ | c
+            echo σ
         case tau
-            echo τ | c
+            echo τ
         case upsilon
-            echo υ | c
+            echo υ
         case phi
-            echo φ | c
+            echo φ
         case chi
-            echo χ | c
+            echo χ
         case psi
-            echo ψ | c
+            echo ψ
         case omega
-            echo ω | c
+            echo ω
         case leq
-            echo "≤" | c
+            echo "≤"
         case geq
-            echo "≥" | c
+            echo "≥"
         case neq
-            echo "≠" | c
+            echo "≠"
         case times
-            echo "×" | c
+            echo "×"
         case cross
-            echo "✗" | c
+            echo "✗"
         case check
-            echo "✓" | c
+            echo "✓"
         case wcheck
-            echo "✅" | c
+            echo "✅"
         case div
-            echo "÷" | c
+            echo "÷"
         case pm
-            echo "±" | c
+            echo "±"
         case infty
-            echo "∞" | c
+            echo "∞"
         case deg
-            echo "°" | c
+            echo "°"
         case cdot
-            echo "·" | c
+            echo "·"
         case ldots
-            echo "…" | c
+            echo "…"
         case prime
-            echo "′" | c
+            echo "′"
         case ldotp
-            echo "⋅" | c
+            echo "⋅"
         case propto
-            echo "∝" | c
+            echo "∝"
         case rightarrow
-            echo "→" | c
+            echo "→"
         case leftarrow
-            echo "←" | c
+            echo "←"
         case uparrow up
-            echo "↑" | c
+            echo "↑"
         case downarrow down
-            echo "↓" | c
+            echo "↓"
         case angle
-            echo "∠" | c
+            echo "∠"
         case nabla
-            echo "∇" | c
+            echo "∇"
         case in
-            echo "∈" | c
+            echo "∈"
         case ni
-            echo "∋" | c
+            echo "∋"
         case subset
-            echo "⊂" | c
+            echo "⊂"
         case supset
-            echo "⊃" | c
+            echo "⊃"
         case subseteq
-            echo "⊆" | c
+            echo "⊆"
         case supseteq
-            echo "⊇" | c
+            echo "⊇"
         case cap
-            echo "∩" | c
+            echo "∩"
         case cup
-            echo "∪" | c
+            echo "∪"
         case int
-            echo "∫" | c
+            echo "∫"
         case sum
-            echo Σ | c
+            echo Σ
         case prod
-            echo "∏" | c
+            echo "∏"
         case wedge
-            echo "∧" | c
+            echo "∧"
         case vee
-            echo "∨" | c
+            echo "∨"
         case oplus
-            echo "⊕" | c
+            echo "⊕"
         case otimes
-            echo "⊗" | c
+            echo "⊗"
         case bigcirc
-            echo "◯" | c
+            echo "◯"
         case dagger
-            echo "†" | c
+            echo "†"
         case ddagger
-            echo "‡" | c
+            echo "‡"
         case amalg
-            echo "⨿" | c
+            echo "⨿"
         case forall
-            echo "∀" | c
+            echo "∀"
         case exists
-            echo "∃" | c
+            echo "∃"
         case neg
-            echo "¬" | c
+            echo "¬"
         case in
-            echo "∈" | c
+            echo "∈"
         case ni
-            echo "∋" | c
+            echo "∋"
         case subset
-            echo "⊂" | c
+            echo "⊂"
         case supset
-            echo "⊃" | c
+            echo "⊃"
         case subseteq
-            echo "⊆" | c
+            echo "⊆"
         case supseteq
-            echo "⊇" | c
+            echo "⊇"
         case equiv
-            echo "≡" | c
+            echo "≡"
         case cong
-            echo "≅" | c
+            echo "≅"
         case approx
-            echo "≈" | c
+            echo "≈"
         case sim
-            echo "~" | c
+            echo "~"
         case avg
-            echo "⌀" | c
+            echo "⌀"
         case tm
-            echo "™" | c
+            echo "™"
         case lra
-            echo "⇔" | c
+            echo "⇔"
         case --
-            echo "–" | c
+            echo "–"
         case ---
-            echo "—" | c
+            echo "—"
         case perp
-            echo "⊥" | c
+            echo "⊥"
         case parallel
-            echo "∥" | c
+            echo "∥"
         case baht
-            echo "฿" | c
+            echo "฿"
             default echo "Invalid input"
     end
 end

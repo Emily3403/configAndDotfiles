@@ -7,4 +7,4 @@ Target = *
 Description = Updating other packages
 When = PostTransaction
 
-Exec = /home/emily/.cargo/bin/cargo install-update -a
+Exec = sudo -u emily /home/emily/.cargo/bin/cargo install-update -a -f -d -g -i
