@@ -143,7 +143,7 @@ alias pbared="cd $HOME/.config/polybar"
 alias swaye="vim $HOME/.config/sway/config"
 alias swayed="cd $HOME/.config/sway/config.d"
 
-alias hypre="vim $HOME/.config/hypr/hyprland.conf"
+alias hypre="vim $HOME/.config/hypr/config.d/new.conf"
 alias hypred="cd $HOME/.config/hypr/"
 
 alias vime="vim $HOME/.vimrc"
@@ -636,8 +636,11 @@ if type -q hyfetch
 end
 
 if type -q nvim
+    alias v="nvim"
     alias vi="nvim"
-    alias vim="nvim"
+    alias vim"=nvim"
+    alias e="nvim"
+    alias emacs="nvim"
 end
 
 if type -q exa

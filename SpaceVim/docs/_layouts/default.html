@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html
+  lang="{{ page.lang | default: site.lang }}"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }} | SpaceVim</title>
+    <meta name="author" content="Eric Wong" />
+    <meta name="description" content="{{ page.description }}" />
+    {% if page.type %}
+    <meta property="og:type" content="{{ page.type }}" />
+    {% else %}
+    <meta property="og:type" content="webpage" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }} | SpaceVim" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta
+      property="og:image"
+      content="{{ page.image | default: site.image }}"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SpaceVim" />
+    <meta name="twitter:creator" content="@wsdtty" />
+    <meta
+      name="twitter:image:src"
+      content="{{ page.image | default: site.image }}"
+    />
+    <meta name="twitter:title" content="{{ page.title }} | SpaceVim" />
+    <meta name="twitter:description" content="{{ page.description }}" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+    ></script>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/codeCopy.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/jquery.1.7.1.min.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section>
+        <div id="titlex">
+          <p align="center">
+            {{ site.title | default: site.github.repository_name }}
+          </p>
+        </div>
+        {% if page.lang == "zh" %}
+        <div id="title">
+          <p>{{ site.description_cn }}</p>
+          <hr />
+          <p align="center">
+            <b><a href="{{ site.url }}/cn/">主页</a></b> |
+            <b><a href="{{ site.url }}/cn/about/">关于我们</a></b> |
+            <b><a href="{{ site.url }}/cn/quick-start-guide/">入门指南</a></b> |
+            <b><a href="{{ site.url }}/cn/documentation/">使用文档</a></b> |
+            <b><a href="{{ site.url }}/cn/development/">开发指南</a></b> |
+            <b><a href="{{ site.url }}/cn/community/">用户社区</a></b> |
+            <b><a href="{{ site.url }}/cn/sponsors/">赞助</a></b> |
+            <b><a href="{{ site.url }}{{ page.url | remove_first: "/cn" }}">English</a></b>
+          </p>
+          <hr />
+        </div>
+        {% else %}
+        <div id="title">
+          <p>{{ site.description }}</p>
+          <hr />
+          <p align="center">
+            <b><a href="{{ site.url }}">Home</a></b> |
+            <b><a href="{{ site.url }}/about/">About</a></b> |
+            <b><a href="{{ site.url }}/quick-start-guide/">Quick start guide</a></b> |
+            <b><a href="{{ site.url }}/documentation/">Documentation</a></b> |
+            <b><a href="{{ site.url }}/development/">Development</a></b> |
+            <b><a href="{{ site.url }}/community/">Community</a></b> |
+            <b><a href="{{ site.url }}/sponsors/">Sponsors</a></b> |
+            <b><a href="{{ site.url }}/cn{{ page.url }}">中文</a></b>
+          </p>
+          <hr />
+        </div>
+        {% endif %}
+        {{ content }} 
+      </section>
+    </div>
+  </body>
+  <root>
+    {% if page.lang == "zh" %}
+    <p align="center">
+      <span class="credits right"
+        >由Jekyll强力驱动
+      </span>
+    </p>
+    {% else %}
+    <p align="center">
+      <span class="credits right"
+        >Powered by Jekyll
+      </span>
+    </p>
+    {% endif %}
+  </root>
+</html>
+
+<!-- vim:set nowrap: -->

@@ -1,0 +1,4 @@
+Execute ( SpaceVim plugin: key bindings guide ):
+  call SpaceVim#plugins#tabmanager#open()
+  AssertEqual &ft, 'SpaceVimTabsManager'
+

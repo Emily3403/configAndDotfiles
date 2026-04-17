@@ -1,0 +1,300 @@
+# 测试版本：
+# vim 7.4.052 Ubuntu 14.04
+# vim 7.4.1689 Ubuntu 16.04
+# vim 8.0.1453 Ubuntu 18.04
+# vim 8.1.2269 Ubuntu 20.04
+# vim 8.2.3995 Ubuntu 22.04
+# vim 9.1.0016 Ubuntu 24.04
+# nvim 0.4.3 Ubuntu 20.04
+# nvim 0.6.1 Ubuntu 22.04
+# nvim 0.7.2 Ubuntu 24.04
+# - vimbin: vim
+# vimtag: v7.4.052
+# disable_es: true
+# - vimbin: vim
+# vimtag: v7.4.629
+# disable_es: true
+# - vimbin: vim
+# vimtag: v7.4.1689
+# disable_es: true
+# - vimbin: vim
+# vimtag: v8.0.0027
+# disable_es: true
+# - vimbin: vim
+# vimtag: v8.0.0183
+# disable_es: true
+# - vimbin: vim
+# vimtag: v8.0.0184
+# - vimbin: vim
+# vimtag: v8.0.1453
+# - vimbin: vim
+# vimtag: v8.1.2269
+# - vimbin: vim
+# vimtag: v8.2.2434
+# - vimbin: vim
+# vimtag: v8.2.3995
+# - vimbin: vim
+# vimtag: nightly
+# - vimbin: nvim
+# vimtag: nightly
+# - vimbin: nvim
+# vimtag: v0.9.1
+# - vimbin: nvim
+# vimtag: v0.9.0
+# - vimbin: nvim
+# vimtag: v0.8.3
+# - vimbin: nvim
+# vimtag: v0.8.2
+# - vimbin: nvim
+# vimtag: v0.8.1
+# - vimbin: nvim
+# vimtag: v0.8.0
+# - vimbin: nvim
+# vimtag: v0.7.2
+# - vimbin: nvim
+# vimtag: v0.7.0
+# - vimbin: nvim
+# vimtag: v0.6.1
+# - vimbin: nvim
+# vimtag: v0.6.0
+# - vimbin: nvim
+# vimtag: v0.5.1
+# - vimbin: nvim
+# vimtag: v0.5.0
+# - vimbin: nvim
+# vimtag: v0.4.4
+# - vimbin: nvim
+# vimtag: v0.4.3
+# - vimbin: nvim
+# vimtag: v0.4.2
+# - vimbin: nvim
+# vimtag: v0.4.0
+# - vimbin: nvim
+# vimtag: v0.3.8
+
+[vader-nvim-win]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-win.options.env]
+    VIM_BIN = 'nvim'
+    VIM_Es = "--headless"
+[vader-nvim-wsl]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-wsl.options.env]
+    VIM_BIN = 'wsl -e nvim'
+    VIM_Es = "--headless"
+[vader-nvim-038]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-038.options.env]
+    VIM_BIN = 'D:\Neovim\v0.3.8\bin\nvim.exe'
+    VIM_Es = "--headless"
+    VIM = 'D:\Neovim\v0.3.8'
+    VIMRUNTIME = 'D:\Neovim\v0.3.8\share\nvim\runtime'
+[vader-nvim-050]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-050.options.env]
+    VIM_BIN = 'D:\Neovim\v0.5.0\bin\nvim.exe'
+    VIM_Es = "--headless"
+    VIM = 'D:\Neovim\v0.5.0'
+    VIMRUNTIME = 'D:\Neovim\v0.5.0\share\nvim\runtime'
+[vader-nvim-061]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-061.options.env]
+    VIM_BIN = 'D:\Neovim\v0.6.1\bin\nvim.exe'
+    VIM_Es = "--headless"
+    VIM = 'D:\Neovim\v0.6.1'
+    VIMRUNTIME = 'D:\Neovim\v0.6.1\share\nvim\runtime'
+[vader-nvim-072]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-072.options.env]
+    VIM_BIN = 'D:\Neovim\v0.7.2\bin\nvim.exe'
+    VIM_Es = "--headless"
+    VIM = 'D:\Neovim\v0.7.2'
+[vader-nvim-080]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-nvim-080.options.env]
+    VIM_BIN = 'D:\Neovim\v0.8.0\bin\nvim.exe'
+    VIM_Es = "--headless"
+    VIM = 'D:\Neovim\v0.8.0'
+# vim 7.4.1185 
+[vader-vim-741185]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-741185.options.env]
+    VIM_BIN = 'D:\Vim\gvim_7.4.1185_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_7.4.1185_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_7.4.1185_x64'
+[vader-vim-741185-buf]
+    command = 'D:\Vim\gvim_7.4.1185_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-741185-buf.options.env]
+    VIM = 'D:\Vim\gvim_7.4.1185_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_7.4.1185_x64'
+# vim 7.4.1689
+[vader-vim-741689]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-741689.options.env]
+    VIM_BIN = 'D:\Vim\gvim_7.4.1689_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_7.4.1689_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_7.4.1689_x64'
+[vader-vim-741689-buf]
+    command = 'D:\Vim\gvim_7.4.1689_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-741689-buf.options.env]
+    VIM = 'D:\Vim\gvim_7.4.1689_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_7.4.1689_x64'
+# vim 8.0.0027
+[vader-vim-800027]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-800027.options.env]
+    VIM_BIN = 'D:\Vim\gvim_8.0.0027_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_8.0.0027_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.0.0027_x64'
+[vader-vim-800027-buf]
+    command = 'D:\Vim\gvim_8.0.0027_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-800027-buf.options.env]
+    VIM = 'D:\Vim\gvim_8.0.0027_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.0.0027_x64'
+# vim 8.0.1453
+[vader-vim-801453]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-801453.options.env]
+    VIM_BIN = 'D:\Vim\gvim_8.0.1453_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_8.0.1453_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.0.1453_x64'
+[vader-vim-801453-buf]
+    command = 'D:\Vim\gvim_8.0.1453_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-801453-buf.options.env]
+    VIM = 'D:\Vim\gvim_8.0.1453_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.0.1453_x64'
+# vim 8.1.2269
+[vader-vim-812269]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-812269.options.env]
+    VIM_BIN = 'D:\Vim\gvim_8.1.2269_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_8.1.2269_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.1.2269_x64'
+[vader-vim-812269-buf]
+    command = 'D:\Vim\gvim_8.1.2269_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-812269-buf.options.env]
+    VIM = 'D:\Vim\gvim_8.1.2269_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.1.2269_x64'
+# vim 8.2.3995
+[vader-vim-823995]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-823995.options.env]
+    VIM_BIN = 'D:\Vim\gvim_8.2.3995_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_8.2.3995_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.2.3995_x64'
+[vader-vim-823995-buf]
+    command = 'D:\Vim\gvim_8.2.3995_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-823995-buf.options.env]
+    VIM = 'D:\Vim\gvim_8.2.3995_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_8.2.3995_x64'
+# vim 9.1.0196
+[vader-vim-910196]
+    command = "make"
+    args = ['test']
+    isBackground = false
+[vader-vim-910196.options.env]
+    VIM_BIN = 'D:\Vim\gvim_9.1.0196_x64\vim.exe'
+    VIM_Es = "-Es"
+    VIM = 'D:\Vim\gvim_9.1.0196_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_9.1.0196_x64'
+[vader-vim-910196-buf]
+    command = 'D:\Vim\gvim_9.1.0196_x64\vim.exe'
+    args = ['-Nu', 'test/vimrc', '-Es', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-vim-910196-buf.options.env]
+    VIM = 'D:\Vim\gvim_9.1.0196_x64'
+    VIMRUNTIME = 'D:\Vim\gvim_9.0.0196_x64'
+[vader-nvim-buf]
+    command = 'nvim'
+    args = ['-Nu', 'test/vimrc', '--headless', '-c', 'Vader! ${relativeFile}']
+    isBackground = false
+[vader-nvim-buf.options.env]
+    VIM = ''
+    VIMRUNTIME = ''
+[generate-vim-doc]
+    command = "python"
+    args = ['-m', 'vimdoc', '.']
+    isBackground = true
+[test_problemMatcher]
+    command = "echo"
+    args = ['.SpaceVim.d/tasks.toml:6:1 test error message']
+    isBackground = true
+[test_problemMatcher.problemMatcher]
+    useStdout = true
+    errorformat = '%f:%l:%c\ %m'
+[test_regexp]
+    command = "echo"
+    args = ['.SpaceVim.d/tasks.toml:12:1 test error message']
+    isBackground = true
+[test_regexp.problemMatcher]
+    useStdout = true
+[test_regexp.problemMatcher.pattern]
+    regexp = '\(.*\):\(\d\+\):\(\d\+\)\s\(\S.*\)'
+    file = 1
+    line = 2
+    column = 3
+    #severity = 4
+    message = 4
+[open-nvim-050]
+    command = "wt.exe"
+    args = ['new-tab', '-p', 'nvim-v0.5.0']
+    isBackground = true
+[open-nvim-050.options]
+    cwd = 'C:\Users\wsdjeg\.SpaceVim'
+[open-nvim-050.options.env]
+    VIM = 'D:\Neovim\v0.5.0'
+    VIMRUNTIME = 'D:\Neovim\v0.5.0\share\nvim\runtime'
+[open-nvim-030]
+    command = "wt.exe"
+    args = ['new-tab', '-p', 'nvim-v0.3.0']
+    isBackground = true
+    description = 'open neovim v0.3.0 in new terminal tab'
+[open-nvim-030.options]
+    cwd = 'C:\Users\wsdjeg\.SpaceVim'
+[open-nvim-030.options.env]
+    VIM = 'D:\Neovim\v0.3.0\share\nvim'
+    VIMRUNTIME = 'D:\Neovim\v0.3.0\share\nvim\runtime'
