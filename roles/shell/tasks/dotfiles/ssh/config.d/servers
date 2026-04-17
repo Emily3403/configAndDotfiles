@@ -26,7 +26,7 @@ Host tamago
 Host data-grave
   HostName 130.149.220.10
   User root
-  IdentityFile ~/.ssh/id_khaled
+  IdentityFile ~/.ssh/id_user
 
 Host mdns
   HostName 130.149.220.11
